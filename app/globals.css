@@ -1,0 +1,408 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    color-scheme: light;
+
+    /* Brand tokens */
+    --brand-red: #8B1A1A;
+    --brand-red-dark: #7B1717;
+    --brand-red-50: #FDECEC;
+
+    /* Legacy aliases kept for backward compat */
+    --brand-purple: #8B1A1A;
+    --brand-maroon: #8B1A1A;
+    --brand-gradient: linear-gradient(135deg, #8B1A1A 0%, #A31F1F 50%, #6E1414 100%);
+    --brand-text-gradient: #8B1A1A;
+
+    /* Semantic neutrals */
+    --white: #FFFFFF;
+    --ink: #141414;
+    --body: #4B4B4B;
+    --muted: #6B6B6B;
+    --line: #E7E7E7;
+
+    /* Surface */
+    --background: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-alt: #FAFAFA;
+
+    /* Legacy text tokens */
+    --text-primary: #141414;
+    --text-secondary: #4B4B4B;
+    --border-light: #E7E7E7;
+
+    --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: inherit;
+  }
+
+  ::selection {
+    background-color: #8B1A1A;
+    color: #FFFFFF;
+  }
+}
+
+/*
+ * Motion Safety Net: force content visible when JS is disabled or unavailable.
+ * Prevents SplitText, MaskReveal, and Reveal primitives from hiding content permanently.
+ */
+@media (scripting: none) {
+  [data-reveal],
+  [data-split],
+  [data-mask] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    visibility: visible !important;
+  }
+}
+
+/*
+ * Motion override: data-motion="off" on <html> forces all animated elements to final state.
+ * Used for screenshot testing and no-animation accessibility preference.
+ */
+html[data-motion="off"] [data-reveal],
+html[data-motion="off"] [data-split],
+html[data-motion="off"] [data-mask] {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+  visibility: visible !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+/* MotionSafetyNet rescue class: applied by JS to elements stuck in hidden state */
+.motion-rescued {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+  visibility: visible !important;
+}
+
+/* Editorial High-Contrast Italic Typography */
+.font-serif {
+  font-family: var(--font-serif), "Instrument Serif", Georgia, serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Dot Grid Background */
+.dot-grid-pattern {
+  background-image: radial-gradient(var(--line) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+.dot-grid-radial-mask {
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, #000 50%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, #000 50%, transparent 95%);
+}
+
+/* Brand Maroon / Crimson Utilities */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #8B1A1A 0%, #A31F1F 50%, #6E1414 100%);
+}
+
+.text-brand-gradient {
+  color: #8B1A1A;
+  display: inline-block;
+  padding-bottom: 0.18em;
+  line-height: 1.15;
+}
+
+/* .text-purple-glow removed — text-shadow glows on headings are not permitted */
+
+/* Horizontal Fade Masks for Infinite Carousels */
+.mask-fade-x {
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 2px solid #8B1A1A;
+  outline-offset: 2px;
+}
+
+
+/* 3D Chiclet Social Media Icon Boxes */
+.chiclet-box {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04), inset 0 2px 0 rgba(255, 255, 255, 1);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.chiclet-box:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 20px 30px -8px rgba(139, 26, 26, 0.22), 0 6px 12px -2px rgba(139, 26, 26, 0.12), inset 0 2px 0 rgba(255, 255, 255, 1);
+  border-color: #F7BDBD;
+}
+
+/* Custom Marquee Animations */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-float,
+  .animate-float-fast,
+  .animate-float-delayed {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F7BDBD;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B1A1A;
+}
+
+/* Smooth Card Hover */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(139, 26, 26, 0.12), 0 0 1px 1px rgba(247, 189, 189, 0.6);
+  border-color: #F7BDBD;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.7;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Skeleton Shimmer Loading State */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #180505 0%,
+    #2e0c0c 35%,
+    #3f1212 50%,
+    #2e0c0c 65%,
+    #180505 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.skeleton-shimmer-light {
+  background: linear-gradient(
+    90deg,
+    #FAFAFA 0%,
+    #F3F3F3 35%,
+    #E7E7E7 50%,
+    #F3F3F3 65%,
+    #FAFAFA 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Browser Mockup Preview Auto-Scroll on Hover */
+@keyframes browser-preview-scroll {
+  0% {
+    transform: translateY(0%);
+  }
+  45% {
+    transform: translateY(-40%);
+  }
+  55% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-browser-scroll {
+  animation: browser-preview-scroll 8s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.group:hover .animate-browser-scroll,
+.group:focus-within .animate-browser-scroll {
+  animation-play-state: running;
+}
+
+/* WhatsApp QR device visibility: show ONLY on devices with hover and fine pointer (mouse/trackpad) */
+@media not all and (hover: hover) and (pointer: fine) {
+  .whatsapp-qr-container {
+    display: none !important;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .whatsapp-qr-container {
+    display: flex;
+  }
+}
+
+/* Motion Foundation: Button Fill Wipe & Slide Arrow */
+.btn-fill-wipe {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-fill-wipe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #6E1414; /* Maroon darkens from left to right */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.btn-fill-wipe:hover::before,
+.btn-fill-wipe:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.btn-fill-wipe > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-arrow-slide,
+.btn-fill-wipe svg {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-fill-wipe:hover .btn-arrow-slide,
+.btn-fill-wipe:hover svg {
+  transform: translateX(4px);
+}
+
+/* Motion Foundation: Text link underline draws from left to right */
+.link-underline {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-fill-wipe::before,
+  .link-underline::after,
+  .btn-arrow-slide,
+  .btn-fill-wipe svg {
+    transition: none !important;
+  }
+}
+

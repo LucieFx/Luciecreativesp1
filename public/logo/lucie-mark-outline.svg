@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+    <g transform="translate(10, 10)">
+      <!-- Outer L shape with angled slant -->
+      <path d="M 8 6 L 36 6 L 30 76 L 80 76 L 75 96 L 0 96 L 0 18 Z" stroke="#8B1A1A" stroke-width="7" stroke-linejoin="round" fill="none" />
+      <!-- Interlocking C shape -->
+      <path d="M 44 6 L 94 6 L 88 24 L 62 24 L 56 46 L 88 46 L 82 64 L 50 64 L 46 80 L 32 80 Z" stroke="#8B1A1A" stroke-width="7" stroke-linejoin="round" fill="none" />
+    </g>
+  </svg>

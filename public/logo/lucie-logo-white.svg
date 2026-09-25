@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130" width="520" height="130" fill="none">
+    <g transform="translate(10, 10)">
+      <!-- LC Monogram Mark -->
+      <path d="M 28 8 L 54 8 L 38 102 L 78 102 L 72 108 L 22 108 L 22 18 Z" fill="#FFFFFF" />
+      <path d="M 68 8 L 102 8 L 96 22 L 68 22 L 64 48 L 90 48 L 86 60 L 52 60 L 46 88 L 88 88 L 84 102 L 36 102 Z" fill="#FFFFFF" />
+      <!-- Stylized Monogram geometric path -->
+      <g transform="translate(0, 0)">
+        <path d="M 12 18 L 42 18 L 36 78 L 84 78 L 80 96 L 2 96 L 2 30 Z" fill="#FFFFFF" />
+        <path d="M 52 18 L 98 18 L 92 34 L 64 34 L 58 54 L 88 54 L 82 70 L 52 70 Z" fill="#FFFFFF" />
+      </g>
+    </g>
+    <!-- Brand Typography: Lucie Creatives. -->
+    <text x="140" y="58" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="44" letter-spacing="-1.5" fill="#FFFFFF">Lucie</text>
+    <text x="140" y="102" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="44" letter-spacing="-1.5" fill="#FFFFFF">Creatives<tspan fill="#8B1A1A">.</tspan></text>
+  </svg>
