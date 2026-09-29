@@ -195,7 +195,7 @@ export const CLIENT_VIDEOS: ClientVideoItem[] = [
     description:
       "Fast-paced lifestyle pacing cut to upbeat audio with kinetic subtitle typography. Seamlessly transitions from double-height living areas to open-sky private courtyards, driving qualified site-visit leads.",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790267065/lucie-creatives/videos/clients/vedam-villas/vedam-villas-influencer-tour.mp4",
-    posterSrc: "https://i.ytimg.com/vi/lLrw4oeHQwc/hqdefault.jpg",
+    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1790684877/lucie-creatives/portfolio/vedam-villas-influencer-tour-poster.jpg",
     aspectRatio: "9:16",
     aspectRatioClass: "aspect-[9/16]",
     duration: "0:58",

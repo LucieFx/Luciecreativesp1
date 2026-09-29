@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/lib/constants";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X, ChevronDown, Video, Palette, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
@@ -16,12 +16,27 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const lastScrollY = React.useRef(0);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const lastScrollY = useRef(0);
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
   }, [pathname]);
+
+  const handleDropdownEnter = () => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    setServicesDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setServicesDropdownOpen(false);
+    }, 180);
+  };
 
   // Lock body scroll when mobile menu is active
   useEffect(() => {
@@ -61,16 +76,17 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Keyboard accessibility: Escape key closes mobile menu
+  // Keyboard accessibility: Escape key closes mobile menu & dropdown
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && mobileMenuOpen) {
-        setMobileMenuOpen(false);
+      if (e.key === "Escape") {
+        if (mobileMenuOpen) setMobileMenuOpen(false);
+        if (servicesDropdownOpen) setServicesDropdownOpen(false);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, servicesDropdownOpen]);
 
   // Logo click handler (smooth scroll up if on home, or clean jump)
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -79,6 +95,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
     }
 
     setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
     const lenis = typeof window !== "undefined" ? (window as any).__lenis : null;
 
     if (pathname === "/") {
@@ -100,6 +117,11 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
   // Strictly determines if a nav link matches current route (never active on "/")
   const isLinkActive = (link: (typeof NAV_LINKS)[0]) => {
     if (pathname === "/") return false;
+    if (link.subLinks && link.subLinks.length > 0) {
+      return link.subLinks.some(
+        (sub) => pathname === sub.href || (sub.href !== "/" && pathname.startsWith(sub.href))
+      );
+    }
     return pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
   };
 
@@ -145,12 +167,107 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
               {NAV_LINKS.map((link) => {
                 const isActive = isLinkActive(link);
 
+                if (link.hasDropdown && link.subLinks) {
+                  return (
+                    <div
+                      key={link.name}
+                      className="relative"
+                      onMouseEnter={handleDropdownEnter}
+                      onMouseLeave={handleDropdownLeave}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setServicesDropdownOpen((prev) => !prev)}
+                        aria-expanded={servicesDropdownOpen}
+                        aria-haspopup="true"
+                        className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-lg group select-none flex items-center gap-1.5 cursor-pointer ${
+                          isActive
+                            ? "text-[#8B1A1A] font-semibold bg-[#8B1A1A]/[0.08]"
+                            : "text-body hover:text-[#8B1A1A] hover:bg-neutral-100/70"
+                        }`}
+                      >
+                        <span className="relative z-10">{link.name}</span>
+                        <ChevronDown
+                          className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                            servicesDropdownOpen
+                              ? "rotate-180 text-[#8B1A1A]"
+                              : "text-muted group-hover:text-[#8B1A1A]"
+                          }`}
+                        />
+
+                        {isActive && (
+                          <span
+                            className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full bg-[#8B1A1A]"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </button>
+
+                      {/* Floating Dropdown Card */}
+                      <AnimatePresence>
+                        {servicesDropdownOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                            transition={{ duration: 0.16, ease: "easeOut" }}
+                            className="absolute top-full left-0 mt-2.5 w-80 rounded-2xl bg-white/98 backdrop-blur-xl border border-line/90 p-2 shadow-[0_20px_45px_-12px_rgba(0,0,0,0.16),0_4px_16px_rgba(0,0,0,0.06)] z-50 overflow-hidden"
+                          >
+                            <div className="px-2.5 pt-2 pb-1.5 text-[10px] font-mono font-bold tracking-widest uppercase text-muted">
+                              Our Capabilities
+                            </div>
+                            <div className="space-y-1">
+                              {link.subLinks.map((sub) => {
+                                const isSubActive = pathname === sub.href;
+                                return (
+                                  <Link
+                                    key={sub.href}
+                                    href={sub.href}
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                    className={`group/item flex items-start gap-3 p-2.5 rounded-xl transition-all ${
+                                      isSubActive
+                                        ? "bg-[#8B1A1A]/[0.08] text-[#8B1A1A]"
+                                        : "hover:bg-neutral-100/80 text-ink"
+                                    }`}
+                                  >
+                                    <div
+                                      className={`mt-0.5 p-2 rounded-lg shrink-0 transition-colors ${
+                                        isSubActive
+                                          ? "bg-[#8B1A1A] text-white"
+                                          : "bg-neutral-100 group-hover/item:bg-[#8B1A1A]/10 text-body group-hover/item:text-[#8B1A1A]"
+                                      }`}
+                                    >
+                                      {sub.name.includes("Video") && <Video className="w-4 h-4" />}
+                                      {sub.name.includes("Graphic") && <Palette className="w-4 h-4" />}
+                                      {sub.name.includes("Web") && <Globe className="w-4 h-4" />}
+                                    </div>
+                                    <div className="flex flex-col">
+                                      <div className="text-[13px] font-bold group-hover/item:text-[#8B1A1A] transition-colors leading-tight">
+                                        {sub.name}
+                                      </div>
+                                      {sub.description && (
+                                        <div className="text-[11px] text-body/80 font-normal leading-snug mt-0.5 line-clamp-1">
+                                          {sub.description}
+                                        </div>
+                                      )}
+                                    </div>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
                     aria-current={isActive ? "page" : undefined}
-                    className={`relative whitespace-nowrap px-3 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-lg group select-none ${
+                    className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-lg group select-none ${
                       isActive
                         ? "text-[#8B1A1A] font-semibold bg-[#8B1A1A]/[0.08]"
                         : "text-body hover:text-[#8B1A1A] hover:bg-neutral-100/70"
@@ -211,11 +328,71 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
 
             {/* Mobile Nav Links */}
             <nav
-              className="flex flex-col space-y-3 sm:space-y-4 my-auto font-sans"
+              className="flex flex-col space-y-2 sm:space-y-3 my-auto font-sans"
               aria-label="Mobile Navigation Links"
             >
               {NAV_LINKS.map((link) => {
                 const isActive = isLinkActive(link);
+
+                if (link.hasDropdown && link.subLinks) {
+                  return (
+                    <div key={link.name} className="flex flex-col">
+                      <button
+                        type="button"
+                        onClick={() => setMobileServicesOpen((prev) => !prev)}
+                        className={`group flex items-center justify-between text-2xl sm:text-3xl font-bold tracking-tight py-2.5 px-3.5 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] cursor-pointer ${
+                          isActive
+                            ? "text-[#8B1A1A] bg-[#8B1A1A]/[0.08]"
+                            : "text-ink hover:text-[#8B1A1A] hover:bg-line/50"
+                        }`}
+                      >
+                        <span>{link.name}</span>
+                        <ChevronDown
+                          className={`w-6 h-6 text-muted transition-transform duration-200 ${
+                            mobileServicesOpen ? "rotate-180 text-[#8B1A1A]" : ""
+                          }`}
+                        />
+                      </button>
+
+                      <AnimatePresence>
+                        {mobileServicesOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden pl-3 pr-1 pt-1 pb-1 flex flex-col space-y-1"
+                          >
+                            {link.subLinks.map((sub) => {
+                              const isSubActive = pathname === sub.href;
+                              return (
+                                <Link
+                                  key={sub.href}
+                                  href={sub.href}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className={`flex items-center justify-between py-2 px-3 rounded-xl text-base sm:text-lg font-semibold transition-all ${
+                                    isSubActive
+                                      ? "text-[#8B1A1A] bg-[#8B1A1A]/[0.08]"
+                                      : "text-body hover:text-[#8B1A1A] hover:bg-line/40"
+                                  }`}
+                                >
+                                  <div className="flex items-center gap-2.5">
+                                    {sub.name.includes("Video") && <Video className="w-4 h-4 text-[#8B1A1A]" />}
+                                    {sub.name.includes("Graphic") && <Palette className="w-4 h-4 text-[#8B1A1A]" />}
+                                    {sub.name.includes("Web") && <Globe className="w-4 h-4 text-[#8B1A1A]" />}
+                                    <span>{sub.name}</span>
+                                  </div>
+                                  <ArrowUpRight className="w-4 h-4 text-muted" />
+                                </Link>
+                              );
+                            })}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.href}

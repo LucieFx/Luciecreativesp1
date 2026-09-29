@@ -535,29 +535,6 @@ export function IPhoneReelsCard({
             maxWidth: "calc(260 * var(--pt))",
           }}
         >
-          {/* F. Views Badge (Translucent pill with play icon) */}
-          {viewsText && (
-            <div
-              className="inline-flex items-center bg-black/45 backdrop-blur-md border border-white/15 rounded-full text-white/90 font-semibold"
-              style={{
-                gap: "calc(4 * var(--pt))",
-                paddingLeft: "calc(7 * var(--pt))",
-                paddingRight: "calc(9 * var(--pt))",
-                paddingTop: "calc(2.5 * var(--pt))",
-                paddingBottom: "calc(2.5 * var(--pt))",
-                fontSize: "calc(10 * var(--pt))",
-                marginBottom: "calc(7 * var(--pt))",
-                width: "fit-content",
-              }}
-            >
-              <Play
-                className="fill-white"
-                style={{ width: "calc(8 * var(--pt))", height: "calc(8 * var(--pt))" }}
-              />
-              <span>{viewsText} views</span>
-            </div>
-          )}
-
           {/* Account Header Row: Avatar, Handle, Verified Check, Follow Pill */}
           <div
             className="flex items-center"

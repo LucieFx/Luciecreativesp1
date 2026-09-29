@@ -71,7 +71,7 @@ export const VEDAM_VILLAS_MULTI_VIDEOS: WorkVideoItem[] = [
     title: "Vedam Villas Luxury Tour with Taniya Oberoi",
     label: "Influencer Tour (9:16)",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790267065/lucie-creatives/videos/clients/vedam-villas/vedam-villas-influencer-tour.mp4",
-    posterSrc: "https://img.youtube.com/vi/lLrw4oeHQwc/maxresdefault.jpg",
+    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1790684877/lucie-creatives/portfolio/vedam-villas-influencer-tour-poster.jpg",
     aspectRatio: "9/16",
     description:
       "Influencer-led architectural walkthrough blending authentic lifestyle presentation with luxury discovery, achieving record site-visit bookings.",
@@ -278,7 +278,7 @@ export const VIDEO_PROJECTS: WorkProject[] = [
       "Contributed to 63M+ organic video impressions, 42k saves, and drove 200+ direct showroom and model villa visits in 30 days.",
     mediaType: "video",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790267065/lucie-creatives/videos/clients/vedam-villas/vedam-villas-influencer-tour.mp4",
-    posterSrc: "https://img.youtube.com/vi/lLrw4oeHQwc/maxresdefault.jpg",
+    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1790684877/lucie-creatives/portfolio/vedam-villas-influencer-tour-poster.jpg",
     aspectRatio: "9/16",
     deliverables: [
       "High-Retention Influencer Reel",

@@ -77,17 +77,46 @@ export const SITE_CONFIG = {
   ],
 };
 
+export interface NavSubLink {
+  name: string;
+  href: string;
+  description?: string;
+}
+
 export interface NavLink {
   name: string;
   href: string;
   hasDropdown?: boolean;
+  subLinks?: NavSubLink[];
 }
 
+export const NAV_SERVICES_LINKS: NavSubLink[] = [
+  {
+    name: "Video Editing",
+    href: "/video-editing",
+    description: "Cinematic commercials, reels & high-retention pacing",
+  },
+  {
+    name: "Graphic Design",
+    href: "/graphic-design",
+    description: "Brand identities, luxury pitch decks & visual packaging",
+  },
+  {
+    name: "Web Development",
+    href: "/web-development",
+    description: "High-speed Next.js digital platforms & responsive flagships",
+  },
+];
+
 export const NAV_LINKS: NavLink[] = [
-  { name: "Video Editing", href: "/video-editing" },
-  { name: "Graphic Design", href: "/graphic-design" },
-  { name: "Web Development", href: "/dev" },
+  {
+    name: "Services",
+    href: "/video-editing",
+    hasDropdown: true,
+    subLinks: NAV_SERVICES_LINKS,
+  },
   { name: "About", href: "/about" },
+  { name: "Careers", href: "/careers" },
   { name: "Insights", href: "/insights" },
 ];
 

@@ -159,11 +159,6 @@ function BentoProjectCard({
           {project.category}
         </div>
 
-        {/* Outcome Metric Badge */}
-        <div className="absolute bottom-4 right-4 bg-[#7A1F2B] text-white px-3.5 py-1.5 rounded-full text-xs font-black shadow-md flex items-center gap-1.5 z-20">
-          <span>{project.views || project.outcomeMetric || SITE_STATS.viewsLabel}</span>
-          <span className="text-[10px] font-medium opacity-90">Views</span>
-        </div>
       </div>
 
       {/* Text Info */}

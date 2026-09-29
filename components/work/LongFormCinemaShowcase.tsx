@@ -88,9 +88,6 @@ function CompactCinemaCard({ project }: { project: WorkProject }) {
             <span className="px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-white">
               {project.client}
             </span>
-            <span className="px-2 py-0.5 rounded-full bg-brand-red text-[10px] font-mono text-white shadow-xs">
-              {project.views || project.outcomeMetric}
-            </span>
           </div>
         </div>
 
@@ -251,9 +248,6 @@ function CinemaProjectPanel({
         <div className="absolute top-2.5 sm:top-4 inset-x-2.5 sm:inset-x-4 flex items-center justify-between pointer-events-none z-10">
           <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-mono font-bold text-white uppercase">
             16:9 Commercial
-          </span>
-          <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-brand-red backdrop-blur-md text-[10px] sm:text-xs font-mono font-bold text-white shadow-md">
-            {project.views || project.outcomeMetric || SITE_STATS.viewsLabel}
           </span>
         </div>
 

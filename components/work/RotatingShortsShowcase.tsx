@@ -78,15 +78,31 @@ function getTilePoster(project: WorkProject): string {
   return project.posterSrc || "";
 }
 
-function NowPlayingEqualizer() {
+function NowPlayingHUD({ compact = false }: { compact?: boolean }) {
   return (
     <div
       aria-hidden="true"
-      className="absolute top-2 right-2 z-10 flex items-end gap-0.5 px-1.5 py-1 rounded bg-[#7A1F2B] text-white shadow-xs pointer-events-none"
+      className={`absolute ${
+        compact ? "top-2 right-2 px-1.5 py-0.5" : "top-2.5 right-2.5 px-2 py-1"
+      } z-30 flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#FF4D5E]/40 text-white shadow-[0_4px_14px_rgba(122,31,43,0.45)] pointer-events-none transition-all duration-300`}
     >
-      <span className="w-0.5 h-2 bg-white rounded-full animate-[pulse_0.8s_ease-in-out_infinite]" />
-      <span className="w-0.5 h-3 bg-white rounded-full animate-[pulse_0.5s_ease-in-out_infinite]" />
-      <span className="w-0.5 h-1.5 bg-white rounded-full animate-[pulse_1.1s_ease-in-out_infinite]" />
+      {/* Pulsing ruby live beacon dot */}
+      <span className="relative flex h-1.5 w-1.5">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF4D5E] opacity-75" />
+        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#FF4D5E]" />
+      </span>
+
+      {/* 4-bar dynamic audio equalizer */}
+      <div className="flex items-end gap-[1.5px] h-2.5">
+        <span className="w-[1.5px] bg-white rounded-full animate-eq-bar-1" />
+        <span className="w-[1.5px] bg-[#FF4D5E] rounded-full animate-eq-bar-2" />
+        <span className="w-[1.5px] bg-white rounded-full animate-eq-bar-3" />
+        <span className="w-[1.5px] bg-[#FF4D5E] rounded-full animate-eq-bar-4" />
+      </div>
+
+      <span className="text-[8.5px] font-mono font-black tracking-wider uppercase text-white/95 leading-none">
+        LIVE
+      </span>
     </div>
   );
 }
@@ -352,7 +368,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                           isCurrent ? "w-5 bg-[#8B1A1A]" : "w-1.5 bg-[#8B1A1A]/25 hover:bg-[#8B1A1A]/50"
                         }`}
-                        title={`Top Reel ${i + 1}: ${r.client} (${r.views || ""})`}
+                        title={`Top Reel ${i + 1}: ${r.client}`}
                         aria-label={`View top reel ${i + 1}: ${r.client}`}
                       />
                     );
@@ -471,44 +487,60 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                     aria-pressed={isActive}
                     className={`relative shrink-0 w-[calc((100%-2.2*14px)/3.2)] min-w-[105px] max-w-[135px] aspect-[9/16] rounded-2xl overflow-hidden snap-start transition-all duration-300 cursor-pointer text-left group ${
                       isActive
-                        ? "ring-2 ring-[#7A1F2B] ring-offset-2 ring-offset-white border border-[#7A1F2B] shadow-[0_8px_20px_rgba(122,31,43,0.22)]"
-                        : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:border-[#8B1A1A]/30 bg-white"
+                        ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_20px_rgba(255,77,94,0.35),0_8px_20px_rgba(122,31,43,0.22)] -translate-y-0.5"
+                        : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:border-[#8B1A1A]/30 bg-slate-950"
                     }`}
                   >
-                    {/* Active rotating conic gradient border ring */}
+                    {/* Active Laser Perimeter Ring (Center Masked so Thumbnail is 100% visible) */}
                     {isActive && !reducedMotion && (
-                      <div className="absolute -inset-[2px] rounded-[18px] pointer-events-none overflow-hidden z-20">
+                      <div
+                        aria-hidden="true"
+                        className="absolute -inset-[2px] rounded-[18px] pointer-events-none p-[2px] z-20 overflow-hidden"
+                        style={{
+                          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                          WebkitMaskComposite: "xor",
+                          maskComposite: "exclude",
+                        }}
+                      >
                         <div
                           style={{
                             background:
-                              "conic-gradient(from 0deg, #7A1F2B 0%, #FF4D5E 50%, #7A1F2B 100%)",
-                            animation: "spin-conic 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+                              "conic-gradient(from 0deg, #FF4D5E 0%, #7A1F2B 20%, #FF808F 45%, #FFFFFF 50%, #FF808F 55%, #7A1F2B 80%, #FF4D5E 100%)",
+                            animation: "spin-conic 3s linear infinite",
                           }}
-                          className="absolute -inset-[100%] will-change-transform"
+                          className="absolute -inset-[150%] will-change-transform"
                         />
-                        <div className="absolute inset-[2px] rounded-2xl bg-transparent" />
                       </div>
                     )}
+
+                    {/* Creative Cinema Skeleton Background */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#180507] via-[#290b10] to-[#140406] z-0 flex flex-col items-center justify-center pointer-events-none overflow-hidden">
+                      <div
+                        aria-hidden="true"
+                        className="absolute inset-x-0 h-10 bg-gradient-to-b from-transparent via-[#FF4D5E]/20 to-transparent pointer-events-none animate-radar-sweep"
+                      />
+                      <div className="flex items-center gap-1 opacity-25">
+                        <div className="w-1 h-3 bg-[#FF4D5E] rounded-full animate-pulse" />
+                        <div className="w-1 h-6 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:200ms]" />
+                        <div className="w-1 h-8 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:400ms]" />
+                        <div className="w-1 h-4 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:300ms]" />
+                      </div>
+                    </div>
+
                     <Image
                       src={getTilePoster(reel)}
                       alt={reel.title}
                       fill
                       sizes="(max-width: 1024px) 140px, 160px"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 relative z-10"
                     />
-                    {isActive && <NowPlayingEqualizer />}
+                    {isActive && <NowPlayingHUD compact />}
 
-                    {/* Bottom Overlay: Thin client name & view count with semi-transparent black gradient */}
+                    {/* Bottom Overlay: Thin client name with semi-transparent black gradient */}
                     <div className="absolute inset-x-0 bottom-0 pt-8 pb-2.5 px-2 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none z-10 flex flex-col justify-end">
                       <span className="text-[10.5px] font-bold text-white tracking-tight line-clamp-1 leading-tight drop-shadow-xs">
                         {reel.client}
                       </span>
-                      {reel.views && (
-                        <div className="flex items-center gap-0.5 mt-0.5 font-mono text-[9px] text-white/90">
-                          <Play className="w-2 h-2 fill-white text-white shrink-0" />
-                          <span>{reel.views}</span>
-                        </div>
-                      )}
                     </div>
                   </button>
                 );
@@ -549,48 +581,65 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         aria-pressed={isActive}
                         className={`relative w-full aspect-[9/16] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer text-left group hover:-translate-y-1 ${
                           isActive
-                            ? "ring-2 ring-[#7A1F2B] ring-offset-2 ring-offset-white border border-[#7A1F2B] shadow-[0_12px_28px_rgba(122,31,43,0.22)] -translate-y-1"
-                            : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:shadow-[0_10px_24px_rgba(139,26,26,0.12)] hover:border-[#8B1A1A]/30 bg-white"
+                            ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_25px_rgba(255,77,94,0.35),0_12px_28px_rgba(122,31,43,0.25)] -translate-y-1"
+                            : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:shadow-[0_10px_24px_rgba(139,26,26,0.12)] hover:border-[#8B1A1A]/30 bg-slate-950"
                         }`}
                       >
-                        {/* Active rotating conic gradient border ring */}
+                        {/* Active Rotating Laser Perimeter Ring (Center Masked so Thumbnail is 100% visible) */}
                         {isActive && !reducedMotion && (
-                          <div className="absolute -inset-[2px] rounded-[18px] pointer-events-none overflow-hidden z-20">
+                          <div
+                            aria-hidden="true"
+                            className="absolute -inset-[2px] rounded-[18px] pointer-events-none p-[2.5px] z-20 overflow-hidden"
+                            style={{
+                              WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                              WebkitMaskComposite: "xor",
+                              maskComposite: "exclude",
+                            }}
+                          >
                             <div
                               style={{
                                 background:
-                                  "conic-gradient(from 0deg, #7A1F2B 0%, #FF4D5E 50%, #7A1F2B 100%)",
-                                animation: "spin-conic 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+                                  "conic-gradient(from 0deg, #FF4D5E 0%, #7A1F2B 20%, #FF808F 45%, #FFFFFF 50%, #FF808F 55%, #7A1F2B 80%, #FF4D5E 100%)",
+                                animation: "spin-conic 3s linear infinite",
                               }}
-                              className="absolute -inset-[100%] will-change-transform"
+                              className="absolute -inset-[150%] will-change-transform"
                             />
-                            <div className="absolute inset-[2px] rounded-2xl bg-transparent" />
                           </div>
                         )}
+
+                        {/* Creative Cinema Skeleton Background */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#180507] via-[#290b10] to-[#140406] z-0 flex flex-col items-center justify-center pointer-events-none overflow-hidden">
+                          <div
+                            aria-hidden="true"
+                            className="absolute inset-x-0 h-12 bg-gradient-to-b from-transparent via-[#FF4D5E]/20 to-transparent pointer-events-none animate-radar-sweep"
+                          />
+                          <div className="flex items-center gap-1.5 opacity-25">
+                            <div className="w-1 h-4 bg-[#FF4D5E] rounded-full animate-pulse" />
+                            <div className="w-1 h-8 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:200ms]" />
+                            <div className="w-1 h-12 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:400ms]" />
+                            <div className="w-1 h-6 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:300ms]" />
+                            <div className="w-1 h-3 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:150ms]" />
+                          </div>
+                        </div>
+
                         <Image
                           src={getTilePoster(reel)}
                           alt={reel.title}
                           fill
                           sizes="(max-width: 1280px) 25vw, 200px"
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105 relative z-10"
                         />
-                        {isActive && <NowPlayingEqualizer />}
+                        {isActive && <NowPlayingHUD />}
 
                         {/* Thin client name overlay with semi-transparent black gradient */}
                         <div className="absolute inset-x-0 bottom-0 pt-10 pb-3 px-3 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none z-10 flex flex-col justify-end">
                           <span className="text-[11.5px] font-bold text-white tracking-tight line-clamp-1 leading-tight drop-shadow-xs">
                             {reel.client}
                           </span>
-                          <div className="flex items-center justify-between mt-1 text-[9.5px]">
-                            <span className="font-mono text-white/75 uppercase tracking-wider truncate max-w-[65%]">
+                          <div className="mt-1 text-[9.5px]">
+                            <span className="font-mono text-white/75 uppercase tracking-wider truncate block">
                               {reel.reelCategory || reel.category}
                             </span>
-                            {reel.views && (
-                              <span className="flex items-center gap-1 font-mono font-bold text-white shrink-0 bg-white/20 px-1.5 py-0.5 rounded backdrop-blur-xs text-[9.5px]">
-                                <Play className="w-2.5 h-2.5 fill-white text-white shrink-0" />
-                                {reel.views}
-                              </span>
-                            )}
                           </div>
                         </div>
                       </button>
@@ -734,12 +783,6 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                             </span>
                           </button>
                         </div>
-
-                        {theaterProject.views && (
-                          <span className="text-[10px] font-bold text-red-300 uppercase tracking-wider">
-                            {theaterProject.views} Views
-                          </span>
-                        )}
                       </div>
                     </div>
                   </>
@@ -824,6 +867,31 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
             transform: rotate(360deg);
           }
         }
+        @keyframes eq-1 {
+          0%, 100% { height: 2px; }
+          50% { height: 9px; }
+        }
+        @keyframes eq-2 {
+          0%, 100% { height: 10px; }
+          50% { height: 3px; }
+        }
+        @keyframes eq-3 {
+          0%, 100% { height: 5px; }
+          50% { height: 10px; }
+        }
+        @keyframes eq-4 {
+          0%, 100% { height: 9px; }
+          50% { height: 3px; }
+        }
+        @keyframes radar-sweep {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(400%); }
+        }
+        :global(.animate-eq-bar-1) { animation: eq-1 0.7s ease-in-out infinite; }
+        :global(.animate-eq-bar-2) { animation: eq-2 0.5s ease-in-out infinite; }
+        :global(.animate-eq-bar-3) { animation: eq-3 0.9s ease-in-out infinite; }
+        :global(.animate-eq-bar-4) { animation: eq-4 0.6s ease-in-out infinite; }
+        :global(.animate-radar-sweep) { animation: radar-sweep 2.8s ease-in-out infinite; }
       `}</style>
     </section>
   );
