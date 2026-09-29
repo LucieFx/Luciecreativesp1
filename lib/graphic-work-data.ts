@@ -62,8 +62,8 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     testimonial: {
       quote:
         "The packaging architecture transformed our frames from simple eyewear into collector-grade accessories. Clients praise the unboxing experience daily.",
-      author: "Siddharth Patel",
-      role: "Founder, Speczo Optics",
+      author: "Founder",
+      role: "Speczo Optics",
     },
     processStills: [
       {
@@ -803,8 +803,8 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     testimonial: {
       quote:
         "The admissions campaign designed by Lucie Creatives set a benchmark for educational branding. Our campus saw record walk-ins on opening week.",
-      author: "Dr. R. K. Patel",
-      role: "Managing Trustee, Ideal Educational Trust",
+      author: "Managing Trustee",
+      role: "Ideal Educational Trust",
     },
     processStills: [
       {

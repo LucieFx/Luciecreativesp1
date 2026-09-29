@@ -6,7 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CAREER_ROLES, getCareerRoleBySlug } from "@/lib/careers-data";
 import { CareerApplicationForm } from "@/components/careers/CareerApplicationForm";
-import { CheckCircle2, Briefcase, Sparkles } from "lucide-react";
+import { CheckCircle2, Briefcase } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
 interface RolePageProps {
@@ -82,7 +82,7 @@ export default async function RoleDetailPage({ params }: RolePageProps) {
 
         {/* Role Header */}
         <header className="mb-12 border-b border-line/80 pb-8">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-ink tracking-tight leading-[1.08] mb-4">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-black text-ink tracking-[-0.02em] leading-[1.0] mb-4 text-balance">
             {role.title}
           </h1>
 
@@ -156,7 +156,7 @@ export default async function RoleDetailPage({ params }: RolePageProps) {
                     key={index}
                     className="flex items-start gap-3 text-sm sm:text-base text-body font-normal leading-relaxed"
                   >
-                    <Sparkles className="w-5 h-5 text-[#8B1A1A]/70 shrink-0 mt-0.5" />
+                    <span className="font-mono text-[#8B1A1A] font-bold shrink-0 mt-0.5">—</span>
                     <span>{item}</span>
                   </li>
                 ))}

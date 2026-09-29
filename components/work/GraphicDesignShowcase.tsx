@@ -259,7 +259,7 @@ function GraphicGridCard({
             <h4 className="text-white text-base font-bold leading-snug mb-2.5">
               {project.title}
             </h4>
-            <p className="text-xs text-muted/60 line-clamp-3 leading-relaxed font-normal">
+            <p className="text-xs text-slate-300 line-clamp-3 leading-relaxed font-normal">
               {project.tagline || project.brief}
             </p>
 
@@ -268,7 +268,7 @@ function GraphicGridCard({
               {project.deliverables.slice(0, 3).map((del, i) => (
                 <span
                   key={i}
-                  className="px-2 py-0.5 rounded-md bg-white/10 border border-white/15 text-[10px] text-white/90 font-mono"
+                  className="px-2.5 py-1 rounded-md bg-white/10 border border-white/20 text-[11px] text-white font-mono font-medium backdrop-blur-xs"
                 >
                   {del}
                 </span>
@@ -277,7 +277,7 @@ function GraphicGridCard({
           </div>
 
           <div className="pt-3 border-t border-white/15 flex items-center justify-between">
-            <span className="text-[10px] text-muted font-mono truncate mr-2">
+            <span className="text-[10px] text-slate-400 font-mono truncate mr-2">
               {project.outcomeLabel}
             </span>
             <Link

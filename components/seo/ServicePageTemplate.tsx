@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  Sparkles,
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
@@ -141,10 +140,10 @@ export function ServicePageTemplate({
 
         {/* 1. HERO SECTION */}
         <section className="pt-32 sm:pt-40 pb-16 px-4 sm:px-6 md:px-12 relative overflow-hidden bg-white">
-          <div className="absolute inset-0 dot-grid-pattern opacity-60 pointer-events-none" />
+          {null}
           
           {/* Ambient Glow Orb */}
-          <div className="absolute top-1/4 right-10 w-[500px] h-[500px] bg-[#7A1F2B]/[0.05] rounded-full blur-[140px] pointer-events-none -z-0" />
+          {null}
 
           <div className="max-w-6xl mx-auto relative z-10">
             <Breadcrumbs
@@ -155,17 +154,16 @@ export function ServicePageTemplate({
               className="mb-8"
             />
 
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-soft border border-[#7A1F2B]/20 mb-6 cursor-default">
-              <Sparkles className="w-3.5 h-3.5 text-[#7A1F2B]" />
-              <span className="text-[11px] font-black uppercase tracking-widest text-ink">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-white border border-line mb-6 cursor-default shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" />
+              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-ink">
                 {eyebrowBadge}
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse ml-0.5" />
             </div>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-ink uppercase leading-[1.08] max-w-5xl">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-black tracking-[-0.02em] text-ink leading-[1.0] max-w-5xl text-balance">
               {headlineRegular}{" "}
-              <span className="text-[#7A1F2B] font-serif italic lowercase font-normal block sm:inline text-[1.08em]">
+              <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
                 {headlineItalic}
               </span>
             </h1>
@@ -231,11 +229,11 @@ export function ServicePageTemplate({
               {capabilities.map((c, i) => (
                 <div
                   key={i}
-                  className="p-7 rounded-3xl backdrop-blur-xl bg-white/85 border border-white/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.06),0_0_1px_1px_rgba(255,255,255,0.8)] flex flex-col justify-between"
+                  className="p-6 sm:p-7 rounded-xl bg-white border border-line shadow-xs flex flex-col justify-between hover:border-[#7A1F2B]/30 transition-colors"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <span className="text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-[#FDF2F2] text-[#7A1F2B] border border-[#7A1F2B]/20">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#FDF2F2] text-[#7A1F2B] border border-[#7A1F2B]/20">
                         {c.tag}
                       </span>
                       <span className="text-xs font-mono font-bold text-muted">
@@ -243,10 +241,10 @@ export function ServicePageTemplate({
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-black text-ink uppercase tracking-tight mb-2">
+                    <h3 className="text-lg font-bold text-ink uppercase tracking-tight mb-2">
                       {c.title}
                     </h3>
-                    <p className="text-sm font-medium text-body leading-relaxed">
+                    <p className="text-sm font-normal text-body leading-relaxed">
                       {c.description}
                     </p>
                   </div>
@@ -256,8 +254,8 @@ export function ServicePageTemplate({
 
             {/* Deliverables Checklist (if provided) */}
             {deliverables.length > 0 && (
-              <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-white border border-line/80 shadow-soft">
-                <h3 className="text-xs font-black uppercase tracking-wider text-muted mb-4">
+              <div className="mt-12 p-6 sm:p-8 rounded-xl bg-white border border-line shadow-xs">
+                <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-muted mb-4">
                   Standard Production Deliverables
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-bold text-body">
@@ -355,7 +353,7 @@ export function ServicePageTemplate({
                 </div>
                 <Link
                   href="/video-editing"
-                  className="text-xs font-black uppercase tracking-wider text-[#7A1F2B] hover:translate-x-1 transition-transform inline-flex items-center gap-1.5"
+                  className="text-xs font-black uppercase tracking-wider text-[#7A1F2B] transition-transform inline-flex items-center gap-1.5"
                 >
                   <span>Explore All Projects</span>
                   <ArrowRight className="w-4 h-4" />
@@ -393,7 +391,7 @@ export function ServicePageTemplate({
                           {p.outcomeLabel}
                         </span>
                       </div>
-                      <span className="font-black text-[#7A1F2B] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                      <span className="font-black text-[#7A1F2B] transition-transform inline-flex items-center gap-1">
                         Read Study →
                       </span>
                     </div>
@@ -417,7 +415,7 @@ export function ServicePageTemplate({
                 </div>
                 <Link
                   href="/insights"
-                  className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#7A1F2B] hover:translate-x-1 transition-transform"
+                  className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#7A1F2B] transition-transform"
                 >
                   <span>View All Insights</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -450,7 +448,7 @@ export function ServicePageTemplate({
                       <span className="text-muted font-semibold truncate max-w-[160px]">
                         By {art.author.name}
                       </span>
-                      <span className="font-black text-[#7A1F2B] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 shrink-0">
+                      <span className="font-black text-[#7A1F2B] transition-transform inline-flex items-center gap-1 shrink-0">
                         Read Guide →
                       </span>
                     </div>
@@ -582,7 +580,7 @@ export function ServicePageTemplate({
                   >
                     <div className="text-sm font-black text-ink group-hover:text-[#7A1F2B] transition-colors flex items-center justify-between mb-1">
                       <span>{rel.name}</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform" />
                     </div>
                     <p className="text-xs text-muted font-medium">
                       {rel.description}

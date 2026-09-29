@@ -48,7 +48,7 @@ export default function Error({
 
         {/* Heading */}
         <h1 className="font-sans font-black text-3xl sm:text-5xl text-ink tracking-tight mb-3">
-          Something went <span className="font-serif italic font-normal text-[#7A1F2B]">wrong.</span>
+          Something went <span className="text-[#7A1F2B] italic">wrong.</span>
         </h1>
 
         {/* Message */}

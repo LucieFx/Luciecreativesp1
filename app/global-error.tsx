@@ -38,7 +38,7 @@ export default function GlobalError({
           </div>
 
           <h1 className="font-sans font-black text-3xl sm:text-5xl text-ink tracking-tight mb-3">
-            Something went <span className="font-serif italic font-normal text-[#7A1F2B]">wrong.</span>
+            Something went <span className="text-[#7A1F2B] italic">wrong.</span>
           </h1>
 
           <p className="text-body text-sm sm:text-base font-medium max-w-md mb-8 leading-relaxed">

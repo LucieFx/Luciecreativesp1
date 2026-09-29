@@ -18,54 +18,33 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
       className="relative bg-white pt-24 md:pt-32 pb-14 md:pb-20 px-4 sm:px-6 md:px-12 overflow-visible font-sans font-normal"
     >
       {/* Background Dot Matrix Pattern */}
-      <div
-        className="absolute inset-0 dot-grid-pattern dot-grid-radial-mask pointer-events-none opacity-60"
-      />
+      {null}
 
       {/* Atmospheric Floating Depth Orb */}
-      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#7A1F2B]/[0.04] rounded-full blur-[140px] pointer-events-none" />
+      {null}
 
-      {/* Background S-Curve Line */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible"
-        viewBox="0 0 1440 900"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M -40 50 C 180 70 280 230 520 235 C 780 240 940 430 1140 580 C 1280 685 1380 770 1480 840"
-          stroke="#7A1F2B"
-          strokeWidth="2.4"
-          strokeOpacity={0.15}
-          strokeLinecap="round"
-          vectorEffect="non-scaling-stroke"
-        />
-      </svg>
-
-      {/* Main Grid: Split Layout (Headline & Narrative on Left, Boring vs Ours on Right) */}
+      {/* Main Grid: Split Layout (Headline & Narrative on Left, Phone Showcase on Right) */}
       <div className="max-w-7xl mx-auto w-full relative z-10 pt-2 pb-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* LEFT COLUMN: Agency Narrative & Actions */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
-            {/* Eyebrow: visible, small caps, above the H1 */}
-            <div className="mb-4 text-xs sm:text-[13px] font-mono font-bold tracking-widest text-[#7A1F2B] uppercase [font-variant-caps:all-small-caps]">
-              {HERO_EYEBROW}
+            {/* Eyebrow: Simple, clean service discipline indicator */}
+            <div className="mb-4 text-xs sm:text-sm font-semibold tracking-wider text-[#7A1F2B] uppercase">
+              Video Editing · Graphic Design · Web Development
             </div>
 
             {/* Single H1 on the page: "Boring gets scrolled past." */}
-            <h1 className="tracking-tight text-text-primary mb-4 text-balance font-sans font-black text-[clamp(2.1rem,6vw,4.8rem)] leading-[1.06]">
+            <h1 className="tracking-[-0.02em] text-text-primary mb-4 text-balance font-display font-black text-[clamp(2.1rem,6vw,4.8rem)] leading-[1.0]">
               <span className="inline-block mr-3">Boring</span>
               <span className="inline-block mr-3">gets</span>
-              <span className="font-serif italic font-normal text-[#7A1F2B] inline-block">
+              <span className="font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal inline-block">
                 scrolled past.
               </span>
             </h1>
 
-            {/* Subhead */}
-            <p className="max-w-xl text-base sm:text-lg text-text-secondary font-medium leading-relaxed mb-8 text-pretty">
-              {HERO_SUB}
+            {/* Subhead: at least 18px with strong contrast */}
+            <p className="max-w-xl text-[18px] sm:text-[20px] text-slate-700 font-medium leading-relaxed mb-8 text-pretty">
+              Video editing, graphic design and web development for brands that want to be noticed.
             </p>
 
             {/* Action Buttons: "Start a project" & "See our work" */}

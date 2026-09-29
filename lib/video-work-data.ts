@@ -480,8 +480,8 @@ export const VIDEO_PROJECTS: WorkProject[] = [
     testimonial: {
       quote:
         "The cinematic pace and quality of these vertical reels set a new standard for our commercial project marketing.",
-      author: "Keyur Patel",
-      role: "Director, Maruti Buildcon",
+      author: "Director",
+      role: "Maruti Buildcon",
     },
     processStills: [
       {
@@ -622,8 +622,8 @@ export const VIDEO_PROJECTS: WorkProject[] = [
     testimonial: {
       quote:
         "The elegance of these reels captured the true essence of living at Nandanvan. It made an indelible impression on our buyers.",
-      author: "Bhavesh Patel",
-      role: "Managing Partner, Nandanvan Estates",
+      author: "Managing Partner",
+      role: "Nandanvan Estates",
     },
     processStills: [
       {
@@ -873,7 +873,7 @@ export const VIDEO_PROJECTS: WorkProject[] = [
     year: 2026,
     tagline: "Aggressive hook pacing, kinetic typography, and multi-angle punch-ins establishing commanding founder authority.",
     brief:
-      "A high-impact founder interview and personal branding reel series featuring Nishant Patel. Cut into high-velocity micro-moments with custom animated subtitles, sound design, and pattern interrupts that build authority across Instagram and LinkedIn.",
+      "A high-impact founder interview and personal branding reel series. Cut into high-velocity micro-moments with custom animated subtitles, sound design, and pattern interrupts that build authority across Instagram and LinkedIn.",
     challenge:
       "Transforming long-form executive interview dialogue into addictive vertical clips without diluting intellectual depth or sounding gimmicky.",
     approach:
@@ -916,8 +916,8 @@ export const VIDEO_PROJECTS: WorkProject[] = [
     testimonial: {
       quote:
         "Every clip Lucie Creatives cuts commands immediate attention. Our content has never felt more authoritative.",
-      author: "Nishant Patel",
-      role: "Founder & Host, Leaders Diary",
+      author: "Host",
+      role: "Leaders Diary",
     },
     processStills: [
       {
@@ -1374,7 +1374,7 @@ export const VIDEO_PROJECTS: WorkProject[] = [
       "Drove 100% capacity bookings for opening weekend and secured 450+ foundational resort memberships within the first 60 days.",
     mediaType: "video",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790267038/lucie-creatives/videos/clients/nirva-resort/nirva-resort-cinema-commercial.mp4",
-    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835298/lucie-creatives/portfolio/graphic-design/nirva-club/hero-main-hoarding.webp",
+    posterSrc: "/portfolio/video/nirva-resort-reel-frame.jpg",
     aspectRatio: "16/9",
     deliverables: [
       "4K Master Cinema Commercial (16:9)",

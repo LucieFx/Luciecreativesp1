@@ -12,7 +12,6 @@ import {
   VolumeX,
   ArrowUpRight,
   CheckCircle2,
-  Sparkles,
   Maximize2,
   X,
   ChevronLeft,
@@ -176,9 +175,9 @@ export function VideoEditingShowcase() {
       />
 
       {/* Atmospheric Background Layers */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-10 pointer-events-none" />
-      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#7A1F2B]/15 rounded-full blur-[180px] pointer-events-none" />
-      <div className="absolute bottom-10 left-0 w-[500px] h-[500px] bg-brand-red/[0.05] rounded-full blur-[160px] pointer-events-none" />
+      {null}
+      {null}
+      {null}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -188,15 +187,15 @@ export function VideoEditingShowcase() {
             className="mb-4 !border-white/15 !bg-white/5 !text-white"
           />
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-[1.08] max-w-4xl text-balance">
-            Algorithmic Retention &amp;{" "}
-            <span className="text-[#C4384B] font-serif italic lowercase font-normal block sm:inline text-[1.08em]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.02em] text-white leading-[1.0] max-w-4xl text-balance">
+            Algorithmic retention &amp;{" "}
+            <span className="font-accent italic text-[#C4384B] text-[1.1em] tracking-normal inline">
               commercial cinema.
             </span>
           </h2>
 
           <p className="mt-5 text-sm sm:text-base md:text-lg text-muted/60 font-medium leading-relaxed max-w-2xl text-pretty">
-            Cinema-grade post-production engineered to command prestige and halt the scroll. Browse our complete production vault of original client videos across Gujarat &amp; India—from monumental 16:9 cinema films to viral 9:16 founder reels and luxury architectural walkthroughs.
+            Cinema-grade post-production engineered to command prestige and halt the scroll. Browse our complete production vault of original client videos across Gujarat &amp; India: from monumental 16:9 cinema films to viral 9:16 founder reels and luxury architectural walkthroughs.
           </p>
         </div>
 
@@ -375,7 +374,7 @@ export function VideoEditingShowcase() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#C4384B] uppercase tracking-wider mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
+                <span className="w-2 h-2 rounded-full bg-[#C4384B] shrink-0" />
                 <span>Omnichannel Vertical Suites • 9:16 Fast-Hook Formats</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
@@ -409,7 +408,7 @@ export function VideoEditingShowcase() {
                   }}
                   className={`px-4 py-2 rounded-full text-xs font-bold tracking-tight whitespace-nowrap transition-all duration-200 cursor-pointer border ${
                     isActive
-                      ? "bg-[#7A1F2B] text-white border-[#7A1F2B] shadow-md scale-105"
+                      ? "bg-[#7A1F2B] text-white border-[#7A1F2B] shadow-md"
                       : "bg-white/5 hover:bg-white/10 text-muted/60 border-white/10"
                   }`}
                 >
@@ -438,17 +437,16 @@ export function VideoEditingShowcase() {
             <div className="mt-12 flex justify-center">
               <button
                 onClick={() => setVisibleCount((prev) => Math.min(prev + 8, filteredReels.length))}
-                className="px-8 py-3.5 rounded-2xl bg-white/10 hover:bg-[#7A1F2B] border border-white/15 text-xs font-black text-white uppercase tracking-wider transition-all duration-300 cursor-pointer flex items-center gap-2 shadow-lg"
+                className="px-8 py-3.5 rounded-lg bg-white/10 hover:bg-[#7A1F2B] border border-white/15 text-xs font-black text-white uppercase tracking-wider transition-colors duration-200 cursor-pointer flex items-center gap-2 shadow-sm"
               >
                 <span>Load More Productions ({filteredReels.length - visibleCount} remaining)</span>
-                <Sparkles className="w-4 h-4" />
               </button>
             </div>
           )}
         </div>
 
         {/* Bottom Conversion Action Strip */}
-        <div className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900 to-[#7A1F2B]/40 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+        <div className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-lg bg-[#7A1F2B] border border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
           <div>
             <div className="text-xs font-mono font-bold text-[#C4384B] uppercase tracking-wider mb-2">
               Ready to Win Algorithmic Retention?

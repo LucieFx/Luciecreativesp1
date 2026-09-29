@@ -19,7 +19,6 @@ import {
   Loader2,
   ExternalLink,
   Send,
-  Sparkles,
   Clock,
   ShieldCheck,
 } from "lucide-react";
@@ -27,46 +26,7 @@ import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 import { WhatsAppQR } from "./WhatsAppQR";
 import { SplitText } from "@/components/motion/SplitText";
 import { m, AnimatePresence } from "framer-motion";
-import { EASE_OUT, SPRING_SOFT, DURATION } from "@/lib/motion";
-
-function CelebrationParticles() {
-  const particles = Array.from({ length: 20 });
-  const colors = ["#8B1A1A", "#10B981", "#F59E0B", "#3B82F6", "#EC4899", "#8B5CF6"];
-
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center z-20">
-      {particles.map((_, i) => {
-        const angle = (i / particles.length) * 360;
-        const radius = 45 + (i % 4) * 22;
-        const rad = (angle * Math.PI) / 180;
-        const x = Math.cos(rad) * radius;
-        const y = Math.sin(rad) * radius;
-        const color = colors[i % colors.length];
-
-        return (
-          <m.div
-            key={i}
-            initial={{ opacity: 1, scale: 0, x: 0, y: 0 }}
-            animate={{
-              opacity: [1, 1, 0],
-              scale: [0, 1.4, 0.4],
-              x: x * 1.6,
-              y: y * 1.6 - 28,
-            }}
-            transition={{
-              duration: 1.2,
-              ease: [0.16, 1, 0.3, 1],
-              delay: (i % 3) * 0.04,
-            }}
-            className="absolute w-2 h-2 rounded-full"
-            style={{ backgroundColor: color }}
-          />
-        );
-      })}
-    </div>
-  );
-}
-
+import { SPRING_SOFT, EASE_OUT } from "@/lib/motion";
 interface ContactProps {
   primaryCtaLabel?: string;
 }
@@ -146,13 +106,13 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
         setStatus("error");
         setErrorMessage(
           data.error ||
-            "Couldn't send your message — check your connection and try again."
+            "Couldn't send your message. Check your connection and try again."
         );
       }
     } catch {
       setStatus("error");
       setErrorMessage(
-        "Couldn't send your message — check your connection and try again."
+        "Couldn't send your message. Check your connection and try again."
       );
     }
   };
@@ -217,7 +177,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
   return (
     <section id="contact" className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden font-bold">
       {/* Background dot pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-70 pointer-events-none" />
+      {null}
 
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionLabel text="START A PROJECT" className="mb-10" />
@@ -233,8 +193,8 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
               {/* Animate Headline with SplitText */}
               <SplitText
                 as="h1"
-                className="font-extrabold tracking-tight text-text-primary text-[clamp(2.2rem,4.5vw,4.5rem)] leading-[1.15] mb-5 text-balance"
-                accentClassName="text-[#8B1A1A] font-serif italic lowercase font-normal pb-1 inline-block"
+                className="font-display font-black tracking-[-0.02em] text-text-primary text-[clamp(2.0rem,4.5vw,4.5rem)] leading-[1.0] mb-5 text-balance"
+                accentClassName="font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal inline"
               >
                 Let&apos;s build something *iconic together.*
               </SplitText>
@@ -315,12 +275,12 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
             </div>
 
             <div className="text-xs text-text-tertiary font-semibold">
-              ✦ Founded in Gujarat • Serving ambitious brands across India and Global.
+              Founded in Gujarat • Serving ambitious brands across India and Global.
             </div>
           </div>
 
           {/* Right Column: Interactive Lead Generation Form */}
-          <div className="lg:col-span-7 self-start bg-white p-8 md:p-10 rounded-3xl border border-line shadow-elevated">
+          <div className="lg:col-span-7 self-start bg-white p-8 md:p-10 rounded-lg border border-line shadow-xs">
             <AnimatePresence mode="wait">
               {status === "success" ? (
                 <m.div
@@ -333,19 +293,16 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                   role="status"
                   aria-live="polite"
                 >
-                  <CelebrationParticles />
-
-                  {/* Animated Checkmark Jewel */}
+                  {/* Animated Checkmark Indicator */}
                   <div className="relative mb-6">
-                    <div className="absolute -inset-2 bg-emerald-500/20 rounded-full blur-xl animate-pulse" />
                     <m.div
                       initial={{ scale: 0 }}
                       animate={{ scale: [0, 1.15, 1] }}
                       transition={{ duration: 0.5, ease: "easeOut" }}
-                      className="relative w-20 h-20 rounded-3xl bg-gradient-to-b from-emerald-500 to-emerald-700 text-white flex items-center justify-center shadow-[0_12px_28px_rgba(16,185,129,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)]"
+                      className="relative w-16 h-16 rounded-lg bg-[#8B1A1A] text-white flex items-center justify-center shadow-xs"
                     >
                       <svg
-                        className="w-10 h-10 text-white"
+                        className="w-8 h-8 text-white"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -369,8 +326,8 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                     transition={{ delay: 0.25, duration: 0.4 }}
                     className="max-w-md mx-auto"
                   >
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3">
-                      <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-[#8B1A1A] text-xs font-black uppercase tracking-wider mb-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#8B1A1A] inline-block" aria-hidden="true" />
                       <span>Brief Dispatched Successfully</span>
                     </div>
 
@@ -382,7 +339,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                       Thank you for trusting Lucie Creatives. Your brief has been directly routed to our founders. We review every project benchmark and will respond within 24 hours.
                     </p>
 
-                    <div className="p-4 rounded-2xl bg-surface-alt border border-line mb-8 text-left text-xs font-medium space-y-2.5">
+                    <div className="p-4 rounded-lg bg-surface-alt border border-line mb-8 text-left text-xs font-medium space-y-2.5">
                       <div className="flex items-center justify-between">
                         <span className="text-muted flex items-center gap-1.5">
                           <Clock className="w-3.5 h-3.5 text-brand-red" />
@@ -407,7 +364,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         href={WHATSAPP_CONFIG.defaultLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-sm transition-all"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#8B1A1A] hover:bg-[#7A1F2B] text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-xs transition-colors"
                       >
                         <WhatsAppIcon className="w-4 h-4 text-white" />
                         <span>Chat on WhatsApp</span>
@@ -731,15 +688,14 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         initial={{ opacity: 0, y: -8, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -8 }}
-                        className="relative p-3.5 bg-emerald-50 border border-emerald-200/80 rounded-xl text-xs font-bold text-emerald-950 flex items-center justify-between gap-2 overflow-hidden shadow-xs mb-3"
+                        className="relative p-3.5 bg-red-50 border border-red-200 rounded-lg text-xs font-bold text-ink flex items-center justify-between gap-2 overflow-hidden shadow-xs mb-3"
                       >
-                        <CelebrationParticles />
                         <div className="flex items-center gap-2 relative z-10">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-[#8B1A1A] shrink-0" />
                           <span>WhatsApp launched with your pre-filled brief! Press send to chat with founders.</span>
                         </div>
-                        <span className="text-[10px] text-emerald-700 bg-white/90 px-2.5 py-0.5 rounded-full shrink-0 border border-emerald-200 font-mono">
-                          Ready ✦
+                        <span className="text-[10px] text-brand-red bg-white px-2.5 py-0.5 rounded-md shrink-0 border border-red-200 font-mono">
+                          Ready
                         </span>
                       </m.div>
                     )}
@@ -747,12 +703,11 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                     <div className="flex flex-col sm:flex-row items-center gap-3 w-full">
                       {isSuccessMorph ? (
                         <m.div
-                          initial={{ width: "100%", borderRadius: "12px" }}
-                          animate={{ width: "200px", borderRadius: "24px" }}
+                          initial={{ width: "100%", borderRadius: "8px" }}
+                          animate={{ width: "200px", borderRadius: "8px" }}
                           transition={{ duration: 0.4, ease: EASE_OUT }}
-                          className="h-12 bg-gradient-to-r from-emerald-600 to-emerald-700 flex items-center justify-center text-white mx-auto shadow-md overflow-hidden shrink-0 relative px-4 gap-2"
+                          className="h-12 bg-[#8B1A1A] flex items-center justify-center text-white mx-auto shadow-xs overflow-hidden shrink-0 relative px-4 gap-2"
                         >
-                          <CelebrationParticles />
                           <m.div
                             initial={{ x: 0, y: 0, opacity: 1 }}
                             animate={{ x: 30, y: -25, opacity: 0 }}
@@ -776,7 +731,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                           disabled={status === "submitting"}
                           variant="primary"
                           size="lg"
-                          className="w-full sm:flex-1 h-12 rounded-xl !bg-[#8B1A1A] hover:!bg-[#701515] disabled:opacity-75 disabled:cursor-not-allowed text-white font-extrabold text-sm flex items-center justify-center gap-2"
+                          className="w-full sm:flex-1 h-12 rounded-lg !bg-[#8B1A1A] hover:!bg-[#701515] disabled:opacity-75 disabled:cursor-not-allowed text-white font-extrabold text-sm flex items-center justify-center gap-2"
                           aria-label="Submit project discovery brief to Lucie Creatives"
                         >
                           {status === "submitting" ? (
@@ -797,9 +752,9 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         <button
                           type="button"
                           onClick={handleWhatsAppSend}
-                          className={`w-full sm:flex-1 h-12 rounded-xl px-5 font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm relative overflow-hidden ${
+                          className={`w-full sm:flex-1 h-12 rounded-lg px-5 font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs relative overflow-hidden ${
                             whatsAppDispatched
-                              ? "bg-emerald-600 text-white border-2 border-emerald-600 shadow-md"
+                              ? "bg-[#8B1A1A] text-white border-2 border-[#8B1A1A]"
                               : "border-2 border-[#8B1A1A] text-[#8B1A1A] hover:bg-red-50"
                           }`}
                           aria-label="Send project discovery brief on WhatsApp"
@@ -811,7 +766,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                               className="flex items-center gap-2"
                             >
                               <CheckCircle2 className="w-4 h-4 text-white" />
-                              <span>WhatsApp Chat Launched! 💬</span>
+                              <span>WhatsApp Chat Launched</span>
                             </m.div>
                           ) : (
                             <>
@@ -828,11 +783,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                       <div
                         role="alert"
                         aria-live="polite"
-                        className={`mt-3 p-3 rounded-xl border text-xs font-semibold flex items-center justify-between gap-2.5 ${
-                          whatsAppNotice.type === "error"
-                            ? "bg-red-50 border-red-200 text-red-800"
-                            : "bg-amber-50 border-amber-200 text-amber-900"
-                        }`}
+                        className="mt-3 p-3 rounded-lg border text-xs font-semibold flex items-center justify-between gap-2.5 bg-red-50 border-red-200 text-ink"
                       >
                         <div className="flex items-center gap-2">
                           <AlertCircle className="w-4 h-4 shrink-0 text-[#8B1A1A]" />
@@ -871,13 +822,13 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                       What happens next
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      <div className="p-3.5 bg-white rounded-xl border border-line/60 text-xs font-medium text-body">
+                      <div className="p-3.5 bg-white rounded-lg border border-line/60 text-xs font-medium text-body">
                         1. Send your brief
                       </div>
-                      <div className="p-3.5 bg-white rounded-xl border border-line/60 text-xs font-medium text-body">
+                      <div className="p-3.5 bg-white rounded-lg border border-line/60 text-xs font-medium text-body">
                         2. We review it and reply with questions or a quote
                       </div>
-                      <div className="p-3.5 bg-white rounded-xl border border-line/60 text-xs font-medium text-body">
+                      <div className="p-3.5 bg-white rounded-lg border border-line/60 text-xs font-medium text-body">
                         3. Kick-off once you approve
                       </div>
                     </div>

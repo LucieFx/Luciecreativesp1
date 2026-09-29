@@ -6,68 +6,87 @@
   :root {
     color-scheme: light;
 
-    /* Brand tokens */
-    --brand-red: #8B1A1A;
-    --brand-red-dark: #7B1717;
-    --brand-red-50: #FDECEC;
+    /* Single warm off-white token site-wide */
+    --bg-white: #FAF8F5;
 
-    /* Legacy aliases kept for backward compat */
-    --brand-purple: #8B1A1A;
+    /* Brand tokens: maroon/red + warm white only */
+    --brand-red: #8B1A1A;
     --brand-maroon: #8B1A1A;
-    --brand-gradient: linear-gradient(135deg, #8B1A1A 0%, #A31F1F 50%, #6E1414 100%);
+    --brand-red-dark: #7A1F2B;
+    --brand-red-50: #F7EBEB;
+
+    /* Legacy aliases aliased to flat brand maroon/white */
+    --brand-purple: #8B1A1A;
+    --brand-gradient: #8B1A1A;
     --brand-text-gradient: #8B1A1A;
 
     /* Semantic neutrals */
-    --white: #FFFFFF;
+    --white: var(--bg-white);
     --ink: #141414;
     --body: #4B4B4B;
     --muted: #6B6B6B;
     --line: #E7E7E7;
 
-    /* Surface */
-    --background: #FFFFFF;
-    --surface: #FFFFFF;
-    --surface-alt: #FAFAFA;
+    /* Surface tokens */
+    --background: var(--bg-white);
+    --surface: var(--bg-white);
+    --surface-alt: var(--bg-white);
 
     /* Legacy text tokens */
     --text-primary: #141414;
     --text-secondary: #4B4B4B;
     --border-light: #E7E7E7;
 
-    --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* Typography System Variables */
+    --font-display: 'BBH Hegarty', sans-serif;
+    --font-accent: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: var(--font-body);
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: #FFFFFF;
+    background-color: var(--bg-white);
     color: var(--text-primary);
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-body), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
   body {
-    background-color: #FFFFFF;
+    background-color: var(--bg-white);
     color: var(--text-primary);
     overflow-x: hidden;
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-body), sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-weight: 400;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  h1, h2 {
+    font-family: var(--font-display), sans-serif;
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+    line-height: 1.0;
+    color: inherit;
+    text-wrap: balance;
+    font-feature-settings: "ss01" 0, "ss02" 0;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-body), sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     color: inherit;
   }
 
   ::selection {
     background-color: #8B1A1A;
-    color: #FFFFFF;
+    color: var(--bg-white);
   }
 }
 
@@ -109,29 +128,39 @@ html[data-motion="off"] [data-mask] {
   visibility: visible !important;
 }
 
-/* Editorial High-Contrast Italic Typography */
+/* Typography System Utilities */
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.0;
+  text-wrap: balance;
+  font-feature-settings: "ss01" 0, "ss02" 0;
+}
+
+.font-accent {
+  font-family: var(--font-accent), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
+}
+
 .font-serif {
-  font-family: var(--font-serif), "Instrument Serif", Georgia, serif;
+  font-family: var(--font-accent), Georgia, serif;
+  font-style: italic;
 }
 
 .font-mono {
   font-family: var(--font-mono), monospace;
 }
 
-/* Dot Grid Background */
-.dot-grid-pattern {
-  background-image: radial-gradient(var(--line) 1.2px, transparent 1.2px);
-  background-size: 22px 22px;
-}
-
-.dot-grid-radial-mask {
-  mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, #000 50%, transparent 95%);
-  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, #000 50%, transparent 95%);
-}
-
-/* Brand Maroon / Crimson Utilities */
+/* Brand Maroon / Red Utilities */
 .bg-brand-gradient {
-  background: linear-gradient(135deg, #8B1A1A 0%, #A31F1F 50%, #6E1414 100%);
+  background-color: #8B1A1A;
 }
 
 .text-brand-gradient {
@@ -141,37 +170,25 @@ html[data-motion="off"] [data-mask] {
   line-height: 1.15;
 }
 
-/* .text-purple-glow removed — text-shadow glows on headings are not permitted */
-
-/* Horizontal Fade Masks for Infinite Carousels */
-.mask-fade-x {
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-}
-
 /* Accessible Focus States */
 :focus-visible {
   outline: 2px solid #8B1A1A;
   outline-offset: 2px;
 }
 
-
-/* 3D Chiclet Social Media Icon Boxes */
+/* Social Media Icon Boxes - Restrained Editorial Style */
 .chiclet-box {
-  background: #FFFFFF;
-  border-radius: 18px;
+  background: var(--bg-white);
+  border-radius: 8px;
   border: 1px solid var(--line);
-  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04), inset 0 2px 0 rgba(255, 255, 255, 1);
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: border-color 0.2s ease;
 }
 
 .chiclet-box:hover {
-  transform: translateY(-6px) scale(1.06);
-  box-shadow: 0 20px 30px -8px rgba(139, 26, 26, 0.22), 0 6px 12px -2px rgba(139, 26, 26, 0.12), inset 0 2px 0 rgba(255, 255, 255, 1);
-  border-color: #F7BDBD;
+  border-color: #8B1A1A;
 }
 
-/* Custom Marquee Animations */
+/* Marquee Animations */
 @keyframes marquee {
   0% {
     transform: translate3d(0, 0, 0);
@@ -201,10 +218,7 @@ html[data-motion="off"] [data-mask] {
 /* Reduced Motion Safety */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
-  .animate-marquee-reverse,
-  .animate-float,
-  .animate-float-fast,
-  .animate-float-delayed {
+  .animate-marquee-reverse {
     animation: none !important;
     transform: none !important;
   }
@@ -221,45 +235,41 @@ html[data-motion="off"] [data-mask] {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAFAFA;
+  background: var(--bg-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #F7BDBD;
-  border-radius: 9999px;
+  background: #E0DCD6;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #8B1A1A;
 }
 
-/* Smooth Card Hover */
+/* Clean Editorial Card Hover - 1px border only, no lift */
 .card-hover {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+  transition: border-color 0.2s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -10px rgba(139, 26, 26, 0.12), 0 0 1px 1px rgba(247, 189, 189, 0.6);
-  border-color: #F7BDBD;
+  border-color: rgba(139, 26, 26, 0.4);
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0.7;
-    transform: translateY(6px);
+    opacity: 0.8;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeIn 0.25s ease forwards;
 }
 
-/* Skeleton Shimmer Loading State */
+/* Skeleton Shimmer Loading State - Subtle neutral warm tones */
 @keyframes shimmer {
   0% {
     background-position: -200% 0;
@@ -272,11 +282,11 @@ html[data-motion="off"] [data-mask] {
 .skeleton-shimmer {
   background: linear-gradient(
     90deg,
-    #180505 0%,
-    #2e0c0c 35%,
-    #3f1212 50%,
-    #2e0c0c 65%,
-    #180505 100%
+    #F3EFEA 0%,
+    #EBE5DE 35%,
+    #E4DDD5 50%,
+    #EBE5DE 65%,
+    #F3EFEA 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -285,11 +295,11 @@ html[data-motion="off"] [data-mask] {
 .skeleton-shimmer-light {
   background: linear-gradient(
     90deg,
-    #FAFAFA 0%,
-    #F3F3F3 35%,
-    #E7E7E7 50%,
-    #F3F3F3 65%,
-    #FAFAFA 100%
+    #FAF8F5 0%,
+    #F0ECE6 35%,
+    #E6E0D8 50%,
+    #F0ECE6 65%,
+    #FAF8F5 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -321,20 +331,7 @@ html[data-motion="off"] [data-mask] {
   animation-play-state: running;
 }
 
-/* WhatsApp QR device visibility: show ONLY on devices with hover and fine pointer (mouse/trackpad) */
-@media not all and (hover: hover) and (pointer: fine) {
-  .whatsapp-qr-container {
-    display: none !important;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .whatsapp-qr-container {
-    display: flex;
-  }
-}
-
-/* Motion Foundation: Button Fill Wipe & Slide Arrow */
+/* Motion Foundation: Static buttons and clean link underline */
 .btn-fill-wipe {
   position: relative;
   overflow: hidden;
@@ -345,16 +342,15 @@ html[data-motion="off"] [data-mask] {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #6E1414; /* Maroon darkens from left to right */
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  background-color: #7A1F2B;
+  opacity: 0;
+  transition: opacity 0.25s ease;
   z-index: 0;
 }
 
 .btn-fill-wipe:hover::before,
 .btn-fill-wipe:focus-visible::before {
-  transform: scaleX(1);
+  opacity: 1;
 }
 
 .btn-fill-wipe > * {
@@ -362,17 +358,12 @@ html[data-motion="off"] [data-mask] {
   z-index: 1;
 }
 
-.btn-arrow-slide,
-.btn-fill-wipe svg {
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+/* Static text CTA arrow - no sliding */
+.btn-arrow-slide {
+  transition: none;
 }
 
-.btn-fill-wipe:hover .btn-arrow-slide,
-.btn-fill-wipe:hover svg {
-  transform: translateX(4px);
-}
-
-/* Motion Foundation: Text link underline draws from left to right */
+/* Text link underline */
 .link-underline {
   position: relative;
   display: inline-block;
@@ -389,7 +380,7 @@ html[data-motion="off"] [data-mask] {
   background-color: currentColor;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.2s ease;
 }
 
 .link-underline:hover::after,
@@ -398,11 +389,7 @@ html[data-motion="off"] [data-mask] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn-fill-wipe::before,
-  .link-underline::after,
-  .btn-arrow-slide,
-  .btn-fill-wipe svg {
+  .link-underline::after {
     transition: none !important;
   }
 }
-

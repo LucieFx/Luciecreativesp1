@@ -1,562 +1,525 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
-  ChevronLeft,
-  ChevronRight,
   Lock,
-  ArrowUpRight,
-  Globe,
-  ExternalLink,
+  ArrowRight,
+  Shield,
+  FileCheck,
+  Play,
+  X,
+  Sparkles,
 } from "lucide-react";
+import { m, useInView, useReducedMotion } from "framer-motion";
+import {
+  getVisibleWebProjects,
+  type WebProject,
+  type WebProjectStatus,
+} from "@/data/web-projects";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { buildWhatsAppLink } from "@/lib/constants";
 
-import { WEB_PROJECTS } from "@/lib/dev-work-data";
-import { TiltCard } from "@/components/motion/TiltCard";
-import { SplitText } from "@/components/motion";
-import { useReducedMotion } from "framer-motion";
-
-export interface WebProjectItem {
-  name: string;
-  tag: string;
-  description: string;
-  url: string;
-  image: string;
+/**
+ * Status Tag Helper Component
+ */
+function StatusTag({ status }: { status: WebProjectStatus }) {
+  switch (status) {
+    case "client":
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" aria-hidden="true" />
+          <span>Live client project</span>
+        </span>
+      );
+    case "concept":
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-sky-600" aria-hidden="true" />
+          <span>Concept project</span>
+        </span>
+      );
+    case "own-product":
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-800 border border-purple-200/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-purple-600" aria-hidden="true" />
+          <span>Our product</span>
+        </span>
+      );
+  }
 }
 
-// Single source of truth is WEB_PROJECTS in @/lib/dev-work-data
-export const projects: WebProjectItem[] = WEB_PROJECTS.map((project) => ({
-  name: project.name,
-  tag: project.category,
-  description: project.description,
-  url: project.url,
-  image: project.previewImage,
-}));
+/**
+ * Animated SVG Circular Score Ring
+ */
+function LighthouseRing({
+  score,
+  label,
+  delay = 0,
+}: {
+  score: number | null;
+  label: string;
+  delay?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
+  const shouldReduceMotion = useReducedMotion();
 
-export function WebDevBrowserShowcase() {
-  const isCarousel = projects.length >= 4;
-  const isSingle = projects.length === 1;
+  const radius = 17;
+  const strokeWidth = 3;
+  const circumference = 2 * Math.PI * radius;
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  // Determine standard Lighthouse color
+  let strokeColor = "#94A3B8"; // neutral slate gray for null / unmeasured
+  if (score !== null) {
+    if (score >= 90) strokeColor = "#0CCE6B"; // green
+    else if (score >= 50) strokeColor = "#FFA400"; // orange
+    else strokeColor = "#FF4E42"; // red
+  }
 
-  const checkScrollability = () => {
-    const el = scrollContainerRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 10);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
-  };
+  const targetOffset =
+    score !== null ? circumference * (1 - Math.min(Math.max(score, 0), 100) / 100) : circumference;
 
-  useEffect(() => {
-    if (!isCarousel) return;
-    const el = scrollContainerRef.current;
-    if (!el) return;
-    checkScrollability();
-    el.addEventListener("scroll", checkScrollability, { passive: true });
-    window.addEventListener("resize", checkScrollability);
-    return () => {
-      el.removeEventListener("scroll", checkScrollability);
-      window.removeEventListener("resize", checkScrollability);
-    };
-  }, [isCarousel]);
-
-  const scroll = (direction: "left" | "right") => {
-    const el = scrollContainerRef.current;
-    if (!el) return;
-    const cardWidth = el.querySelector(".browser-card")?.clientWidth || 520;
-    const scrollAmount = direction === "left" ? -cardWidth - 32 : cardWidth + 32;
-    el.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isCarousel) return;
-    if (e.key === "ArrowLeft") {
-      e.preventDefault();
-      scroll("left");
-    } else if (e.key === "ArrowRight") {
-      e.preventDefault();
-      scroll("right");
-    }
-  };
+  const accessibleLabel =
+    score !== null ? `${label}: ${score} out of 100` : `${label}: Measuring soon`;
 
   return (
-    <section
-      id="websites-weve-built"
-      className="relative w-full py-20 lg:py-28 bg-white text-text-primary overflow-hidden border-b border-line select-none"
+    <div
+      ref={ref}
+      className="flex flex-col items-center text-center gap-1.5"
+      aria-label={accessibleLabel}
+      role="meter"
+      aria-valuenow={score !== null ? score : undefined}
+      aria-valuemin={0}
+      aria-valuemax={100}
     >
-      {/* Background Ambience */}
-      <div className="absolute top-1/3 right-10 w-[600px] h-[500px] bg-brand-red/[0.03] rounded-full blur-[160px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 lg:mb-16">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-redLight border border-brand-red/20 text-brand-red text-xs font-black tracking-widest uppercase mb-4">
-              <Globe className="w-3.5 h-3.5" />
-              <span>Selected Web Deployments</span>
-            </div>
-            <SplitText
-              as="h2"
-              className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-ink uppercase"
-              accentWords={["platforms"]}
-              accentClassName="text-brand-red font-serif italic lowercase font-normal"
-            >
-              Featured client *platforms*
-            </SplitText>
-            <p className="mt-3 text-sm sm:text-base text-body font-medium">
-              A curated selection of high-performance web platforms engineered directly by our team—combining
-              sub-second response times, bespoke UI architecture, and proven conversion capability.
-            </p>
-          </div>
-
-          {/* Navigation Controls (Only active for carousel mode: 4+ items) */}
-          {isCarousel && (
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-mono text-muted hidden sm:inline">
-                Scroll or use arrow keys
-              </span>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => scroll("left")}
-                  disabled={!canScrollLeft}
-                  aria-label="Previous website project"
-                  className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all cursor-pointer shadow-xs ${
-                    canScrollLeft
-                      ? "bg-slate-100 hover:bg-line border-line text-ink hover:scale-105 active:scale-95"
-                      : "bg-slate-50 border-line/60 text-muted/60 cursor-not-allowed opacity-50"
-                  }`}
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => scroll("right")}
-                  disabled={!canScrollRight}
-                  aria-label="Next website project"
-                  className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all cursor-pointer shadow-xs ${
-                    canScrollRight
-                      ? "bg-slate-100 hover:bg-line border-line text-ink hover:scale-105 active:scale-95"
-                      : "bg-slate-50 border-line/60 text-muted/60 cursor-not-allowed opacity-50"
-                  }`}
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* 1 PROJECT: Single wide featured card (60% Mockup Left, 40% Content Right; Stack on Mobile) */}
-        {isSingle && (
-          <SingleFeaturedProjectCard project={projects[0]} />
-        )}
-
-        {/* 2-3 PROJECTS: Clean responsive grid */}
-        {!isSingle && !isCarousel && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {projects.map((project, idx) => (
-              <GridProjectCard key={project.name} project={project} index={idx} />
-            ))}
-          </div>
-        )}
-
-        {/* 4+ PROJECTS: Horizontal carousel */}
-        {isCarousel && (
-          <div className="relative -mx-6 sm:-mx-12 px-6 sm:px-12">
-            <div
-              className={`pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-20 transition-opacity duration-300 ${
-                canScrollLeft ? "opacity-100" : "opacity-0"
-              }`}
-            />
-            <div
-              className={`pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-20 transition-opacity duration-300 ${
-                canScrollRight ? "opacity-100" : "opacity-0"
-              }`}
-            />
-
-            <div
-              ref={scrollContainerRef}
-              tabIndex={0}
-              onKeyDown={handleKeyDown}
-              aria-label="Website projects"
-              role="region"
-              className="flex items-stretch gap-6 sm:gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory py-4 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-brand-red/40 rounded-3xl"
-              style={{
-                scrollSnapType: "x mandatory",
-                WebkitOverflowScrolling: "touch",
-                touchAction: "pan-x",
+      <div className="relative w-12 h-12 flex items-center justify-center">
+        <svg className="w-full h-full -rotate-90" viewBox="0 0 44 44" aria-hidden="true">
+          {/* Background Track */}
+          <circle
+            cx="22"
+            cy="22"
+            r={radius}
+            fill="transparent"
+            stroke="#E2E8F0"
+            strokeWidth={strokeWidth}
+          />
+          {/* Animated Progress Circle */}
+          {score !== null ? (
+            <m.circle
+              cx="22"
+              cy="22"
+              r={radius}
+              fill="transparent"
+              stroke={strokeColor}
+              strokeWidth={strokeWidth}
+              strokeDasharray={circumference}
+              strokeLinecap="round"
+              initial={{ strokeDashoffset: circumference }}
+              animate={
+                isInView || shouldReduceMotion
+                  ? { strokeDashoffset: targetOffset }
+                  : { strokeDashoffset: circumference }
+              }
+              transition={{
+                duration: shouldReduceMotion ? 0 : 0.9,
+                delay: shouldReduceMotion ? 0 : delay,
+                ease: [0.16, 1, 0.3, 1],
               }}
-            >
-              {projects.map((project, idx) => (
-                <CarouselProjectCard key={project.name} project={project} index={idx} />
-              ))}
-            </div>
-          </div>
+            />
+          ) : (
+            <circle
+              cx="22"
+              cy="22"
+              r={radius}
+              fill="transparent"
+              stroke="#CBD5E1"
+              strokeWidth={strokeWidth}
+              strokeDasharray="3 3"
+            />
+          )}
+        </svg>
+
+        {/* Center Score Value */}
+        <span className="absolute font-body font-bold text-xs sm:text-[13px] text-ink select-none">
+          {score !== null ? score : "—"}
+        </span>
+      </div>
+
+      <div className="flex flex-col items-center leading-none">
+        <span className="text-[11px] font-semibold text-slate-700 tracking-tight">
+          {label}
+        </span>
+        {score === null && (
+          <span className="text-[9px] font-medium text-slate-400 mt-0.5">
+            Measuring soon
+          </span>
         )}
       </div>
-    </section>
+    </div>
   );
 }
 
-function BrowserMockupViewport({
-  imageSrc,
-  altText,
+/**
+ * MacBook-Style Hardware Frame + Overlapping Phone Frame
+ */
+function ShowcaseDeviceFrames({
+  project,
   isHovered,
 }: {
-  imageSrc: string;
-  altText: string;
+  project: WebProject;
   isHovered: boolean;
 }) {
-  const shouldReduceMotion = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isTaller, setIsTaller] = useState(true);
-  const [overflowPx, setOverflowPx] = useState(240);
+  const isInView = useInView(containerRef, { margin: "-40px" });
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const measure = () => {
-    if (!containerRef.current) return;
-    const containerHeight = containerRef.current.clientHeight;
-    const inner = containerRef.current.querySelector(".mockup-img-inner") as HTMLElement;
-    if (inner && containerHeight > 0) {
-      const imgHeight = inner.offsetHeight;
-      if (imgHeight > containerHeight + 20) {
-        setIsTaller(true);
-        setOverflowPx(imgHeight - containerHeight);
-      } else {
-        setIsTaller(false);
-      }
-    }
-  };
-
+  // Play video on hover (desktop) or in-view (mobile)
   useEffect(() => {
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
+    if (!project.scrollVideo || !videoRef.current) return;
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const shouldPlay = isMobile ? isInView : isHovered;
+
+    if (shouldPlay) {
+      videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  }, [isHovered, isInView, project.scrollVideo]);
 
   return (
     <div
       ref={containerRef}
-      className="relative aspect-[16/10] sm:aspect-[16/9.5] w-full overflow-hidden bg-slate-100 flex-grow min-h-[260px] sm:min-h-[340px]"
+      className="relative w-full select-none"
+      onContextMenu={(e) => e.preventDefault()}
     >
-      <div
-        className="mockup-img-inner relative w-full will-change-transform"
-        style={{
-          transform: shouldReduceMotion
-            ? undefined
-            : isHovered
-            ? isTaller
-              ? `translateY(-${overflowPx}px)`
-              : "scale(1.05)"
-            : isTaller
-            ? "translateY(0px)"
-            : "scale(1)",
-          transition: shouldReduceMotion
-            ? undefined
-            : isHovered
-            ? isTaller
-              ? "transform 6s ease-in-out"
-              : "transform 0.6s ease-out"
-            : isTaller
-            ? "transform 1.2s ease-out"
-            : "transform 0.6s ease-out",
-        }}
-      >
-        <Image
-          src={imageSrc}
-          alt={altText}
-          width={1400}
-          height={2400}
-          loading="lazy"
-          sizes="(max-width: 1024px) 100vw, 720px"
-          onLoad={measure}
-          className="w-full h-auto object-cover object-top block"
-        />
+      {/* 1. MacBook-Style Laptop Frame (CSS / SVG) */}
+      <div className="relative w-full rounded-t-xl sm:rounded-t-2xl bg-slate-900 border border-slate-800 shadow-sm overflow-hidden flex flex-col pt-2 px-2 pb-0 transition-transform duration-500 ease-out group-hover:scale-[1.01]">
+        {/* Laptop Display Top Bezel: Camera Dot */}
+        <div className="flex items-center justify-center pb-1.5" aria-hidden="true">
+          <div className="w-1.5 h-1.5 rounded-full bg-slate-800 border border-slate-700" />
+        </div>
+
+        {/* Laptop Screen Viewport */}
+        <div className="relative w-full aspect-[16/10] bg-slate-950 rounded-t-sm overflow-hidden border border-slate-800/80">
+          {/* Video or Desktop Screenshot */}
+          {project.scrollVideo ? (
+            <>
+              <video
+                ref={videoRef}
+                src={project.scrollVideo}
+                poster={project.poster || project.screenshotDesktop}
+                muted
+                loop
+                playsInline
+                preload="none"
+                className="w-full h-full object-cover object-top pointer-events-none transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              >
+                <p>Screen recording demonstration of {project.title}.</p>
+              </video>
+              {!isPlaying && (
+                <div
+                  className="absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity"
+                  aria-hidden="true"
+                >
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-xs text-white text-xs font-semibold shadow-md transition-transform duration-200 group-hover:scale-105">
+                    <Play className="w-3.5 h-3.5 fill-white" />
+                    <span>Preview</span>
+                  </div>
+                </div>
+              )}
+            </>
+          ) : (
+            <Image
+              src={project.screenshotDesktop}
+              alt={`${project.title} desktop web interface`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              draggable={false}
+              className="object-cover object-top pointer-events-none select-none transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            />
+          )}
+
+          {/* Low-Opacity IP Watermark on Laptop Screen */}
+          <div
+            className="absolute top-2.5 right-2.5 z-10 pointer-events-none select-none px-2 py-0.5 rounded bg-black/40 backdrop-blur-2xs text-[10px] font-mono tracking-wider text-white/70 shadow-2xs"
+            aria-hidden="true"
+          >
+            Lucie Creatives
+          </div>
+        </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#8B1A1A]/20 to-transparent pointer-events-none opacity-0 group-hover/mockup:opacity-100 transition-opacity" />
+      {/* Laptop Aluminum Base & Notch */}
+      <div className="w-full bg-gradient-to-b from-slate-200 via-slate-300 to-slate-400 h-2.5 sm:h-3 rounded-b-lg border-t border-slate-400/60 flex items-center justify-center shadow-xs">
+        <div className="w-12 sm:w-16 h-1 rounded-full bg-slate-500/50" aria-hidden="true" />
+      </div>
 
-      <div className="absolute bottom-4 right-4 opacity-0 group-hover/mockup:opacity-100 transition-opacity duration-300 pointer-events-none">
-        <span className="px-3 py-1.5 rounded-full bg-[#8B1A1A]/90 backdrop-blur-md text-xs font-mono font-bold text-white border border-white/20 flex items-center gap-1.5 shadow-md">
-          <ExternalLink className="w-3.5 h-3.5 text-red-200" />
-          <span>Visit Site</span>
-        </span>
+      {/* 2. Overlapping Mobile Phone Frame (Bottom-Right Corner) */}
+      <div
+        className="absolute -bottom-2 -right-1 sm:-bottom-3 sm:-right-2 z-20 w-[68px] sm:w-[84px] aspect-[9/19.5] rounded-[14px] sm:rounded-[18px] bg-slate-900 border-2 border-slate-800 shadow-xl overflow-hidden flex flex-col p-1 transition-all duration-500 ease-out group-hover:-translate-y-1.5 group-hover:scale-105 group-hover:shadow-2xl"
+        aria-hidden="true"
+      >
+        {/* Phone Notch */}
+        <div className="w-5 sm:w-6 h-1 bg-slate-800 rounded-full mx-auto mb-0.5 shrink-0" />
+
+        {/* Phone Screen */}
+        <div className="relative w-full flex-1 rounded-[10px] sm:rounded-[13px] overflow-hidden bg-slate-950">
+          <Image
+            src={project.screenshotMobile || project.screenshotDesktop}
+            alt={`${project.title} mobile interface`}
+            fill
+            sizes="84px"
+            draggable={false}
+            className="object-cover object-top pointer-events-none select-none transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+          />
+        </div>
       </div>
     </div>
   );
 }
 
-function SingleFeaturedProjectCard({ project }: { project: WebProjectItem }) {
+/**
+ * Individual Web Development Showcase Card
+ */
+function WebProjectShowcaseCard({
+  project,
+  onOpenReport,
+}: {
+  project: WebProject;
+  onOpenReport: (imageSrc: string, projectTitle: string) => void;
+}) {
   const [isHovered, setIsHovered] = useState(false);
-  let displayUrl = project.url;
-  try {
-    if (project.url.startsWith("http")) {
-      const parsed = new URL(project.url);
-      displayUrl = parsed.hostname + (parsed.pathname !== "/" ? parsed.pathname : "");
-    }
-  } catch {
-    displayUrl = project.url;
-  }
+
+  const contactMessage = `Hi, I'd like the live link for ${project.title}.`;
+  const contactHref = `/contact?message=${encodeURIComponent(contactMessage)}`;
+  const whatsappHref = buildWhatsAppLink(contactMessage);
 
   return (
-    <div
-      data-cursor="View"
-      className="w-full max-w-6xl mx-auto rounded-2xl sm:rounded-3xl bg-white border border-line/90 shadow-card hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col lg:flex-row items-stretch group"
+    <article
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-line/80 shadow-xs hover:border-[#8B1A1A]/35 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between h-full group"
     >
-      {/* Left 60%: Browser Mockup Frame with TiltCard */}
-      <TiltCard
-        maxTilt={5}
-        glare={true}
-        className="w-full lg:w-[60%] flex flex-col border-b lg:border-b-0 lg:border-r border-line/90 bg-slate-50"
-      >
+      <div>
+        {/* Device Showcase (Laptop + Overlapping Mobile Phone) */}
+        <div className="mb-6 pt-1">
+          <ShowcaseDeviceFrames project={project} isHovered={isHovered} />
+        </div>
+
+        {/* Status Tag & Category */}
+        <div className="flex items-center justify-between gap-3 mb-3">
+          <StatusTag status={project.status} />
+          <span className="text-[11px] font-mono font-semibold text-slate-500 uppercase tracking-wider truncate">
+            {project.category}
+          </span>
+        </div>
+
+        {/* Project Title */}
+        <h3 className="text-xl sm:text-2xl font-bold font-body text-ink tracking-tight mb-2">
+          {project.title}
+        </h3>
+
+        {/* Description (max 2 short sentences) */}
+        <p className="text-sm sm:text-[15px] font-normal text-slate-700 leading-relaxed mb-4 text-pretty">
+          {project.description}
+        </p>
+
+        {/* Tech Stack Chips */}
+        <div className="flex flex-wrap gap-1.5 mb-6" aria-label="Technology stack">
+          {project.stack.map((tech) => (
+            <span
+              key={tech}
+              className="px-2.5 py-1 rounded-md bg-slate-100/90 hover:bg-slate-200/90 text-slate-700 hover:text-ink text-xs font-semibold border border-line/60 transition-colors duration-150"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Lighthouse Score Row */}
+        <div className="pt-4 border-t border-line/80 mb-6">
+          <div className="grid grid-cols-4 gap-2 mb-3">
+            <LighthouseRing score={project.lighthouse.performance} label="Performance" delay={0.05} />
+            <LighthouseRing score={project.lighthouse.accessibility} label="Accessibility" delay={0.12} />
+            <LighthouseRing score={project.lighthouse.bestPractices} label="Best Practices" delay={0.19} />
+            <LighthouseRing score={project.lighthouse.seo} label="SEO" delay={0.26} />
+          </div>
+
+          {/* Audit Metadata & Report Link */}
+          <div className="flex items-center justify-between text-xs text-slate-500 font-medium pt-1">
+            <span>
+              {project.lighthouse.mode}, measured {project.lighthouse.measuredOn}
+            </span>
+            {project.reportImage && (
+              <button
+                type="button"
+                onClick={() => onOpenReport(project.reportImage!, project.title)}
+                className="inline-flex items-center gap-1 text-xs font-semibold text-[#8B1A1A] hover:underline cursor-pointer transition-colors"
+              >
+                <FileCheck className="w-3.5 h-3.5" />
+                <span>View report</span>
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Action Row: Request Live Link + WhatsApp Quick Message */}
+      <div className="pt-4 border-t border-line/80 flex items-center justify-between gap-3 mt-auto">
+        <Link
+          href={contactHref}
+          className="group/btn flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#8B1A1A] hover:bg-[#721515] active:scale-[0.98] text-white font-body font-bold text-xs sm:text-sm transition-all duration-200 shadow-xs hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B1A1A]"
+        >
+          <span>Request live link</span>
+          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/btn:translate-x-1" />
+        </Link>
+
         <a
-          href={project.url}
+          href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          data-cursor="View"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          className="flex flex-col h-full group/mockup focus:outline-hidden"
-          aria-label={`Open ${project.name} live site`}
+          aria-label={`Request live link for ${project.title} via WhatsApp`}
+          title="Quick request via WhatsApp"
+          className="p-2.5 rounded-xl border border-line/80 bg-white hover:bg-slate-50 hover:border-emerald-600/40 hover:scale-105 active:scale-95 text-emerald-700 transition-all duration-200 shrink-0 shadow-2xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
         >
-          {/* Browser Chrome Header (macOS-style) */}
-          <div className="bg-slate-100 border-b border-line/90 px-4 sm:px-5 py-3 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-1.5 shrink-0" aria-hidden="true">
-              <span className="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
-              <span className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]" />
-              <span className="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
-            </div>
-
-            <div className="flex-grow max-w-sm mx-auto bg-white/90 border border-line rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-[11px] font-mono text-body shadow-2xs">
-              <Lock className="w-3 h-3 text-brand-red shrink-0" />
-              <span className="truncate text-body font-medium">
-                {displayUrl}
-              </span>
-            </div>
-
-            <div className="shrink-0 text-muted group-hover/mockup:text-brand-red transition-colors">
-              <ArrowUpRight className="w-4 h-4 group-hover/mockup:translate-x-0.5 group-hover/mockup:-translate-y-0.5 transition-transform" />
-            </div>
-          </div>
-
-          {/* Viewport Image with auto-scroll or slow zoom */}
-          <BrowserMockupViewport
-            imageSrc={project.image}
-            altText={`${project.name} - ${project.tag} developed by Lucie Creatives`}
-            isHovered={isHovered}
-          />
+          <WhatsAppIcon className="w-4 h-4" />
         </a>
-      </TiltCard>
-
-      {/* Right 40%: Project Details */}
-      <div className="w-full lg:w-[40%] flex flex-col justify-between p-6 sm:p-8 lg:p-10 bg-white">
-        <div>
-          {/* Tag badge: fully visible, never clipped or truncated */}
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 border border-line text-[11px] font-mono font-bold uppercase tracking-wider text-body whitespace-normal">
-              {project.tag}
-            </span>
-          </div>
-
-          {/* Project Title */}
-          <h3 className="mt-5 text-2xl sm:text-3xl lg:text-4xl font-black text-ink uppercase tracking-tight group-hover:text-brand-red transition-colors">
-            {project.name}
-          </h3>
-
-          {/* Description */}
-          <p className="mt-4 text-sm sm:text-base text-body font-medium leading-relaxed">
-            {project.description}
-          </p>
-        </div>
-
-        {/* Live Site CTA Link Button */}
-        <div className="mt-8 pt-6 border-t border-line/60">
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor="View"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm tracking-wide transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group/btn"
-          >
-            <span>Visit live site</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-          </a>
-        </div>
       </div>
-    </div>
+    </article>
   );
 }
 
-function GridProjectCard({
-  project,
-  index,
-}: {
-  project: WebProjectItem;
-  index: number;
-}) {
-  const [isHovered, setIsHovered] = useState(false);
-  let displayUrl = project.url;
-  try {
-    if (project.url.startsWith("http")) {
-      const parsed = new URL(project.url);
-      displayUrl = parsed.hostname + (parsed.pathname !== "/" ? parsed.pathname : "");
+/**
+ * Main Web Development Showcase Section
+ */
+export function WebDevBrowserShowcase() {
+  const projects = getVisibleWebProjects();
+  const [reportModal, setReportModal] = useState<{ src: string; title: string } | null>(null);
+
+  // Close report modal on Esc key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setReportModal(null);
+    };
+    if (reportModal) {
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
     }
-  } catch {
-    displayUrl = project.url;
-  }
+  }, [reportModal]);
 
   return (
-    <TiltCard
-      maxTilt={5}
-      glare={true}
-      className="w-full flex flex-col justify-between group rounded-2xl sm:rounded-3xl bg-white border border-line/90 hover:border-brand-red/40 shadow-card hover:shadow-xl transition-all duration-500 overflow-hidden"
+    <section
+      id="websites-weve-built"
+      className="relative w-full py-16 sm:py-24 px-4 sm:px-6 md:px-12 bg-white text-text-primary overflow-hidden border-b border-line select-none"
     >
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-cursor="View"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="block bg-slate-100"
-        aria-label={`Open ${project.name} live site`}
-      >
-        {/* Browser Chrome Header */}
-        <div className="bg-slate-100 border-b border-line/90 px-4 sm:px-5 py-3 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-1.5 shrink-0" aria-hidden="true">
-            <span className="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
-            <span className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]" />
-            <span className="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Header */}
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-red-50 border border-brand-red/20 text-[#8B1A1A] text-xs font-semibold uppercase tracking-wider mb-4">
+            <Shield className="w-3.5 h-3.5" />
+            <span>Digital Engineering Portfolio</span>
           </div>
 
-          <div className="flex-grow max-w-sm mx-auto bg-white/90 border border-line rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-[11px] font-mono text-body shadow-2xs">
-            <Lock className="w-3 h-3 text-brand-red shrink-0" />
-            <span className="truncate text-body font-medium">
-              {displayUrl}
-            </span>
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.02em] leading-[1.0] text-ink text-balance mb-4">
+            Websites we&apos;ve built
+          </h2>
 
-          <div className="shrink-0 text-muted group-hover:text-brand-red transition-colors">
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </div>
-        </div>
-
-        {/* Viewport Image with auto-scroll or slow zoom */}
-        <BrowserMockupViewport
-          imageSrc={project.image}
-          altText={`${project.name} - ${project.tag} developed by Lucie Creatives`}
-          isHovered={isHovered}
-        />
-      </a>
-
-      {/* Details Under Card */}
-      <div className="p-6 flex flex-col justify-between flex-grow">
-        <div>
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-            <span className="px-2.5 py-1 rounded-full bg-slate-100 border border-line text-[10px] font-mono font-bold uppercase tracking-wider text-body whitespace-normal">
-              {project.tag}
-            </span>
-          </div>
-          <h3 className="text-xl sm:text-2xl font-black text-ink group-hover:text-brand-red transition-colors">
-            {project.name}
-          </h3>
-          <p className="text-xs sm:text-sm text-muted font-medium mt-2 leading-relaxed">
-            {project.description}
+          <p className="text-base sm:text-lg text-slate-700 font-medium leading-relaxed max-w-2xl text-pretty mb-2">
+            Screenshots and real performance scores. Live links on request.
           </p>
+
+          <p className="text-xs sm:text-sm text-slate-500 font-normal">
+            Live links are shared privately on request.
+          </p>
+
+          {/* Status Tag Legend */}
+          <div className="mt-6 pt-5 border-t border-line/80 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-600">
+            <div className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-600" aria-hidden="true" />
+              <span className="font-semibold text-slate-800">Live client project:</span>
+              <span>Client deliverable in production</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-sky-600" aria-hidden="true" />
+              <span className="font-semibold text-slate-800">Concept project:</span>
+              <span>Architecture &amp; UX exploration</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-purple-600" aria-hidden="true" />
+              <span className="font-semibold text-slate-800">Our product:</span>
+              <span>Internal tooling &amp; platform</span>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-line/60">
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor="View"
-            className="inline-flex items-center gap-2 text-xs font-bold text-brand-red hover:text-brand-redDark group/link"
+        {/* Responsive Showcase Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          {projects.map((project, idx) => (
+            <m.div
+              key={project.slug}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{
+                duration: 0.45,
+                delay: idx * 0.1,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="h-full"
+            >
+              <WebProjectShowcaseCard
+                project={project}
+                onOpenReport={(src, title) => setReportModal({ src, title })}
+              />
+            </m.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Accessible Report Lightbox Modal */}
+      {reportModal && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="report-modal-title"
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4"
+          onClick={() => setReportModal(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl p-6"
+            onClick={(e) => e.stopPropagation()}
           >
-            <span>Visit live site</span>
-            <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-          </a>
+            <div className="flex items-center justify-between pb-4 border-b border-line mb-4">
+              <h3 id="report-modal-title" className="text-base font-bold text-ink">
+                Lighthouse Audit Report — {reportModal.title}
+              </h3>
+              <button
+                type="button"
+                onClick={() => setReportModal(null)}
+                aria-label="Close Lighthouse report modal"
+                className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-ink transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="relative w-full aspect-16/10 bg-slate-50 rounded-xl overflow-hidden border border-line">
+              <Image
+                src={reportModal.src}
+                alt={`Lighthouse audit report for ${reportModal.title}`}
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </TiltCard>
+      )}
+    </section>
   );
 }
 
-function CarouselProjectCard({
-  project,
-  index,
-}: {
-  project: WebProjectItem;
-  index: number;
-}) {
-  const [isHovered, setIsHovered] = useState(false);
-  let displayUrl = project.url;
-  try {
-    if (project.url.startsWith("http")) {
-      const parsed = new URL(project.url);
-      displayUrl = parsed.hostname + (parsed.pathname !== "/" ? parsed.pathname : "");
-    }
-  } catch {
-    displayUrl = project.url;
-  }
-
-  return (
-    <TiltCard
-      maxTilt={5}
-      glare={true}
-      className="browser-card snap-center shrink-0 w-[85vw] sm:w-[520px] lg:w-[600px] flex flex-col justify-between group cursor-pointer focus-within:outline-hidden"
-    >
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-cursor="View"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="block rounded-2xl sm:rounded-3xl bg-white border border-line/90 hover:border-brand-red/40 shadow-card hover:shadow-xl transition-all duration-500 overflow-hidden"
-        aria-label={`Open ${project.name} live site`}
-      >
-        {/* Realistic Browser Chrome Header (macOS-style) */}
-        <div className="bg-slate-100 border-b border-line/90 px-4 sm:px-5 py-3 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-1.5 shrink-0" aria-hidden="true">
-            <span className="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
-            <span className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]" />
-            <span className="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
-          </div>
-
-          <div className="flex-grow max-w-sm mx-auto bg-white/90 border border-line rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-[11px] font-mono text-body shadow-2xs">
-            <Lock className="w-3 h-3 text-brand-red shrink-0" />
-            <span className="truncate text-body font-medium">
-              {displayUrl}
-            </span>
-          </div>
-
-          <div className="shrink-0 text-muted group-hover:text-brand-red transition-colors">
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </div>
-        </div>
-
-        {/* Viewport Image with auto-scroll or slow zoom */}
-        <BrowserMockupViewport
-          imageSrc={project.image}
-          altText={`${project.name} - ${project.tag} developed by Lucie Creatives`}
-          isHovered={isHovered}
-        />
-      </a>
-
-      {/* Caption Under Card */}
-      <div className="mt-4 px-1 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-4">
-        <div>
-          <h3 className="text-base sm:text-lg font-black text-ink group-hover:text-brand-red transition-colors">
-            {project.name}
-          </h3>
-          <p className="text-xs sm:text-sm text-muted font-medium mt-0.5">
-            {project.description}
-          </p>
-        </div>
-        <span className="self-start sm:self-auto px-2.5 py-1 rounded-full bg-slate-100 border border-line text-[10px] font-mono font-bold uppercase tracking-wider text-body whitespace-normal">
-          {project.tag}
-        </span>
-      </div>
-    </TiltCard>
-  );
-}
+export default WebDevBrowserShowcase;

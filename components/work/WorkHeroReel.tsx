@@ -41,7 +41,7 @@ export function WorkHeroReel({ onLoaded }: WorkHeroReelProps) {
         {/* Primary H1 */}
         <h1 className="text-white font-black tracking-tight leading-[1.05] text-[clamp(2.5rem,6.8vw,6.5rem)] text-balance max-w-4xl">
           We make brands <br />
-          <span className="font-serif italic font-normal text-white/90 tracking-tight text-[1.06em]">
+          <span className="italic text-white/90 tracking-tight">
             impossible to ignore.
           </span>
         </h1>

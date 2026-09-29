@@ -214,7 +214,7 @@ export function PageHero({
                   }}
                   className={`inline-block mr-[0.28em] last:mr-0 ${
                     item.isAccent
-                      ? "font-serif italic font-normal text-white/90 tracking-tight text-[1.06em]"
+                      ? "italic text-white/90 tracking-tight"
                       : ""
                   }`}
                   aria-hidden="true"
@@ -248,9 +248,9 @@ export function PageHero({
           <div className="max-w-4xl">
             <SplitText
               as="h1"
-              className="text-white font-black tracking-tight leading-[1.05] text-[clamp(2.1rem,6.4vw,6.2rem)] text-balance"
+              className="text-white font-display font-black tracking-[-0.02em] leading-[1.0] text-[clamp(2.1rem,6.4vw,5.5rem)] text-balance"
               accentWords={[headlineItalicAccent.replace(/[.,]/g, "")]}
-              accentClassName="font-serif italic font-normal text-white/95 tracking-tight text-[1.06em]"
+              accentClassName="font-accent italic text-white text-[1.1em] tracking-normal inline"
               markerHighlight={true}
               markerClassName="absolute -inset-x-1.5 bottom-1 sm:bottom-2 h-[38%] bg-white/20 -z-1 rounded-xs pointer-events-none"
             >
@@ -258,9 +258,9 @@ export function PageHero({
             </SplitText>
           </div>
         ) : (
-          <h1 className="text-white font-black tracking-tight leading-[1.05] text-[clamp(2.1rem,6.4vw,6.2rem)] text-balance max-w-4xl">
+          <h1 className="text-white font-display font-black tracking-[-0.02em] leading-[1.0] text-[clamp(2.1rem,6.4vw,5.5rem)] text-balance max-w-4xl">
             {headlinePrefix}{" "}
-            <span className="font-serif italic font-normal text-white/90 tracking-tight text-[1.06em]">
+            <span className="font-accent italic text-white text-[1.1em] tracking-normal inline">
               {headlineItalicAccent}
             </span>
             {headlineSuffix && ` ${headlineSuffix}`}

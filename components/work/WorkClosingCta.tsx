@@ -19,7 +19,7 @@ export function WorkClosingCta({ primaryCtaLabel = "Start a Project" }: WorkClos
 
         <h2 className="text-white font-black text-[clamp(2.2rem,5.5vw,4.8rem)] leading-[1.08] tracking-tight text-balance">
           Your brand <br />
-          <span className="font-serif italic font-normal text-white text-[1.1em]">
+          <span className="italic text-white">
             could be next.
           </span>
         </h2>

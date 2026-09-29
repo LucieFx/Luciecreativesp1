@@ -54,10 +54,10 @@ export function HomeFaq() {
       />
 
       {/* Dot Grid Pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-50 pointer-events-none" />
+      {null}
 
       {/* Atmospheric Glow */}
-      <div className="absolute top-1/2 right-1/3 w-[550px] h-[550px] bg-[#7A1F2B]/[0.04] rounded-full blur-[160px] pointer-events-none" />
+      {null}
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -65,9 +65,9 @@ export function HomeFaq() {
           <div className="lg:col-span-5 sticky top-28">
             <SectionLabel number="11" text="FREQUENTLY ASKED QUESTIONS" className="mb-4" />
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-text-primary uppercase leading-[1.1] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-[-0.02em] text-text-primary leading-[1.0] mb-6 text-balance">
               Clear answers to{" "}
-              <span className="text-[#7A1F2B] font-serif italic lowercase font-normal block text-[1.08em]">
+              <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
                 commercial questions.
               </span>
             </h2>

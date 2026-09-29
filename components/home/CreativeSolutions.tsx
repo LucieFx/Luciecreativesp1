@@ -129,8 +129,8 @@ export function CreativeSolutions() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-text-primary uppercase leading-[1.08] max-w-4xl text-balance">
             End-to-End Creative &amp;{" "}
-            <span className="text-[#7A1F2B] font-serif italic lowercase font-normal block sm:inline text-[1.08em]">
-              digital execution.
+            <span className="text-[#7A1F2B] italic block sm:inline">
+              Digital Execution.
             </span>
           </h2>
 

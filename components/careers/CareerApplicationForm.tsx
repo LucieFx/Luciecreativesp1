@@ -230,7 +230,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               required
               value={formData.name}
               onChange={handleChange}
-              placeholder="e.g. Aakash Patel"
+              placeholder="e.g. Full Name"
               className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             />
           </div>

@@ -1,24 +1,38 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+const bbhHegarty = localFont({
+  src: [
+    {
+      path: "../public/fonts/BBHHegarty-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-display",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-  adjustFontFallback: true,
+  fallback: ["sans-serif"],
   preload: true,
 });
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-accent",
   display: "swap",
-  weight: ["400"],
-  style: ["normal", "italic"],
-  adjustFontFallback: true,
+  weight: "400",
+  style: "italic",
+  fallback: ["serif"],
+  preload: true,
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+  fallback: ["sans-serif"],
   preload: true,
 });
 
@@ -26,8 +40,8 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
-  weight: ["400", "500", "600"],
-  adjustFontFallback: true,
+  weight: ["400", "700"],
+  fallback: ["monospace"],
   preload: false,
 });
 
@@ -110,7 +124,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakarta.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans scroll-smooth bg-white text-ink`}
+      className={`${bbhHegarty.variable} ${instrumentSerif.variable} ${inter.variable} ${jetbrainsMono.variable} font-body scroll-smooth bg-white text-ink`}
     >
       <head>
         <meta name="color-scheme" content="light" />
@@ -138,7 +152,7 @@ export default function RootLayout({
           `}</style>
         </noscript>
       </head>
-      <body className="antialiased selection:bg-[#8B1A1A] selection:text-white bg-white font-sans text-ink font-normal">
+      <body className="antialiased selection:bg-[#8B1A1A] selection:text-white bg-white font-body text-ink font-normal text-[15px] sm:text-[16px] leading-[1.6]">
         <MotionProvider>
           <MotionSafetyNet />
           <ScrollProgressBar />

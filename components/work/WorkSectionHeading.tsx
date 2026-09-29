@@ -42,10 +42,10 @@ export function WorkSectionHeading({
           <span>{badgeText}</span>
         </div>
 
-        {/* System Heading: Uppercase Sans + Serif Italic Accent */}
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-ink uppercase">
+        {/* System Heading: font-display + font-accent */}
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display font-black tracking-[-0.02em] leading-[1.0] text-ink text-balance">
           {primaryWord}{" "}
-          <span className="text-brand-red font-serif italic lowercase font-normal">
+          <span className="font-accent italic text-brand-red text-[1.1em] tracking-normal inline">
             {accentWord}
           </span>
         </h2>

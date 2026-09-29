@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CAREER_ROLES } from "@/lib/careers-data";
-import { ArrowUpRight, Sparkles, Briefcase } from "lucide-react";
+import { ArrowUpRight, Briefcase } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
 import { SplitText } from "@/components/motion/SplitText";
@@ -42,14 +42,14 @@ export default function CareersPage() {
         {/* Header Section */}
         <header className="mb-14 sm:mb-18 text-left">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-bold tracking-widest uppercase mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#8B1A1A]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#8B1A1A] inline-block" aria-hidden="true" />
             <span>Join The Team</span>
           </div>
 
           <SplitText
             as="h1"
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink tracking-tight leading-[1.08] mb-4"
-            accentClassName="font-serif italic text-[#8B1A1A] font-normal"
+            className="text-4xl sm:text-5xl lg:text-6xl font-display font-black text-ink tracking-[-0.02em] leading-[1.0] mb-4 text-balance"
+            accentClassName="font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal inline"
           >
             Come make things people *stop for.*
           </SplitText>
@@ -93,7 +93,7 @@ export default function CareersPage() {
 
                     {/* Apply Link (Bold Maroon, Top-Right) */}
                     <div className="self-start sm:self-auto shrink-0 pt-1">
-                      <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#8B1A1A] hover:underline group-hover:translate-x-0.5 transition-transform">
+                      <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#8B1A1A] hover:underline transition-transform">
                         <span>Apply</span>
                         <ArrowUpRight className="w-4 h-4" />
                       </span>

@@ -10,7 +10,6 @@ import {
   ArrowUpRight,
   CheckCircle2,
   Cpu,
-  Sparkles,
 } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { MagneticButton } from "@/components/ui/MagneticButton";
@@ -22,19 +21,19 @@ export function UiUxShowcase() {
       className="py-24 sm:py-32 px-4 sm:px-6 md:px-12 bg-white relative overflow-hidden font-bold"
     >
       {/* Dot Grid Pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-50 pointer-events-none" />
+      {null}
 
       {/* Atmospheric Glow */}
-      <div className="absolute top-1/2 left-1/3 w-[550px] h-[550px] bg-[#7A1F2B]/[0.04] rounded-full blur-[160px] pointer-events-none" />
+      {null}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Label & Header */}
         <div className="flex flex-col items-center text-center mb-16 sm:mb-20">
           <SectionLabel number="06" text="UI/UX &amp; PRODUCT DESIGN" className="mb-4" />
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-text-primary uppercase leading-[1.08] max-w-4xl text-balance">
-            Human-Centered UI/UX &amp;{" "}
-            <span className="text-[#7A1F2B] font-serif italic lowercase font-normal block sm:inline text-[1.08em]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.02em] text-text-primary leading-[1.0] max-w-4xl text-balance">
+            Human-centered UI/UX &amp;{" "}
+            <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
               fluid product journeys.
             </span>
           </h2>

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  Sparkles,
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
@@ -128,10 +127,10 @@ export function LocationPageTemplate({
 
         {/* 1. HERO SECTION */}
         <section className="pt-32 sm:pt-40 pb-16 px-4 sm:px-6 md:px-12 relative overflow-hidden bg-white">
-          <div className="absolute inset-0 dot-grid-pattern opacity-60 pointer-events-none" />
+          {null}
 
           {/* Ambient Glow Orb */}
-          <div className="absolute top-1/4 right-10 w-[500px] h-[500px] bg-[#7A1F2B]/[0.05] rounded-full blur-[140px] pointer-events-none -z-0" />
+          {null}
 
           <div className="max-w-6xl mx-auto relative z-10">
             <Breadcrumbs items={breadcrumbItems} className="mb-8" />
@@ -144,9 +143,9 @@ export function LocationPageTemplate({
               <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse ml-0.5" />
             </div>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-ink uppercase leading-[1.08] max-w-5xl">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-black tracking-[-0.02em] text-ink leading-[1.0] max-w-5xl text-balance">
               {headlineRegular}{" "}
-              <span className="text-[#7A1F2B] font-serif italic lowercase font-normal block sm:inline text-[1.08em]">
+              <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
                 {headlineItalic}
               </span>
             </h1>
@@ -259,7 +258,7 @@ export function LocationPageTemplate({
                       <span className="text-xs font-bold text-muted">
                         Service 0{idx + 1}
                       </span>
-                      <span className="text-[#7A1F2B] font-black text-xs group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                      <span className="text-[#7A1F2B] font-black text-xs transition-transform inline-flex items-center gap-1">
                         {s.name} in {locationName} →
                       </span>
                     </div>
@@ -294,7 +293,7 @@ export function LocationPageTemplate({
                 </div>
                 <Link
                   href="/video-editing"
-                  className="text-xs font-black uppercase tracking-wider text-[#7A1F2B] hover:translate-x-1 transition-transform inline-flex items-center gap-1.5"
+                  className="text-xs font-black uppercase tracking-wider text-[#7A1F2B] transition-transform inline-flex items-center gap-1.5"
                 >
                   <span>Explore Video &amp; Design Portfolio</span>
                   <ArrowRight className="w-4 h-4" />
@@ -332,7 +331,7 @@ export function LocationPageTemplate({
                           {p.outcomeLabel}
                         </span>
                       </div>
-                      <span className="font-black text-[#7A1F2B] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                      <span className="font-black text-[#7A1F2B] transition-transform inline-flex items-center gap-1">
                         View Study →
                       </span>
                     </div>
@@ -389,11 +388,11 @@ export function LocationPageTemplate({
                   3. Founder Oversight
                 </h3>
                 <p className="text-xs font-medium text-body leading-relaxed">
-                  Direct review with agency leadership — ensuring zero quality loss or handoff miscommunication.
+                  Direct review with agency leadership, ensuring zero quality loss or handoff miscommunication.
                 </p>
               </div>
 
-              <div className="p-6 rounded-3xl bg-white border border-line shadow-soft">
+              <div className="p-6 rounded-xl bg-white border border-line shadow-xs">
                 <div className="w-10 h-10 rounded-2xl bg-[#FDF2F2] border border-[#7A1F2B]/20 flex items-center justify-center text-[#7A1F2B] mb-4">
                   <Layers className="w-5 h-5" />
                 </div>

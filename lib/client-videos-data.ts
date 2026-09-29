@@ -513,7 +513,7 @@ export const CLIENT_VIDEOS: ClientVideoItem[] = [
   },
 
   // ─────────────────────────────────────────────────────────────
-  // 4. FOUNDER AUTHORITY (Leaders Diary & Nishant Patel)
+  // 4. FOUNDER AUTHORITY (Leaders Diary)
   // ─────────────────────────────────────────────────────────────
   {
     id: "leaders-diary-01",
@@ -524,7 +524,7 @@ export const CLIENT_VIDEOS: ClientVideoItem[] = [
     tagline:
       "Aggressive hook pacing, kinetic captions, and multi-cam punch-ins engineered to stop the scroll.",
     description:
-      "Episode 01 of the Leaders Diary series with Nishant Patel. Engineered for viral business shorts with auto-highlighted bold keywords, subtle zoom-ins on punchlines, and high-impact sound design.",
+      "Episode 01 of the Leaders Diary series. Engineered for viral business shorts with auto-highlighted bold keywords, subtle zoom-ins on punchlines, and high-impact sound design.",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790266905/lucie-creatives/videos/clients/leaders-diary/leaders-diary-nishant-patel-01.mp4",
     posterSrc: "https://i.ytimg.com/vi/NajP1LgJ8qo/hqdefault.jpg",
     aspectRatio: "9:16",
@@ -545,7 +545,7 @@ export const CLIENT_VIDEOS: ClientVideoItem[] = [
       pacing: "Rapid Multi-Cam Intercuts",
       colorGrade: "Mood Studio Charcoal & Warm Skin Tones",
     },
-    tags: ["Podcast", "Founder Authority", "Nishant Patel", "Viral Reel"],
+    tags: ["Podcast", "Founder Authority", "Executive Authority", "Viral Reel"],
     featured: true,
   },
   {

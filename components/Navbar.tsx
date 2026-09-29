@@ -410,7 +410,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                       {isActive && (
                         <span className="w-2 h-2 rounded-full bg-[#8B1A1A]" />
                       )}
-                      <ArrowUpRight className="w-5 h-5 text-muted group-hover:text-[#8B1A1A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                      <ArrowUpRight className="w-5 h-5 text-muted group-hover:text-[#8B1A1A] transition-all" />
                     </div>
                   </Link>
                 );

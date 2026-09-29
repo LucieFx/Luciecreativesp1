@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Clock } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { INSIGHTS_ARTICLES } from "@/lib/insights-data";
 
@@ -17,19 +17,19 @@ export function HomeInsights() {
       className="py-24 sm:py-32 px-4 sm:px-6 md:px-12 bg-white relative overflow-hidden font-bold border-t border-line"
     >
       {/* Dot Grid Pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-50 pointer-events-none" />
+      {null}
 
       {/* Atmospheric Glow */}
-      <div className="absolute top-1/2 left-1/3 w-[600px] h-[600px] bg-[#7A1F2B]/[0.03] rounded-full blur-[160px] pointer-events-none" />
+      {null}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <SectionLabel number="11" text="STRATEGIC INSIGHTS &amp; ANALYSIS" className="mb-4" />
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-text-primary uppercase leading-[1.08] max-w-3xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.02em] text-text-primary leading-[1.0] max-w-3xl text-balance">
               Engineering &amp;{" "}
-              <span className="text-[#7A1F2B] font-serif italic lowercase font-normal block sm:inline text-[1.08em]">
+              <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
                 design strategy.
               </span>
             </h2>
@@ -94,7 +94,7 @@ export function HomeInsights() {
                 <span className="font-semibold text-muted">
                   By {article.author.name.replace("Lucie Creatives ", "")}
                 </span>
-                <span className="font-black text-[#7A1F2B] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                <span className="font-black text-[#7A1F2B] transition-transform inline-flex items-center gap-1">
                   Read Guide →
                 </span>
               </div>

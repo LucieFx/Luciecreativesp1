@@ -34,8 +34,8 @@ export function GraphicDesignShowcase() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-text-primary uppercase leading-[1.08] max-w-4xl text-balance">
             Monolithic Design &amp;{" "}
-            <span className="text-[#7A1F2B] font-serif italic lowercase font-normal block sm:inline text-[1.08em]">
-              editorial precision.
+            <span className="text-[#7A1F2B] italic block sm:inline">
+              Editorial Precision.
             </span>
           </h2>
 

@@ -28,9 +28,9 @@ export function DevClosingCta({ primaryCtaLabel = "Start a Project" }: DevClosin
 
             <SplitText
               as="h2"
-              className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] mb-6"
+              className="text-4xl sm:text-6xl lg:text-7xl font-display font-black text-white tracking-[-0.02em] leading-[1.0] mb-6 text-balance"
               accentWords={["website", "or", "web", "platform?"]}
-              accentClassName="font-serif italic font-normal text-red-100 text-[1.08em] tracking-tight"
+              accentClassName="font-accent italic text-red-100 text-[1.1em] tracking-normal inline"
             >
               Ready to build your next *website or web platform?*
             </SplitText>

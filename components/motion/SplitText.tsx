@@ -18,7 +18,7 @@ export function SplitText({
   as: Component = "h2",
   className = "",
   accentWords = [],
-  accentClassName = "font-serif italic text-[#7A1F2B]",
+  accentClassName = "font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal font-normal inline",
   markerHighlight = false,
   markerClassName,
 }: SplitTextProps) {

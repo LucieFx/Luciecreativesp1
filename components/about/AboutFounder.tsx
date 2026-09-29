@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Quote, Sparkles, ShieldCheck, Zap, Target, ArrowUpRight } from "lucide-react";
+import { Quote, ShieldCheck, Zap, Target, ArrowUpRight } from "lucide-react";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { SITE_CONFIG } from "@/lib/constants";
 
@@ -46,23 +46,18 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
   return (
     <section className="relative w-full py-16 sm:py-24 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto select-none">
       <div className="max-w-4xl mx-auto">
-        <div className="p-8 sm:p-12 lg:p-16 rounded-[36px] bg-white border border-line/90 shadow-2xl relative overflow-hidden text-center">
-          {/* Ambient Subtle Background Accents */}
-          <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#8B1A1A]/[0.03] rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-slate-100/60 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute inset-0 dot-grid-pattern opacity-20 pointer-events-none" />
-
+        <div className="p-8 sm:p-12 lg:p-16 rounded-xl bg-white border border-line shadow-xs relative overflow-hidden text-center">
           <div className="relative z-10 space-y-8">
             {/* Header Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-red-50 border border-brand-red/20 text-brand-red text-xs font-black uppercase tracking-widest shadow-xs">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Founders&apos; Note</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-red-50 border border-brand-red/20 text-[#8B1A1A] text-xs font-mono font-bold uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" />
+              <span>Studio Note</span>
             </div>
 
-            {/* Quote Icon Jewel Badge */}
+            {/* Quote Icon Badge */}
             <div className="flex justify-center">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-b from-[#8B1A1A] via-[#781515] to-[#500C0C] text-white flex items-center justify-center shadow-[0_10px_25px_-5px_rgba(139,26,26,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] border border-[#8B1A1A]/40">
-                <Quote className="w-7 h-7 text-white" />
+              <div className="w-12 h-12 rounded-lg bg-[#8B1A1A] text-white flex items-center justify-center border border-[#8B1A1A]/40 shadow-xs">
+                <Quote className="w-5 h-5 text-white" />
               </div>
             </div>
 
@@ -73,27 +68,27 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
 
             {/* 3 Core Commitments */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 max-w-2xl mx-auto text-left">
-              <div className="p-4 rounded-2xl bg-surface-alt/70 border border-line/80 flex items-start gap-3">
+              <div className="p-4 rounded-lg bg-surface-alt/70 border border-line flex items-start gap-3">
                 <Target className="w-4 h-4 text-brand-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-black uppercase tracking-wider text-ink">Direct Access</h4>
-                  <p className="text-[11px] text-body mt-0.5">Direct communication with the builders—no account managers.</p>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-ink">Direct Access</h4>
+                  <p className="text-[11px] text-body mt-0.5 font-normal">Direct communication with the builders, no account managers.</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-surface-alt/70 border border-line/80 flex items-start gap-3">
+              <div className="p-4 rounded-lg bg-surface-alt/70 border border-line flex items-start gap-3">
                 <Zap className="w-4 h-4 text-brand-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-black uppercase tracking-wider text-ink">High Velocity</h4>
-                  <p className="text-[11px] text-body mt-0.5">Agile 7–14 day sprints with sub-24h critical turnaround.</p>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-ink">High Velocity</h4>
+                  <p className="text-[11px] text-body mt-0.5 font-normal">Agile 7 to 14 day sprints with sub-24h critical turnaround.</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-surface-alt/70 border border-line/80 flex items-start gap-3">
+              <div className="p-4 rounded-lg bg-surface-alt/70 border border-line flex items-start gap-3">
                 <ShieldCheck className="w-4 h-4 text-brand-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-black uppercase tracking-wider text-ink">True Ownership</h4>
-                  <p className="text-[11px] text-body mt-0.5">Total skin in the game &amp; 100% commercial IP transfer.</p>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-ink">True Ownership</h4>
+                  <p className="text-[11px] text-body mt-0.5 font-normal">Total skin in the game &amp; 100% commercial IP transfer.</p>
                 </div>
               </div>
             </div>
@@ -101,11 +96,11 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
             {/* Note Sign-off & Socials */}
             <div className="pt-8 border-t border-line/70 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-center sm:text-left">
-                <div className="text-ink font-black text-sm tracking-tight uppercase">
-                  — Founders
+                <div className="text-ink font-bold text-sm tracking-tight">
+                  Lucie Creatives
                 </div>
-                <div className="text-muted font-mono font-semibold text-xs tracking-wider">
-                  [Lucie Creatives]
+                <div className="text-muted font-mono font-medium text-xs tracking-wider">
+                  Digital Engineering &amp; Creative Studio
                 </div>
               </div>
 

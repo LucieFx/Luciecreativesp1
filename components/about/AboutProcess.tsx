@@ -59,9 +59,9 @@ export function AboutProcess() {
           <div className="inline-flex items-center gap-2 text-xs font-black text-brand-red tracking-widest uppercase">
             <span>Our Methodology</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-ink tracking-tight leading-tight">
-            How We Work:{" "}
-            <span className="font-serif italic font-normal text-brand-red">
+          <h2 className="text-3xl sm:text-5xl font-display font-black text-ink tracking-[-0.02em] leading-[1.0] text-balance">
+            How we work:{" "}
+            <span className="font-accent italic text-brand-red text-[1.1em] tracking-normal inline">
               Sprint-Based Precision
             </span>
           </h2>
