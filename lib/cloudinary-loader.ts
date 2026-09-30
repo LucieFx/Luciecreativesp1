@@ -43,13 +43,14 @@ export default function cloudinaryLoader({
     return src;
   }
 
-  // If local SVG, favicon, or local hardware mockup, keep untouched
+  // If local SVG, favicon, local hardware mockup, or local project screenshots, keep untouched
   if (
     src.endsWith(".svg") ||
     src.includes("favicon") ||
     src.includes("apple-touch-icon") ||
     src.includes("iphone-frame") ||
-    src.includes("iphone-screen-mask")
+    src.includes("iphone-screen-mask") ||
+    src.startsWith("/projects/")
   ) {
     return src;
   }

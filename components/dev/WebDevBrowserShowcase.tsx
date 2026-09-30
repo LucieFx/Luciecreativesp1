@@ -456,8 +456,12 @@ export function WebDevBrowserShowcase() {
           </div>
         </div>
 
-        {/* Responsive Showcase Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        {/* Responsive Showcase Grid: 1 col mobile, 2 col tablet/desktop (2x2 for 4 projects, 3 col for multiples of 3) */}
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 ${
+            projects.length % 3 === 0 ? "lg:grid-cols-3" : "lg:grid-cols-2"
+          } gap-6 sm:gap-8 items-stretch`}
+        >
           {projects.map((project, idx) => (
             <m.div
               key={project.slug}
