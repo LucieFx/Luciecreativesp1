@@ -1,0 +1,276 @@
+<USER_REQUEST>
+ROLE
+You are a senior front-end engineer and design QA lead. Audit, repair,
+and clean the Lucie Creatives codebase (Next.js, React Three Fiber,
+Framer Motion). Goal: the site must not look "vibecoded" (generic
+AI-generated), while keeping all functionality and ALL SEO intact.
+
+GROUND RULES
+- Work on a new git branch: audit/anti-vibecode. Never touch main.
+- Commit per phase and per checkpoint group so any change can be
+  reverted individually.
+- Three phases, in order. STOP after Phase 1 and wait for my approval.
+- Brand: maroon/red + white only. No purple, no neon, no pastels,
+  no rainbow. Backgrounds are only white or red/maroon.
+- Use ONE white token (e.g. --bg-white) site-wide. It may be a very
+  slightly warm white, but it must be the same everywhere.
+- Copy must be honest and provable. Pricing is custom-quote only.
+- Keep: the 63M+ views metric, the iPhone reels showcase, the MacBook
+  browser mockup, Framer Motion, the R3F hero (with a fallback).
+
+======================================================================
+PHASE 1: AUDIT (READ-ONLY, NO CODE CHANGES)
+======================================================================
+Scan every route, layout, component, style file, and Tailwind config.
+Output a report as a table: checkpoint #, PASS/FAIL, file:line
+references, and the proposed fix. End with a count of PASS/FAIL and a
+list of anything ambiguous. Then stop.
+
+CHECKPOINTS
+
+1. HARSH GRADIENTS
+   Detect: linear/radial/conic-gradient, bg-gradient-*, from-/to-/via-
+   classes, gradient text (bg-clip-text).
+   Fix: replace with flat maroon, red, or white fills. Allow at most
+   one subtle same-hue tonal gradient (under 8% difference), used
+   sparingly. Remove all gradient text.
+
+2. LUCIDE ICONS
+   Detect: lucide-react imports, and any stock icon-pack look.
+   Fix: remove icons that only decorate. Where an icon is needed,
+   use custom inline SVGs drawn to one consistent stroke width and
+   size. Remove the lucide-react dependency once unused.
+
+3. PURE WHITE BACKGROUND
+   Detect: #fff, #ffffff, bg-white, white in CSS.
+   Fix: replace with a single --bg-white token (warm, slightly
+   off-white) defined once in the theme. Nothing hardcoded.
+
+4. RAINBOW COLORING
+   Detect: multi-hue accents, colored tags/badges, per-card colors.
+   Fix: one accent (maroon/red) plus neutrals only.
+
+5. DROP SHADOWS
+   Detect: shadow-*, box-shadow, drop-shadow filters.
+   Fix: replace with 1px borders (neutral or faint maroon tint) and
+   spacing. Where elevation is truly needed, use one low-opacity
+   tinted shadow token, used in one or two places at most.
+
+6. THREE FEATURE CARDS IN A ROW
+   Detect: grid-cols-3 card rows of icon + title + text, especially
+   for services (Video Editing, Graphic Design, Social Media
+   Marketing).
+   Fix: change layout so services are not three identical cards:
+   e.g. large numbered list rows, alternating image/text blocks, or
+   one dominant service with two supporting. Add real imagery.
+
+7. EMOJIS
+   Detect: any emoji character in JSX, copy, metadata visible text,
+   toasts, alerts.
+   Fix: remove. (Do not alter emoji inside SEO metadata without
+   asking; report it instead.)
+
+8. LIQUID GLASS / GLASSMORPHISM (REMOVE COMPLETELY)
+   Detect: backdrop-filter, backdrop-blur-*, bg-white/10-style
+   translucent panels, blurred frosted cards, glass borders, glass
+   utility classes, R3F glass materials or transmission materials
+   used as UI.
+   Fix: replace every instance with solid white or solid maroon
+   surfaces plus a 1px border. Delete unused glass CSS classes,
+   variables, and shaders. No frosted look anywhere, including
+   navbar, modals, cards, buttons, and mockup overlays.
+
+9. EM DASHES (LIKELY)
+   Detect: the characters — and – in visible copy and JSX text.
+   Fix: rewrite the sentence with a period, comma, or colon.
+   Never change em dashes in code comments or in SEO metadata
+   without listing them for my approval.
+
+10. DEFAULT FONT (LIKELY)
+    Detect: Inter, Roboto, Arial, system-ui as the main font.
+    Fix: choose one distinctive display font for headings and one
+    clean body font via next/font. Define in the theme, remove all
+    unused font imports and weights.
+
+11. COLORED ACCENT BORDERS (LIKELY)
+    Detect: border-l-4 with a color, top/side accent bars on cards.
+    Fix: remove accent bars. Use plain borders or none.
+
+12. FAKE OR UNPROVABLE STATS AND TESTIMONIALS
+    Detect: every number, percentage, "X+ clients", star rating,
+    testimonial, logo wall, founder quote, and result claim.
+    Fix: keep only what I can prove. List each claim with its
+    location so I can confirm it. Ensure the same stat matches on
+    Home and About. Attribute or delete unattributed quotes. Remove
+    placeholder names/logos/testimonials.
+
+13. BENTO GRIDS
+    Detect: mixed-size card mosaics in grids.
+    Fix: replace with a straightforward editorial layout unless the
+    content genuinely needs it.
+
+14. TERMINAL WINDOW
+    Detect: fake terminal/code windows, traffic-light dots, typed
+    command animations.
+    Fix: remove.
+
+15. "IT'S NOT X, IT'S Y" COPY
+    Detect: contrast-framed headlines and lines ("Not just X, but Y",
+    "More than a...", "We don't X, we Y").
+    Fix: rewrite as one direct, specific statement about what we do.
+    Keep any hero line that is honest, memorable, and quotable.
+
+16. CHECKMARK BULLETS
+    Detect: check icons before list items.
+    Fix: use plain text paragraphs, numbered lists, or simple dashes
+    drawn in CSS. Not check icons.
+
+17. THREE PRICING TIERS
+    Detect: Basic/Pro/Enterprise style tier cards.
+    Fix: none should exist. Pricing is custom-quote. Keep the
+    "get a quote" flow with one clear CTA.
+
+18. NO REAL PRODUCT DEMOS
+    Detect: static mock images or vague screenshots in place of real
+    work.
+    Fix: use real reels, real project screenshots, real embedded
+    video. Flag places that need real assets; do not invent them.
+
+19. SOFT CORNER RADIUS
+    Detect: rounded-2xl/3xl/full on cards and buttons, mixed radii.
+    Fix: one radius scale in the theme (e.g. 0, 4px, 8px). Cards
+    and buttons use the same value. Pills only for small tags.
+
+20. PURPLE AND BLACK
+    Detect: purple/violet/indigo values, near-black hero sections.
+    Fix: remove. Only maroon/red and white backgrounds.
+
+21. NO SKELETON LOADERS
+    Detect: images, reels, R3F hero, and fetched sections with no
+    loading state.
+    Fix: add skeleton or placeholder states with fixed dimensions
+    (no layout shift): R3F hero (poster image fallback), Cloudinary
+    images (blur/solid placeholder), reels grid, case studies.
+
+22. RADIAL ORBS
+    Detect: blurred circular glow blobs behind hero or sections.
+    Fix: remove.
+
+23. DOT GRIDS
+    Detect: dotted/grid background patterns (SVG, CSS radial-gradient
+    dots, background-image patterns).
+    Fix: remove.
+
+24. SPARKLE ICONS
+    Detect: sparkle/star/stars icons or "AI" sparkle motifs.
+    Fix: remove.
+
+25. ANIMATED ARROWS
+    Detect: arrows that slide or bounce on CTAs and links.
+    Fix: static text CTAs, or one restrained underline/color change.
+
+26. NO TERMS OF SERVICE
+    Detect: missing /terms route or footer link.
+    Fix: create /terms and link it in the footer (draft text for me
+    to review, tailored to a creative and web agency: scope,
+    payments, revisions, IP transfer, delivery, liability).
+
+27. NO PRIVACY POLICY
+    Detect: missing /privacy route or footer link.
+    Fix: create /privacy and link it in the footer, and next to every
+    form (contact, careers application, WhatsApp quick message).
+    Cover what data is collected, why, where it goes (hello@
+    luciecreatives.in), retention, and the user's rights, in line
+    with India's DPDP Act. I will have it reviewed before launch.
+
+28. HOVER ANIMATIONS EVERYWHERE
+    Detect: hover:scale, hover:-translate, whileHover on most items.
+    Fix: keep hover effects only on clickable elements, with one
+    consistent effect (e.g. color or underline change). Remove
+    scale/lift on cards. Keep scroll and entrance animations smooth
+    (Framer Motion) and respect prefers-reduced-motion.
+
+29. NEON COLORS
+    Detect: saturated cyan, lime, hot pink, glowing text-shadows.
+    Fix: remove.
+
+30. BASIC PASTEL COLORS
+    Detect: soft pink/lavender/mint/peach backgrounds.
+    Fix: remove. Only white and maroon/red backgrounds.
+
+EXTRA QA IN THE SAME REPORT
+- Text alignment, spacing consistency, and heading hierarchy.
+- Color contrast on maroon backgrounds (WCAG AA).
+- Mobile and tablet layout at 360, 390, 768, 1024, 1440 widths.
+- CTA labels consistent site-wide.
+
+======================================================================
+PHASE 2: REPAIR (ONLY AFTER I APPROVE THE REPORT)
+======================================================================
+- Fix all FAILs, one commit per checkpoint group.
+- Centralize colors, radius, borders, and fonts in the theme so the
+  fixes stay consistent.
+- After each group run `next build` and fix any errors.
+- Do not change any route, slug, or heading meaning while fixing copy.
+
+======================================================================
+PHASE 3: DEAD CODE REMOVAL (SEO LOCKED)
+======================================================================
+Find and remove:
+- Unused files, components, hooks, utils, and unused exports
+  (use knip and ts-prune).
+- Unused npm packages (depcheck), including lucide-react and any
+  glass/blur helper libraries if no longer used.
+- Unused CSS classes, Tailwind config extensions, CSS variables,
+  keyframes, and font imports.
+- Unused images, videos, and public assets (verify with a project-
+  wide search including dynamic paths and CMS/Cloudinary references).
+- Commented-out code, unreachable branches, leftover TODOs,
+  console.logs, and duplicate components (e.g. leftovers from the old
+  Editing & Design combined page and the removed ComplyHQ project).
+- Unused ESLint errors (no-unused-vars).
+
+Before deleting anything: grep for dynamic imports, string-built
+paths, and Next.js conventions (page, layout, route, loading, error,
+not-found, middleware, opengraph-image, sitemap, robots). Never
+delete files Next.js loads by convention.
+
+SEO IS LOCKED. DO NOT MODIFY OR REMOVE:
+- metadata / generateMetadata, titles, descriptions, canonicals
+- Open Graph and Twitter tags/images, favicons, manifest
+- JSON-LD structured data, sitemap.ts/xml, robots.txt
+- next.config redirects/rewrites and every existing URL and slug
+  (the old Editing & Design URL must keep redirecting to the new
+  video editing and graphic design pages)
+- alt text, one h1 per page, heading hierarchy, internal links
+- analytics, Search Console verification, tracking tags
+Only permitted SEO change: app development stays removed, and the
+nav label stays "Web Development".
+
+VERIFICATION (REQUIRED)
+1. Before Phase 2 and again after Phase 3, save the rendered <head>
+   and JSON-LD for every route, plus the sitemap and robots output.
+   Diff them and show me the result. Any difference other than the
+   permitted one is a bug: revert it.
+2. Crawl all internal links and confirm no 404s and all redirects
+   still work.
+3. Run Lighthouse (mobile) before and after: Performance,
+   Accessibility, Best Practices, SEO. SEO score must not drop.
+4. Test error states: the real 404 page, Retry / Go to Home on
+   errors, the R3F fallback, and inline form errors.
+5. Final output: list of deleted files and packages, bundle size
+   before/after, and the PASS/FAIL table re-run showing all 30 PASS.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-29T19:03:07+05:30.
+
+The user's current state is as follows:
+Active Document: e:\NEWSITE\downloads\dpl_BGnurtTK5RJXf7LfMoxnTjoz61wr\src\.npmrc (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- e:\NEWSITE\downloads\dpl_BGnurtTK5RJXf7LfMoxnTjoz61wr\src\.npmrc (LANGUAGE_UNSPECIFIED)
+- e:\NEWSITE\downloads\dpl_BGnurtTK5RJXf7LfMoxnTjoz61wr\src\app\web-development\page.tsx (LANGUAGE_TSX)
+- e:\NEWSITE\downloads\dpl_BGnurtTK5RJXf7LfMoxnTjoz61wr\src\components\about\AboutFounder.tsx (LANGUAGE_TSX)
+- e:\NEWSITE\downloads\dpl_BGnurtTK5RJXf7LfMoxnTjoz61wr\src\components\ui\SectionLabel.tsx (LANGUAGE_TSX)
+- e:\NEWSITE\downloads\dpl_BGnurtTK5RJXf7LfMoxnTjoz61wr\src\components\about\AboutHero.tsx (LANGUAGE_TSX)
+</ADDITIONAL_METADATA>

@@ -59,7 +59,7 @@ export function DevHero() {
 
           <SplitText
             as="h1"
-            className="text-4xl sm:text-6xl lg:text-7xl font-display font-black text-ink tracking-[-0.02em] leading-[1.0] text-balance"
+            className="text-4xl sm:text-6xl lg:text-7xl font-display font-semibold text-ink tracking-[-0.02em] leading-[1.05] text-balance"
             accentWords={["alive."]}
             accentClassName="font-accent italic text-brand-red text-[1.1em] tracking-normal inline"
           >

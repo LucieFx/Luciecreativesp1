@@ -129,7 +129,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
     <>
       {/* Dynamic smart header: sticks at top, goes up with scroll down, reveals on scroll up */}
       <header
-        className={`fixed top-3 sm:top-4 left-0 right-0 z-50 pointer-events-none px-3.5 sm:px-6 transition-transform duration-300 ease-out ${
+        className={`fixed top-3 sm:top-4 left-0 right-0 z-[100] pointer-events-none px-3.5 sm:px-6 transition-transform duration-300 ease-out ${
           isVisible || mobileMenuOpen ? "translate-y-0" : "-translate-y-[140%]"
         }`}
       >

@@ -125,18 +125,26 @@ ${message}
     if (resendApiKey) {
       try {
         const resend = new Resend(resendApiKey);
-        await resend.emails.send({
-          from: process.env.RESEND_FROM_EMAIL || "Lucie Creatives Inquiries <inquiries@luciecreatives.in>",
-          to: "hello@luciecreatives.in",
+        const toEmail = process.env.RESEND_TO_EMAIL || "hello@luciecreatives.in";
+        const fromEmail = process.env.RESEND_FROM_EMAIL || "Lucie Creatives <hello@luciecreatives.in>";
+
+        const result = await resend.emails.send({
+          from: fromEmail,
+          to: toEmail,
           replyTo: email,
           subject,
           html: htmlContent,
           text: textContent,
         });
-        emailSent = true;
-        console.log(`[Contact] Inquiry delivered via Resend for ${name} (${service})`);
+
+        if (result.error) {
+          console.error("[Contact] Resend API error:", result.error);
+        } else {
+          emailSent = true;
+          console.log(`[Contact] Inquiry delivered via Resend for ${name} (${service}) -> ID: ${result.data?.id}`);
+        }
       } catch (resendError) {
-        console.error("[Contact] Resend delivery error:", resendError);
+        console.error("[Contact] Resend delivery exception:", resendError);
       }
     }
 

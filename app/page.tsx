@@ -8,8 +8,8 @@ import { Hero } from "@/components/Hero";
 const ClientLogoStrip = nextDynamic(() =>
   import("@/components/ui/ClientLogoStrip").then((m) => m.ClientLogoStrip)
 );
-const HomeServicesMerged = nextDynamic(() =>
-  import("@/components/home/HomeServicesMerged").then((m) => m.HomeServicesMerged)
+const HomeBentoServices = nextDynamic(() =>
+  import("@/components/home/HomeBentoServices").then((m) => m.HomeBentoServices)
 );
 const FeaturedPortfolio = nextDynamic(() =>
   import("@/components/home/FeaturedPortfolio").then((m) => m.FeaturedPortfolio)
@@ -178,8 +178,8 @@ export default function Home() {
       {/* 2. Compact Trust Strip: Logo Ticker + Single Inline Row of Verified Stats */}
       <ClientLogoStrip />
 
-      {/* 3. Capabilities Grid: 6 Cohesive Disciplines */}
-      <HomeServicesMerged />
+      {/* 3. Capabilities Bento Grid: 6 Disciplines with Mini UI Mockups */}
+      <HomeBentoServices />
 
       {/* 4. Proven Commercial Outcomes: Case Studies Grid Proof Section */}
       <FeaturedPortfolio />

@@ -23,9 +23,10 @@ export async function POST(request: Request) {
     const expectedSalary = (formData.get("expectedSalary") as string)?.trim();
     const noticePeriod = (formData.get("noticePeriod") as string)?.trim();
     const location = (formData.get("location") as string)?.trim();
+    const message = (formData.get("message") as string)?.trim() || (formData.get("coverLetter") as string)?.trim() || "";
     const cvFile = formData.get("cv") as File | null;
 
-    // Field validation - only required fields per specification: Name*, Email*, Total experience*, Notice period*, Current location*, CV upload*
+    // Field validation - required fields: Name*, Email*, Total experience*, Notice period*, Current location*, CV upload*
     const missingFields: string[] = [];
     if (!name) missingFields.push("Name");
     if (!email) missingFields.push("Email");
@@ -77,88 +78,622 @@ export async function POST(request: Request) {
     const arrayBuffer = await file.arrayBuffer();
     const cvBuffer = Buffer.from(arrayBuffer);
 
-    // Build structured email
-    const subject = `New application: ${roleTitle} — ${name}`;
     const formattedDate = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+    const applicantMessage = message || "Application submitted via the Lucie Creatives career portal. CV document attached for evaluation.";
 
-    const htmlContent = `
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <style>
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px; color: #0f172a; }
-            .card { background-color: #ffffff; max-width: 620px; margin: 0 auto; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
-            .header { background-color: #8B1A1A; color: #ffffff; padding: 28px 32px; }
-            .header h1 { margin: 0 0 6px 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
-            .header p { margin: 0; font-size: 13px; color: #fecdd3; }
-            .content { padding: 28px 32px; }
-            .row { display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 10px 0; font-size: 13px; }
-            .label { color: #64748b; font-weight: 600; width: 40%; }
-            .value { color: #0f172a; font-weight: 700; width: 60%; text-align: right; word-break: break-word; }
-            .highlight { color: #8B1A1A; font-weight: 800; }
-            .footer { padding: 16px 32px; background-color: #f8fafc; font-size: 11px; color: #94a3b8; text-align: center; border-top: 1px solid #e2e8f0; }
-          </style>
-        </head>
-        <body>
-          <div class="card">
-            <div class="header">
-              <h1>New Candidate Application</h1>
-              <p>Submitted for <strong>${roleTitle}</strong> • ${formattedDate} IST</p>
-            </div>
-            <div class="content">
-              <div class="row">
-                <div class="label">Applicant Name</div>
-                <div class="value">${name}</div>
-              </div>
-              <div class="row">
-                <div class="label">Email Address</div>
-                <div class="value"><a href="mailto:${email}">${email}</a></div>
-              </div>
-              <div class="row">
-                <div class="label">Phone Number</div>
-                <div class="value">${phone ? `<a href="tel:${phone}">${phone}</a>` : "Not provided"}</div>
-              </div>
-              <div class="row">
-                <div class="label">City / Native Area</div>
-                <div class="value">${city || "Not specified"}</div>
-              </div>
-              <div class="row">
-                <div class="label">Current Location</div>
-                <div class="value">${location}</div>
-              </div>
-              <div class="row">
-                <div class="label">Total Experience</div>
-                <div class="value">${experience}</div>
-              </div>
-              <div class="row">
-                <div class="label">Current Salary (Monthly)</div>
-                <div class="value">${currentSalary ? `₹${currentSalary}` : "Not specified"}</div>
-              </div>
-              <div class="row">
-                <div class="label">Expected Salary (Monthly)</div>
-                <div class="value highlight">${expectedSalary ? `₹${expectedSalary}` : "Not specified"}</div>
-              </div>
-              <div class="row">
-                <div class="label">Notice Period</div>
-                <div class="value">${noticePeriod}</div>
-              </div>
-              <div class="row">
-                <div class="label">Portfolio / Profile</div>
-                <div class="value">
-                  ${portfolio !== "Not provided" ? `<a href="${portfolio}" target="_blank">${portfolio}</a>` : "Not provided"}
-                </div>
-              </div>
-              <div class="row" style="border-bottom: none;">
-                <div class="label">Attached CV</div>
-                <div class="value">${fileName} (${fileSizeKb} KB)</div>
-              </div>
-            </div>
-            <div class="footer">
-              Lucie Creatives Automated Careers Portal • Direct Delivery to hello@luciecreatives.in
-            </div>
-          </div>
-        </body>
-      </html>
+    // =========================================================================
+    // 1. INTERNAL TEAM NOTIFICATION TEMPLATE (Delivered TO hello@luciecreatives.in)
+    // =========================================================================
+    const internalHtml = `
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="supported-color-schemes" content="light only" />
+  <title>New Application – Lucie Creatives</title>
+</head>
+
+<body style="margin:0;padding:0;background-color:#f4f1f1;-webkit-text-size-adjust:100%;">
+
+  <!-- Preheader -->
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#ffffff;">
+    ${name} just applied for ${roleTitle} at Lucie Creatives.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+         style="background-color:#f4f1f1;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+
+        <!-- Main Card -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+               style="width:100%;max-width:600px;background-color:#ffffff;border-radius:16px;overflow:hidden;">
+
+          <!-- Maroon Top Bar -->
+          <tr>
+            <td height="8"
+                style="height:8px;line-height:8px;font-size:0;background-color:#800000;">
+              &nbsp;
+            </td>
+          </tr>
+
+          <!-- Logo -->
+          <tr>
+            <td align="left"
+                style="padding:36px 40px 8px 40px;background-color:#ffffff;">
+
+              <img
+                src="https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_400/v1791402408/lucie-creatives/brand/lucie-creatives-logo-transparent.png"
+                alt="Lucie Creatives."
+                width="190"
+                style="display:block;width:190px;max-width:100%;height:auto;border:0;outline:none;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:bold;color:#800000;"
+              />
+
+            </td>
+          </tr>
+
+          <!-- Heading -->
+          <tr>
+            <td style="padding:28px 40px 0 40px;font-family:Arial,Helvetica,sans-serif;">
+
+              <p style="margin:0 0 10px 0;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#800000;font-weight:bold;">
+                New Application &bull; Internal
+              </p>
+
+              <h1 style="margin:0;font-size:28px;line-height:36px;color:#1a1a1a;font-weight:800;">
+                ${name} applied for ${roleTitle}.
+              </h1>
+
+              <p style="margin:10px 0 0 0;font-size:14px;color:#777777;">
+                Submitted on ${formattedDate} IST
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Applicant Details -->
+          <tr>
+            <td style="padding:28px 40px 0 40px;">
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                     style="background-color:#fbf5f5;border:1px solid #ecd6d6;border-radius:12px;">
+
+                <tr>
+                  <td style="padding:20px 24px;font-family:Arial,Helvetica,sans-serif;">
+
+                    <p style="margin:0 0 14px 0;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#800000;font-weight:bold;">
+                      Applicant Details
+                    </p>
+
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                      <!-- Name -->
+                      <tr>
+                        <td width="36%" valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Full Name
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${name}
+                        </td>
+                      </tr>
+
+                      <!-- Email -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Email
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;font-weight:bold;">
+                          <a
+                            href="mailto:${email}"
+                            style="color:#800000;text-decoration:none;"
+                          >
+                            ${email}
+                          </a>
+                        </td>
+                      </tr>
+
+                      <!-- Phone -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Phone / WhatsApp
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${phone ? `<a href="tel:${phone}" style="color:#1a1a1a;text-decoration:none;">${phone}</a>` : "Not provided"}
+                        </td>
+                      </tr>
+
+                      <!-- Role -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Role
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${roleTitle}
+                        </td>
+                      </tr>
+
+                      <!-- Experience -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Experience
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${experience}
+                        </td>
+                      </tr>
+
+                      <!-- Location -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Location
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${location}${city ? ` (${city})` : ""}
+                        </td>
+                      </tr>
+
+                      <!-- Notice Period -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Notice Period
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${noticePeriod}
+                        </td>
+                      </tr>
+
+                      ${currentSalary || expectedSalary ? `
+                      <!-- Salary Details -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Salary (Current / Exp)
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${currentSalary ? `₹${currentSalary}` : "N/A"} / <span style="color:#800000;">${expectedSalary ? `₹${expectedSalary}` : "N/A"}</span>
+                        </td>
+                      </tr>
+                      ` : ""}
+
+                      <!-- Portfolio -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Portfolio
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;font-weight:bold;word-break:break-all;">
+
+                          ${portfolio && portfolio !== "Not provided" ? `
+                          <a
+                            href="${portfolio}"
+                            target="_blank"
+                            style="color:#800000;text-decoration:underline;"
+                          >
+                            ${portfolio}
+                          </a>
+                          ` : `<span style="color:#777777;font-weight:normal;">Not provided</span>`}
+
+                        </td>
+                      </tr>
+
+                      <!-- Attached CV -->
+                      <tr>
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#777777;">
+                          Attached CV
+                        </td>
+
+                        <td valign="top"
+                            style="padding:7px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">
+                          ${fileName} (${fileSizeKb} KB)
+                        </td>
+                      </tr>
+
+                    </table>
+
+                  </td>
+                </tr>
+
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Applicant Message -->
+          <tr>
+            <td style="padding:24px 40px 0 40px;font-family:Arial,Helvetica,sans-serif;">
+
+              <p style="margin:0 0 10px 0;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#800000;font-weight:bold;">
+                Message from Applicant
+              </p>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+
+                  <td style="border-left:4px solid #800000;padding:6px 0 6px 16px;font-size:15px;line-height:24px;color:#333333;">
+                    ${applicantMessage}
+                  </td>
+
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- CTA Buttons -->
+          <tr>
+            <td align="left" style="padding:32px 40px 0 40px;">
+
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+
+                  <!-- Reply -->
+                  <td align="center"
+                      bgcolor="#800000"
+                      style="border-radius:10px;">
+
+                    <a
+                      href="mailto:${email}?subject=Your%20application%20at%20Lucie%20Creatives"
+                      style="display:inline-block;padding:14px 26px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;border-radius:10px;"
+                    >
+                      Reply to ${name} &rarr;
+                    </a>
+
+                  </td>
+
+                  ${portfolio && portfolio !== "Not provided" ? `
+                  <td width="12">&nbsp;</td>
+
+                  <!-- Portfolio -->
+                  <td align="center"
+                      style="border:2px solid #800000;border-radius:10px;">
+
+                    <a
+                      href="${portfolio}"
+                      target="_blank"
+                      style="display:inline-block;padding:12px 24px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#800000;text-decoration:none;border-radius:10px;"
+                    >
+                      View Portfolio
+                    </a>
+
+                  </td>
+                  ` : ""}
+
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Internal Note -->
+          <tr>
+            <td style="padding:28px 40px 36px 40px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#888888;">
+
+              This is an internal hiring notification from the Lucie Creatives website.
+              The applicant has already received an automatic confirmation email.
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center"
+                style="background-color:#800000;padding:28px 40px;font-family:Arial,Helvetica,sans-serif;">
+
+              <p style="margin:0 0 6px 0;font-size:16px;font-weight:bold;color:#ffffff;">
+                Lucie Creatives.
+              </p>
+
+              <p style="margin:0 0 14px 0;font-size:13px;line-height:20px;color:#f0caca;">
+                Creative work, built with care.
+              </p>
+
+              <p style="margin:0;font-size:12px;line-height:18px;color:#e2a8a8;">
+
+                <a
+                  href="https://luciecreatives.in"
+                  style="color:#ffffff;text-decoration:underline;"
+                >
+                  Website
+                </a>
+
+                &nbsp;&bull;&nbsp;
+
+                <a
+                  href="https://instagram.com/luciecreatives"
+                  style="color:#ffffff;text-decoration:underline;"
+                >
+                  Instagram
+                </a>
+
+                &nbsp;&bull;&nbsp;
+
+                <a
+                  href="mailto:hello@luciecreatives.in"
+                  style="color:#ffffff;text-decoration:underline;"
+                >
+                  Contact
+                </a>
+
+              </p>
+
+              <p style="margin:16px 0 0 0;font-size:11px;line-height:17px;color:#d99a9a;">
+                Internal notification &bull; Hiring form<br />
+                &copy; 2026 Lucie Creatives. All rights reserved.
+              </p>
+
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Main Card -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
+    `;
+
+    // =========================================================================
+    // 2. APPLICANT AUTO-CONFIRMATION TEMPLATE (Delivered TO candidate email)
+    // =========================================================================
+    const candidateHtml = `
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light only" />
+    <meta name="supported-color-schemes" content="light only" />
+    <title>Application Received – Lucie Creatives</title>
+  </head>
+  <body style="margin:0;padding:0;background-color:#f4f1f1;-webkit-text-size-adjust:100%;">
+    <!-- Preheader -->
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#ffffff;">
+      Thanks for applying to Lucie Creatives. We've received your application.
+    </div>
+
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="background-color:#f4f1f1;"
+    >
+      <tr>
+        <td align="center" style="padding:32px 12px;">
+          <!-- Card -->
+          <table
+            role="presentation"
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="width:100%;max-width:600px;background-color:#ffffff;border-radius:16px;overflow:hidden;"
+          >
+            <!-- Maroon top bar -->
+            <tr>
+              <td height="8" style="height:8px;line-height:8px;font-size:0;background-color:#800000;">&nbsp;</td>
+            </tr>
+
+            <!-- Logo -->
+            <tr>
+              <td align="left" style="padding:36px 40px 8px 40px;background-color:#ffffff;">
+                <img
+                  src="https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_400/v1791402408/lucie-creatives/brand/lucie-creatives-logo-transparent.png"
+                  alt="Lucie Creatives."
+                  width="190"
+                  style="display:block;width:190px;max-width:100%;height:auto;border:0;outline:none;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:bold;color:#800000;"
+                />
+              </td>
+            </tr>
+
+            <!-- Heading -->
+            <tr>
+              <td style="padding:28px 40px 0 40px;font-family:Arial,Helvetica,sans-serif;">
+                <p
+                  style="margin:0 0 10px 0;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#800000;font-weight:bold;"
+                >
+                  Application Received
+                </p>
+                <h1 style="margin:0;font-size:30px;line-height:38px;color:#1a1a1a;font-weight:800;">
+                  Thanks for applying, ${name}.
+                </h1>
+              </td>
+            </tr>
+
+            <!-- Intro -->
+            <tr>
+              <td
+                style="padding:16px 40px 0 40px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:26px;color:#444444;"
+              >
+                We've received your application for the
+                <strong style="color:#800000;">${roleTitle}</strong> position at <strong>Lucie Creatives</strong>. Our
+                team will go through your details and portfolio carefully.
+              </td>
+            </tr>
+
+            <!-- Submitted details -->
+            <tr>
+              <td style="padding:28px 40px 0 40px;">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="background-color:#fbf5f5;border:1px solid #ecd6d6;border-radius:12px;"
+                >
+                  <tr>
+                    <td style="padding:20px 24px;font-family:Arial,Helvetica,sans-serif;">
+                      <p
+                        style="margin:0 0 14px 0;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#800000;font-weight:bold;"
+                      >
+                        Your Submission
+                      </p>
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="38%" style="padding:6px 0;font-size:14px;color:#777777;">Name</td>
+                          <td style="padding:6px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">${name}</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:6px 0;font-size:14px;color:#777777;">Email</td>
+                          <td style="padding:6px 0;font-size:14px;color:#1a1a1a;font-weight:bold;">${email}</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:6px 0;font-size:14px;color:#777777;">Role</td>
+                          <td style="padding:6px 0;font-size:14px;color:#800000;font-weight:bold;">${roleTitle}</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:6px 0;font-size:14px;color:#777777;">Portfolio</td>
+                          <td style="padding:6px 0;font-size:14px;color:#800000;font-weight:bold;">
+                            ${portfolio && portfolio !== "Not provided" ? `<a href="${portfolio}" target="_blank" style="color:#800000;text-decoration:underline;">${portfolio}</a>` : "Not provided"}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- What happens next -->
+            <tr>
+              <td style="padding:32px 40px 0 40px;font-family:Arial,Helvetica,sans-serif;">
+                <h2 style="margin:0 0 16px 0;font-size:18px;color:#1a1a1a;">What happens next</h2>
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width="36" valign="top" style="padding-bottom:14px;">
+                      <div
+                        style="width:28px;height:28px;line-height:28px;border-radius:14px;background-color:#800000;color:#ffffff;text-align:center;font-size:13px;font-weight:bold;"
+                      >
+                        1
+                      </div>
+                    </td>
+                    <td valign="top" style="padding-bottom:14px;font-size:15px;line-height:23px;color:#444444;">
+                      <strong style="color:#1a1a1a;">Review</strong> – we go through your application and work.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="36" valign="top" style="padding-bottom:14px;">
+                      <div
+                        style="width:28px;height:28px;line-height:28px;border-radius:14px;background-color:#800000;color:#ffffff;text-align:center;font-size:13px;font-weight:bold;"
+                      >
+                        2
+                      </div>
+                    </td>
+                    <td valign="top" style="padding-bottom:14px;font-size:15px;line-height:23px;color:#444444;">
+                      <strong style="color:#1a1a1a;">Shortlist</strong> – shortlisted candidates get a call or a small
+                      task.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="36" valign="top">
+                      <div
+                        style="width:28px;height:28px;line-height:28px;border-radius:14px;background-color:#800000;color:#ffffff;text-align:center;font-size:13px;font-weight:bold;"
+                      >
+                        3
+                      </div>
+                    </td>
+                    <td valign="top" style="font-size:15px;line-height:23px;color:#444444;">
+                      <strong style="color:#1a1a1a;">Decision</strong> – you'll hear from us within
+                      <strong>5–7 working days</strong>.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- CTA button -->
+            <tr>
+              <td align="left" style="padding:32px 40px 0 40px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="center" bgcolor="#800000" style="border-radius:10px;">
+                      <a
+                        href="https://luciecreatives.in"
+                        style="display:inline-block;padding:14px 30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;border-radius:10px;"
+                      >
+                        Visit Lucie Creatives &rarr;
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Note -->
+            <tr>
+              <td
+                style="padding:28px 40px 36px 40px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:#777777;"
+              >
+                Have something to add? Just reply to this email and it will reach our team directly.
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                align="center"
+                style="background-color:#800000;padding:28px 40px;font-family:Arial,Helvetica,sans-serif;"
+              >
+                <p style="margin:0 0 6px 0;font-size:16px;font-weight:bold;color:#ffffff;">Lucie Creatives.</p>
+                <p style="margin:0 0 14px 0;font-size:13px;line-height:20px;color:#f0caca;">
+                  Creative work, built with care.
+                </p>
+                <p style="margin:0;font-size:12px;line-height:18px;color:#e2a8a8;">
+                  <a href="https://luciecreatives.in" style="color:#ffffff;text-decoration:underline;">Website</a>
+                  &nbsp;&bull;&nbsp;
+                  <a href="https://instagram.com/luciecreatives" style="color:#ffffff;text-decoration:underline;"
+                    >Instagram</a
+                  >
+                  &nbsp;&bull;&nbsp;
+                  <a href="mailto:hello@luciecreatives.in" style="color:#ffffff;text-decoration:underline;">Contact</a>
+                </p>
+                <p style="margin:16px 0 0 0;font-size:11px;line-height:17px;color:#d99a9a;">
+                  You received this email because you applied at Lucie Creatives.<br />
+                  &copy; 2026 Lucie Creatives. All rights reserved.
+                </p>
+              </td>
+            </tr>
+          </table>
+          <!-- /Card -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
     `;
 
     const textContent = `
@@ -177,6 +712,7 @@ Current Monthly Salary: ${currentSalary ? `₹${currentSalary}` : "Not specified
 Expected Monthly Salary: ${expectedSalary ? `₹${expectedSalary}` : "Not specified"}
 Notice Period: ${noticePeriod}
 Portfolio Link: ${portfolio}
+Applicant Message: ${applicantMessage}
 Attached CV: ${fileName} (${fileSizeKb} KB)
 ============================================
     `;
@@ -188,12 +724,16 @@ Attached CV: ${fileName} (${fileSizeKb} KB)
     if (resendApiKey) {
       try {
         const resend = new Resend(resendApiKey);
-        await resend.emails.send({
-          from: process.env.RESEND_FROM_EMAIL || "Lucie Creatives Careers <careers@luciecreatives.in>",
-          to: "hello@luciecreatives.in",
+        const toEmail = process.env.RESEND_TO_EMAIL || "hello@luciecreatives.in";
+        const fromEmail = process.env.RESEND_FROM_EMAIL || "Lucie Creatives Careers <careers@luciecreatives.in>";
+
+        // Send INTERNAL notification to the team with CV attached
+        const result = await resend.emails.send({
+          from: fromEmail,
+          to: toEmail,
           replyTo: email,
-          subject,
-          html: htmlContent,
+          subject: `New application: ${roleTitle} — ${name}`,
+          html: internalHtml,
           text: textContent,
           attachments: [
             {
@@ -202,10 +742,32 @@ Attached CV: ${fileName} (${fileSizeKb} KB)
             },
           ],
         });
-        emailSent = true;
-        console.log(`[Careers] Application email sent via Resend for ${name} (${roleTitle})`);
+
+        if (result.error) {
+          console.error("[Careers] Resend API error:", result.error);
+        } else {
+          emailSent = true;
+          console.log(`[Careers] Internal application email sent via Resend for ${name} (${roleTitle}) -> ID: ${result.data?.id}`);
+        }
+
+        // Send APPLICANT confirmation email
+        if (email && email.includes("@")) {
+          try {
+            await resend.emails.send({
+              from: fromEmail,
+              to: email,
+              replyTo: "hello@luciecreatives.in",
+              subject: `Application Received – Lucie Creatives`,
+              html: candidateHtml,
+              text: textContent,
+            });
+            console.log(`[Careers] Applicant confirmation sent to ${email}`);
+          } catch (applicantErr) {
+            console.error("[Careers] Error sending confirmation to candidate:", applicantErr);
+          }
+        }
       } catch (resendError) {
-        console.error("[Careers] Resend delivery error:", resendError);
+        console.error("[Careers] Resend delivery exception:", resendError);
       }
     }
 
@@ -226,8 +788,8 @@ Attached CV: ${fileName} (${fileSizeKb} KB)
           from: process.env.SMTP_FROM || `"Lucie Creatives Careers" <${process.env.SMTP_USER}>`,
           to: "hello@luciecreatives.in",
           replyTo: email,
-          subject,
-          html: htmlContent,
+          subject: `New application: ${roleTitle} — ${name}`,
+          html: internalHtml,
           text: textContent,
           attachments: [
             {

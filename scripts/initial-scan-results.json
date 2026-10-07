@@ -1,0 +1,320 @@
+[
+  {
+    "route": "/",
+    "mobile": {
+      "perf": 91,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.4 s",
+      "cls": "0.001"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.7 s",
+      "cls": "0"
+    }
+  },
+  {
+    "route": "/video-editing",
+    "mobile": {
+      "perf": 63,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "8.5 s",
+      "cls": "0.214"
+    },
+    "desktop": {
+      "perf": 95,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "1.5 s",
+      "cls": "0.001"
+    }
+  },
+  {
+    "route": "/graphic-design",
+    "mobile": {
+      "perf": 85,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.6 s",
+      "cls": "0.117"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.7 s",
+      "cls": "0"
+    }
+  },
+  {
+    "route": "/web-development",
+    "mobile": {
+      "perf": 92,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.2 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0"
+    }
+  },
+  {
+    "route": "/about",
+    "mobile": {
+      "perf": 93,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.1 s",
+      "cls": "0.001"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0.003"
+    }
+  },
+  {
+    "route": "/careers",
+    "mobile": {
+      "perf": 94,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "2.9 s",
+      "cls": "0.002"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0.002"
+    }
+  },
+  {
+    "route": "/contact",
+    "mobile": {
+      "perf": 92,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.2 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.7 s",
+      "cls": "0"
+    }
+  },
+  {
+    "route": "/testimonials",
+    "mobile": {
+      "perf": 95,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "2.8 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0.001"
+    }
+  },
+  {
+    "route": "/industries",
+    "mobile": {
+      "perf": 94,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.0 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0"
+    }
+  },
+  {
+    "route": "/insights",
+    "mobile": {
+      "perf": 93,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.1 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0"
+    }
+  },
+  {
+    "route": "/ui-ux-design",
+    "mobile": {
+      "perf": 92,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.2 s",
+      "cls": "0.01"
+    },
+    "desktop": {
+      "error": "Command failed: npx --yes lighthouse \"http://localhost:3000/ui-ux-design\" --output=json --output-path=\"src/scripts/tmp-scan-d-1791367153225.json\" --chrome-flags=\"--headless=new --no-sandbox\" --preset=desktop --quiet\nRuntime error encountered: EPERM, Permission denied: \\\\?\\C:\\Users\\lucie\\AppData\\Local\\Temp\\lighthouse.49601792 '\\\\?\\C:\\Users\\lucie\\AppData\\Local\\Temp\\lighthouse.49601792'\nError: EPERM, Permission denied: \\\\?\\C:\\Users\\lucie\\AppData\\Local\\Temp\\lighthouse.49601792 '\\\\?\\C:\\Users\\lucie\\AppData\\Local\\Temp\\lighthouse.49601792'\n    at rmSync (node:fs:1484:18)\n    at Launcher.destroyTmp (file:///C:/Users/lucie/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:367:9)\n    at Launcher.kill (file:///C:/Users/lucie/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:349:14)\n    at Object.kill (file:///C:/Users/lucie/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:39:18)\n    at runLighthouse (file:///C:/Users/lucie/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/run.js:217:21)\n    at async file:///C:/Users/lucie/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/index.js:10:1\n"
+    }
+  },
+  {
+    "route": "/branding",
+    "mobile": {
+      "perf": 92,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.2 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.7 s",
+      "cls": "0.005"
+    }
+  },
+  {
+    "route": "/logo-design",
+    "mobile": {
+      "perf": 92,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.2 s",
+      "cls": "0.002"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.7 s",
+      "cls": "0.005"
+    }
+  },
+  {
+    "route": "/social-media-design",
+    "mobile": {
+      "perf": 92,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.2 s",
+      "cls": "0.024"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.7 s",
+      "cls": "0.005"
+    }
+  },
+  {
+    "route": "/privacy",
+    "mobile": {
+      "perf": 94,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.0 s",
+      "cls": "0.011"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0.001"
+    }
+  },
+  {
+    "route": "/terms",
+    "mobile": {
+      "perf": 94,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "3.0 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 100,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "0.6 s",
+      "cls": "0"
+    }
+  },
+  {
+    "route": "/work/vedam-villas-influencer-tour",
+    "mobile": {
+      "perf": 78,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "5.6 s",
+      "cls": "0"
+    },
+    "desktop": {
+      "perf": 96,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100,
+      "lcp": "1.3 s",
+      "cls": "0"
+    }
+  }
+]

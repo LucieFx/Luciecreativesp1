@@ -1,0 +1,26 @@
+[
+  {
+    "page": "Home",
+    "path": "/",
+    "mobileScore": 100,
+    "desktopScore": 100,
+    "mobileFailing": [],
+    "desktopFailing": []
+  },
+  {
+    "page": "Contact",
+    "path": "/contact",
+    "mobileScore": 100,
+    "desktopScore": 100,
+    "mobileFailing": [],
+    "desktopFailing": []
+  },
+  {
+    "page": "Video Editing",
+    "path": "/video-editing",
+    "mobileScore": 100,
+    "desktopScore": 100,
+    "mobileFailing": [],
+    "desktopFailing": []
+  }
+]

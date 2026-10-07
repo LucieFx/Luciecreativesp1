@@ -67,7 +67,7 @@ export const ADAPTIVE_CARDS: AdaptiveCardData[] = [
     title: "Media House Agency",
     subtitle: "Responsive Website Design & Build",
     image: "/projects/mediahouse-desktop.webp",
-    domain: "mediahouseagency.com",
+    domain: "mediahouse.space",
     alt: "Media House Agency creator talent and influencer media platform",
     aspectRatio: "16/9",
     desktopWidth: 432,
@@ -284,7 +284,7 @@ export function StackedAdaptiveCards() {
                 layout.isFront
                   ? `${card.title} - active showcase`
                   : card.discipline === "Web"
-                  ? `https://${card.domain || "mediahouseagency.com"} - Switch to Web showcase: ${card.title}`
+                  ? `https://${card.domain || "mediahouse.space"} - Switch to Web showcase: ${card.title}`
                   : `Switch to ${card.discipline} showcase: ${card.title}`
               }
               tabIndex={layout.isFront ? undefined : 0}
@@ -517,7 +517,7 @@ export function StackedAdaptiveCards() {
                     {/* Mini Address Capsule */}
                     <div className="mx-auto h-5 px-3 rounded-full bg-white/10 text-xs font-mono text-white/80 flex items-center gap-1 select-none" aria-hidden="true">
                       <span className="text-white/40">https://</span>
-                      <span>{card.domain || "mediahouseagency.com"}</span>
+                      <span>{card.domain || "mediahouse.space"}</span>
                     </div>
                   </div>
 

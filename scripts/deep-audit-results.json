@@ -1,0 +1,2855 @@
+{
+  "backdropBlur": [
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 346,
+      "text": "<span className=\"text-[11px] font-black uppercase tracking-widest text-red-100 bg-white/15 border border-white/25 px-3.5 py-1 rounded-full inline-block mb-3 backdrop-blur-sm\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 587,
+      "text": "<div className=\"inline-flex items-center gap-2 text-xs font-black text-red-100 uppercase tracking-wider mb-2.5 px-3 py-1 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 773,
+      "text": "<div className=\"inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-red-100 bg-white/15 border border-white/20 px-3.5 py-1 rounded-full backdrop-blur-sm mb-2.5\">"
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 16,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-red-100 text-xs font-black tracking-widest uppercase mb-6 backdrop-blur-md\">"
+    },
+    {
+      "file": "components/about/AboutProofStrip.tsx",
+      "line": 80,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-red-100 text-xs font-black uppercase tracking-widest border border-white/25 backdrop-blur-sm mb-2\">"
+    },
+    {
+      "file": "components/about/AboutProofStrip.tsx",
+      "line": 94,
+      "text": "className=\"p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md text-center flex flex-col justify-center items-center hover:bg-white/15 hover:border-white/30 transition-all group shadow-md\""
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 24,
+      "text": "<div className=\"inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider mb-6 border border-white/30 backdrop-blur-xs\">"
+    },
+    {
+      "file": "components/dev/DevHeroBrowserMock.tsx",
+      "line": 86,
+      "text": "<div className=\"absolute bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-line px-4 sm:px-6 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 z-10\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 279,
+      "text": "<span className=\"px-3 py-1.5 rounded-full bg-[#8B1A1A]/90 backdrop-blur-md text-xs font-mono font-bold text-white border border-white/20 flex items-center gap-1.5 shadow-md\">"
+    },
+    {
+      "file": "components/home/FeaturedPortfolio.tsx",
+      "line": 158,
+      "text": "<div className=\"absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-mono font-bold text-ink uppercase tracking-wider border border-line/80 shadow-xs z-20\">"
+    },
+    {
+      "file": "components/home/GraphicDesignShowcase.tsx",
+      "line": 131,
+      "text": "<div className=\"absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-line text-xs font-black text-ink flex items-center gap-1.5 shadow-sm\">"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 68,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 76,
+      "text": "<span className=\"inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-sm text-white/80 text-[9px] font-mono font-medium\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 344,
+      "text": "<span className=\"inline-flex items-center gap-1 px-1.5 sm:px-2 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-white border border-white/20 text-[8px] sm:text-[9px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 356,
+      "text": "className=\"w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all cursor-pointer shadow-xs hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 369,
+      "text": "className=\"w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all cursor-pointer shadow-xs hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 413,
+      "text": "<span className=\"inline-flex items-center justify-center w-6 h-6 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-xs\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 496,
+      "text": "<span className=\"inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/Navbar.tsx",
+      "line": 214,
+      "text": "className=\"absolute top-full left-0 mt-2.5 w-80 rounded-2xl bg-white/98 backdrop-blur-xl border border-line/90 p-2 shadow-[0_20px_45px_-12px_rgba(0,0,0,0.16),0_4px_16px_rgba(0,0,0,0.06)] z-50 overflow-hidden\""
+    },
+    {
+      "file": "components/RedBreak.tsx",
+      "line": 31,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-white/20 text-white text-xs font-mono font-bold uppercase tracking-wider mb-6 border border-white/30 backdrop-blur-xs\">"
+    },
+    {
+      "file": "components/RedBreak.tsx",
+      "line": 67,
+      "text": "className=\"inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs uppercase tracking-wider border border-white/30 backdrop-blur-xs transition-colors duration-200\""
+    },
+    {
+      "file": "components/RedBreak.tsx",
+      "line": 75,
+      "text": "<div className=\"mt-3 inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-white/10 border border-white/20 text-xs font-medium text-white/90 backdrop-blur-xs\">"
+    },
+    {
+      "file": "components/seo/LocationPageTemplate.tsx",
+      "line": 215,
+      "text": "className=\"p-7 rounded-3xl backdrop-blur-xl bg-white/85 border border-white/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.06),0_0_1px_1px_rgba(255,255,255,0.8)] flex flex-col justify-between\""
+    },
+    {
+      "file": "components/video/YouTubeEmbedPlayer.tsx",
+      "line": 100,
+      "text": "<span className=\"bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 311,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 316,
+      "text": "<span className=\"w-7 h-7 rounded-md bg-white/90 backdrop-blur-md border border-line shadow-xs text-ink flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 382,
+      "text": "className=\"fixed inset-0 z-[9999] top-0 left-0 w-full h-full bg-white/95 backdrop-blur-2xl flex flex-col justify-between p-4 sm:p-8 select-none shadow-2xl\""
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 432,
+      "text": "className=\"absolute left-2 sm:left-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 462,
+      "text": "className=\"absolute right-2 sm:right-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/CaseStudyConversionFooter.tsx",
+      "line": 15,
+      "text": "<div className=\"sticky bottom-0 z-20 bg-white/95 backdrop-blur-md border-t border-line px-5 sm:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]\">"
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 209,
+      "text": "className=\"fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-8 bg-black/75 backdrop-blur-md overflow-hidden animate-in fade-in duration-200\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 215,
+      "text": "className=\"group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 229,
+      "text": "className=\"group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 253,
+      "text": "<div className=\"sticky top-0 z-40 bg-white/95 backdrop-blur-md px-5 sm:px-8 py-3.5 border-b border-line/60 flex items-center justify-between gap-4\">"
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 547,
+      "text": "className=\"fixed inset-0 z-[10000] top-0 left-0 w-full h-full bg-white/95 backdrop-blur-2xl flex flex-col justify-between p-4 sm:p-8 select-none shadow-2xl\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 598,
+      "text": "className=\"absolute left-2 sm:left-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 627,
+      "text": "className=\"absolute right-2 sm:right-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 150,
+      "text": "<div className=\"px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-black tracking-wider uppercase flex items-center gap-2 shadow-lg\">"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 159,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-black uppercase tracking-wider mb-3 shadow-lg\">"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 186,
+      "text": "<div className=\"w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center group-hover:bg-brand-red group-hover:scale-110 transition-all shadow-md\">"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 202,
+      "text": "<div className=\"inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white/90 text-xs font-black uppercase tracking-widest\">"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 245,
+      "text": "<span className=\"px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs\">"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 254,
+      "text": "<div className=\"absolute inset-0 bg-slate-950/85 backdrop-blur-sm p-6 flex flex-col justify-between opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none md:group-hover:pointer-events-auto\">"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 452,
+      "text": "<span className=\"px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono font-bold text-white shadow-xs\">"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 249,
+      "text": "className=\"rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white/90\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 652,
+      "text": "className=\"inline-flex items-center overflow-hidden bg-black/40 backdrop-blur-md rounded-full text-white/90\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 88,
+      "text": "<span className=\"px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-white\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 249,
+      "text": "<span className=\"px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-mono font-bold text-white uppercase\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 263,
+      "text": "className=\"px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 text-white text-[11px] sm:text-xs font-bold flex items-center gap-1.5 sm:gap-2 backdrop-blur-md transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 272,
+      "text": "className=\"w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 flex items-center justify-center text-white backdrop-blur-md transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/MoreFromClientStrip.tsx",
+      "line": 55,
+      "text": "className={`px-2 py-0.5 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase backdrop-blur-xs shadow-xs border ${"
+    },
+    {
+      "file": "components/work/MoreInCategoryStrip.tsx",
+      "line": 52,
+      "text": "className={`px-2 py-0.5 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase backdrop-blur-xs shadow-xs border ${"
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 238,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/20 text-white text-[10px] font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 242,
+      "text": "<span className=\"inline-flex items-center px-2.5 py-1 rounded-full bg-[#8b1a1a]/90 backdrop-blur-md text-white text-[10px] font-mono font-bold uppercase tracking-wider shadow-md line-clamp-1 max-w-[160px]\">"
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 293,
+      "text": "className=\"fixed inset-0 z-[9999] top-0 left-0 w-full h-full bg-white/95 backdrop-blur-2xl flex items-center justify-center p-4 sm:p-6\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 87,
+      "text": "} z-30 flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#FF4D5E]/40 text-white shadow-[0_4px_14px_rgba(139, 26, 26,0.45)] pointer-events-none transition-all duration-300`}"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 683,
+      "text": "className=\"fixed inset-0 z-[9999] top-0 left-0 w-full h-full bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-6\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 193,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white/90 text-xs font-black uppercase tracking-widest mb-4 shadow-md\">"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 288,
+      "text": "className=\"inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs sm:text-sm font-bold uppercase tracking-wider backdrop-blur-md hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 311,
+      "text": "className=\"px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 text-white text-xs font-semibold backdrop-blur-sm transition-all flex items-center gap-1.5 cursor-pointer hover:border-white/40\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 183,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 188,
+      "text": "<div className=\"inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-brand-red/70 text-xs font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 258,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider shadow-md shrink-0\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 266,
+      "text": "className=\"px-2.5 py-1 rounded-full bg-black/75 hover:bg-black/90 border border-white/20 text-white backdrop-blur-md text-[10px] font-mono font-bold tracking-wider shadow-md flex items-center gap-1.5 pointer-events-auto cursor-pointer transition-colors shrink-0\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 279,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs font-mono font-bold transition-all pointer-events-auto cursor-pointer flex items-center gap-1.5\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 291,
+      "text": "className=\"p-2 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs transition-all pointer-events-auto cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 320,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider shadow-md shrink-0\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 332,
+      "text": "<div className=\"w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-red hover:bg-brand-redDark text-white flex items-center justify-center shadow-2xl backdrop-blur-md transform transition-all group-hover/thumb:scale-110\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 348,
+      "text": "className=\"p-2 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs transition-all pointer-events-auto cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 396,
+      "text": "className=\"fixed inset-0 z-[9999] top-0 left-0 w-full h-full bg-ink/95 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 453,
+      "text": "<div className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-white text-[11px] font-mono font-bold uppercase tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 210,
+      "text": "<div className=\"flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/20 text-xs font-black text-white shadow-lg\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 251,
+      "text": "<div className=\"w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#8b1a1a]/90 backdrop-blur-md text-white flex items-center justify-center shadow-2xl border border-white/20 transform transition-transform group-hover:scale-110\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 488,
+      "text": "className=\"fixed inset-0 z-[9999] top-0 left-0 w-full h-full bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 md:p-10\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 725,
+      "text": "<span className=\"px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 739,
+      "text": "<div className=\"w-12 h-12 rounded-full bg-black/70 backdrop-blur-md text-white flex items-center justify-center shadow-xl border border-white/20\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 752,
+      "text": "className=\"p-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 762,
+      "text": "<span className=\"px-2 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[10px] font-mono font-semibold text-white/90\">"
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 15,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/20 text-white text-xs font-black uppercase tracking-widest border border-white/30 backdrop-blur-sm\">"
+    },
+    {
+      "file": "components/work/WorkFilterPills.tsx",
+      "line": 44,
+      "text": "<div className=\"w-full bg-white/95 backdrop-blur-xl border-y border-line py-4 sm:py-5 px-6 sm:px-12 sticky top-[68px] z-30 shadow-xs select-none\">"
+    },
+    {
+      "file": "components/work/WorkHeroReel.tsx",
+      "line": 36,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white/90 text-xs font-black uppercase tracking-widest mb-4 shadow-md\">"
+    }
+  ],
+  "translucentPanels": [
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 317,
+      "text": "<tr key={rIdx} className=\"hover:bg-white/50 transition-colors\">"
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 332,
+      "text": "<div className=\"mt-4 p-4 rounded-xl bg-white/60 border-l-4 border-[#8b1a1a] text-xs font-semibold text-body\">"
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 346,
+      "text": "<span className=\"text-[11px] font-black uppercase tracking-widest text-red-100 bg-white/15 border border-white/25 px-3.5 py-1 rounded-full inline-block mb-3 backdrop-blur-sm\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 430,
+      "text": "<div className=\"p-6 rounded-3xl bg-white/70 border border-line/80\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 458,
+      "text": "className=\"flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/70 border border-line/80 text-xs sm:text-sm font-semibold text-ink hover:border-brand-red/30 hover:bg-brand-red-50 transition-colors shadow-2xs\""
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 474,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 border border-white/20 text-red-100 text-xs font-black uppercase tracking-wider mb-5\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 587,
+      "text": "<div className=\"inline-flex items-center gap-2 text-xs font-black text-red-100 uppercase tracking-wider mb-2.5 px-3 py-1 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 737,
+      "text": "<span className=\"text-[10px] font-black uppercase tracking-widest text-red-200 bg-white/10 px-3 py-1 rounded-full inline-block mb-2.5\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 757,
+      "text": "className=\"inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-black uppercase tracking-wider transition-colors\""
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 773,
+      "text": "<div className=\"inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-red-100 bg-white/15 border border-white/20 px-3.5 py-1 rounded-full backdrop-blur-sm mb-2.5\">"
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 16,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-red-100 text-xs font-black tracking-widest uppercase mb-6 backdrop-blur-md\">"
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 54,
+      "text": "className=\"px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 60,
+      "text": "className=\"px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 66,
+      "text": "className=\"px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 72,
+      "text": "className=\"px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 78,
+      "text": "className=\"px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/about/AboutProofStrip.tsx",
+      "line": 80,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-red-100 text-xs font-black uppercase tracking-widest border border-white/25 backdrop-blur-sm mb-2\">"
+    },
+    {
+      "file": "components/about/AboutProofStrip.tsx",
+      "line": 94,
+      "text": "className=\"p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md text-center flex flex-col justify-center items-center hover:bg-white/15 hover:border-white/30 transition-all group shadow-md\""
+    },
+    {
+      "file": "components/about/AboutStory.tsx",
+      "line": 8,
+      "text": "<section id=\"story\" className=\"relative w-full py-20 sm:py-28 px-4 sm:px-8 md:px-12 bg-white/60 border-y border-line/60 select-none\">"
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 235,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 254,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 275,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 293,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 313,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 332,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 355,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 384,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 404,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 425,
+      "text": "className=\"w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all\""
+    },
+    {
+      "file": "components/careers/CareerApplicationForm.tsx",
+      "line": 437,
+      "text": "<div className=\"relative border-2 border-dashed border-line hover:border-[#8B1A1A]/40 rounded-lg p-5 bg-white/50 transition-colors text-center\">"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 456,
+      "text": "className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 501,
+      "text": "className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 539,
+      "text": "className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 575,
+      "text": "className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 611,
+      "text": "className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all cursor-pointer ${"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 653,
+      "text": "className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all cursor-pointer ${"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 703,
+      "text": "className={`w-full min-h-[140px] bg-white/80 border rounded-xl p-4 pt-7 text-text-primary text-sm font-medium focus:outline-none transition-all resize-none ${"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 741,
+      "text": "<span className=\"text-[10px] text-emerald-700 bg-white/90 px-2.5 py-0.5 rounded-md shrink-0 border border-emerald-200 font-mono\">"
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 24,
+      "text": "<div className=\"inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider mb-6 border border-white/30 backdrop-blur-xs\">"
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 82,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 88,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 94,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 100,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 106,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/dev/DevClosingCta.tsx",
+      "line": 112,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors\""
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 329,
+      "text": "<div className=\"flex-grow max-w-sm mx-auto bg-white/90 border border-line rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-[11px] font-mono text-body shadow-2xs\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 431,
+      "text": "<div className=\"flex-grow max-w-sm mx-auto bg-white/90 border border-line rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-[11px] font-mono text-body shadow-2xs\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 526,
+      "text": "<div className=\"flex-grow max-w-sm mx-auto bg-white/90 border border-line rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-[11px] font-mono text-body shadow-2xs\">"
+    },
+    {
+      "file": "components/Footer.tsx",
+      "line": 292,
+      "text": "className=\"flex items-center justify-between py-2 px-2.5 rounded-xl bg-white/80 hover:bg-red-50 border border-line/60 hover:border-brand-red/30 text-body hover:text-brand-red transition-all group\""
+    },
+    {
+      "file": "components/home/GraphicDesignShowcase.tsx",
+      "line": 51,
+      "text": "<div className=\"p-8 rounded-3xl bg-white/80 border border-line/80\">"
+    },
+    {
+      "file": "components/home/GraphicDesignShowcase.tsx",
+      "line": 74,
+      "text": "<div className=\"p-8 rounded-3xl bg-white/80 border border-line/80\">"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 68,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 76,
+      "text": "<span className=\"inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-sm text-white/80 text-[9px] font-mono font-medium\">"
+    },
+    {
+      "file": "components/home/IndustriesCondensedStrip.tsx",
+      "line": 35,
+      "text": "<section className=\"relative w-full py-16 sm:py-20 px-4 sm:px-6 md:px-12 bg-white/70 border-b border-line/80 select-none\">"
+    },
+    {
+      "file": "components/home/IndustriesServed.tsx",
+      "line": 122,
+      "text": "className=\"group p-8 rounded-3xl bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white hover:shadow-[0_20px_45px_-10px_rgba(139, 26, 26,0.12)] transition-all duration-300 flex flex-col justify-between\""
+    },
+    {
+      "file": "components/home/LogoBrandingShowcase.tsx",
+      "line": 49,
+      "text": "<div className=\"p-8 sm:p-10 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300\">"
+    },
+    {
+      "file": "components/home/LogoBrandingShowcase.tsx",
+      "line": 94,
+      "text": "<div className=\"p-8 sm:p-10 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 356,
+      "text": "className=\"w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all cursor-pointer shadow-xs hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 369,
+      "text": "className=\"w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all cursor-pointer shadow-xs hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 413,
+      "text": "<span className=\"inline-flex items-center justify-center w-6 h-6 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-xs\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 421,
+      "text": "<div className=\"absolute inset-0 bg-black/20 pointer-events-none\" />"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 465,
+      "text": "<div className=\"mx-auto h-4 px-2.5 rounded-full bg-white/10 text-[8px] sm:text-[9px] font-mono text-white/70 flex items-center gap-1 select-none\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 496,
+      "text": "<span className=\"inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 505,
+      "text": "<div className=\"absolute inset-0 bg-black/10 hover:bg-transparent transition-colors pointer-events-none\" />"
+    },
+    {
+      "file": "components/home/UiUxShowcase.tsx",
+      "line": 50,
+      "text": "<div className=\"p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300\">"
+    },
+    {
+      "file": "components/home/UiUxShowcase.tsx",
+      "line": 75,
+      "text": "<div className=\"p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300\">"
+    },
+    {
+      "file": "components/home/UiUxShowcase.tsx",
+      "line": 100,
+      "text": "<div className=\"p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300\">"
+    },
+    {
+      "file": "components/RedBreak.tsx",
+      "line": 31,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-white/20 text-white text-xs font-mono font-bold uppercase tracking-wider mb-6 border border-white/30 backdrop-blur-xs\">"
+    },
+    {
+      "file": "components/RedBreak.tsx",
+      "line": 67,
+      "text": "className=\"inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs uppercase tracking-wider border border-white/30 backdrop-blur-xs transition-colors duration-200\""
+    },
+    {
+      "file": "components/RedBreak.tsx",
+      "line": 75,
+      "text": "<div className=\"mt-3 inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-white/10 border border-white/20 text-xs font-medium text-white/90 backdrop-blur-xs\">"
+    },
+    {
+      "file": "components/seo/LocationPageTemplate.tsx",
+      "line": 202,
+      "text": "<section className=\"py-20 px-4 sm:px-6 md:px-12 bg-white/70 border-y border-line/80\">"
+    },
+    {
+      "file": "components/seo/LocationPageTemplate.tsx",
+      "line": 286,
+      "text": "<section className=\"py-20 px-4 sm:px-6 md:px-12 bg-white/70 border-t border-line/80\">"
+    },
+    {
+      "file": "components/seo/LocationPageTemplate.tsx",
+      "line": 431,
+      "text": "className=\"w-full text-left p-5 sm:p-6 bg-white/50 hover:bg-brand-red-50 flex items-center justify-between gap-4 font-bold text-ink text-sm sm:text-base focus:outline-none\""
+    },
+    {
+      "file": "components/seo/ServicePageTemplate.tsx",
+      "line": 219,
+      "text": "<section className=\"py-20 px-4 sm:px-6 md:px-12 bg-white/70 border-y border-line/80 relative\">"
+    },
+    {
+      "file": "components/seo/ServicePageTemplate.tsx",
+      "line": 292,
+      "text": "className=\"p-7 rounded-3xl bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white transition-all flex flex-col justify-between group\""
+    },
+    {
+      "file": "components/seo/ServicePageTemplate.tsx",
+      "line": 345,
+      "text": "<section className=\"py-20 px-4 sm:px-6 md:px-12 bg-white/70 border-t border-line/80\">"
+    },
+    {
+      "file": "components/seo/ServicePageTemplate.tsx",
+      "line": 482,
+      "text": "className=\"w-full text-left p-5 sm:p-6 bg-white/50 hover:bg-brand-red-50 flex items-center justify-between gap-4 font-bold text-ink text-sm sm:text-base focus:outline-none\""
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 37,
+      "text": "className=\"relative w-full py-10 bg-white/70 border-y border-line/80 overflow-hidden font-bold select-none\""
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 93,
+      "text": "className=\"flex flex-col sm:flex-row items-center sm:items-baseline justify-center sm:justify-start gap-1 sm:gap-2.5 px-2.5 sm:px-3 py-2.5 rounded-xl bg-white/70 border border-line/70 sm:bg-transparent sm:border-0 hover:bg-white transition-colors text-center sm:text-left\""
+    },
+    {
+      "file": "components/ui/CompanyStatsBar.tsx",
+      "line": 68,
+      "text": "className=\"p-4 sm:p-5 rounded-2xl bg-white/70 border border-line/70 text-center flex flex-col items-center justify-center group hover:bg-white hover:border-[#8B1A1A]/30 hover:shadow-md transition-all duration-200\""
+    },
+    {
+      "file": "components/video/YouTubeEmbedPlayer.tsx",
+      "line": 100,
+      "text": "<span className=\"bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 316,
+      "text": "<span className=\"w-7 h-7 rounded-md bg-white/90 backdrop-blur-md border border-line shadow-xs text-ink flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 338,
+      "text": "<div className=\"relative w-full h-full rounded-lg overflow-hidden shadow-xs ring-1 ring-black/5 flex items-center justify-center bg-white/40\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 432,
+      "text": "className=\"absolute left-2 sm:left-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 462,
+      "text": "className=\"absolute right-2 sm:right-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 215,
+      "text": "className=\"group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 229,
+      "text": "className=\"group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 457,
+      "text": "className=\"group relative rounded-xl overflow-hidden border border-line bg-white/60 cursor-pointer shadow-2xs hover:shadow-md transition-shadow\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 598,
+      "text": "className=\"absolute left-2 sm:left-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 627,
+      "text": "className=\"absolute right-2 sm:right-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 150,
+      "text": "<div className=\"px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-black tracking-wider uppercase flex items-center gap-2 shadow-lg\">"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 159,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-black uppercase tracking-wider mb-3 shadow-lg\">"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 186,
+      "text": "<div className=\"w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center group-hover:bg-brand-red group-hover:scale-110 transition-all shadow-md\">"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 202,
+      "text": "<div className=\"inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white/90 text-xs font-black uppercase tracking-widest\">"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 271,
+      "text": "className=\"px-2 py-0.5 rounded-md bg-white/10 border border-white/15 text-[10px] text-white/90 font-mono\""
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 452,
+      "text": "<span className=\"px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono font-bold text-white shadow-xs\">"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 247,
+      "text": "<div className=\"absolute inset-0 flex items-center justify-center bg-black/20 pointer-events-none z-15\">"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 249,
+      "text": "className=\"rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white/90\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 265,
+      "text": "<div className=\"absolute inset-0 bg-black/40 z-20 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 365,
+      "text": "className=\"bg-white/80 rounded-r-xs\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 606,
+      "text": "? \"bg-white/20 text-white/90 border-transparent\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 607,
+      "text": ": \"bg-transparent text-white border border-white/80 hover:bg-white/10\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 652,
+      "text": "className=\"inline-flex items-center overflow-hidden bg-black/40 backdrop-blur-md rounded-full text-white/90\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 682,
+      "text": "className=\"absolute inset-x-0 z-30 bg-white/30\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 77,
+      "text": "<div className=\"group bg-white/70 border border-line/90 hover:border-brand-red/40 rounded-2xl p-5 shadow-xs hover:shadow-md transition-all flex flex-col justify-between\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 88,
+      "text": "<span className=\"px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-white\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 194,
+      "text": "} items-center gap-10 lg:gap-14 bg-white/70 border border-line/90 rounded-3xl p-4 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl hover:border-brand-red/30 transition-all duration-500`}"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 249,
+      "text": "<span className=\"px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-mono font-bold text-white uppercase\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 263,
+      "text": "className=\"px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 text-white text-[11px] sm:text-xs font-bold flex items-center gap-1.5 sm:gap-2 backdrop-blur-md transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 272,
+      "text": "className=\"w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 flex items-center justify-center text-white backdrop-blur-md transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/MoreFromClientStrip.tsx",
+      "line": 43,
+      "text": "className=\"group relative bg-white/80 hover:bg-white rounded-xl sm:rounded-2xl border border-line/80 hover:border-brand-red/40 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col\""
+    },
+    {
+      "file": "components/work/MoreInCategoryStrip.tsx",
+      "line": 40,
+      "text": "className=\"group relative bg-white/80 hover:bg-white rounded-xl sm:rounded-2xl border border-line/80 hover:border-brand-red/40 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col\""
+    },
+    {
+      "file": "components/work/NirvaBrandSystem.tsx",
+      "line": 93,
+      "text": "className=\"group cursor-pointer rounded-2xl bg-white/80 border border-line/90 p-4 hover:bg-line/60 hover:border-line transition-all flex flex-col justify-between shadow-2xs\""
+    },
+    {
+      "file": "components/work/NirvaBrandSystem.tsx",
+      "line": 140,
+      "text": "className=\"p-4 rounded-2xl bg-white/80 border border-line/90 flex flex-col justify-between shadow-2xs\""
+    },
+    {
+      "file": "components/work/NirvaBrandSystem.tsx",
+      "line": 164,
+      "text": "<div className=\"p-6 rounded-2xl bg-white/80 border border-line/90 space-y-4 shadow-2xs\">"
+    },
+    {
+      "file": "components/work/NirvaBrandSystem.tsx",
+      "line": 190,
+      "text": "className=\"group p-3 rounded-xl bg-white/80 hover:bg-line/60 border border-line/90 flex items-center justify-between transition-colors shadow-2xs\""
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 201,
+      "text": "isSelected ? \"bg-white/20 text-white\" : \"bg-line text-body\""
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 248,
+      "text": "<div className=\"absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none\">"
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 315,
+      "text": "className=\"absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer z-20 hidden sm:flex items-center justify-center hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 329,
+      "text": "className=\"absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer z-20 hidden sm:flex items-center justify-center hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 357,
+      "text": "<div className=\"flex items-center gap-2 mb-3.5 px-3 py-1 rounded-full bg-white/90 border border-[#8B1A1A]/15 shadow-2xs\">"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 695,
+      "text": "className=\"absolute top-3 right-3 sm:top-4 sm:right-4 z-40 p-2.5 rounded-full bg-black/60 md:bg-white/90 text-white md:text-ink hover:scale-105 active:scale-95 transition-all cursor-pointer border border-white/20 md:border-line shadow-md\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 746,
+      "text": "className=\"w-full h-1.5 bg-white/20 rounded-lg appearance-none cursor-pointer accent-brand-red\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 763,
+      "text": "className=\"p-1 rounded bg-white/10 hover:bg-white/20 text-white cursor-pointer\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 774,
+      "text": "className=\"p-1 rounded bg-white/10 hover:bg-white/20 text-white cursor-pointer flex items-center gap-1.5\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 132,
+      "text": "className=\"w-[76px] sm:w-24 md:w-28 lg:w-32 aspect-[9/16] rounded-xl sm:rounded-2xl overflow-hidden border border-white/25 bg-black/20 shadow-xl relative shrink-0\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 154,
+      "text": "className=\"w-[76px] sm:w-24 md:w-28 lg:w-32 aspect-[9/16] rounded-xl sm:rounded-2xl overflow-hidden border border-white/25 bg-black/20 shadow-xl relative shrink-0\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 193,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white/90 text-xs font-black uppercase tracking-widest mb-4 shadow-md\">"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 229,
+      "text": "className=\"relative w-full max-w-2xl h-[2px] mt-4 bg-white/15 overflow-visible rounded-full\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 255,
+      "text": "markerClassName=\"absolute -inset-x-1.5 bottom-1 sm:bottom-2 h-[38%] bg-white/20 -z-1 rounded-xs pointer-events-none\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 288,
+      "text": "className=\"inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs sm:text-sm font-bold uppercase tracking-wider backdrop-blur-md hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 311,
+      "text": "className=\"px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 text-white text-xs font-semibold backdrop-blur-sm transition-all flex items-center gap-1.5 cursor-pointer hover:border-white/40\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 183,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 188,
+      "text": "<div className=\"inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-brand-red/70 text-xs font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 266,
+      "text": "className=\"px-2.5 py-1 rounded-full bg-black/75 hover:bg-black/90 border border-white/20 text-white backdrop-blur-md text-[10px] font-mono font-bold tracking-wider shadow-md flex items-center gap-1.5 pointer-events-auto cursor-pointer transition-colors shrink-0\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 279,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs font-mono font-bold transition-all pointer-events-auto cursor-pointer flex items-center gap-1.5\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 291,
+      "text": "className=\"p-2 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs transition-all pointer-events-auto cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 348,
+      "text": "className=\"p-2 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs transition-all pointer-events-auto cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 453,
+      "text": "<div className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-white text-[11px] font-mono font-bold uppercase tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 479,
+      "text": "<div className=\"mt-6 p-4 rounded-2xl bg-white/60 border border-line/90 space-y-2.5\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 188,
+      "text": "className=\"mb-4 !border-white/15 !bg-white/5 !text-white\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 248,
+      "text": "cinemaPlaying ? \"opacity-0 group-hover:opacity-100\" : \"opacity-100 bg-black/40\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 274,
+      "text": "className=\"w-full h-1.5 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[#C4384B] hover:h-2 transition-all\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 281,
+      "text": "className=\"p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 288,
+      "text": "className=\"p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer flex items-center gap-1.5 text-[11px] font-bold\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 300,
+      "text": "<span className=\"hidden md:inline-block px-2.5 py-1 rounded bg-white/10 border border-white/10 font-bold uppercase tracking-wider\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 308,
+      "text": "className=\"p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 339,
+      "text": "className=\"px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200 font-mono font-medium\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 392,
+      "text": "className=\"inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold text-white transition-all cursor-pointer self-start md:self-auto shrink-0\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 413,
+      "text": ": \"bg-white/5 hover:bg-white/10 text-muted/60 border-white/10\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 441,
+      "text": "className=\"px-8 py-3.5 rounded-2xl bg-white/10 hover:bg-[#8b1a1a] border border-white/15 text-xs font-black text-white uppercase tracking-wider transition-all duration-300 cursor-pointer flex items-center gap-2 shadow-lg\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 736,
+      "text": "isPlaying ? \"opacity-0 group-hover:opacity-100\" : \"opacity-100 bg-black/30\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 739,
+      "text": "<div className=\"w-12 h-12 rounded-full bg-black/70 backdrop-blur-md text-white flex items-center justify-center shadow-xl border border-white/20\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 752,
+      "text": "className=\"p-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 762,
+      "text": "<span className=\"px-2 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[10px] font-mono font-semibold text-white/90\">"
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 15,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/20 text-white text-xs font-black uppercase tracking-widest border border-white/30 backdrop-blur-sm\">"
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 48,
+      "text": "className=\"px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs transition-colors\""
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 54,
+      "text": "className=\"px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs transition-colors\""
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 60,
+      "text": "className=\"px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs transition-colors\""
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 66,
+      "text": "className=\"px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs transition-colors\""
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 72,
+      "text": "className=\"px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs transition-colors\""
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 78,
+      "text": "className=\"px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs transition-colors\""
+    },
+    {
+      "file": "components/work/WorkFilterPills.tsx",
+      "line": 63,
+      "text": "isActive ? \"bg-white/20 text-white\" : \"bg-line text-body font-bold\""
+    },
+    {
+      "file": "components/work/WorkHeroReel.tsx",
+      "line": 36,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white/90 text-xs font-black uppercase tracking-widest mb-4 shadow-md\">"
+    }
+  ],
+  "harshGradients": [
+    {
+      "file": "app/branding/page.tsx",
+      "line": 27,
+      "text": "\"In-depth 80-to-120 page brand manuals specifying typography hierarchies, grid mechanics, iconography rules, and usage do's & don'ts across all channels.\","
+    },
+    {
+      "file": "app/global/page.tsx",
+      "line": 72,
+      "text": "description: \"End-to-end brand identity architecture, international positioning strategy, color psychology, and comprehensive brand guideline books.\","
+    },
+    {
+      "file": "app/globals.css",
+      "line": 246,
+      "text": "background: linear-gradient("
+    },
+    {
+      "file": "app/globals.css",
+      "line": 259,
+      "text": "background: linear-gradient("
+    },
+    {
+      "file": "app/globals.css",
+      "line": 271,
+      "text": "/* Browser Mockup Preview Auto-Scroll on Hover */"
+    },
+    {
+      "file": "app/india/page.tsx",
+      "line": 66,
+      "text": "description: \"End-to-end brand identity systems, market positioning strategy, typography hierarchies, and comprehensive brand guideline books.\","
+    },
+    {
+      "file": "app/logo-design/page.tsx",
+      "line": 51,
+      "text": "\"Delivered with ready-to-animate vector separation layers and motion design concepts for cinematic intros and digital web launches.\","
+    },
+    {
+      "file": "app/social-media-design/page.tsx",
+      "line": 73,
+      "text": "\"High-utility educational graphics create immediate bookmarks and peer-to-peer shares, amplifying organic reach without paid ad spend.\","
+    },
+    {
+      "file": "app/social-media-design/page.tsx",
+      "line": 139,
+      "text": "a: \"Yes! We build complete, organized Figma template suites with locked style components and auto-layout text boxes so your team can rapidly generate on-brand graphics.\","
+    },
+    {
+      "file": "app/surat/page.tsx",
+      "line": 70,
+      "text": "description: \"End-to-end luxury brand ecosystems, sensory packaging, and global positioning systems.\","
+    },
+    {
+      "file": "app/surat/page.tsx",
+      "line": 101,
+      "text": "q: \"How does your web development in Surat support direct-to-consumer (D2C) brands?\","
+    },
+    {
+      "file": "app/ui-ux-design/page.tsx",
+      "line": 21,
+      "text": "\"Modular component libraries utilizing Figma variables, auto-layout 5.0, dark mode tokens, and strict naming conventions that map 1-to-1 with React/Tailwind frontend codebases.\","
+    },
+    {
+      "file": "app/ui-ux-design/page.tsx",
+      "line": 57,
+      "text": "\"Scalable component library with variants, interactive properties, and auto-layout\","
+    },
+    {
+      "file": "app/ui-ux-design/page.tsx",
+      "line": 135,
+      "text": "a: \"Figma is our primary design and prototyping operating environment. It allows seamless real-time collaboration, auto-layout 5.0 systems, design tokens, and instant developer inspection. For complex physics-based motion, we also utilize Principle and After Effects.\","
+    },
+    {
+      "file": "app/ui-ux-design/page.tsx",
+      "line": 151,
+      "text": "a: \"Yes! Our agency offers end-to-end capabilities; our web development team can seamlessly turn Figma files into production Next.js/React code.\","
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 345,
+      "text": "className=\"relative w-20 h-20 rounded-3xl bg-gradient-to-b from-emerald-500 to-emerald-700 text-white flex items-center justify-center shadow-[0_12px_28px_rgba(16,185,129,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)]\""
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 753,
+      "text": "className=\"h-12 bg-gradient-to-r from-emerald-600 to-emerald-700 flex items-center justify-center text-white mx-auto shadow-md overflow-hidden shrink-0 relative px-4 gap-2\""
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 167,
+      "text": "className={`pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-20 transition-opacity duration-300 ${"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 172,
+      "text": "className={`pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-20 transition-opacity duration-300 ${"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 276,
+      "text": "<div className=\"absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#8B1A1A]/20 to-transparent pointer-events-none opacity-0 group-hover/mockup:opacity-100 transition-opacity\" />"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 341,
+      "text": "{/* Viewport Image with auto-scroll or slow zoom */}"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 443,
+      "text": "{/* Viewport Image with auto-scroll or slow zoom */}"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 538,
+      "text": "{/* Viewport Image with auto-scroll or slow zoom */}"
+    },
+    {
+      "file": "components/home/FeaturedPortfolio.tsx",
+      "line": 155,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none opacity-80 group-hover:opacity-60 transition-opacity duration-300 z-10\" />"
+    },
+    {
+      "file": "components/home/HomeFaq.tsx",
+      "line": 23,
+      "text": "a: \"Individual sprint deliverables like social media carousels or short-form video reels are typically turned around in 24 to 48 hours. Comprehensive web applications, custom e-commerce platforms, and end-to-end brand identity books are delivered in 3 to 6-week phased sprint cycles.\","
+    },
+    {
+      "file": "components/home/HomeServicesMerged.tsx",
+      "line": 69,
+      "text": "desc: \"Figma token architecture, auto-layout 5.0, and conversion-optimized user flows that map 1-to-1 to React code.\","
+    },
+    {
+      "file": "components/home/HomeServicesMerged.tsx",
+      "line": 101,
+      "text": "End-to-End Creative & *digital execution.*"
+    },
+    {
+      "file": "components/home/LogoBrandingShowcase.tsx",
+      "line": 109,
+      "text": "We build end-to-end brand ecosystems that define strategic market positioning, verbal tone of voice, color psychology, and multi-channel asset guidelines."
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 337,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/25 pointer-events-none\" />"
+    },
+    {
+      "file": "components/home/UiUxShowcase.tsx",
+      "line": 59,
+      "text": "Modular component libraries utilizing Figma variables, auto-layout 5.0, dark mode tokens, and naming structures that map 1-to-1 with React/Tailwind codebases."
+    },
+    {
+      "file": "components/motion/Marquee.tsx",
+      "line": 25,
+      "text": "// Match padding-right to gap so track-to-track wrapping has zero gap discontinuity"
+    },
+    {
+      "file": "components/Navbar.tsx",
+      "line": 425,
+      "text": "className=\"w-full flex items-center justify-center gap-2 bg-gradient-to-b from-[#8b1a1a] to-[#8b1a1a] hover:from-[#8B1A1A] hover:to-[#8b1a1a] text-white font-semibold text-base rounded-xl py-4 shadow-[0_4px_16px_rgba(139,26,26,0.28)] active:scale-[0.98] transition-all\""
+    },
+    {
+      "file": "components/Navbar.tsx",
+      "line": 480,
+      "text": "className=\"relative overflow-hidden inline-flex items-center gap-1.5 bg-gradient-to-b from-[#8b1a1a] to-[#8b1a1a] hover:from-[#8B1A1A] hover:to-[#8b1a1a] text-white font-semibold text-xs sm:text-sm rounded-xl px-5 py-2.5 shadow-[0_4px_14px_rgba(139,26,26,0.28)] hover:shadow-[0_6px_20px_rgba(139,26,26,0.38)] active:scale-[0.97] transition-all duration-200 group/cta focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 select-none\""
+    },
+    {
+      "file": "components/Navbar.tsx",
+      "line": 492,
+      "text": "className=\"absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/28 to-transparent -skew-x-12 pointer-events-none\""
+    },
+    {
+      "file": "components/Preloader.tsx",
+      "line": 63,
+      "text": "className=\"h-full bg-gradient-to-r from-brand-red via-[#A31F1F] to-brand-red rounded-full transition-all duration-150 ease-out\""
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 7,
+      "text": "* Easy-to-edit heading constant for the client reels & short-form showcase strip."
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 52,
+      "text": "<div className=\"absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white/90 to-transparent z-10 pointer-events-none\" />"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 53,
+      "text": "<div className=\"absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white/90 to-transparent z-10 pointer-events-none\" />"
+    },
+    {
+      "file": "components/video/YouTubeEmbedPlayer.tsx",
+      "line": 86,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/20 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 146,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 237,
+      "text": "background: `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.45) 0%, transparent 60%)`,"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 696,
+      "text": "<div className=\"absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-white/90 to-transparent z-10 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 697,
+      "text": "<div className=\"absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-white/90 to-transparent z-10 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 270,
+      "text": "className=\"absolute top-0 inset-x-0 bg-gradient-to-b from-black/65 via-black/20 to-transparent pointer-events-none z-10\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 276,
+      "text": "className=\"absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent pointer-events-none z-10\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 245,
+      "text": "<div className=\"absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-10\" />"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 65,
+      "text": "// Always prioritize curated, verified poster thumbnails over Cloudinary auto-frame so_0 (which can return blank/red placeholder frames)"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 194,
+      "text": "// Top 3 highest-view-count reels for auto-rotation"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 201,
+      "text": "// Sync featured phone mockup on the left to auto-rotate through the top 3 highest-view reels"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 300,
+      "text": "radial-gradient(ellipse 70% 55% at 50% 25%, rgba(139, 26, 26, 0.055) 0%, rgba(139, 26, 26, 0.015) 55%, transparent 100%),"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 301,
+      "text": "radial-gradient(circle at 10% 80%, rgba(139, 26, 26, 0.035) 0%, transparent 45%),"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 302,
+      "text": "radial-gradient(circle at 90% 20%, rgba(139, 26, 26, 0.035) 0%, transparent 45%)"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 310,
+      "text": "backgroundImage: `radial-gradient(circle, #8B1A1A 0.75px, transparent 0.75px)`,"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 355,
+      "text": "{/* Top 3 Auto-Rotation Indicator */}"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 359,
+      "text": "Auto-Rotating Top 3 ({Math.max(1, top3Reels.findIndex((r) => r.slug === activeProject.slug) + 1)}/3)"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 500,
+      "text": "WebkitMask: \"linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)\","
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 517,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-b from-[#180507] via-[#290b10] to-[#140406] z-0 flex flex-col items-center justify-center pointer-events-none overflow-hidden\">"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 520,
+      "text": "className=\"absolute inset-x-0 h-10 bg-gradient-to-b from-transparent via-[#FF4D5E]/20 to-transparent pointer-events-none animate-radar-sweep\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 540,
+      "text": "<div className=\"absolute inset-x-0 bottom-0 pt-8 pb-2.5 px-2 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none z-10 flex flex-col justify-end\">"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 594,
+      "text": "WebkitMask: \"linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)\","
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 611,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-b from-[#180507] via-[#290b10] to-[#140406] z-0 flex flex-col items-center justify-center pointer-events-none overflow-hidden\">"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 614,
+      "text": "className=\"absolute inset-x-0 h-12 bg-gradient-to-b from-transparent via-[#FF4D5E]/20 to-transparent pointer-events-none animate-radar-sweep\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 635,
+      "text": "<div className=\"absolute inset-x-0 bottom-0 pt-10 pb-3 px-3 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none z-10 flex flex-col justify-end\">"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 737,
+      "text": "<div className=\"absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/95 via-black/60 to-transparent z-30 flex flex-col gap-2\">"
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 79,
+      "text": "subtext = \"We engineer end-to-end creative ecosystems for ambitious brands.\","
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 102,
+      "text": "<div className=\"absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300\" />"
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 119,
+      "text": "<div className=\"absolute -inset-1 bg-gradient-to-br from-brand-red/35 to-brand-crimson/15 rounded-2xl blur-md opacity-70 group-hover:opacity-100 group-hover:blur-lg transition-all duration-300\" />"
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 122,
+      "text": "<div className=\"relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-[#8B1A1A] via-[#781515] to-[#500C0C] text-white flex items-center justify-center shadow-[0_10px_25px_-5px_rgba(139,26,26,0.45),inset_0_1px_1px_rgba(255,255,255,0.4),inset_0_-1px_2px_rgba(0,0,0,0.4)] border border-[#8B1A1A]/40 group-hover:scale-105 group-hover:shadow-[0_14px_30px_-5px_rgba(139,26,26,0.6),inset_0_1px_1px_rgba(255,255,255,0.6)] transition-all duration-300\">"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 76,
+      "text": "// Ensure the reel thumbnails list has enough items to fill any display edge-to-edge"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 93,
+      "text": "\"radial-gradient(ellipse at 50% 0%, rgba(163, 31, 31, 0.40) 0%, transparent 60%)\","
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 100,
+      "text": "\"linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.18) 100%)\","
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 122,
+      "text": "<div className=\"absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#8B1A1A] to-transparent z-10 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 123,
+      "text": "<div className=\"absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#8B1A1A] to-transparent z-10 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 141,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15\" />"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 163,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15\" />"
+    },
+    {
+      "file": "components/work/shared/ProcessStrip.tsx",
+      "line": 160,
+      "text": "<div className=\"absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300\" />"
+    },
+    {
+      "file": "components/work/shared/ProcessStrip.tsx",
+      "line": 172,
+      "text": "<div className=\"w-10 h-10 rounded-xl bg-gradient-to-b from-white via-surface-alt to-neutral-100 border border-line shadow-[0_2px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center text-ink/75 group-hover:text-white group-hover:bg-gradient-to-b group-hover:from-brand-red group-hover:via-brand-red group-hover:to-brand-redDark group-hover:border-brand-red group-hover:shadow-[0_4px_16px_rgba(139,26,26,0.35)] transition-all duration-300\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 316,
+      "text": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/35 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 262,
+      "text": "className=\"absolute bottom-0 inset-x-0 p-4 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-20 flex flex-col gap-2 transition-opacity duration-300\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 451,
+      "text": "<div className=\"mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900 to-[#8b1a1a]/40 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 460,
+      "text": "We manage end-to-end post-production for Gujarat&apos;s leading brands and creator founders. Turnaround in 24-48 hours."
+    },
+    {
+      "file": "components/work/WorkHeroReel.tsx",
+      "line": 22,
+      "text": "\"radial-gradient(ellipse at 50% 0%, rgba(163, 31, 31, 0.40) 0%, transparent 60%)\","
+    },
+    {
+      "file": "components/work/WorkHeroReel.tsx",
+      "line": 29,
+      "text": "\"linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.18) 100%)\","
+    },
+    {
+      "file": "lib/client-videos-data.ts",
+      "line": 206,
+      "text": "\"Dynamic auto-styled captions with brand highlights\","
+    },
+    {
+      "file": "lib/client-videos-data.ts",
+      "line": 261,
+      "text": "\"A tranquil, aspirational edit showcasing morning light pouring through floor-to-ceiling glass. Tailored to trigger deep emotional resonance and lifestyle visualization in luxury homebuyers.\","
+    },
+    {
+      "file": "lib/client-videos-data.ts",
+      "line": 291,
+      "text": "\"Sweeping drone-to-ground vertical transitions framing lush landscaping and private pool sanctuaries.\","
+    },
+    {
+      "file": "lib/client-videos-data.ts",
+      "line": 527,
+      "text": "\"Episode 01 of the Leaders Diary series with Nishant Patel. Engineered for viral business shorts with auto-highlighted bold keywords, subtle zoom-ins on punchlines, and high-impact sound design.\","
+    },
+    {
+      "file": "lib/constants.ts",
+      "line": 171,
+      "text": "\"We offer custom web development and web platforms, complete branding and visual identity systems (logos, style guides, packaging), end-to-end social media management, and high-retention video editing (reels, YouTube, motion graphics). Tell us what you need and we'll suggest the right mix.\","
+    },
+    {
+      "file": "lib/graphic-work-data.ts",
+      "line": 144,
+      "text": "outcomeLabel: \"Direct-to-Consumer Launch ROAS\","
+    },
+    {
+      "file": "lib/graphic-work-data.ts",
+      "line": 508,
+      "text": "\"We developed dynamic grid templates featuring aspirational destination photography, bold destination typography, clear pricing package badges, and WhatsApp call-to-action triggers.\","
+    },
+    {
+      "file": "lib/graphic-work-data.ts",
+      "line": 693,
+      "text": "\"Positioned Lumara as a tier-one luxury organic brand, boosting distributor interest across 14 premium retail outlets and elevating initial direct-to-consumer pre-orders by 240%.\","
+    },
+    {
+      "file": "lib/graphic-work-data.ts",
+      "line": 765,
+      "text": "\"We developed a structured, energetic visual hierarchy featuring bold academic typography, high-contrast admission badges, inspiring student achievement showcases, and conversion-optimized call-to-actions across social feeds and outdoor print.\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 86,
+      "text": "coverImage: \"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop&q=80\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 222,
+      "text": "coverImage: \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&auto=format&fit=crop&q=80\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 339,
+      "text": "coverImage: \"https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 457,
+      "text": "coverImage: \"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop&q=80\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 472,
+      "text": "\"Product Detail Pages (PDP) must position price, customer reviews, variant selectors, and the sticky add-to-cart button above the mobile fold.\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 493,
+      "text": "\"2. Sticky Add-to-Cart Bar: When users scroll down to inspect ingredients, dimensions, or technical specifications, a persistent bottom bar keeps the purchase action accessible at all times.\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 572,
+      "text": "coverImage: \"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&auto=format&fit=crop&q=80\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 586,
+      "text": "\"Gujarat's leading enterprises are transitioning from domestic subcontracting to global direct-to-consumer and enterprise positioning.\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 686,
+      "text": "coverImage: \"https://images.unsplash.com/photo-1633167606207-d840b5070fc2?w=1600&auto=format&fit=crop&q=80\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 696,
+      "text": "{ id: \"static-to-motion\", title: \"4. Unifying Static Graphic Design and Motion Video\" },"
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 733,
+      "text": "\"To prevent drop-off, the design must incorporate continuous visual cues: horizontal connecting lines that bridge across slide boundaries, persistent micro-page indicators (e.g., '03 / 08'), and curiosity-inducing cliffhangers at the right margin of each slide. When executed with high-contrast editorial rigor, carousels achieve save-to-reach ratios exceeding 15%.\","
+    },
+    {
+      "file": "lib/insights-data.ts",
+      "line": 737,
+      "text": "id: \"static-to-motion\","
+    },
+    {
+      "file": "lib/shared-work-assets.ts",
+      "line": 194,
+      "text": "src: \"https://res.cloudinary.com/oct7txvw/image/upload/v1789835306/lucie-creatives/portfolio/graphic-design/nirva-club/photo-frame-mockup.jpg\","
+    },
+    {
+      "file": "lib/shared-work-assets.ts",
+      "line": 262,
+      "text": "\"End-to-end color science consistency: ACES cinema grade in DaVinci Resolve strictly cross-matched with CMYK prepress tolerances.\","
+    },
+    {
+      "file": "lib/video-work-data.ts",
+      "line": 87,
+      "text": "\"Double-height living spaces, floor-to-ceiling glazing, and seamless courtyard transitions captured with cinematic vertical elegance.\","
+    },
+    {
+      "file": "lib/video-work-data.ts",
+      "line": 367,
+      "text": "tagline: \"Double-height living spaces, floor-to-ceiling glazing, and seamless courtyard transitions captured with vertical elegance.\","
+    },
+    {
+      "file": "lib/youtube.ts",
+      "line": 80,
+      "text": "* Auto-populate per-page meta tags from YouTube & CMS entry data:"
+    }
+  ],
+  "sparkles": [
+    {
+      "file": "app/careers/page.tsx",
+      "line": 7,
+      "text": "import { ArrowUpRight, Sparkles, Briefcase } from \"lucide-react\";"
+    },
+    {
+      "file": "app/careers/page.tsx",
+      "line": 45,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-[#8B1A1A]\" />"
+    },
+    {
+      "file": "app/careers/[slug]/page.tsx",
+      "line": 9,
+      "text": "import { CheckCircle2, Briefcase, Sparkles } from \"lucide-react\";"
+    },
+    {
+      "file": "app/careers/[slug]/page.tsx",
+      "line": 159,
+      "text": "<Sparkles className=\"w-5 h-5 text-[#8B1A1A]/70 shrink-0 mt-0.5\" />"
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 29,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 162,
+      "text": "<Sparkles className=\"w-3 h-3 text-[#8b1a1a]\" />"
+    },
+    {
+      "file": "app/not-found.tsx",
+      "line": 4,
+      "text": "import { Home, ArrowRight, Sparkles, Compass } from \"lucide-react\";"
+    },
+    {
+      "file": "app/not-found.tsx",
+      "line": 30,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 30,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 419,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/about/AboutHero.tsx",
+      "line": 2,
+      "text": "import { Sparkles, ArrowDown } from \"lucide-react\";"
+    },
+    {
+      "file": "components/about/AboutHero.tsx",
+      "line": 29,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-maroon-700\" />"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 22,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 373,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-emerald-600\" />"
+    },
+    {
+      "file": "components/Footer.tsx",
+      "line": 5,
+      "text": "import { ArrowUpRight, Sparkles } from \"lucide-react\";"
+    },
+    {
+      "file": "components/Footer.tsx",
+      "line": 154,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 shrink-0\" />"
+    },
+    {
+      "file": "components/home/GraphicDesignShowcase.tsx",
+      "line": 13,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 5,
+      "text": "import { RefreshCw, Sparkles, Layers } from \"lucide-react\";"
+    },
+    {
+      "file": "components/home/HomeInsights.tsx",
+      "line": 6,
+      "text": "import { ArrowRight, ArrowUpRight, Clock, Sparkles } from \"lucide-react\";"
+    },
+    {
+      "file": "components/home/LogoBrandingShowcase.tsx",
+      "line": 7,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/home/UiUxShowcase.tsx",
+      "line": 13,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/RedBreak.tsx",
+      "line": 3,
+      "text": "import { ArrowUpRight, Sparkles, Clock, ShieldCheck, Mail, Zap } from \"lucide-react\";"
+    },
+    {
+      "file": "components/seo/LocationPageTemplate.tsx",
+      "line": 6,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 7,
+      "text": "import { ArrowUpRight, Sparkles, Play } from \"lucide-react\";"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 160,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-brand-redLight\" />"
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 203,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 8,
+      "text": "import { Palette, ArrowUpRight, Sparkles } from \"lucide-react\";"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 433,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 678,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 11,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 15,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 318,
+      "text": "badgeIcon={Sparkles}"
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 5,
+      "text": "import { ArrowRight, Sparkles } from \"lucide-react\";"
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 72,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-amber-300 absolute -top-1 -right-1 drop-shadow-[0_0_4px_rgba(253,224,71,0.7)]\" />"
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 111,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/shared/ProcessStrip.tsx",
+      "line": 4,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/work/shared/ProcessStrip.tsx",
+      "line": 134,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 15,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 464,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 15,
+      "text": "Sparkles,"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 378,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 444,
+      "text": "<Sparkles className=\"w-4 h-4\" />"
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 5,
+      "text": "import { ArrowUpRight, Sparkles, Zap } from \"lucide-react\";"
+    },
+    {
+      "file": "components/work/WorkClosingCta.tsx",
+      "line": 16,
+      "text": "<Sparkles className=\"w-3.5 h-3.5\" />"
+    },
+    {
+      "file": "components/work/WorkStatBreak.tsx",
+      "line": 6,
+      "text": "import { TrendingUp, ShieldCheck, Sparkles } from \"lucide-react\";"
+    },
+    {
+      "file": "components/work/WorkStatBreak.tsx",
+      "line": 84,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-brand-red\" />"
+    }
+  ],
+  "purpleTones": [
+    {
+      "file": "app/globals.css",
+      "line": 19,
+      "text": "--brand-purple: #8B1A1A;"
+    },
+    {
+      "file": "components/FAQ.tsx",
+      "line": 66,
+      "text": "? \"bg-brand-red text-white shadow-purple-btn rotate-180 scale-105\""
+    },
+    {
+      "file": "components/FAQ.tsx",
+      "line": 80,
+      "text": "<div className=\"pt-2 border-t border-brand-purple/15 text-body text-sm leading-relaxed font-bold text-pretty\">"
+    },
+    {
+      "file": "components/ui/Marquee.tsx",
+      "line": 35,
+      "text": "<span className=\"text-brand-purple font-black text-lg\">{separator}</span>"
+    },
+    {
+      "file": "tailwind.config.ts",
+      "line": 40,
+      "text": "purple: \"#8B1A1A\","
+    },
+    {
+      "file": "tailwind.config.ts",
+      "line": 43,
+      "text": "violet: \"#8B1A1A\","
+    },
+    {
+      "file": "tailwind.config.ts",
+      "line": 62,
+      "text": "purple: \"#E7E7E7\","
+    },
+    {
+      "file": "tailwind.config.ts",
+      "line": 97,
+      "text": "\"purple-btn\": \"none\","
+    }
+  ],
+  "accentColors": [
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 284,
+      "text": "? \"bg-amber-50/70 border-amber-200 text-amber-950\""
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 286,
+      "text": "? \"bg-emerald-50/70 border-emerald-200 text-emerald-950\""
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 291,
+      "text": "{sec.callout.type === \"warning\" && <AlertCircle className=\"w-4 h-4 text-amber-600\" />}"
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 292,
+      "text": "{sec.callout.type === \"tip\" && <Lightbulb className=\"w-4 h-4 text-emerald-600\" />}"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 345,
+      "text": "className=\"relative w-20 h-20 rounded-3xl bg-gradient-to-b from-emerald-500 to-emerald-700 text-white flex items-center justify-center shadow-[0_12px_28px_rgba(16,185,129,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)]\""
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 372,
+      "text": "<div className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3\">"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 373,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-emerald-600\" />"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 410,
+      "text": "className=\"inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-sm transition-all\""
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 734,
+      "text": "className=\"relative p-3.5 bg-emerald-50 border border-emerald-200/80 rounded-xl text-xs font-bold text-emerald-950 flex items-center justify-between gap-2 overflow-hidden shadow-xs mb-3\""
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 738,
+      "text": "<CheckCircle2 className=\"w-4 h-4 text-emerald-600 shrink-0\" />"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 741,
+      "text": "<span className=\"text-[10px] text-emerald-700 bg-white/90 px-2.5 py-0.5 rounded-md shrink-0 border border-emerald-200 font-mono\">"
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 753,
+      "text": "className=\"h-12 bg-gradient-to-r from-emerald-600 to-emerald-700 flex items-center justify-center text-white mx-auto shadow-md overflow-hidden shrink-0 relative px-4 gap-2\""
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 802,
+      "text": "? \"bg-emerald-600 text-white border-2 border-emerald-600 shadow-md\""
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 834,
+      "text": ": \"bg-amber-50 border-amber-200 text-amber-900\""
+    },
+    {
+      "file": "components/Testimonials.tsx",
+      "line": 76,
+      "text": "<span className=\"text-[10px] font-mono px-2 py-0.5 rounded-sm bg-amber-50 text-amber-800 border border-amber-200\">"
+    },
+    {
+      "file": "components/work/shared/CrossLinkStrip.tsx",
+      "line": 72,
+      "text": "<Sparkles className=\"w-3.5 h-3.5 text-amber-300 absolute -top-1 -right-1 drop-shadow-[0_0_4px_rgba(253,224,71,0.7)]\" />"
+    },
+    {
+      "file": "lib/client-videos-data.ts",
+      "line": 139,
+      "text": "\"Warm amber stone arch illumination grading\","
+    },
+    {
+      "file": "lib/client-videos-data.ts",
+      "line": 196,
+      "text": "\"Fast-paced lifestyle pacing cut to upbeat audio with kinetic subtitle typography. Seamlessly transitions from double-height living areas to open-sky private courtyards, driving qualified site-visit leads.\","
+    },
+    {
+      "file": "lib/client-videos-data.ts",
+      "line": 304,
+      "text": "\"Color-matched sky replacement and enhancement\","
+    },
+    {
+      "file": "lib/shared-work-assets.ts",
+      "line": 225,
+      "text": "role: \"Olympic pool water vibrancy, summer sky reflections, and leisure energy.\","
+    },
+    {
+      "file": "lib/video-work-data.ts",
+      "line": 403,
+      "text": "brief: \"Vertical social reel spotlighting private garden courtyards, custom pool tiles, and open-sky living.\","
+    },
+    {
+      "file": "lib/video-work-data.ts",
+      "line": 769,
+      "text": "{ phase: \"Phase 01\", title: \"Twilight Capture\", description: \"Shot during 20-minute blue hour window with warm amber accents.\" },"
+    },
+    {
+      "file": "lib/video-work-data.ts",
+      "line": 836,
+      "text": "challenge: \"Balancing vibrant sunny highlights without clipping sky or skin tones.\","
+    },
+    {
+      "file": "lib/video-work-data.ts",
+      "line": 1205,
+      "text": "{ phase: \"Phase 03\", title: \"Warm Amber Grade\", description: \"Rich amber and sawdust contrast in DaVinci Resolve.\" },"
+    }
+  ],
+  "borderL4": [
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 332,
+      "text": "<div className=\"mt-4 p-4 rounded-xl bg-white/60 border-l-4 border-[#8b1a1a] text-xs font-semibold text-body\">"
+    }
+  ],
+  "bgSlateOrBlack": [
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 188,
+      "text": "<div className=\"w-10 h-10 rounded-full bg-slate-100 border border-line flex items-center justify-center text-[#8b1a1a] font-black\">"
+    },
+    {
+      "file": "app/insights/[slug]/page.tsx",
+      "line": 250,
+      "text": "<span className=\"w-1.5 h-1.5 rounded-full bg-slate-300\" />"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 309,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-line text-xs font-bold text-body\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 313,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-line text-xs font-bold text-body\">"
+    },
+    {
+      "file": "app/work/[slug]/page.tsx",
+      "line": 348,
+      "text": "project.mediaType === \"video\" ? \"bg-black\" : \"bg-white\""
+    },
+    {
+      "file": "components/about/AboutClosingCta.tsx",
+      "line": 39,
+      "text": "className=\"w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-white hover:bg-slate-100 text-ink text-sm font-black tracking-wider uppercase transition-all shadow-md active:translate-y-px group\""
+    },
+    {
+      "file": "components/Contact.tsx",
+      "line": 261,
+      "text": "<span className=\"text-[11px] font-bold text-muted bg-slate-100 px-2.5 py-0.5 rounded-full\">"
+    },
+    {
+      "file": "components/dev/DevHero.tsx",
+      "line": 96,
+      "text": "className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 border border-line text-xs font-mono font-bold text-body\""
+    },
+    {
+      "file": "components/dev/DevHeroBrowserMock.tsx",
+      "line": 17,
+      "text": "<div className=\"flex items-center gap-1.5 p-1 rounded-xl bg-slate-100 border border-line\">"
+    },
+    {
+      "file": "components/dev/DevHeroBrowserMock.tsx",
+      "line": 46,
+      "text": "<span className=\"w-2.5 h-2.5 rounded-full bg-slate-300\" />"
+    },
+    {
+      "file": "components/dev/DevHeroBrowserMock.tsx",
+      "line": 47,
+      "text": "<span className=\"w-2.5 h-2.5 rounded-full bg-slate-300\" />"
+    },
+    {
+      "file": "components/dev/DevHeroBrowserMock.tsx",
+      "line": 48,
+      "text": "<span className=\"w-2.5 h-2.5 rounded-full bg-slate-300\" />"
+    },
+    {
+      "file": "components/dev/DevHeroBrowserMock.tsx",
+      "line": 74,
+      "text": "<div className=\"relative w-full aspect-[16/10] sm:aspect-[16/9] bg-slate-100 overflow-hidden\">"
+    },
+    {
+      "file": "components/dev/DevHeroBrowserMock.tsx",
+      "line": 92,
+      "text": "<span className=\"text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 border border-line text-muted\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 126,
+      "text": "? \"bg-slate-100 hover:bg-line border-line text-ink hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 138,
+      "text": "? \"bg-slate-100 hover:bg-line border-line text-ink hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 239,
+      "text": "className=\"relative aspect-[16/10] sm:aspect-[16/9.5] w-full overflow-hidden bg-slate-100 flex-grow min-h-[260px] sm:min-h-[340px]\""
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 322,
+      "text": "<div className=\"bg-slate-100 border-b border-line/90 px-4 sm:px-5 py-3 flex items-center justify-between gap-4\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 355,
+      "text": "<span className=\"inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 border border-line text-[11px] font-mono font-bold uppercase tracking-wider text-body whitespace-normal\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 420,
+      "text": "className=\"block bg-slate-100\""
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 424,
+      "text": "<div className=\"bg-slate-100 border-b border-line/90 px-4 sm:px-5 py-3 flex items-center justify-between gap-4\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 455,
+      "text": "<span className=\"px-2.5 py-1 rounded-full bg-slate-100 border border-line text-[10px] font-mono font-bold uppercase tracking-wider text-body whitespace-normal\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 519,
+      "text": "<div className=\"bg-slate-100 border-b border-line/90 px-4 sm:px-5 py-3 flex items-center justify-between gap-4\">"
+    },
+    {
+      "file": "components/dev/WebDevBrowserShowcase.tsx",
+      "line": 556,
+      "text": "<span className=\"self-start sm:self-auto px-2.5 py-1 rounded-full bg-slate-100 border border-line text-[10px] font-mono font-bold uppercase tracking-wider text-body whitespace-normal\">"
+    },
+    {
+      "file": "components/home/FeaturedPortfolio.tsx",
+      "line": 140,
+      "text": "<div className={`relative ${aspectRatioClass} w-full overflow-hidden bg-slate-100`}>"
+    },
+    {
+      "file": "components/home/FeaturedPortfolio.tsx",
+      "line": 193,
+      "text": "className=\"px-2.5 py-1 rounded-lg bg-slate-100 text-body text-[11px] font-medium\""
+    },
+    {
+      "file": "components/home/GraphicDesignShowcase.tsx",
+      "line": 120,
+      "text": "<div className=\"relative w-full overflow-hidden bg-slate-100\">"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 68,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 76,
+      "text": "<span className=\"inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-sm text-white/80 text-[9px] font-mono font-medium\">"
+    },
+    {
+      "file": "components/home/HeroShowcaseErrorBoundary.tsx",
+      "line": 95,
+      "text": "className=\"inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-ink text-xs font-mono font-medium transition-colors cursor-pointer border border-line\""
+    },
+    {
+      "file": "components/home/HomeFaq.tsx",
+      "line": 123,
+      "text": ": \"bg-slate-100 text-body border border-line\""
+    },
+    {
+      "file": "components/home/HomeInsights.tsx",
+      "line": 60,
+      "text": "<div className=\"relative w-full aspect-16/9 rounded-2xl overflow-hidden mb-6 bg-slate-100 border border-line/60\">"
+    },
+    {
+      "file": "components/home/HomeServicesMerged.tsx",
+      "line": 110,
+      "text": "<div className=\"inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-line text-xs font-mono font-bold text-muted\">"
+    },
+    {
+      "file": "components/home/HomeServicesMerged.tsx",
+      "line": 146,
+      "text": "<div className=\"w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-ink shrink-0\">"
+    },
+    {
+      "file": "components/home/IndustriesCondensedStrip.tsx",
+      "line": 85,
+      "text": "<span className=\"text-[10px] font-black uppercase tracking-wider text-muted bg-slate-100 px-2.5 py-0.5 rounded-full border border-line/60\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 257,
+      "text": ": `overflow-hidden bg-slate-900 ${"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 313,
+      "text": "className=\"absolute inset-0 overflow-hidden bg-black text-white\""
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 344,
+      "text": "<span className=\"inline-flex items-center gap-1 px-1.5 sm:px-2 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-white border border-white/20 text-[8px] sm:text-[9px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 356,
+      "text": "className=\"w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all cursor-pointer shadow-xs hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 369,
+      "text": "className=\"w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all cursor-pointer shadow-xs hover:scale-105 active:scale-95\""
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 413,
+      "text": "<span className=\"inline-flex items-center justify-center w-6 h-6 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-xs\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 421,
+      "text": "<div className=\"absolute inset-0 bg-black/20 pointer-events-none\" />"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 456,
+      "text": "<div className=\"h-6 sm:h-7 bg-slate-900/95 flex items-center px-2.5 sm:px-3 gap-1.5 border-b border-white/10 shrink-0 z-20\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 496,
+      "text": "<span className=\"inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase shadow-xs\">"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 505,
+      "text": "<div className=\"absolute inset-0 bg-black/10 hover:bg-transparent transition-colors pointer-events-none\" />"
+    },
+    {
+      "file": "components/home/StackedAdaptiveCards.tsx",
+      "line": 521,
+      "text": "className=\"inline-flex items-center gap-1.5 p-1 rounded-full bg-slate-100/90 border border-line/80 shadow-xs\""
+    },
+    {
+      "file": "components/InsightCard.tsx",
+      "line": 22,
+      "text": "<div className=\"relative w-full aspect-16/9 rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-line/60\">"
+    },
+    {
+      "file": "components/video/YouTubeEmbedPlayer.tsx",
+      "line": 52,
+      "text": "className={`relative w-full ${aspectClass} overflow-hidden rounded-xl bg-slate-950 group select-none ${className}`}"
+    },
+    {
+      "file": "components/video/YouTubeEmbedPlayer.tsx",
+      "line": 55,
+      "text": "<div className=\"absolute inset-0 bg-slate-900 pointer-events-none\" aria-hidden=\"true\" />"
+    },
+    {
+      "file": "components/video/YouTubeEmbedPlayer.tsx",
+      "line": 100,
+      "text": "<span className=\"bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 289,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-line text-xs font-mono font-bold text-body\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 311,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs\">"
+    },
+    {
+      "file": "components/work/CaseStudyBentoGallery.tsx",
+      "line": 408,
+      "text": "className=\"p-2.5 rounded-full bg-slate-100 hover:bg-line text-ink border border-line shadow-sm transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 209,
+      "text": "className=\"fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-8 bg-black/75 backdrop-blur-md overflow-hidden animate-in fade-in duration-200\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 215,
+      "text": "className=\"group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 229,
+      "text": "className=\"group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 267,
+      "text": "className=\"p-2 rounded-full text-muted hover:text-ink bg-slate-100 hover:bg-line transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 292,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 border border-line font-bold\">"
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 296,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 border border-line font-bold\">"
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 300,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 border border-line font-bold\">"
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 330,
+      "text": "project.mediaType === \"video\" ? \"bg-black\" : \"bg-slate-50\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 514,
+      "text": "className=\"flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-line text-ink text-xs font-bold transition-colors cursor-pointer truncate\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 521,
+      "text": "className=\"flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-line text-ink text-xs font-bold transition-colors cursor-pointer truncate\""
+    },
+    {
+      "file": "components/work/CaseStudyOverlay.tsx",
+      "line": 575,
+      "text": "className=\"p-2.5 rounded-full bg-slate-100 hover:bg-line text-ink border border-line shadow-sm transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/DepthStackScroll.tsx",
+      "line": 150,
+      "text": "<div className=\"px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-black tracking-wider uppercase flex items-center gap-2 shadow-lg\">"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 245,
+      "text": "<span className=\"px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs\">"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 254,
+      "text": "<div className=\"absolute inset-0 bg-slate-950/85 backdrop-blur-sm p-6 flex flex-col justify-between opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none md:group-hover:pointer-events-auto\">"
+    },
+    {
+      "file": "components/work/GraphicDesignShowcase.tsx",
+      "line": 452,
+      "text": "<span className=\"px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono font-bold text-white shadow-xs\">"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 186,
+      "text": "className=\"absolute overflow-hidden bg-black\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 247,
+      "text": "<div className=\"absolute inset-0 flex items-center justify-center bg-black/20 pointer-events-none z-15\">"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 249,
+      "text": "className=\"rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white/90\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 265,
+      "text": "<div className=\"absolute inset-0 bg-black/40 z-20 pointer-events-none\" />"
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 510,
+      "text": "className=\"relative overflow-hidden bg-black border-[1.5px] border-white cursor-pointer shadow-md\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 545,
+      "text": "className=\"relative overflow-hidden rounded-full border border-white/20 bg-slate-800 shrink-0 flex items-center justify-center\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 652,
+      "text": "className=\"inline-flex items-center overflow-hidden bg-black/40 backdrop-blur-md rounded-full text-white/90\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 697,
+      "text": "className=\"absolute bottom-0 inset-x-0 bg-black flex flex-col justify-between z-30 pointer-events-none select-none\""
+    },
+    {
+      "file": "components/work/IPhoneReelsCard.tsx",
+      "line": 765,
+      "text": "className=\"rounded-full border border-white/60 bg-slate-700 flex items-center justify-center overflow-hidden\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 79,
+      "text": "<div className=\"relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-900 mb-4 shadow-sm\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 88,
+      "text": "<span className=\"px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-white\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 201,
+      "text": "className=\"w-full lg:w-3/5 relative aspect-[16/9] rounded-2xl overflow-hidden bg-slate-900 border border-line shadow-xl group cursor-pointer\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 249,
+      "text": "<span className=\"px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-mono font-bold text-white uppercase\">"
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 263,
+      "text": "className=\"px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 text-white text-[11px] sm:text-xs font-bold flex items-center gap-1.5 sm:gap-2 backdrop-blur-md transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/LongFormCinemaShowcase.tsx",
+      "line": 272,
+      "text": "className=\"w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 flex items-center justify-center text-white backdrop-blur-md transition-all cursor-pointer\""
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 238,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/20 text-white text-[10px] font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 248,
+      "text": "<div className=\"absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none\">"
+    },
+    {
+      "file": "components/work/NirvaDesignGallery.tsx",
+      "line": 301,
+      "text": "className=\"absolute top-5 right-5 p-3 rounded-full bg-slate-100 hover:bg-line text-ink border border-line shadow-sm transition-all cursor-pointer z-20\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 87,
+      "text": "} z-30 flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#FF4D5E]/40 text-white shadow-[0_4px_14px_rgba(139, 26, 26,0.45)] pointer-events-none transition-all duration-300`}"
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 491,
+      "text": ": \"border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:border-[#8B1A1A]/30 bg-slate-950\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 585,
+      "text": ": \"border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:shadow-[0_10px_24px_rgba(139,26,26,0.12)] hover:border-[#8B1A1A]/30 bg-slate-950\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 683,
+      "text": "className=\"fixed inset-0 z-[9999] top-0 left-0 w-full h-full bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-6\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 695,
+      "text": "className=\"absolute top-3 right-3 sm:top-4 sm:right-4 z-40 p-2.5 rounded-full bg-black/60 md:bg-white/90 text-white md:text-ink hover:scale-105 active:scale-95 transition-all cursor-pointer border border-white/20 md:border-line shadow-md\""
+    },
+    {
+      "file": "components/work/RotatingShortsShowcase.tsx",
+      "line": 702,
+      "text": "<div className=\"relative w-full md:w-1/2 bg-black flex items-center justify-center overflow-hidden min-h-[360px] md:min-h-[580px]\">"
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 132,
+      "text": "className=\"w-[76px] sm:w-24 md:w-28 lg:w-32 aspect-[9/16] rounded-xl sm:rounded-2xl overflow-hidden border border-white/25 bg-black/20 shadow-xl relative shrink-0\""
+    },
+    {
+      "file": "components/work/shared/PageHero.tsx",
+      "line": 154,
+      "text": "className=\"w-[76px] sm:w-24 md:w-28 lg:w-32 aspect-[9/16] rounded-xl sm:rounded-2xl overflow-hidden border border-white/25 bg-black/20 shadow-xl relative shrink-0\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 147,
+      "text": "className=\"relative w-full aspect-video bg-black cursor-pointer overflow-hidden\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 183,
+      "text": "<div className=\"inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 188,
+      "text": "<div className=\"inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-brand-red/70 text-xs font-mono font-bold tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 223,
+      "text": "<div className=\"relative w-full aspect-[9/16] bg-black overflow-hidden\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 258,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider shadow-md shrink-0\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 266,
+      "text": "className=\"px-2.5 py-1 rounded-full bg-black/75 hover:bg-black/90 border border-white/20 text-white backdrop-blur-md text-[10px] font-mono font-bold tracking-wider shadow-md flex items-center gap-1.5 pointer-events-auto cursor-pointer transition-colors shrink-0\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 279,
+      "text": "className=\"px-3 py-1.5 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs font-mono font-bold transition-all pointer-events-auto cursor-pointer flex items-center gap-1.5\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 291,
+      "text": "className=\"p-2 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs transition-all pointer-events-auto cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 320,
+      "text": "<span className=\"inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider shadow-md shrink-0\">"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 348,
+      "text": "className=\"p-2 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-white/20 backdrop-blur-md text-xs transition-all pointer-events-auto cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 422,
+      "text": "className={`relative bg-black flex items-center justify-center overflow-hidden ${"
+    },
+    {
+      "file": "components/work/VideoBentoGrid.tsx",
+      "line": 453,
+      "text": "<div className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-white text-[11px] font-mono font-bold uppercase tracking-wider shadow-md\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 207,
+      "text": "<div className=\"group relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900/90 shadow-2xl transition-all\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 210,
+      "text": "<div className=\"flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/20 text-xs font-black text-white shadow-lg\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 221,
+      "text": "className=\"relative w-full aspect-[16/9] bg-black cursor-pointer overflow-hidden\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 248,
+      "text": "cinemaPlaying ? \"opacity-0 group-hover:opacity-100\" : \"opacity-100 bg-black/40\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 320,
+      "text": "<div className=\"p-6 sm:p-8 bg-slate-900 border-t border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 488,
+      "text": "className=\"fixed inset-0 z-[9999] top-0 left-0 w-full h-full bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 md:p-10\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 508,
+      "text": "className={`relative bg-black flex items-center justify-center ${"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 696,
+      "text": "className=\"group relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900/90 hover:border-[#8b1a1a]/60 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 700,
+      "text": "className=\"relative aspect-[9/16] w-full overflow-hidden bg-black cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 725,
+      "text": "<span className=\"px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 736,
+      "text": "isPlaying ? \"opacity-0 group-hover:opacity-100\" : \"opacity-100 bg-black/30\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 739,
+      "text": "<div className=\"w-12 h-12 rounded-full bg-black/70 backdrop-blur-md text-white flex items-center justify-center shadow-xl border border-white/20\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 752,
+      "text": "className=\"p-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white transition-colors cursor-pointer\""
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 762,
+      "text": "<span className=\"px-2 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[10px] font-mono font-semibold text-white/90\">"
+    },
+    {
+      "file": "components/work/VideoEditingShowcase.tsx",
+      "line": 769,
+      "text": "<div className=\"p-4 flex flex-col justify-between flex-grow bg-slate-900 border-t border-white/10\">"
+    }
+  ],
+  "unicodeSymbols": [
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 20,
+      "text": "{ name: \"SPECZO\", category: \"OPTICS\", tagline: \"Luxury Eyewear Identity\", symbol: \"◆\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 21,
+      "text": "{ name: \"ONIRIQUE\", category: \"PARFUMS\", tagline: \"Haute Fragrance 3D CGI\", symbol: \"◈\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 22,
+      "text": "{ name: \"PCFITMENT\", category: \"AUTO SAAS\", tagline: \"Automotive Catalog Cloud\", symbol: \"◇\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 23,
+      "text": "{ name: \"SAMSUNG\", category: \"TECH\", tagline: \"Consumer Electronics & Tech\", symbol: \"◆\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 24,
+      "text": "{ name: \"NIRVA CLUB\", category: \"RESORT\", tagline: \"Hospitality & Large OOH\", symbol: \"▲\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 25,
+      "text": "{ name: \"SOUL REGALTOS\", category: \"ESPORTS\", tagline: \"Gaming & Creator Ecosystem\", symbol: \"⬡\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 26,
+      "text": "{ name: \"RHYME\", category: \"JEWELS\", tagline: \"Haute Joaillerie Print\", symbol: \"◈\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 27,
+      "text": "{ name: \"LOVE BEAUTY & PLANET\", category: \"CARE\", tagline: \"Clean & Sustainable Beauty\", symbol: \"◇\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 28,
+      "text": "{ name: \"SIVANTA\", category: \"LIFESTYLE\", tagline: \"Monolithic Brand Identity\", symbol: \"●\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 29,
+      "text": "{ name: \"VANTARA\", category: \"WILDLIFE\", tagline: \"Wildlife Rescue & Conservation\", symbol: \"▲\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 30,
+      "text": "{ name: \"ADANI\", category: \"ENTERPRISE\", tagline: \"Infrastructure & Energy Systems\", symbol: \"■\" },"
+    },
+    {
+      "file": "components/ui/ClientLogoStrip.tsx",
+      "line": 31,
+      "text": "{ name: \"NANDANVAN\", category: \"REALTY\", tagline: \"Architectural Real Estate\", symbol: \"▲\" },"
+    },
+    {
+      "file": "lib/testimonials.ts",
+      "line": 81,
+      "text": "\"⚠️  [TESTIMONIALS BUILD-TIME AUDIT] Placeholder testimonials detected:\","
+    }
+  ]
+}

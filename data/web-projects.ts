@@ -18,6 +18,7 @@ export type WebProjectStatus = "client" | "concept" | "own-product";
 export interface WebProject {
   slug: string;
   title: string;
+  domain?: string;
   category: string;
   status: WebProjectStatus;
   description: string;
@@ -34,17 +35,43 @@ export interface WebProject {
 
 export const WEB_PROJECTS_DATA: WebProject[] = [
   {
+    slug: "media-house",
+    title: "Media House Agency",
+    domain: "mediahouse.space",
+    category: "Influencer Marketing & Media",
+    status: "client",
+    description:
+      "Creator talent and influencer management platform with interactive roster showcases, brand decks, and real-time campaign metrics.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+    screenshotDesktop: "/projects/mediahouse-desktop.webp",
+    screenshotMobile: "/projects/mediahouse-mobile.webp",
+    fullPreviewImage: "/projects/mediahouse-full-desktop.png",
+    poster: "/projects/mediahouse-desktop.webp",
+    lighthouse: {
+      performance: 99,
+      accessibility: 96,
+      bestPractices: 100,
+      seo: 100,
+      agenticBrowsing: "3/3",
+      mode: "Desktop",
+      measuredOn: "Oct 2026",
+    },
+    reportImage: "/projects/mediahouse-lighthouse-report.png",
+    permissionToShow: true,
+  },
+  {
     slug: "forever-films",
     title: "Forever Films",
+    domain: "foreverfilms.in",
     category: "Cinema & Luxury Photography",
     status: "client",
     description:
       "Luxury wedding cinematography flagship with sub-second route transitions, dark-mode visual storytelling, and bespoke editorial typography.",
     stack: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-    screenshotDesktop: "/projects/forever-films-desktop.png",
-    screenshotMobile: "/projects/forever-films-mobile.png",
-    fullPreviewImage: "/projects/forever-films-full-desktop.png",
-    poster: "/projects/forever-films-desktop.png",
+    screenshotDesktop: "/projects/forever-films-desktop.webp",
+    screenshotMobile: "/projects/forever-films-mobile.webp",
+    fullPreviewImage: "/projects/forever-films-full-desktop.webp",
+    poster: "/projects/forever-films-desktop.webp",
     lighthouse: {
       performance: 95,
       accessibility: 96,
@@ -57,27 +84,52 @@ export const WEB_PROJECTS_DATA: WebProject[] = [
     permissionToShow: true,
   },
   {
-    slug: "media-house",
-    title: "Media House Agency",
-    category: "Influencer Marketing & Media",
+    slug: "novimail",
+    title: "NoviMail",
+    domain: "novimail.com",
+    category: "Privacy Email & SaaS Infrastructure",
     status: "client",
     description:
-      "Creator talent and influencer management platform with interactive roster showcases, brand decks, and real-time campaign metrics.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
-    screenshotDesktop: "/projects/mediahouse-desktop.png",
-    screenshotMobile: "/projects/mediahouse-mobile.png",
-    fullPreviewImage: "/projects/mediahouse-full-desktop.png",
-    poster: "/projects/mediahouse-desktop.png",
+      "Custom-domain email hosting platform eliminating rental fees and third-party tracking with unified inbox management and sub-second delivery.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "IMAP/SMTP", "DKIM/DMARC"],
+    screenshotDesktop: "/projects/novimail-desktop.webp",
+    screenshotMobile: "/projects/novimail-mobile.webp",
+    fullPreviewImage: "/projects/novimail-full-desktop.webp",
+    poster: "/projects/novimail-desktop.webp",
     lighthouse: {
-      performance: 99,
-      accessibility: 96,
-      bestPractices: 100,
-      seo: 100,
-      agenticBrowsing: "3/3",
+      performance: 94,
+      accessibility: 94,
+      bestPractices: 92,
+      seo: 91,
+      agenticBrowsing: "1/2",
       mode: "Desktop",
       measuredOn: "Oct 2026",
     },
-    reportImage: "/projects/mediahouse-lighthouse-report.png",
+    reportImage: "/projects/novimail-lighthouse-report.png",
+    permissionToShow: true,
+  },
+  {
+    slug: "nimus-ai",
+    title: "Nimus AI",
+    domain: "nimus.ai",
+    category: "Autonomous AI & DevTools",
+    status: "client",
+    description:
+      "Autonomous AI engineering agent platform with real-time codebase telemetry, automated debugging workflows, and private LLM infrastructure.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets", "Autonomous Agents"],
+    screenshotDesktop: "/projects/nimus-ai-desktop.webp",
+    screenshotMobile: "/projects/nimus-ai-mobile.webp",
+    fullPreviewImage: "/projects/nimus-ai-full-desktop.webp",
+    poster: "/projects/nimus-ai-desktop.webp",
+    lighthouse: {
+      performance: 100,
+      accessibility: 98,
+      bestPractices: 100,
+      seo: 83,
+      mode: "Desktop",
+      measuredOn: "Oct 2026",
+    },
+    reportImage: "/projects/nimus-ai-lighthouse-report.png",
     permissionToShow: true,
   },
   {

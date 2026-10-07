@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimus AI - Work at the speed of thought. Powered by autonomous AI.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            dark: {
+              bg: '#05070E',
+              card: '#0B0F19',
+              border: '#1E293B',
+              surface: '#0F172A',
+            },
+            neon: {
+              purple: '#8B5CF6',
+              violet: '#6D28D9',
+              indigo: '#6366F1',
+              cyan: '#06B6D4',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #05070E;
+      color: #F8FAFC;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #A78BFA 0%, #C084FC 50%, #818CF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glow-purple {
+      box-shadow: 0 0 50px -10px rgba(139, 92, 246, 0.35);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.25);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-[#05070E] text-slate-100 antialiased selection:bg-purple-600 selection:text-white">
+
+  <!-- Ambient Background Spotlights -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-purple-900/30 via-indigo-900/20 to-transparent blur-[120px] rounded-full"></div>
+    <div class="absolute top-[40%] -left-40 w-[500px] h-[500px] bg-purple-900/15 blur-[140px] rounded-full"></div>
+    <div class="absolute top-[60%] -right-40 w-[500px] h-[500px] bg-cyan-900/15 blur-[140px] rounded-full"></div>
+  </div>
+
+  <!-- 1. Top Navbar -->
+  <header class="w-full bg-[#05070E]/80 backdrop-blur-md border-b border-slate-800/80 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-18 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-purple-600/30">
+          <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="text-xl font-bold font-sans tracking-tight text-white">Nimus <span class="text-purple-400 font-extrabold">AI</span></span>
+      </div>
+
+      <!-- Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-slate-300">
+        <a href="#features" class="hover:text-purple-400 transition-colors">Features</a>
+        <a href="#solutions" class="hover:text-purple-400 transition-colors">Solutions</a>
+        <a href="#team" class="hover:text-purple-400 transition-colors">Team</a>
+        <a href="#pricing" class="hover:text-purple-400 transition-colors">Pricing</a>
+        <a href="#docs" class="hover:text-purple-400 transition-colors">Docs</a>
+      </nav>
+
+      <!-- Right Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a href="#signin" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Sign in</a>
+        <a href="#start" class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold transition-all shadow-md shadow-purple-600/25">
+          Start Free Trial
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="relative pt-16 pb-24 overflow-hidden text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/70 border border-purple-800/60 text-purple-300 text-xs font-semibold mb-6 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        <span>Product release • Autonomous Agents v2.4</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white mb-6">
+        Work at the speed of <br/>
+        thought. <span class="gradient-text">Powered by <br class="hidden sm:inline"/>autonomous AI.</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+        Supercharge your development workflow with intelligent autonomous AI agents that write code, debug runtime failures, and orchestrate infrastructure in real time.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+        <a href="#start" class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold shadow-lg shadow-purple-600/30 transition-all flex items-center gap-2">
+          <span>Get started free</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+        <a href="#demo" class="px-6 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 text-sm font-bold transition-all flex items-center gap-2">
+          <svg class="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>Watch Architecture Demo</span>
+        </a>
+      </div>
+
+      <!-- Main Dashboard Mockup Card -->
+      <div class="relative mx-auto max-w-5xl rounded-2xl bg-slate-900/90 border border-slate-800 p-2 sm:p-3 shadow-2xl glow-purple text-left">
+        <!-- Mockup Top Bar -->
+        <div class="bg-slate-950/80 border-b border-slate-800/80 rounded-t-xl px-4 py-3 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            <span class="ml-2 text-xs font-mono text-slate-400 font-semibold">nimus-orchestrator-prod :: main</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/50 border border-emerald-800/40 px-2.5 py-0.5 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Live Agent Running</span>
+          </div>
+        </div>
+
+        <!-- Dashboard Body -->
+        <div class="grid grid-cols-12 gap-3 p-4 bg-[#090D1A] rounded-b-xl">
+          <!-- Left Nav -->
+          <div class="col-span-3 border-r border-slate-800/60 pr-3 space-y-1 text-xs font-mono">
+            <div class="p-2 rounded-lg bg-purple-950/60 text-purple-300 font-bold flex items-center gap-2">
+              <span class="w-2 h-2 rounded bg-purple-400"></span>
+              <span>Overview</span>
+            </div>
+            <div class="p-2 rounded-lg text-slate-400 hover:text-slate-200 flex items-center gap-2">
+              <span class="w-2 h-2 rounded bg-slate-600"></span>
+              <span>Agents (8)</span>
+            </div>
+            <div class="p-2 rounded-lg text-slate-400 hover:text-slate-200 flex items-center gap-2">
+              <span class="w-2 h-2 rounded bg-slate-600"></span>
+              <span>Code Graph</span>
+            </div>
+            <div class="p-2 rounded-lg text-slate-400 hover:text-slate-200 flex items-center gap-2">
+              <span class="w-2 h-2 rounded bg-slate-600"></span>
+              <span>Deployments</span>
+            </div>
+            <div class="p-2 rounded-lg text-slate-400 hover:text-slate-200 flex items-center gap-2">
+              <span class="w-2 h-2 rounded bg-slate-600"></span>
+              <span>Audit Logs</span>
+            </div>
+          </div>
+
+          <!-- Center Analytics & Chart -->
+          <div class="col-span-9 space-y-4">
+            <!-- Metric Sparkline Bar -->
+            <div class="grid grid-cols-3 gap-3">
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-[11px] text-slate-400 block">Agent Execution Time</span>
+                <span class="text-xl font-bold font-mono text-white">0.34s</span>
+                <span class="text-[10px] text-emerald-400">92% faster than baseline</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-[11px] text-slate-400 block">Context Token Window</span>
+                <span class="text-xl font-bold font-mono text-purple-300">2M Tokens</span>
+                <span class="text-[10px] text-purple-400">Zero data retention</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-[11px] text-slate-400 block">Test Pass Rate</span>
+                <span class="text-xl font-bold font-mono text-emerald-400">99.8%</span>
+                <span class="text-[10px] text-slate-400">4,120 tests verified</span>
+              </div>
+            </div>
+
+            <!-- Area Chart Graphic -->
+            <div class="h-32 rounded-xl bg-slate-900/40 border border-slate-800/80 p-3 relative overflow-hidden flex flex-col justify-end">
+              <svg class="w-full h-24 overflow-visible" viewBox="0 0 400 100" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,80 Q50,70 100,50 T200,40 T300,20 T400,10 L400,100 L0,100 Z" fill="url(#chartGrad)"/>
+                <path d="M0,80 Q50,70 100,50 T200,40 T300,20 T400,10" fill="none" stroke="#A78BFA" stroke-width="2.5"/>
+              </svg>
+              <div class="absolute top-3 left-4 text-xs font-mono text-slate-400 font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                <span>Real-Time Code Execution Velocity Spike</span>
+              </div>
+            </div>
+
+            <!-- Autonomous Action Prompt Strip -->
+            <div class="p-3 rounded-xl bg-purple-950/40 border border-purple-800/50 flex items-center justify-between text-xs font-mono">
+              <div class="flex items-center gap-2">
+                <span class="text-purple-400 font-bold">&gt;</span>
+                <span class="text-slate-200">Autonomous Agent: &quot;Refactoring PostgreSQL query pool &amp; auto-generating migrations&quot;</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-purple-900/80 text-purple-200 font-bold">Done in 240ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Key Metrics Strip -->
+  <section class="py-12 bg-[#080B14] border-y border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/60">
+        <span class="text-5xl font-extrabold font-mono text-white block mb-1">10x</span>
+        <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">Faster Production Releases</span>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/60">
+        <span class="text-5xl font-extrabold font-mono text-purple-400 block mb-1">4.8 hrs</span>
+        <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">Saved Daily per Engineer</span>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/60">
+        <span class="text-5xl font-extrabold font-mono text-emerald-400 block mb-1">99.9%</span>
+        <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">Autonomous Accuracy Rate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Leaders / Reviews Strip -->
+  <section class="py-16 bg-[#05070E]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">
+          Built for leaders who care about velocity.
+        </h2>
+        <p class="text-xs text-slate-400">Used by engineering squads across fast-moving tech startups.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 text-left">
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            &quot;Nimus AI cut our cycle time in half. Our engineers focus on architecture while autonomous agents ship unit tests and fix regressions instantly.&quot;
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-xs font-bold text-purple-300">AS</div>
+            <div>
+              <div class="text-xs font-bold text-white">Alex S.</div>
+              <div class="text-[10px] text-slate-500">VP Engineering, ScaleScale</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 text-left">
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            &quot;The contextual code graph is unbelievable. It comprehends multi-repo microservices without halluncinations. True autonomous power.&quot;
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-indigo-600/30 border border-indigo-500/40 flex items-center justify-center text-xs font-bold text-indigo-300">KR</div>
+            <div>
+              <div class="text-xs font-bold text-white">Kavita R.</div>
+              <div class="text-[10px] text-slate-500">Principal Architect, CloudZero</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 text-left">
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            &quot;Zero data retention gave our compliance team peace of mind on day one. We deployed private instances without any security roadblocks.&quot;
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-emerald-600/30 border border-emerald-500/40 flex items-center justify-center text-xs font-bold text-emerald-300">DM</div>
+            <div>
+              <div class="text-xs font-bold text-white">David M.</div>
+              <div class="text-[10px] text-slate-500">Head of Security, FinTech Global</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Feature Deep Dives (3-row feature stack) -->
+  <section class="py-20 bg-[#080B14] border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+          Engineered for engineering teams that move with conviction.
+        </h2>
+        <p class="text-sm text-slate-400">
+          A full-stack autonomous AI platform designed from the bare metal up for modern high-performance codebases.
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Feature 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 rounded-3xl bg-slate-900/60 border border-slate-800">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">Autonomous Workflows</span>
+            <h3 class="text-2xl font-bold text-white">Autonomous multi-step execution workflows</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Describe intent in plain English or GitHub issues. Nimus AI breaks it down into deterministic subtasks, writes the code, verifies with test runners, and opens the PR.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-300 font-medium">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Automated root-cause isolation &amp; fix generation</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Real-time execution in sandboxed Docker containers</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 bg-slate-950 rounded-2xl p-4 border border-slate-800 font-mono text-xs">
+            <div class="text-slate-500 mb-2">// Executing plan #1842: Auth middleware refactor</div>
+            <div class="text-emerald-400">&gt; npm run test:unit ... PASSED (342/342)</div>
+            <div class="text-purple-300">&gt; Building AST diff ... 14 files updated</div>
+            <div class="text-slate-300">&gt; Generating PR description with security checklist</div>
+            <div class="mt-3 p-2 rounded bg-purple-950/60 text-purple-300 border border-purple-800/40 text-[11px]">
+              Branch &quot;feat/nimus-auth-perf&quot; pushed to origin. PR #921 ready for review.
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 rounded-3xl bg-slate-900/60 border border-slate-800">
+          <div class="lg:col-span-6 order-2 lg:order-1 bg-slate-950 rounded-2xl p-4 border border-slate-800 font-mono text-xs">
+            <div class="text-slate-400 mb-2">Semantic Dependency Graph</div>
+            <div class="h-28 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-center text-purple-400">
+              <span class="text-xs font-mono">[Core Microservice] &lt;---&gt; [Redis Cache Pool] &lt;---&gt; [Edge Gateway]</span>
+            </div>
+            <div class="mt-2 text-[11px] text-slate-500">Cross-repo semantic linkages indexed across 2.4M lines of code.</div>
+          </div>
+          <div class="lg:col-span-6 order-1 lg:order-2 space-y-4 text-left">
+            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">Semantic Intelligence</span>
+            <h3 class="text-2xl font-bold text-white">Deep semantic context intelligence across your entire codebase</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              No shallow regex parsing. Nimus AI creates real-time vector AST graphs connecting API contracts, data models, and dependency trees across all your microservices.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 rounded-3xl bg-slate-900/60 border border-slate-800">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Production Hardened</span>
+            <h3 class="text-2xl font-bold text-white">Production-hardened automated testing in 30 seconds</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Never let an edge-case escape into production. Autonomous agents generate unit, integration, and fuzz tests covering every branch condition.
+            </p>
+          </div>
+          <div class="lg:col-span-6 bg-slate-950 rounded-2xl p-4 border border-slate-800 font-mono text-xs">
+            <div class="text-emerald-400">&gt; 100% Mutation coverage achieved on critical billing route</div>
+            <div class="text-slate-400 mt-1">&gt; 48 edge tests synthesized and validated</div>
+            <div class="mt-3 p-2 rounded bg-emerald-950/40 text-emerald-300 border border-emerald-800/40 text-[11px]">
+              Lighthouse Perf: 100 · Best Practices: 100 · Zero Regressions
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Zero Data Retention Strip -->
+  <section class="py-14 bg-[#05070E] border-t border-slate-800/80 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs text-slate-300 mb-4">
+        <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Zero data retention. Private hosted LLM infrastructure.</span>
+      </div>
+      <h3 class="text-xl font-bold text-white mb-6">Enterprise-Grade Security &amp; Compliance</h3>
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-mono text-slate-400">
+        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">SOC 2 Type II</span>
+        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">GDPR Compliant</span>
+        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">HIPAA Ready</span>
+        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">ISO 27001</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Pricing Section -->
+  <section class="py-20 bg-[#080B14] border-t border-slate-800/80 text-center">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+        Invest in velocity. Pay for impact.
+      </h2>
+      <p class="text-sm text-slate-400 max-w-xl mx-auto mb-14">
+        Transparent pricing designed for individual developers and fast-scaling teams.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto">
+        <!-- Starter -->
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Starter</h3>
+            <p class="text-xs text-slate-400 mb-4">For individual developers wanting autonomous AI speed.</p>
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-3xl font-extrabold text-white font-mono">$19</span>
+              <span class="text-xs text-slate-500">/mo</span>
+            </div>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li>✓ 500 autonomous agent runs / mo</li>
+              <li>✓ 1 codebase repository context</li>
+              <li>✓ Automated unit test synthesis</li>
+              <li>✓ Standard execution queue</li>
+            </ul>
+          </div>
+          <button class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition-all">Start Free</button>
+        </div>
+
+        <!-- Pro (Highlighted) -->
+        <div class="p-8 rounded-2xl bg-slate-900 border-2 border-purple-500 shadow-xl glow-purple flex flex-col justify-between relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-[10px] font-mono font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">
+            Most Popular
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Pro</h3>
+            <p class="text-xs text-slate-400 mb-4">For engineers and high-output product teams.</p>
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-3xl font-extrabold text-white font-mono">$49</span>
+              <span class="text-xs text-slate-500">/mo</span>
+            </div>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li>✓ Unlimited autonomous agent runs</li>
+              <li>✓ Multi-repo code graph indexing</li>
+              <li>✓ Sub-second execution sandbox</li>
+              <li>✓ Priority container cluster</li>
+              <li>✓ GitHub &amp; GitLab bot automation</li>
+            </ul>
+          </div>
+          <button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-bold shadow-md transition-all">Get Pro</button>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Enterprise</h3>
+            <p class="text-xs text-slate-400 mb-4">Dedicated VPC hosting, private LLMs, and custom SLA.</p>
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-3xl font-extrabold text-white font-mono">$149</span>
+              <span class="text-xs text-slate-500">/mo</span>
+            </div>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li>✓ Self-hosted VPC / on-prem deployment</li>
+              <li>✓ Custom LLM fine-tuning</li>
+              <li>✓ Dedicated customer engineer</li>
+              <li>✓ 99.99% uptime SLA guarantee</li>
+            </ul>
+          </div>
+          <button class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition-all">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Closing Call to Action Banner -->
+  <section class="py-20 bg-[#05070E] text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="p-10 rounded-3xl bg-gradient-to-tr from-purple-950/60 via-slate-900 to-slate-950 border border-purple-800/40 glow-purple">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+          Ready to accelerate your product development?
+        </h2>
+        <p class="text-sm text-slate-400 max-w-md mx-auto mb-8">
+          Join thousands of developers shipping faster with autonomous AI agents today.
+        </p>
+        <button class="px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold shadow-lg shadow-purple-600/40 transition-all">
+          Start 14-day free trial &rarr;
+        </button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -19,11 +19,11 @@ interface ClientLogo {
 const CLIENT_LOGOS: ClientLogo[] = [
   { name: "SAMSUNG", category: "TECH", tagline: "Consumer Tech", fontClass: "font-sans font-black tracking-widest text-sm" },
   { name: "ADANI", category: "ENTERPRISE", tagline: "Infrastructure", fontClass: "font-sans font-black tracking-wider text-sm" },
-  { name: "NIRVA CLUB", category: "RESORT", tagline: "Hospitality & Leisure", fontClass: "font-serif font-bold tracking-wider text-sm" },
-  { name: "VEDAM VILLAS", category: "LIVING", tagline: "Luxury Real Estate", fontClass: "font-serif font-bold tracking-wide text-sm" },
+  { name: "NIRVA CLUB", category: "RESORT", tagline: "Hospitality & Leisure", fontClass: "font-sans font-bold tracking-wider text-sm" },
+  { name: "VEDAM VILLAS", category: "LIVING", tagline: "Luxury Real Estate", fontClass: "font-sans font-bold tracking-wide text-sm" },
   { name: "SPECZO", category: "OPTICS", tagline: "Luxury Eyewear", fontClass: "font-sans font-black tracking-[0.2em] text-xs" },
-  { name: "ONIRIQUE", category: "PARFUMS", tagline: "Haute Fragrance", fontClass: "font-serif italic font-bold tracking-wider text-sm" },
-  { name: "RHYME JEWELS", category: "JEWELRY", tagline: "Fine Jewelry", fontClass: "font-serif font-bold tracking-wide text-sm" },
+  { name: "ONIRIQUE", category: "PARFUMS", tagline: "Haute Fragrance", fontClass: "font-sans font-bold tracking-wider text-sm" },
+  { name: "RHYME JEWELS", category: "JEWELRY", tagline: "Fine Jewelry", fontClass: "font-sans font-bold tracking-wide text-sm" },
   { name: "NANDANVAN", category: "REALTY", tagline: "Architectural Realty", fontClass: "font-sans font-bold tracking-wider text-sm" },
   { name: "AMBICA", category: "INTERIOR", tagline: "Interior Gallery", fontClass: "font-sans font-bold tracking-wide text-sm" },
   { name: "LOVE BEAUTY & PLANET", category: "CARE", tagline: "Clean Beauty", fontClass: "font-sans font-extrabold tracking-tight text-xs" },
@@ -34,10 +34,10 @@ const CLIENT_LOGOS: ClientLogo[] = [
 export function ClientLogoStrip() {
   return (
     <section
-      className="relative w-full py-12 sm:py-16 bg-white border-y border-line/80 overflow-hidden font-normal select-none"
+      className="relative w-full py-12 sm:py-16 bg-white border-y border-line/80 overflow-hidden font-sans font-normal select-none"
     >
       <div className="max-w-7xl mx-auto px-6 mb-6 flex items-center justify-center text-center">
-        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider text-slate-700 uppercase">
+        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider text-slate-700 uppercase font-sans">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" aria-hidden="true" />
           <span>{CLIENT_LOGOS_HEADING}</span>
         </div>

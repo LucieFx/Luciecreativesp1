@@ -1,0 +1,175 @@
+{
+  "totalDiffs": 69,
+  "routeDiffResults": [
+    {
+      "pathname": "/",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Video Editing &amp; Web Development Agency | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in\"",
+        "OG:Title changed: \"null\" -> \"Video Editing &amp; Web Development Agency | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in\""
+      ]
+    },
+    {
+      "pathname": "/video-editing",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Video Editing Services: Reels &amp; Commercials | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/video-editing\"",
+        "OG:Title changed: \"null\" -> \"Video Editing Services: Reels &amp; Commercials | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/video-editing\""
+      ]
+    },
+    {
+      "pathname": "/graphic-design",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Graphic Design Services: Branding, Packaging &amp; OOH | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/graphic-design\"",
+        "OG:Title changed: \"null\" -> \"Graphic Design Services: Branding, Packaging &amp; OOH | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/graphic-design\""
+      ]
+    },
+    {
+      "pathname": "/web-development",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Website Development &amp; Custom Website Design Services | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/web-development\"",
+        "OG:Title changed: \"null\" -> \"Website Development &amp; Custom Website Design Services | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/web-development\""
+      ]
+    },
+    {
+      "pathname": "/about",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"About Lucie Creatives | Agency Leadership, Culture &amp; Conviction\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/about\"",
+        "OG:Title changed: \"null\" -> \"About Lucie Creatives | Agency Leadership, Culture &amp; Conviction\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/about\""
+      ]
+    },
+    {
+      "pathname": "/careers",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Careers — Work With Us | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/careers\"",
+        "OG:Title changed: \"null\" -> \"Careers at Lucie Creatives — Work With Us\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/careers\""
+      ]
+    },
+    {
+      "pathname": "/contact",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Schedule a Discovery Call | Partner With Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/contact\"",
+        "OG:Title changed: \"null\" -> \"Schedule a Discovery Call | Partner With Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/contact\""
+      ]
+    },
+    {
+      "pathname": "/testimonials",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Client Testimonials &amp; Partner Reviews | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/testimonials\"",
+        "OG:Title changed: \"null\" -> \"Verified Partner Testimonials | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/testimonials\""
+      ]
+    },
+    {
+      "pathname": "/industries",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Industries &amp; Sectors We Accelerate | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/industries\"",
+        "OG:Title changed: \"null\" -> \"Commercial Sectors &amp; Industries We Accelerate | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/industries\""
+      ]
+    },
+    {
+      "pathname": "/insights",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Agency Insights, Guides &amp; Growth Playbooks | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/insights\"",
+        "OG:Title changed: \"null\" -> \"Agency Insights, Guides &amp; Growth Playbooks | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/insights\""
+      ]
+    },
+    {
+      "pathname": "/ui-ux-design",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"UI/UX Design Services | Figma Systems &amp; Web App Interfaces | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/ui-ux-design\"",
+        "OG:Title changed: \"null\" -> \"UI/UX Design Services | Figma Systems &amp; Web App Interfaces | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/ui-ux-design\""
+      ]
+    },
+    {
+      "pathname": "/branding",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Brand Identity &amp; Strategic Branding Agency | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/branding\"",
+        "OG:Title changed: \"null\" -> \"Brand Identity &amp; Strategic Branding Agency | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/branding\""
+      ]
+    },
+    {
+      "pathname": "/logo-design",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Custom Logo Design &amp; Business Logo Identity Services | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/logo-design\"",
+        "OG:Title changed: \"null\" -> \"Custom Logo Design &amp; Business Logo Identity Services | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/logo-design\""
+      ]
+    },
+    {
+      "pathname": "/social-media-design",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Social Media Design Services | High-Retention Carousels &amp; Paid Ads | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/social-media-design\"",
+        "OG:Title changed: \"null\" -> \"Social Media Design Services | High-Retention Carousels &amp; Paid Ads | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/social-media-design\""
+      ]
+    },
+    {
+      "pathname": "/privacy",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Privacy Policy | Lucie Creatives Data Governance\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/privacy\"",
+        "OG:Title changed: \"null\" -> \"Privacy Policy | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/privacy\""
+      ]
+    },
+    {
+      "pathname": "/terms",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Terms of Service | Lucie Creatives Agency Governance\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/terms\"",
+        "OG:Title changed: \"null\" -> \"Terms of Service | Lucie Creatives\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/terms\""
+      ]
+    },
+    {
+      "pathname": "/work/vedam-villas-influencer-tour",
+      "status": "DIFF",
+      "issues": [
+        "Title changed: \"null\" -> \"Vedam Villas Luxury Tour with Taniya Oberoi — Vedam Villas (Baroda) | Luxury Real Estate &amp; Influencer Media Case Study | Lucie Creatives\"",
+        "Canonical changed: \"null\" -> \"https://luciecreatives.in/work/vedam-villas-influencer-tour\"",
+        "OG:Title changed: \"null\" -> \"Vedam Villas Luxury Tour with Taniya Oberoi — Vedam Villas (Baroda) | Case Study\"",
+        "OG:URL changed: \"null\" -> \"https://luciecreatives.in/work/vedam-villas-influencer-tour\""
+      ]
+    }
+  ]
+}

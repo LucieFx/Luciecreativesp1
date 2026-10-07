@@ -706,7 +706,7 @@ export function WebDevBrowserShowcase() {
                     <div className="flex-1 max-w-md mx-auto bg-white border border-slate-200 rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-xs font-mono text-slate-600 shadow-2xs">
                       <Lock className="w-3 h-3 text-[#008744]" />
                       <span className="truncate font-medium">
-                        https://{modalState.project.slug}.luciecreatives.in
+                        https://{modalState.project.domain || `${modalState.project.slug}.luciecreatives.in`}
                       </span>
                     </div>
                     <div className="text-[11px] font-mono text-slate-400 hidden sm:block">

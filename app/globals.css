@@ -41,13 +41,20 @@
     --text-secondary: #4B4B4B;
     --border-light: #E7E7E7;
 
+    /* Typography Font Tokens */
+    --font-sora: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-sans: var(--font-sora);
+    --font-body: var(--font-sora);
+    --font-display: var(--font-sora);
+    --font-heading: var(--font-sora);
+
   }
 
   html {
     scroll-behavior: smooth;
     background-color: var(--bg-white);
     color: var(--text-primary);
-    font-family: var(--font-body), sans-serif;
+    font-family: var(--font-sora, 'Sora', sans-serif);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -57,7 +64,7 @@
     background-color: var(--bg-white);
     color: var(--text-primary);
     overflow-x: hidden;
-    font-family: var(--font-body), sans-serif;
+    font-family: var(--font-sora, 'Sora', sans-serif);
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -67,20 +74,30 @@
   }
 
   h1, h2 {
-    font-family: var(--font-display), sans-serif;
-    font-weight: 700;
+    font-family: var(--font-sora, 'Sora', sans-serif);
+    font-weight: 600;
     letter-spacing: -0.02em;
-    line-height: 1.0;
+    line-height: 1.05;
     color: inherit;
     text-wrap: balance;
-    font-feature-settings: "ss01" 0, "ss02" 0;
   }
 
   h3, h4, h5, h6 {
-    font-family: var(--font-body), sans-serif;
-    font-weight: 700;
+    font-family: var(--font-sora, 'Sora', sans-serif);
+    font-weight: 600;
     letter-spacing: -0.01em;
     color: inherit;
+  }
+
+  .font-display,
+  .font-heading {
+    font-family: var(--font-sora, 'Sora', sans-serif) !important;
+    font-weight: 600 !important;
+  }
+
+  .font-sans,
+  .font-body {
+    font-family: var(--font-sora, 'Sora', sans-serif) !important;
   }
 
 }
@@ -139,7 +156,7 @@ html[data-motion="off"] [data-mask] {
 
 /* Typography System Utilities */
 .font-display {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-sora, 'Sora', sans-serif) !important;
   letter-spacing: -0.02em;
   line-height: 1.0;
   text-wrap: balance;
@@ -154,17 +171,17 @@ html[data-motion="off"] [data-mask] {
   display: inline;
 }
 
-.font-body {
-  font-family: var(--font-body), sans-serif;
+.font-body,
+.font-sans {
+  font-family: var(--font-sora, 'Sora', sans-serif) !important;
 }
 
 .font-serif {
-  font-family: var(--font-accent), Georgia, serif;
-  font-style: italic;
+  font-family: var(--font-sora, 'Sora', sans-serif) !important;
 }
 
 .font-mono {
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-mono, monospace);
 }
 
 /* Brand Maroon / Red Utilities */

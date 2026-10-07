@@ -1,0 +1,203 @@
+{
+  "unusedFiles": [
+    "src\\components\\FullPageDollyBackground.tsx",
+    "src\\components\\HeroDevicePhone.tsx",
+    "src\\components\\home\\HomeFaq.tsx",
+    "src\\components\\home\\HomeInsights.tsx",
+    "src\\components\\home\\LogoBrandingShowcase.tsx",
+    "src\\components\\home\\UiUxShowcase.tsx",
+    "src\\components\\home\\VideoEditingShowcase.tsx",
+    "src\\components\\Intro.tsx",
+    "src\\components\\MobileMenu.tsx",
+    "src\\components\\motion\\index.ts",
+    "src\\components\\PageTransition.tsx",
+    "src\\components\\Preloader.tsx",
+    "src\\components\\Results.tsx",
+    "src\\components\\ScrollScene.tsx",
+    "src\\components\\ui\\CompanyStatsBar.tsx",
+    "src\\components\\ui\\ContinuousPageSpine.tsx",
+    "src\\components\\ui\\Doodles.tsx",
+    "src\\components\\ui\\IntroLoader.tsx",
+    "src\\components\\ui\\ParallaxLayer.tsx",
+    "src\\components\\ui\\RevealSection.tsx",
+    "src\\components\\WebsiteShowcase.tsx",
+    "src\\components\\work\\DepthStackScroll.tsx",
+    "src\\components\\work\\WorkFilterPills.tsx",
+    "src\\components\\work\\WorkPortfolioClient.tsx",
+    "src\\lib\\useLiteMotion.ts",
+    "src\\lib\\utils.ts",
+    "src\\lib\\youtube-player-registry.ts",
+    "src\\next-env.d.ts"
+  ],
+  "unusedAssets": [
+    {
+      "file": "src\\public\\favicon.svg",
+      "rel": "favicon.svg",
+      "name": "favicon.svg",
+      "size": 4442
+    },
+    {
+      "file": "src\\public\\fonts\\BBHHegarty-Regular.ttf",
+      "rel": "fonts/BBHHegarty-Regular.ttf",
+      "name": "BBHHegarty-Regular.ttf",
+      "size": 28752
+    },
+    {
+      "file": "src\\public\\hero-iphone-vector.svg",
+      "rel": "hero-iphone-vector.svg",
+      "name": "hero-iphone-vector.svg",
+      "size": 344647
+    },
+    {
+      "file": "src\\public\\hero-iphone.svg",
+      "rel": "hero-iphone.svg",
+      "name": "hero-iphone.svg",
+      "size": 344647
+    },
+    {
+      "file": "src\\public\\iphone-frame.png",
+      "rel": "iphone-frame.png",
+      "name": "iphone-frame.png",
+      "size": 96137
+    },
+    {
+      "file": "src\\public\\llms.txt",
+      "rel": "llms.txt",
+      "name": "llms.txt",
+      "size": 1889
+    },
+    {
+      "file": "src\\public\\logo\\lucie-logo-outline.svg",
+      "rel": "logo/lucie-logo-outline.svg",
+      "name": "lucie-logo-outline.svg",
+      "size": 1369
+    },
+    {
+      "file": "src\\public\\logo\\lucie-logo-white.svg",
+      "rel": "logo/lucie-logo-white.svg",
+      "name": "lucie-logo-white.svg",
+      "size": 1183
+    },
+    {
+      "file": "src\\public\\logo\\lucie-logo.svg",
+      "rel": "logo/lucie-logo.svg",
+      "name": "lucie-logo.svg",
+      "size": 1183
+    },
+    {
+      "file": "src\\public\\logo\\lucie-mark-outline.svg",
+      "rel": "logo/lucie-mark-outline.svg",
+      "name": "lucie-mark-outline.svg",
+      "size": 549
+    },
+    {
+      "file": "src\\public\\logo\\lucie-mark-white.svg",
+      "rel": "logo/lucie-mark-white.svg",
+      "name": "lucie-mark-white.svg",
+      "size": 439
+    },
+    {
+      "file": "src\\public\\logo\\lucie-mark.svg",
+      "rel": "logo/lucie-mark.svg",
+      "name": "lucie-mark.svg",
+      "size": 439
+    },
+    {
+      "file": "src\\public\\portfolio\\video\\nirva-resort-reel-frame.jpg",
+      "rel": "portfolio/video/nirva-resort-reel-frame.jpg",
+      "name": "nirva-resort-reel-frame.jpg",
+      "size": 952800
+    },
+    {
+      "file": "src\\public\\projects\\copease-desktop.png",
+      "rel": "projects/copease-desktop.png",
+      "name": "copease-desktop.png",
+      "size": 200853
+    },
+    {
+      "file": "src\\public\\projects\\copease-full-desktop.png",
+      "rel": "projects/copease-full-desktop.png",
+      "name": "copease-full-desktop.png",
+      "size": 467845
+    },
+    {
+      "file": "src\\public\\projects\\copease-hero-illustration.png",
+      "rel": "projects/copease-hero-illustration.png",
+      "name": "copease-hero-illustration.png",
+      "size": 713133
+    },
+    {
+      "file": "src\\public\\projects\\copease-mobile.png",
+      "rel": "projects/copease-mobile.png",
+      "name": "copease-mobile.png",
+      "size": 69559
+    },
+    {
+      "file": "src\\public\\projects\\doxx-full.png",
+      "rel": "projects/doxx-full.png",
+      "name": "doxx-full.png",
+      "size": 467845
+    },
+    {
+      "file": "src\\public\\projects\\doxx-lighthouse-report.png",
+      "rel": "projects/doxx-lighthouse-report.png",
+      "name": "doxx-lighthouse-report.png",
+      "size": 20567
+    },
+    {
+      "file": "src\\public\\projects\\doxx-mobile.png",
+      "rel": "projects/doxx-mobile.png",
+      "name": "doxx-mobile.png",
+      "size": 69559
+    },
+    {
+      "file": "src\\public\\projects\\doxx.png",
+      "rel": "projects/doxx.png",
+      "name": "doxx.png",
+      "size": 200853
+    },
+    {
+      "file": "src\\public\\projects\\forever-films-full.png",
+      "rel": "projects/forever-films-full.png",
+      "name": "forever-films-full.png",
+      "size": 71956
+    },
+    {
+      "file": "src\\public\\projects\\kaption-full.png",
+      "rel": "projects/kaption-full.png",
+      "name": "kaption-full.png",
+      "size": 400330
+    },
+    {
+      "file": "src\\public\\projects\\mediahouse-full.png",
+      "rel": "projects/mediahouse-full.png",
+      "name": "mediahouse-full.png",
+      "size": 237005
+    },
+    {
+      "file": "src\\public\\projects\\nandanvan-realty-web.jpg",
+      "rel": "projects/nandanvan-realty-web.jpg",
+      "name": "nandanvan-realty-web.jpg",
+      "size": 785230
+    },
+    {
+      "file": "src\\public\\robots.txt",
+      "rel": "robots.txt",
+      "name": "robots.txt",
+      "size": 253
+    },
+    {
+      "file": "src\\public\\SVG FOR IPHONE\\hero-iphone.svg",
+      "rel": "SVG FOR IPHONE/hero-iphone.svg",
+      "name": "hero-iphone.svg",
+      "size": 344647
+    }
+  ],
+  "unusedDeps": [
+    "dotenv",
+    "gsap",
+    "lenis",
+    "next-cloudinary",
+    "puppeteer-core"
+  ]
+}

@@ -52,7 +52,7 @@ export function DevHeroBrowserMock() {
           <div className="flex-grow max-w-md mx-auto bg-white border border-line rounded-lg px-3 py-1 flex items-center justify-center gap-2 text-[11px] font-mono text-muted shadow-2xs">
             <Lock className="w-3 h-3 text-[#8B1A1A] shrink-0" />
             <span className="truncate text-ink font-medium">
-              private-deployment/{activeProject.id}
+              {activeProject.domain ? `https://${activeProject.domain}` : `private-deployment/${activeProject.id}`}
             </span>
           </div>
 

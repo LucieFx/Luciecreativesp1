@@ -1,0 +1,1186 @@
+{
+  "mobile": {
+    "name": "MOBILE",
+    "scores": {
+      "Performance": 77,
+      "Accessibility": 100,
+      "Best Practices": 96,
+      "SEO": 100
+    },
+    "metrics": {
+      "fcp": "1.7 s",
+      "lcp": "6.2 s",
+      "lcpRaw": 6234.9629,
+      "tbt": "40 ms",
+      "tbtRaw": 44,
+      "cls": "0",
+      "clsRaw": 0,
+      "speedIndex": "2.3 s"
+    },
+    "totalJsTransferKB": "181.4",
+    "totalJsResourceKB": "608.5",
+    "topResources": [
+      {
+        "url": "https://res.cloudinary.com/oct7txvw/video/upload/v1790266871/lucie-creatives/videos/clients/ambica-interior/ambica-interior-luxury-spaces.mp4",
+        "type": "Media",
+        "transferSizeKB": "928.4",
+        "resourceSizeKB": "942.9"
+      },
+      {
+        "url": "http://localhost:3000/projects/mediahouse-desktop.webp",
+        "type": "Image",
+        "transferSizeKB": "539.6",
+        "resourceSizeKB": "539.1"
+      },
+      {
+        "url": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creatives/portfolio/graphic-design/onirique/hero-perfume-trio.webp",
+        "type": "Image",
+        "transferSizeKB": "121.7",
+        "resourceSizeKB": "121.2"
+      },
+      {
+        "url": "https://img.youtube.com/vi/F66vpDy_qQY/maxresdefault.jpg",
+        "type": "Image",
+        "transferSizeKB": "94.7",
+        "resourceSizeKB": "94.2"
+      },
+      {
+        "url": "http://localhost:3000/iphone-frame.png",
+        "type": "Image",
+        "transferSizeKB": "94.4",
+        "resourceSizeKB": "93.9"
+      },
+      {
+        "url": "http://localhost:3000/icon.png",
+        "type": "Other",
+        "transferSizeKB": "67.3",
+        "resourceSizeKB": "66.8"
+      },
+      {
+        "url": "http://localhost:3000/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+        "type": "Script",
+        "transferSizeKB": "53.7",
+        "resourceSizeKB": "169.0"
+      },
+      {
+        "url": "http://localhost:3000/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+        "type": "Font",
+        "transferSizeKB": "47.8",
+        "resourceSizeKB": "47.3"
+      },
+      {
+        "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+        "type": "Script",
+        "transferSizeKB": "46.0",
+        "resourceSizeKB": "169.5"
+      },
+      {
+        "url": "http://localhost:3000/_next/static/media/558ca1a6aa3cb55e-s.woff2",
+        "type": "Font",
+        "transferSizeKB": "31.1",
+        "resourceSizeKB": "30.6"
+      }
+    ],
+    "failedByCategory": {
+      "Performance": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.93,
+          "weight": 10,
+          "displayValue": "1.7 s",
+          "description": "First Contentful Paint marks the time at which the first text or image is painted.",
+          "items": []
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.11,
+          "weight": 25,
+          "displayValue": "6.2 s",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted.",
+          "items": []
+        },
+        {
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.98,
+          "weight": 10,
+          "displayValue": "2.3 s",
+          "description": "Speed Index shows how quickly the contents of a page are visibly populated.",
+          "items": []
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "weight": 0,
+          "displayValue": "Est savings of 71 KiB",
+          "description": "A long cache lifetime can speed up repeat visits to your page.",
+          "items": [
+            {
+              "url": "https://img.youtube.com/vi/F66vpDy_qQY/maxresdefault.jpg",
+              "cacheLifetimeMs": 7200000,
+              "totalBytes": 96949,
+              "wastedBytes": 72711.75
+            }
+          ]
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 604 KiB",
+          "description": "Reducing the download time of images can improve the perceived load time of the page and LCP.",
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-0-IMG",
+                "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,DIV,1,DIV,0,IMG",
+                "selector": "div.col-start-1 > div.relative > div.relative > img.object-cover",
+                "boundingRect": {
+                  "top": 676,
+                  "bottom": 805,
+                  "left": 108,
+                  "right": 351,
+                  "width": 242,
+                  "height": 129
+                },
+                "snippet": "<img alt=\"Media House Agency creator talent and influencer media platform\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover object-top\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" src=\"/projects/mediahouse-desktop.webp\">",
+                "nodeLabel": "Media House Agency creator talent and influencer media platform"
+              },
+              "url": "http://localhost:3000/projects/mediahouse-desktop.webp",
+              "totalBytes": 552002,
+              "wastedBytes": 492467,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "Increasing the image compression factor could improve this image's download size.",
+                    "wastedBytes": 240535
+                  },
+                  {
+                    "reason": "This image file is larger than it needs to be (1920x973) for its displayed dimensions (756x473). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 446490
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-1-IMG",
+                "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                "selector": "div.relative > div.col-start-1 > div.relative > img.object-cover",
+                "boundingRect": {
+                  "top": 628,
+                  "bottom": 833,
+                  "left": 80,
+                  "right": 284,
+                  "width": 205,
+                  "height": 205
+                },
+                "snippet": "<img alt=\"Onirique Parfums 3D CGI and luxury fragrance branding\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" src=\"https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creativ…\">",
+                "nodeLabel": "Onirique Parfums 3D CGI and luxury fragrance branding"
+              },
+              "url": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creatives/portfolio/graphic-design/onirique/hero-perfume-trio.webp",
+              "totalBytes": 124068,
+              "wastedBytes": 120268,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "This image file is larger than it needs to be (2400x2400) for its displayed dimensions (420x420). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 120268
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-2-IMG",
+                "path": "2,HTML,1,BODY,1,MAIN,1,HEADER,0,DIV,0,NAV,0,A,0,DIV,0,IMG",
+                "selector": "nav.w-full > a.flex > div.relative > img.h-full",
+                "boundingRect": {
+                  "top": 27,
+                  "bottom": 55,
+                  "left": 33,
+                  "right": 121,
+                  "width": 88,
+                  "height": 28
+                },
+                "snippet": "<img alt=\"Lucie Creatives\" width=\"145\" height=\"46\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-auto object-contain\" style=\"color:transparent\" srcset=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789…\" src=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789…\">",
+                "nodeLabel": "Lucie Creatives"
+              },
+              "url": "https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png",
+              "totalBytes": 13586,
+              "wastedBytes": 5778,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "Increasing the image compression factor could improve this image's download size.",
+                    "wastedBytes": 5778
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "lcp-discovery-insight",
+          "title": "LCP request discovery",
+          "score": 0,
+          "weight": 0,
+          "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+          "items": [
+            {
+              "type": "checklist",
+              "items": {
+                "priorityHinted": {
+                  "label": "fetchpriority=high should be applied",
+                  "value": false
+                },
+                "requestDiscoverable": {
+                  "label": "Request is discoverable in initial document",
+                  "value": true
+                },
+                "eagerlyLoaded": {
+                  "label": "LCP resources should not use loading=lazy",
+                  "value": true
+                }
+              }
+            },
+            {
+              "type": "node",
+              "lhId": "page-3-DIV",
+              "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV",
+              "selector": "div.relative > div.col-start-1 > div.relative > div.absolute",
+              "boundingRect": {
+                "top": 520,
+                "bottom": 940,
+                "left": 88,
+                "right": 324,
+                "width": 236,
+                "height": 420
+              },
+              "snippet": "<div class=\"absolute inset-0 pointer-events-auto\" style=\"mask-image: url(&quot;/iphone-scr…&quot;);\">",
+              "nodeLabel": "OURS\n\nAmbica Interior Gallery\n\nMaterial Precision & Craft\n\nShort"
+            }
+          ]
+        },
+        {
+          "id": "legacy-javascript-insight",
+          "title": "Legacy JavaScript",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 12 KiB",
+          "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers.",
+          "items": [
+            {
+              "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+              "wastedBytes": 11869,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "signal": "Array.prototype.at",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 4383
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flat",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3771
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flatMap",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3884
+                    }
+                  },
+                  {
+                    "signal": "Object.fromEntries",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 4260
+                    }
+                  },
+                  {
+                    "signal": "Object.hasOwn",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 4518
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimEnd",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3513
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimStart",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3428
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "weight": 0,
+          "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "76DEAD213034BB57C9AE565588170634": {
+                    "url": "http://localhost:3000/",
+                    "navStartToEndTime": 24,
+                    "transferSize": 25953,
+                    "isLongest": true,
+                    "children": {
+                      "9808.6": {
+                        "url": "http://localhost:3000/_next/static/css/8a7abce877c68235.css",
+                        "navStartToEndTime": 32,
+                        "transferSize": 1726,
+                        "isLongest": true,
+                        "children": {
+                          "9808.65": {
+                            "url": "http://localhost:3000/_next/static/media/9cc5b37ab1350db7-s.p.woff2",
+                            "navStartToEndTime": 215,
+                            "transferSize": 16186,
+                            "isLongest": true,
+                            "children": {}
+                          },
+                          "9808.78": {
+                            "url": "http://localhost:3000/_next/static/media/558ca1a6aa3cb55e-s.woff2",
+                            "navStartToEndTime": 215,
+                            "transferSize": 31842,
+                            "children": {}
+                          },
+                          "9808.72": {
+                            "url": "http://localhost:3000/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+                            "navStartToEndTime": 215,
+                            "transferSize": 48934,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "9808.7": {
+                        "url": "http://localhost:3000/_next/static/css/ab5bae64a8365755.css",
+                        "navStartToEndTime": 39,
+                        "transferSize": 17431,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 215
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 650 ms",
+          "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+          "items": [
+            {
+              "url": "http://localhost:3000/_next/static/css/ab5bae64a8365755.css",
+              "totalBytes": 17431,
+              "wastedMs": 455
+            },
+            {
+              "url": "http://localhost:3000/_next/static/css/8a7abce877c68235.css",
+              "totalBytes": 1726,
+              "wastedMs": 155
+            }
+          ]
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.61,
+          "weight": 0,
+          "displayValue": "6.3 s",
+          "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive.",
+          "items": []
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.97,
+          "weight": 0,
+          "displayValue": "90 ms",
+          "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task.",
+          "items": []
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 13 KiB",
+          "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity.",
+          "items": [
+            {
+              "url": "http://localhost:3000/_next/static/css/ab5bae64a8365755.css",
+              "wastedBytes": 12996,
+              "wastedPercent": 77.07104360607545,
+              "totalBytes": 16863
+            }
+          ]
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "title": "Minimize main-thread work",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "2.3 s",
+          "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this.",
+          "items": [
+            {
+              "group": "other",
+              "groupLabel": "Other",
+              "duration": 1008.852000000002
+            },
+            {
+              "group": "styleLayout",
+              "groupLabel": "Style & Layout",
+              "duration": 783.0240000000002
+            },
+            {
+              "group": "scriptEvaluation",
+              "groupLabel": "Script Evaluation",
+              "duration": 256.616
+            },
+            {
+              "group": "paintCompositeRender",
+              "groupLabel": "Rendering",
+              "duration": 152.68400000000528
+            },
+            {
+              "group": "scriptParseCompile",
+              "groupLabel": "Script Parsing & Compilation",
+              "duration": 48.56400000000001
+            },
+            {
+              "group": "parseHTML",
+              "groupLabel": "Parse HTML & CSS",
+              "duration": 30.284
+            },
+            {
+              "group": "garbageCollection",
+              "groupLabel": "Garbage Collection",
+              "duration": 7.835999999999996
+            }
+          ]
+        }
+      ],
+      "Accessibility": [
+        {
+          "id": "label-content-name-mismatch",
+          "title": "Elements with visible text labels do not have matching accessible names.",
+          "score": 0,
+          "weight": 0,
+          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users.",
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-DIV",
+                "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV",
+                "selector": "div.lg:col-span-5 > div.w-full > div.relative > div.col-start-1",
+                "boundingRect": {
+                  "top": 656,
+                  "bottom": 805,
+                  "left": 108,
+                  "right": 352,
+                  "width": 244,
+                  "height": 149
+                },
+                "snippet": "<div role=\"button\" aria-label=\"Switch to Web showcase: Media House Agency\" tabindex=\"0\" class=\"col-start-1 row-start-1 will-change-transform overflow-hidden bg-slate-900…\" style=\"width: 280px; height: 158px; border-radius: 8px;\">",
+                "nodeLabel": "https://\nmediahouseagency.com",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-1-A",
+                "path": "2,HTML,1,BODY,1,MAIN,9,FOOTER,0,DIV,1,DIV,0,DIV,2,DIV,1,DIV,1,A",
+                "selector": "div.lg:col-span-3 > div.text-[13px] > div.flex > a.hover:underline",
+                "boundingRect": {
+                  "top": 10341,
+                  "bottom": 10361,
+                  "left": 213,
+                  "right": 325,
+                  "width": 112,
+                  "height": 21
+                },
+                "snippet": "<a href=\"https://wa.me/919106489694?text=Hi%20Lucie%20Creatives%2C%20I%27d%20like%2…\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Message Lucie Creatives on WhatsApp\" class=\"hover:underline hover:opacity-85 transition-opacity cursor-pointer\">",
+                "nodeLabel": "+91 91064 89694",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ]
+        }
+      ],
+      "Best Practices": [
+        {
+          "id": "errors-in-console",
+          "title": "Browser errors were logged to the console",
+          "score": 0,
+          "weight": 1,
+          "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns.",
+          "items": [
+            {
+              "source": "network",
+              "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+              "sourceLocation": {
+                "type": "source-location",
+                "url": "http://localhost:3000/favicon.ico",
+                "urlProvider": "network",
+                "line": 0,
+                "column": 0
+              }
+            }
+          ]
+        }
+      ],
+      "SEO": []
+    }
+  },
+  "desktop": {
+    "name": "DESKTOP",
+    "scores": {
+      "Performance": 97,
+      "Accessibility": 100,
+      "Best Practices": 96,
+      "SEO": 100
+    },
+    "metrics": {
+      "fcp": "0.4 s",
+      "lcp": "1.2 s",
+      "lcpRaw": 1246.5993825,
+      "tbt": "0 ms",
+      "tbtRaw": 0,
+      "cls": "0",
+      "clsRaw": 0.00005376558777288342,
+      "speedIndex": "0.7 s"
+    },
+    "totalJsTransferKB": "214.5",
+    "totalJsResourceKB": "702.5",
+    "topResources": [
+      {
+        "url": "https://res.cloudinary.com/oct7txvw/video/upload/v1790266871/lucie-creatives/videos/clients/ambica-interior/ambica-interior-luxury-spaces.mp4",
+        "type": "Media",
+        "transferSizeKB": "1008.4",
+        "resourceSizeKB": "1023.0"
+      },
+      {
+        "url": "http://localhost:3000/projects/mediahouse-desktop.webp",
+        "type": "Image",
+        "transferSizeKB": "539.6",
+        "resourceSizeKB": "539.1"
+      },
+      {
+        "url": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creatives/portfolio/graphic-design/onirique/hero-perfume-trio.webp",
+        "type": "Image",
+        "transferSizeKB": "121.7",
+        "resourceSizeKB": "121.2"
+      },
+      {
+        "url": "https://img.youtube.com/vi/F66vpDy_qQY/maxresdefault.jpg",
+        "type": "Image",
+        "transferSizeKB": "94.7",
+        "resourceSizeKB": "94.2"
+      },
+      {
+        "url": "http://localhost:3000/iphone-frame.png",
+        "type": "Image",
+        "transferSizeKB": "94.4",
+        "resourceSizeKB": "93.9"
+      },
+      {
+        "url": "http://localhost:3000/icon.png",
+        "type": "Other",
+        "transferSizeKB": "67.3",
+        "resourceSizeKB": "66.8"
+      },
+      {
+        "url": "http://localhost:3000/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+        "type": "Script",
+        "transferSizeKB": "53.7",
+        "resourceSizeKB": "169.0"
+      },
+      {
+        "url": "http://localhost:3000/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+        "type": "Font",
+        "transferSizeKB": "47.8",
+        "resourceSizeKB": "47.3"
+      },
+      {
+        "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+        "type": "Script",
+        "transferSizeKB": "46.0",
+        "resourceSizeKB": "169.5"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/aML3WYYORvg/maxresdefault.webp",
+        "type": "Image",
+        "transferSizeKB": "37.7",
+        "resourceSizeKB": "37.3"
+      }
+    ],
+    "failedByCategory": {
+      "Performance": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.88,
+          "weight": 25,
+          "displayValue": "1.2 s",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted.",
+          "items": []
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 99 KiB",
+          "description": "A long cache lifetime can speed up repeat visits to your page.",
+          "items": [
+            {
+              "url": "https://img.youtube.com/vi/F66vpDy_qQY/maxresdefault.jpg",
+              "cacheLifetimeMs": 7200000,
+              "totalBytes": 96949,
+              "wastedBytes": 72711.75
+            },
+            {
+              "url": "https://i.ytimg.com/vi_webp/aML3WYYORvg/maxresdefault.webp",
+              "cacheLifetimeMs": 7200000,
+              "totalBytes": 38589,
+              "wastedBytes": 28941.75
+            }
+          ]
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "weight": 0,
+          "displayValue": "Est savings of 736 KiB",
+          "description": "Reducing the download time of images can improve the perceived load time of the page and LCP.",
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-4-IMG",
+                "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,0,DIV,1,DIV,0,IMG",
+                "selector": "div.col-start-1 > div.relative > div.relative > img.object-cover",
+                "boundingRect": {
+                  "top": 337,
+                  "bottom": 548,
+                  "left": 932,
+                  "right": 1310,
+                  "width": 377,
+                  "height": 212
+                },
+                "snippet": "<img alt=\"Media House Agency creator talent and influencer media platform\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover object-top\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" src=\"/projects/mediahouse-desktop.webp\">",
+                "nodeLabel": "Media House Agency creator talent and influencer media platform"
+              },
+              "url": "http://localhost:3000/projects/mediahouse-desktop.webp",
+              "totalBytes": 552002,
+              "wastedBytes": 532562,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "Increasing the image compression factor could improve this image's download size.",
+                    "wastedBytes": 246224
+                  },
+                  {
+                    "reason": "This image file is larger than it needs to be (1920x956) for its displayed dimensions (432x270). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 516908
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-5-IMG",
+                "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                "selector": "div.relative > div.col-start-1 > div.relative > img.object-cover",
+                "boundingRect": {
+                  "top": 291,
+                  "bottom": 571,
+                  "left": 838,
+                  "right": 1118,
+                  "width": 281,
+                  "height": 281
+                },
+                "snippet": "<img alt=\"Onirique Parfums 3D CGI and luxury fragrance branding\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" src=\"https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creativ…\">",
+                "nodeLabel": "Onirique Parfums 3D CGI and luxury fragrance branding"
+              },
+              "url": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creatives/portfolio/graphic-design/onirique/hero-perfume-trio.webp",
+              "totalBytes": 124068,
+              "wastedBytes": 121807,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "This image file is larger than it needs to be (2400x2400) for its displayed dimensions (324x324). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 121807
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-6-IMG",
+                "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,1,DIV,0,DIV,1,DIV,0,IMG",
+                "selector": "div.col-start-1 > div.relative > div.absolute > img.object-contain",
+                "boundingRect": {
+                  "top": 143,
+                  "bottom": 719,
+                  "left": 888,
+                  "right": 1212,
+                  "width": 324,
+                  "height": 576
+                },
+                "snippet": "<img alt=\"iPhone Hardware Frame\" decoding=\"async\" data-nimg=\"fill\" class=\"object-contain pointer-events-none select-none\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" src=\"/iphone-frame.png\">",
+                "nodeLabel": "iPhone Hardware Frame"
+              },
+              "url": "http://localhost:3000/iphone-frame.png",
+              "totalBytes": 96137,
+              "wastedBytes": 65719,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "This image file is larger than it needs to be (576x1024) for its displayed dimensions (324x576). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 65719
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-7-IMG",
+                "path": "2,HTML,1,BODY,1,MAIN,5,SECTION,0,DIV,2,DIV,2,DIV,0,A,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+                "selector": "div.relative > div.overflow-hidden > div.w-full > img.object-cover",
+                "boundingRect": {
+                  "top": 2917,
+                  "bottom": 3157,
+                  "left": 907,
+                  "right": 1290,
+                  "width": 383,
+                  "height": 239
+                },
+                "snippet": "<img alt=\"Vedam Villas: Master Living &amp; High Ceilings - Luxury Real Estate case stud…\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover object-center group-hover:scale-[1.03] transition-transform d…\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"https://i.ytimg.com/vi_webp/aML3WYYORvg/maxresdefault.webp 256w, https://i…\" src=\"https://i.ytimg.com/vi_webp/aML3WYYORvg/maxresdefault.webp\">",
+                "nodeLabel": "Vedam Villas: Master Living & High Ceilings - Luxury Real Estate case study for…"
+              },
+              "url": "https://i.ytimg.com/vi_webp/aML3WYYORvg/maxresdefault.webp",
+              "totalBytes": 38168,
+              "wastedBytes": 33249,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "This image file is larger than it needs to be (1154x720) for its displayed dimensions (436x245). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 33249
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "lcp-discovery-insight",
+          "title": "LCP request discovery",
+          "score": 0,
+          "weight": 0,
+          "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+          "items": [
+            {
+              "type": "checklist",
+              "items": {
+                "priorityHinted": {
+                  "label": "fetchpriority=high should be applied",
+                  "value": false
+                },
+                "requestDiscoverable": {
+                  "label": "Request is discoverable in initial document",
+                  "value": true
+                },
+                "eagerlyLoaded": {
+                  "label": "LCP resources should not use loading=lazy",
+                  "value": true
+                }
+              }
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-VIDEO",
+              "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,VIDEO",
+              "selector": "div.relative > div.absolute > div.absolute > video.w-full",
+              "boundingRect": {
+                "top": 172,
+                "bottom": 690,
+                "left": 931,
+                "right": 1169,
+                "width": 238,
+                "height": 519
+              },
+              "snippet": "<video src=\"https://res.cloudinary.com/oct7txvw/video/upload/v1790266871/lucie-creativ…\" poster=\"https://img.youtube.com/vi/F66vpDy_qQY/maxresdefault.jpg\" playsinline=\"\" muted=\"\" loop=\"\" autoplay=\"\" preload=\"auto\" class=\"w-full h-full object-cover\">",
+              "nodeLabel": "div.relative > div.absolute > div.absolute > video.w-full"
+            }
+          ]
+        },
+        {
+          "id": "legacy-javascript-insight",
+          "title": "Legacy JavaScript",
+          "score": 0.5,
+          "weight": 0,
+          "displayValue": "Est savings of 12 KiB",
+          "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers.",
+          "items": [
+            {
+              "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+              "wastedBytes": 11869,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "signal": "Array.prototype.at",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 4383
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flat",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3771
+                    }
+                  },
+                  {
+                    "signal": "Array.prototype.flatMap",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3884
+                    }
+                  },
+                  {
+                    "signal": "Object.fromEntries",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 4260
+                    }
+                  },
+                  {
+                    "signal": "Object.hasOwn",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 4518
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimEnd",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3513
+                    }
+                  },
+                  {
+                    "signal": "String.prototype.trimStart",
+                    "location": {
+                      "type": "source-location",
+                      "url": "http://localhost:3000/_next/static/chunks/1255-2ad1c38c0d2d2927.js",
+                      "urlProvider": "network",
+                      "line": 0,
+                      "column": 3428
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "weight": 0,
+          "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "657EE50D549C503896EBB61B6A8FA2AE": {
+                    "url": "http://localhost:3000/",
+                    "navStartToEndTime": 23,
+                    "transferSize": 25953,
+                    "isLongest": true,
+                    "children": {
+                      "19224.6": {
+                        "url": "http://localhost:3000/_next/static/css/8a7abce877c68235.css",
+                        "navStartToEndTime": 31,
+                        "transferSize": 1726,
+                        "isLongest": true,
+                        "children": {
+                          "19224.65": {
+                            "url": "http://localhost:3000/_next/static/media/9cc5b37ab1350db7-s.p.woff2",
+                            "navStartToEndTime": 205,
+                            "transferSize": 16186,
+                            "isLongest": true,
+                            "children": {}
+                          },
+                          "19224.78": {
+                            "url": "http://localhost:3000/_next/static/media/558ca1a6aa3cb55e-s.woff2",
+                            "navStartToEndTime": 205,
+                            "transferSize": 31842,
+                            "children": {}
+                          },
+                          "19224.72": {
+                            "url": "http://localhost:3000/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+                            "navStartToEndTime": 205,
+                            "transferSize": 48934,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "19224.7": {
+                        "url": "http://localhost:3000/_next/static/css/ab5bae64a8365755.css",
+                        "navStartToEndTime": 33,
+                        "transferSize": 17431,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 205
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 150 ms",
+          "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+          "items": [
+            {
+              "url": "http://localhost:3000/_next/static/css/ab5bae64a8365755.css",
+              "totalBytes": 17431,
+              "wastedMs": 123
+            },
+            {
+              "url": "http://localhost:3000/_next/static/css/8a7abce877c68235.css",
+              "totalBytes": 1726
+            }
+          ]
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "weight": 0,
+          "displayValue": "Est savings of 12 KiB",
+          "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity.",
+          "items": [
+            {
+              "url": "http://localhost:3000/_next/static/css/ab5bae64a8365755.css",
+              "wastedBytes": 12059,
+              "wastedPercent": 71.50906418422342,
+              "totalBytes": 16863
+            }
+          ]
+        }
+      ],
+      "Accessibility": [
+        {
+          "id": "label-content-name-mismatch",
+          "title": "Elements with visible text labels do not have matching accessible names.",
+          "score": 0,
+          "weight": 0,
+          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users.",
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-DIV",
+                "path": "2,HTML,1,BODY,1,MAIN,2,SECTION,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV",
+                "selector": "div.lg:col-span-5 > div.w-full > div.relative > div.col-start-1",
+                "boundingRect": {
+                  "top": 314,
+                  "bottom": 548,
+                  "left": 932,
+                  "right": 1312,
+                  "width": 379,
+                  "height": 235
+                },
+                "snippet": "<div role=\"button\" aria-label=\"Switch to Web showcase: Media House Agency\" tabindex=\"0\" class=\"col-start-1 row-start-1 will-change-transform overflow-hidden bg-slate-900…\" style=\"width: 432px; height: 243px; border-radius: 10px;\">",
+                "nodeLabel": "https://\nmediahouseagency.com",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-1-A",
+                "path": "2,HTML,1,BODY,1,MAIN,9,FOOTER,0,DIV,1,DIV,0,DIV,2,DIV,1,DIV,1,A",
+                "selector": "div.lg:col-span-3 > div.text-[13px] > div.flex > a.hover:underline",
+                "boundingRect": {
+                  "top": 6403,
+                  "bottom": 6424,
+                  "left": 68,
+                  "right": 180,
+                  "width": 112,
+                  "height": 21
+                },
+                "snippet": "<a href=\"https://wa.me/919106489694?text=Hi%20Lucie%20Creatives%2C%20I%27d%20like%2…\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Message Lucie Creatives on WhatsApp\" class=\"hover:underline hover:opacity-85 transition-opacity cursor-pointer\">",
+                "nodeLabel": "+91 91064 89694",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ]
+        }
+      ],
+      "Best Practices": [
+        {
+          "id": "errors-in-console",
+          "title": "Browser errors were logged to the console",
+          "score": 0,
+          "weight": 1,
+          "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns.",
+          "items": [
+            {
+              "source": "network",
+              "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+              "sourceLocation": {
+                "type": "source-location",
+                "url": "http://localhost:3000/favicon.ico",
+                "urlProvider": "network",
+                "line": 0,
+                "column": 0
+              }
+            }
+          ]
+        }
+      ],
+      "SEO": []
+    }
+  }
+}

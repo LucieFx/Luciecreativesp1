@@ -1,21 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Sora, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-const bbhHegarty = localFont({
-  src: [
-    {
-      path: "../public/fonts/BBHHegarty-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-display",
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  fallback: ["Arial", "sans-serif"],
-  adjustFontFallback: "Arial",
+  fallback: ["sans-serif"],
   preload: true,
 });
 
@@ -30,13 +23,7 @@ const instrumentSerif = Instrument_Serif({
   preload: true,
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-  fallback: ["sans-serif"],
-  preload: false,
-});
+
 
 export const metadata: Metadata = {
   title: "Lucie Creatives — Video Editing & Web Development Agency",
@@ -113,7 +100,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bbhHegarty.variable} ${instrumentSerif.variable} ${inter.variable} font-body scroll-smooth bg-white text-ink`}
+      suppressHydrationWarning
+      className={`${sora.variable} ${instrumentSerif.variable} font-sans scroll-smooth bg-white text-ink`}
     >
       <head>
         <meta name="color-scheme" content="light" />
@@ -141,7 +129,7 @@ export default function RootLayout({
           `}</style>
         </noscript>
       </head>
-      <body className="antialiased selection:bg-[#8B1A1A] selection:text-white bg-white font-body text-ink font-normal text-[15px] sm:text-[16px] leading-[1.6]">
+      <body suppressHydrationWarning className="antialiased selection:bg-[#8B1A1A] selection:text-white bg-white font-sans text-ink font-normal text-[15px] sm:text-[16px] leading-[1.6]">
         <MotionProvider>
           <MotionSafetyNet />
           <ScrollProgressBar />
