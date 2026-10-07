@@ -50,7 +50,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             key={link.name}
             href={link.href}
             onClick={onClose}
-            className="text-3xl sm:text-5xl font-extrabold tracking-tight hover:translate-x-3 transition-transform duration-200 text-text-primary hover:text-brand-red"
+            className="text-3xl sm:text-5xl font-extrabold tracking-tight transition-transform duration-200 text-text-primary hover:text-brand-red"
             style={{ transitionDelay: `${idx * 40}ms` }}
           >
             {link.name}

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import Link from "next/link";
 import { CheckCircle2, AlertCircle, Upload, Loader2, Send } from "lucide-react";
 import { CareerRole } from "@/lib/careers-data";
 
@@ -161,8 +162,8 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
         (typeof navigator !== "undefined" && !navigator.onLine);
 
       const errorMessage = isNetworkError
-        ? "Couldn't submit your application — check your connection and try again, or email us at hello@luciecreatives.in."
-        : (err?.message || "Couldn't submit your application — check your connection and try again, or email us at hello@luciecreatives.in.");
+        ? "Couldn't submit your application. Check your connection and try again, or email us at hello@luciecreatives.in."
+        : (err?.message || "Couldn't submit your application. Check your connection and try again, or email us at hello@luciecreatives.in.");
 
       // Input is preserved when submission fails
       setStatusMessage({
@@ -331,9 +332,9 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             >
               <option value="">Select experience level</option>
-              <option value="0–1 yr">0–1 yr</option>
-              <option value="1–3 yrs">1–3 yrs</option>
-              <option value="3–5 yrs">3–5 yrs</option>
+              <option value="0 to 1 yr">0 to 1 yr</option>
+              <option value="1 to 3 yrs">1 to 3 yrs</option>
+              <option value="3 to 5 yrs">3 to 5 yrs</option>
               <option value="5+ yrs">5+ yrs</option>
             </select>
           </div>
@@ -433,7 +434,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
           >
             CV upload <span className="text-[#8B1A1A]">*</span>
           </label>
-          <div className="relative border-2 border-dashed border-line hover:border-[#8B1A1A]/40 rounded-2xl p-5 bg-white/50 transition-colors text-center">
+          <div className="relative border-2 border-dashed border-line hover:border-[#8B1A1A]/40 rounded-lg p-5 bg-white/50 transition-colors text-center">
             <input
               type="file"
               id="cv"
@@ -456,6 +457,15 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
           </div>
         </div>
 
+        {/* DPDP Act Privacy Notice */}
+        <p className="text-[11px] text-muted leading-relaxed">
+          By submitting this application, you agree to our{" "}
+          <Link href="/privacy" className="text-[#8B1A1A] underline font-semibold hover:text-[#8b1a1a]">
+            Privacy Policy
+          </Link>
+          . Candidate personal data is processed solely for recruitment evaluation under the Digital Personal Data Protection Act (DPDP Act) 2023.
+        </p>
+
         {/* Form Footer */}
         <div className="pt-6 border-t border-line/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted font-medium self-start sm:self-auto">
@@ -466,7 +476,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#8B1A1A] hover:bg-[#701515] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wider shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-lg bg-[#8B1A1A] hover:bg-[#8b1a1a]/90 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wider shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer"
           >
             {isSubmitting ? (
               <>

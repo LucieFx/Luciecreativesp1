@@ -2,4 +2,17 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
+# AI Crawlers & Agentic Search
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://luciecreatives.in/sitemap.xml

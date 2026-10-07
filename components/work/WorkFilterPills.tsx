@@ -76,7 +76,7 @@ export function WorkFilterPills({
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-line/40 hover:bg-line/70 border border-line text-xs font-bold text-body hover:text-brand-red transition-all group"
           >
             <span>Explore Development</span>
-            <span className="text-brand-red group-hover:translate-x-0.5 transition-transform">→</span>
+            <span className="text-brand-red transition-transform">→</span>
           </Link>
         </div>
       </div>

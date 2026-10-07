@@ -18,9 +18,9 @@ export function MoreFromClientStrip({ clientName, cards, onNavigate }: MoreFromC
   return (
     <div className="py-6 sm:py-8 border-t border-line">
       <div className="flex items-center justify-between mb-4">
-        <div className="text-xs font-mono font-bold uppercase tracking-wider text-muted">
+        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-muted">
           More from {clientName}
-        </div>
+        </h2>
         <span className="text-[11px] font-mono text-muted">
           {cards.length} {cards.length === 1 ? "work item" : "work items"}
         </span>
@@ -42,7 +42,7 @@ export function MoreFromClientStrip({ clientName, cards, onNavigate }: MoreFromC
               onClick={handleClick}
               className="group relative bg-white/80 hover:bg-white rounded-xl sm:rounded-2xl border border-line/80 hover:border-brand-red/40 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col"
             >
-              <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#FAFAFA]">
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#ffffff]">
                 <Image
                   src={card.thumbnail}
                   alt={card.title}
@@ -66,12 +66,12 @@ export function MoreFromClientStrip({ clientName, cards, onNavigate }: MoreFromC
               </div>
 
               <div className="p-3 flex flex-col flex-1 justify-between gap-1.5">
-                <h4 className="text-xs sm:text-sm font-bold text-ink line-clamp-2 leading-snug group-hover:text-brand-red transition-colors">
+                <h3 className="text-xs sm:text-sm font-bold text-ink line-clamp-2 leading-snug group-hover:text-brand-red transition-colors">
                   {card.title}
-                </h4>
+                </h3>
                 <div className="flex items-center justify-between text-[10px] font-mono text-muted pt-1.5 border-t border-line/60">
                   <span className="truncate">{card.client}</span>
-                  <ArrowUpRight className="w-3 h-3 text-muted group-hover:text-brand-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0 ml-1" />
+                  <ArrowUpRight className="w-3 h-3 text-muted group-hover:text-brand-red transition-transform shrink-0 ml-1" />
                 </div>
               </div>
             </Link>

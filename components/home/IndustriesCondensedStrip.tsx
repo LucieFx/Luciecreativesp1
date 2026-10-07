@@ -36,7 +36,7 @@ export function IndustriesCondensedStrip() {
         {/* Top Header & Link to Full Dedicated Industries Page */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
-            <div className="mb-2 text-xs sm:text-sm font-semibold tracking-wider text-[#7A1F2B] uppercase">
+            <div className="mb-2 text-xs sm:text-sm font-semibold tracking-wider text-[#8b1a1a] uppercase">
               Industries
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-ink tracking-[-0.02em] leading-[1.0] text-balance">
@@ -46,7 +46,7 @@ export function IndustriesCondensedStrip() {
 
           <Link
             href="/industries"
-            className="inline-flex items-center gap-1.5 text-[14px] sm:text-[15px] font-bold text-[#7A1F2B] hover:text-[#5c1720] transition-colors group"
+            className="inline-flex items-center gap-1.5 text-[14px] sm:text-[15px] font-bold text-[#8b1a1a] hover:text-[#8b1a1a] hover:opacity-80 transition-colors group"
           >
             <span>Explore industries</span>
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -72,25 +72,25 @@ export function IndustriesCondensedStrip() {
               >
                 <Link
                   href="/industries"
-                  className="group p-6 sm:p-7 rounded-2xl bg-white border border-line/90 shadow-xs hover:shadow-md hover:border-[#7A1F2B]/40 transition-all duration-300 flex flex-col justify-between h-full"
+                  className="group p-6 sm:p-7 rounded-2xl bg-white border border-line/90 shadow-xs hover:shadow-md hover:border-[#8b1a1a]/40 transition-all duration-300 flex flex-col justify-between h-full"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-xs font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-line/70">
                         {sector.badge}
                       </span>
-                      <div className="w-9 h-9 rounded-xl bg-red-50 text-[#7A1F2B] flex items-center justify-center group-hover:bg-[#7A1F2B] group-hover:text-white transition-colors">
+                      <div className="w-9 h-9 rounded-xl bg-red-50 text-[#8b1a1a] flex items-center justify-center group-hover:bg-[#8b1a1a] group-hover:text-white transition-colors">
                         <Icon className="w-4 h-4" />
                       </div>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-ink mb-2.5 group-hover:text-[#7A1F2B] transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-ink mb-2.5 group-hover:text-[#8b1a1a] transition-colors">
                       {sector.title}
                     </h3>
                     <p className="text-[14px] sm:text-[15px] text-slate-700 font-normal leading-relaxed">
                       {sector.summary}
                     </p>
                   </div>
-                  <div className="pt-4 mt-6 border-t border-line/60 flex items-center gap-1.5 text-[14px] font-bold text-[#7A1F2B]">
+                  <div className="pt-4 mt-6 border-t border-line/60 flex items-center gap-1.5 text-[14px] font-bold text-[#8b1a1a]">
                     <span>View solutions</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>

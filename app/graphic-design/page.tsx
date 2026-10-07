@@ -49,10 +49,10 @@ export default function GraphicDesignPage() {
           headlineItalicAccent="remember."
           subheadline="Brand identity, packaging, social creatives and large-format OOH, designed to look premium and sell."
           chips={[
-            { label: "Brand Identity & Packaging", icon: "📦", href: "#graphic-design-grid" },
-            { label: "OOH Print & Billboards", icon: "🏢", href: "#graphic-design-grid" },
-            { label: "Haute Jewels & FMCG", icon: "✨", href: "#graphic-design-grid" },
-            { label: "Education, Social & Logos", icon: "🎨", href: "#graphic-design-grid" },
+            { label: "Brand Identity & Packaging", href: "#graphic-design-grid" },
+            { label: "OOH Print & Billboards", href: "#graphic-design-grid" },
+            { label: "Haute Jewels & FMCG", href: "#graphic-design-grid" },
+            { label: "Education, Social & Logos", href: "#graphic-design-grid" },
           ]}
           primaryButton={{
             label: "Start a project",
@@ -85,8 +85,8 @@ export default function GraphicDesignPage() {
             {
               number: "02",
               title: "Concept Exploration",
-              description: "We craft 2–3 distinct art directions exploring typographic hierarchy, chromatic palettes, composition structures, and visual tone.",
-              deliverables: ["2–3 Art Directions", "Moodboards", "Initial Drafts"],
+              description: "We craft 2 to 3 distinct art directions exploring typographic hierarchy, chromatic palettes, composition structures, and visual tone.",
+              deliverables: ["2 to 3 Art Directions", "Moodboards", "Initial Drafts"],
             },
             {
               number: "03",

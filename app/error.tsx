@@ -22,10 +22,10 @@ export default function Error({
   return (
     <main className="min-h-screen bg-white text-text-primary flex flex-col items-center justify-center p-6 text-center relative overflow-hidden font-sans">
       {/* Background Dot Grid Pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-60 pointer-events-none" />
+      {null}
 
       {/* Atmospheric Depth Blur */}
-      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#7A1F2B]/[0.03] rounded-full blur-[120px] pointer-events-none" />
+      {null}
 
       <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center">
         {/* Chiclet Logo Mark */}
@@ -41,14 +41,14 @@ export default function Error({
         </div>
 
         {/* Notice Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#7A1F2B] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
           <AlertCircle className="w-3.5 h-3.5" />
           <span>Notice — Something Went Wrong</span>
         </div>
 
         {/* Heading */}
         <h1 className="font-sans font-black text-3xl sm:text-5xl text-ink tracking-tight mb-3">
-          Something went <span className="text-[#7A1F2B] italic">wrong.</span>
+          Something went <span className="text-[#8b1a1a] italic">wrong.</span>
         </h1>
 
         {/* Message */}
@@ -61,7 +61,7 @@ export default function Error({
           <button
             type="button"
             onClick={() => reset()}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#7A1F2B] hover:bg-[#631923] text-white rounded-xl font-bold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 text-white rounded-xl font-bold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
           >
             <RefreshCw className="w-4 h-4" />
             <span>Try Again</span>
@@ -69,7 +69,7 @@ export default function Error({
 
           <Link
             href="/"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#7A1F2B]/40 hover:text-[#7A1F2B] rounded-xl font-bold text-sm transition-all shadow-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] rounded-xl font-bold text-sm transition-all shadow-xs"
           >
             <Home className="w-4 h-4" />
             <span>Go to Home</span>

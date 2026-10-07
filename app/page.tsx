@@ -3,10 +3,11 @@ import { Metadata } from "next";
 import nextDynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { ClientLogoStrip } from "@/components/ui/ClientLogoStrip";
-import { Footer } from "@/components/Footer";
 
 // Code-split below-the-fold components for consolidated Home structure
+const ClientLogoStrip = nextDynamic(() =>
+  import("@/components/ui/ClientLogoStrip").then((m) => m.ClientLogoStrip)
+);
 const HomeServicesMerged = nextDynamic(() =>
   import("@/components/home/HomeServicesMerged").then((m) => m.HomeServicesMerged)
 );
@@ -16,8 +17,14 @@ const FeaturedPortfolio = nextDynamic(() =>
 const IndustriesCondensedStrip = nextDynamic(() =>
   import("@/components/home/IndustriesCondensedStrip").then((m) => m.IndustriesCondensedStrip)
 );
+const HumanTrustSection = nextDynamic(() =>
+  import("@/components/home/HumanTrustSection").then((m) => m.HumanTrustSection)
+);
 const RedBreak = nextDynamic(() =>
   import("@/components/RedBreak").then((m) => m.RedBreak)
+);
+const Footer = nextDynamic(() =>
+  import("@/components/Footer").then((m) => m.Footer)
 );
 
 import { constructMetadata, SITE_METADATA_MAP } from "@/lib/seo-metadata";
@@ -154,8 +161,15 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesCatalogSchema) }}
       />
+      <link
+        rel="preload"
+        as="image"
+        href="/iphone-frame.webp"
+        type="image/webp"
+        // @ts-ignore
+        fetchPriority="high"
+      />
 
-      {/* Persistent Navigation */}
       <Navbar />
 
       {/* 1. Hero Section: Primary H1, Narrative & Quick Action */}
@@ -170,10 +184,13 @@ export default function Home() {
       {/* 4. Proven Commercial Outcomes: Case Studies Grid Proof Section */}
       <FeaturedPortfolio />
 
-      {/* 5. Industries We Accelerate: Condensed Highlight Row Linking to /industries */}
+      {/* 5. Industries: Real Estate, Hospitality, Retail & D2C */}
       <IndustriesCondensedStrip />
 
-      {/* 6. Final CTA: Discovery Call & Brief Banner */}
+      {/* 6. Human / Trust Section: Founders & Verified Testimonials */}
+      <HumanTrustSection />
+
+      {/* 7. Final CTA: Discovery Call & Project Brief */}
       <RedBreak />
 
       {/* Comprehensive Footer */}

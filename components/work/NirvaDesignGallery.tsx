@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SPRING_SOFT } from "@/lib/motion";
 import {
   Layers,
-  Sparkles,
   Maximize2,
   X,
   ChevronRight,
@@ -149,7 +148,7 @@ export function NirvaDesignGallery({
       {/* Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-line mb-8">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#7A1F2B]/10 text-[#7A1F2B] text-xs font-black uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8b1a1a]/10 text-[#8b1a1a] text-xs font-black uppercase tracking-wider mb-2">
             <Palette className="w-3.5 h-3.5" />
             <span>Complete Brand Collateral &amp; Print System</span>
           </div>
@@ -162,7 +161,7 @@ export function NirvaDesignGallery({
         </div>
 
         <div className="flex items-center gap-2 text-xs font-mono font-bold text-muted shrink-0">
-          <span className="w-2 h-2 rounded-full bg-[#7A1F2B] animate-ping" />
+          <span className="w-2 h-2 rounded-full bg-[#8b1a1a] animate-ping" />
           <span>{allItems.length} Creative Assets</span>
         </div>
       </div>
@@ -173,7 +172,7 @@ export function NirvaDesignGallery({
           onClick={() => setSelectedFilter("ALL")}
           className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
             selectedFilter === "ALL"
-              ? "bg-[#7A1F2B] text-white shadow-md scale-[1.02]"
+              ? "bg-[#8b1a1a] text-white shadow-md scale-[1.02]"
               : "bg-line/50 text-body hover:text-ink hover:bg-line"
           }`}
         >
@@ -191,7 +190,7 @@ export function NirvaDesignGallery({
               onClick={() => setSelectedFilter(cat.category)}
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                 isSelected
-                  ? "bg-[#7A1F2B] text-white shadow-md scale-[1.02]"
+                  ? "bg-[#8b1a1a] text-white shadow-md scale-[1.02]"
                   : "bg-line/50 text-body hover:text-ink hover:bg-line"
               }`}
             >
@@ -217,12 +216,12 @@ export function NirvaDesignGallery({
           return (
             <div
               key={`${item.src}-${idx}`}
-              className={`${spanClass} group rounded-3xl bg-white border border-line/90 shadow-sm hover:shadow-xl hover:border-[#7A1F2B]/40 transition-all duration-300 flex flex-col overflow-hidden`}
+              className={`${spanClass} group rounded-3xl bg-white border border-line/90 shadow-sm hover:shadow-xl hover:border-[#8b1a1a]/40 transition-all duration-300 flex flex-col overflow-hidden`}
             >
               {/* Media Container with Zoom Hover Effect and MaskReveal */}
               <MaskReveal direction="up" duration={0.6} className="w-full">
                 <div
-                  className={`relative w-full ${aspectClass} bg-[#F5F2EF] p-2 flex items-center justify-center overflow-hidden cursor-pointer`}
+                  className={`relative w-full ${aspectClass} bg-[#ffffff] p-2 flex items-center justify-center overflow-hidden cursor-pointer`}
                   onClick={() => setActiveLightboxIdx(idx)}
                 >
                   <Image
@@ -239,7 +238,7 @@ export function NirvaDesignGallery({
                       <span>{item.aspectRatio || "1:1"}</span>
                     </span>
 
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-[#7A1F2B]/90 backdrop-blur-md text-white text-[10px] font-mono font-bold uppercase tracking-wider shadow-md line-clamp-1 max-w-[160px]">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-[#8b1a1a]/90 backdrop-blur-md text-white text-[10px] font-mono font-bold uppercase tracking-wider shadow-md line-clamp-1 max-w-[160px]">
                       {item.categoryName.split("&")[0].trim()}
                     </span>
                   </div>
@@ -247,7 +246,7 @@ export function NirvaDesignGallery({
                   {/* Hover Inspect Overlay */}
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-ink text-xs font-black shadow-xl transform scale-95 group-hover:scale-100 transition-transform">
-                      <Maximize2 className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                      <Maximize2 className="w-3.5 h-3.5 text-[#8b1a1a]" />
                       <span>View High-Res</span>
                     </div>
                   </div>
@@ -257,7 +256,7 @@ export function NirvaDesignGallery({
               {/* Card Meta Content */}
               <div className="p-5 flex-1 flex flex-col justify-between space-y-2 bg-white">
                 <div className="space-y-1">
-                  <h3 className="text-sm sm:text-base font-bold text-ink tracking-tight leading-snug group-hover:text-[#7A1F2B] transition-colors">
+                  <h3 className="text-sm sm:text-base font-bold text-ink tracking-tight leading-snug group-hover:text-[#8b1a1a] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs text-body font-normal leading-relaxed">
@@ -270,7 +269,7 @@ export function NirvaDesignGallery({
                   <button
                     type="button"
                     onClick={() => setActiveLightboxIdx(idx)}
-                    className="text-[#7A1F2B] font-bold hover:underline cursor-pointer"
+                    className="text-[#8b1a1a] font-bold hover:underline cursor-pointer"
                   >
                     Inspect Asset →
                   </button>

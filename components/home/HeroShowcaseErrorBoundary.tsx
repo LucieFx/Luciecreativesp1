@@ -2,7 +2,7 @@
 
 import React, { Component, ErrorInfo, ReactNode } from "react";
 import Image from "next/image";
-import { RefreshCw, Sparkles, Layers } from "lucide-react";
+import { RefreshCw, Layers } from "lucide-react";
 
 interface Props {
   children: ReactNode;
@@ -48,7 +48,7 @@ export class HeroShowcaseErrorBoundary extends Component<Props, State> {
         >
           {/* Static Bounding Container Matching the Active Stage Dimensions */}
           <div className="relative w-full h-[400px] sm:h-[440px] md:h-[460px] flex items-center justify-center">
-            <div className="relative w-[320px] sm:w-[330px] aspect-square rounded-2xl overflow-hidden bg-[#EBE7E2] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5">
+            <div className="relative w-[320px] sm:w-[330px] aspect-square rounded-2xl overflow-hidden bg-[#ffffff] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5">
               {/* Static 2D Image */}
               <Image
                 src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creatives/portfolio/graphic-design/onirique/hero-perfume-trio.webp"
@@ -85,7 +85,7 @@ export class HeroShowcaseErrorBoundary extends Component<Props, State> {
           <div className="mt-4 w-full flex flex-col items-center">
             {/* Discipline Tag & Retry */}
             <div className="inline-flex items-center gap-2">
-              <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-white text-[#7A1F2B] shadow-xs border border-line">
+              <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-white text-[#8b1a1a] shadow-xs border border-line">
                 Design Flagship
               </span>
 
@@ -95,7 +95,7 @@ export class HeroShowcaseErrorBoundary extends Component<Props, State> {
                 className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-ink text-xs font-mono font-medium transition-colors cursor-pointer border border-line"
                 title="Retry interactive showcase"
               >
-                <RefreshCw className="w-3 h-3 text-[#7A1F2B]" />
+                <RefreshCw className="w-3 h-3 text-[#8b1a1a]" />
                 <span>Retry</span>
               </button>
             </div>

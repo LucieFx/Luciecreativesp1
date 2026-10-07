@@ -60,7 +60,7 @@ export function Preloader() {
         {/* Progress Bar */}
         <div className="w-48 h-1 bg-surface-muted rounded-full relative overflow-hidden mt-1">
           <div
-            className="h-full bg-gradient-to-r from-brand-red via-[#A31F1F] to-brand-red rounded-full transition-all duration-150 ease-out"
+            className="h-full bg-[#8b1a1a] rounded-full transition-all duration-150 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>

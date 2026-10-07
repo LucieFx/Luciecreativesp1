@@ -197,12 +197,12 @@ function GraphicGridCard({
         onMouseMove={handleMouseMove}
         className={`relative w-full aspect-[4/5] overflow-hidden ${
           isNearFourByFive
-            ? "bg-[#FAFAFA]"
+            ? "bg-[#ffffff]"
             : "p-4 sm:p-5 flex items-center justify-center"
         }`}
         style={
           !isNearFourByFive
-            ? { backgroundColor: project.bgColor || "#F5F2EF" }
+            ? { backgroundColor: project.bgColor || "#ffffff" }
             : undefined
         }
       >
@@ -256,9 +256,9 @@ function GraphicGridCard({
             <div className="text-[10px] font-mono font-bold text-brand-redLight uppercase tracking-wider mb-1.5">
               {project.industry} • {project.year}
             </div>
-            <h4 className="text-white text-base font-bold leading-snug mb-2.5">
+            <p className="text-white text-base font-bold leading-snug mb-2.5">
               {project.title}
-            </h4>
+            </p>
             <p className="text-xs text-slate-300 line-clamp-3 leading-relaxed font-normal">
               {project.tagline || project.brief}
             </p>
@@ -282,7 +282,7 @@ function GraphicGridCard({
             </span>
             <Link
               href={`/work/${project.slug}${categoryQuery}`}
-              className="inline-flex items-center gap-1.5 text-xs font-black text-white bg-brand-red hover:bg-[#6E1414] px-4 py-2 rounded-xl transition-all shadow-sm shrink-0"
+              className="inline-flex items-center gap-1.5 text-xs font-black text-white bg-brand-red hover:bg-[#8b1a1a]/90 px-4 py-2 rounded-xl transition-all shadow-sm shrink-0"
             >
               <span>Explore Case</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -305,6 +305,7 @@ function GraphicGridCard({
           href={`/work/${project.slug}${categoryQuery}`}
           className="shrink-0 p-2 rounded-xl text-muted hover:text-brand-red hover:bg-brand-red-50 transition-colors"
           title="Explore Case"
+          aria-label={`Explore ${project.title} case study`}
         >
           <ArrowUpRight className="w-4 h-4" />
         </Link>
@@ -441,8 +442,8 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
             >
               {/* Left Column: Rounded panel with soft background & uncropped image at natural aspect ratio */}
               <motion.div
-                initial={{ backgroundColor: "#F5F2EF" }}
-                whileInView={{ backgroundColor: flagshipProject.bgColor || "#F5F2EF" }}
+                initial={{ backgroundColor: "#ffffff" }}
+                whileInView={{ backgroundColor: flagshipProject.bgColor || "#ffffff" }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.9, ease: EASE_OUT }}
                 className="lg:col-span-7 relative w-full rounded-[20px] p-4 sm:p-6 lg:p-8 flex flex-col justify-between items-center border border-line/60 overflow-hidden"
@@ -476,7 +477,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                         alt={`${flagshipProject.title} - Flagship design project for ${flagshipProject.client}`}
                         width={flagshipProject.width || 2400}
                         height={flagshipProject.height || 2400}
-                        loading="lazy"
+                        priority={true}
                         sizes="(max-width: 1024px) 100vw, 60vw"
                         style={{
                           maxHeight: "min(70vh, 640px)",
@@ -532,9 +533,9 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                   </div>
 
                   {/* 2. Title */}
-                  <h3 className="text-2xl sm:text-3xl font-black text-ink group-hover:text-brand-red transition-colors leading-tight">
+                  <h2 className="text-2xl sm:text-3xl font-black text-ink group-hover:text-brand-red transition-colors leading-tight">
                     {flagshipProject.title}
-                  </h3>
+                  </h2>
 
                   {/* 3. Description clamped to 4 lines */}
                   <p className="mt-3 text-sm text-body font-medium leading-relaxed line-clamp-4">
@@ -593,7 +594,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                   )}
                   <Link
                     href={`/work/${flagshipProject.slug}${categoryQuery}`}
-                    className="inline-flex items-center justify-center gap-2 text-xs font-black text-white bg-brand-red hover:bg-[#6E1414] px-6 py-3 rounded-xl transition-all shadow-md group/btn shrink-0"
+                    className="inline-flex items-center justify-center gap-2 text-xs font-black text-white bg-brand-red hover:bg-[#8b1a1a]/90 px-6 py-3 rounded-xl transition-all shadow-md group/btn shrink-0"
                   >
                     <span>Explore Flagship Case</span>
                     <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -614,7 +615,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
         id="graphic-design-grid"
         className="relative w-full py-12 sm:py-16 border-b border-line select-none overflow-hidden"
         style={{
-          backgroundColor: hoveredProject?.bgColor ? hoveredProject.bgColor : "#FAFAF9",
+          backgroundColor: hoveredProject?.bgColor ? hoveredProject.bgColor : "#ffffff",
           transition: "background-color 600ms cubic-bezier(0.22, 1, 0.36, 1)",
         }}
       >
@@ -674,7 +675,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
         <div className="max-w-7xl mx-auto px-5 sm:px-10 relative z-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#7A1F2B] mb-1">
+              <div className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#8b1a1a] mb-1">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Continuous Stream • 1:1 Creative Suite</span>
               </div>
@@ -702,7 +703,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                   key={idx}
                   className="relative flex-shrink-0 w-52 sm:w-60 bg-white rounded-2xl border border-line p-2.5 shadow-xs select-none"
                 >
-                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-[#F5F2EF] p-1.5 flex items-center justify-center">
+                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-[#ffffff] p-1.5 flex items-center justify-center">
                     <Image
                       src={post.src}
                       alt={post.title}
@@ -715,7 +716,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                   <div className="mt-2 px-1">
                     <div className="flex items-center justify-between text-[10px] font-mono font-bold text-muted uppercase">
                       <span>{post.tag}</span>
-                      <span className="text-[#7A1F2B] font-bold">1:1</span>
+                      <span className="text-[#8b1a1a] font-bold">1:1</span>
                     </div>
                     <div className="text-xs font-black text-ink truncate mt-0.5">
                       {post.title}

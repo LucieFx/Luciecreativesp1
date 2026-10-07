@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Code2, ArrowLeft, ArrowUpRight } from "lucide-react";
-import { SplitText } from "@/components/motion";
+import { SplitText, Reveal } from "@/components/motion";
 import { DevHeroBrowserMock } from "./DevHeroBrowserMock";
 
 const FEATURE_CHIPS = [
@@ -29,12 +29,12 @@ export function DevHero() {
   };
 
   return (
-    <section className="relative w-full pt-32 sm:pt-40 pb-16 lg:pb-24 bg-white text-text-primary overflow-hidden border-b border-line">
+    <section className="relative w-full pt-32 sm:pt-40 pb-16 lg:pb-24 bg-white text-text-primary overflow-visible border-b border-line">
       {/* Background Dot Grid Pattern */}
       {null}
       {null}
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10 overflow-visible">
         {/* Navigation Breadcrumb */}
         <div className="mb-8 flex items-center justify-between flex-wrap gap-4">
           <Link
@@ -50,8 +50,8 @@ export function DevHero() {
           </span>
         </div>
 
-        {/* Hero Header */}
-        <div className="max-w-4xl">
+        {/* Hero Header with blur fade up */}
+        <Reveal delay={0} y={16} duration={0.65} className="max-w-4xl overflow-visible">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-redLight border border-brand-red/20 text-[#8B1A1A] text-xs font-mono font-bold tracking-wider uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" />
             <span>Web Development</span>
@@ -74,7 +74,7 @@ export function DevHero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm tracking-wide transition-colors shadow-xs"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm tracking-wide transition-all hover:scale-[1.02] shadow-xs will-change-transform"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function DevHero() {
 
             <button
               onClick={handleScrollToProjects}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-line bg-white hover:bg-brand-red-50 text-ink font-bold text-sm tracking-wide transition-colors cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-line bg-white hover:bg-brand-red-50 text-ink font-bold text-sm tracking-wide transition-all hover:scale-[1.02] cursor-pointer will-change-transform"
             >
               <span>See our work</span>
             </button>
@@ -100,10 +100,12 @@ export function DevHero() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        {/* Hero Visual: Self-Building Browser Window Mock */}
-        <DevHeroBrowserMock />
+        {/* Hero Visual: Self-Building Browser Window Mock with blur fade up */}
+        <Reveal delay={0.15} y={24} duration={0.75} className="w-full mt-10 overflow-visible">
+          <DevHeroBrowserMock />
+        </Reveal>
       </div>
     </section>
   );

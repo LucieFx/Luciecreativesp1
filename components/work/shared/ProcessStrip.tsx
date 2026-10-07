@@ -1,7 +1,6 @@
 import React from "react";
 import {
   ArrowRight,
-  Sparkles,
   FileText,
   Palette,
   SlidersHorizontal,
@@ -39,8 +38,8 @@ const DEFAULT_STEP_DATA: Record<
   },
   "concepts": {
     title: "Concept Exploration",
-    description: "We craft 2–3 distinct art directions exploring typographic hierarchy, chromatic palettes, and compositional harmony.",
-    deliverables: ["2–3 Directions", "Moodboards", "Initial Drafts"],
+    description: "We craft 2 to 3 distinct art directions exploring typographic hierarchy, chromatic palettes, and compositional harmony.",
+    deliverables: ["2 to 3 Directions", "Moodboards", "Initial Drafts"],
     iconType: "palette",
   },
   "refine": {
@@ -124,14 +123,14 @@ export function ProcessStrip({
   return (
     <section className="relative w-full py-16 sm:py-24 bg-white border-y border-line select-none overflow-hidden">
       {/* Subtle background dot pattern & ambient warm glow */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-25 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-red/[0.02] rounded-full blur-3xl pointer-events-none" />
+      {null}
+      {null}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-red-50 border border-brand-red/20 text-brand-red text-xs font-black uppercase tracking-widest mb-3.5 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5" />
+            <span className="w-2 h-2 rounded-full bg-brand-red shrink-0" />
             <span>{eyebrow}</span>
           </div>
 
@@ -154,13 +153,13 @@ export function ProcessStrip({
             return (
               <div
                 key={idx}
-                className="group relative bg-white rounded-2xl border border-line hover:border-brand-red/40 p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-xs hover:shadow-card hover:-translate-y-1 overflow-hidden"
+                className="group relative bg-white rounded-2xl border border-line hover:border-brand-red/40 p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-xs hover:shadow-card overflow-hidden"
               >
                 {/* Subtle top accent gradient bar on hover */}
                 <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Ambient corner glow on hover */}
-                <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-brand-red/5 rounded-full blur-xl group-hover:bg-brand-red/10 transition-colors pointer-events-none" />
+                {null}
 
                 <div>
                   {/* Top Bar: Monospace Step Index & Visual Icon */}
@@ -221,7 +220,7 @@ export function ProcessStrip({
         <div className="mt-12 pt-8 border-t border-line/80 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-body font-medium">
           <div className="inline-flex items-center gap-2">
             <Clock className="w-4 h-4 text-brand-red" />
-            <span>Turnaround: <strong className="font-bold text-ink">7–14 business days</strong></span>
+            <span>Turnaround: <strong className="font-bold text-ink">7 to 14 business days</strong></span>
           </div>
 
           <div className="inline-flex items-center gap-2">

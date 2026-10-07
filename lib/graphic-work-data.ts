@@ -48,7 +48,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 2000,
     height: 2000,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "Rigid Eyewear Frame Packaging",
       "Tactile Foil Business Cards",
@@ -87,7 +87,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Speczo optical website digital mockup",
       },
     ],
-    accentColor: "#6E1414",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "onirique-parfums-identity",
@@ -133,7 +133,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 2400,
     height: 2400,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "3D Raytraced Product CGI",
       "Luxury Perfume Box Die-Lines",
@@ -166,7 +166,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Onirique seasonal offer campaign creative",
       },
     ],
-    accentColor: "#540F0F",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "nirva-resort-environmental-branding",
@@ -211,7 +211,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "2/1",
     width: 2560,
     height: 1280,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "Large-Format Highway Billboards (OOH)",
       "3x4 Exhibition Standee Mockups",
@@ -252,7 +252,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     multiVideos: NIRVA_MULTI_VIDEOS,
     designGalleries: NIRVA_DESIGN_GALLERIES,
     brandIdentitySystem: NIRVA_BRAND_IDENTITY_SYSTEM,
-    accentColor: "#6E1414",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "rhyme-haute-joaillerie",
@@ -297,7 +297,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 2400,
     height: 2400,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "Haute Joaillerie Editorial Direction",
       "Macro Jewelry Print Artboards",
@@ -335,7 +335,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Rhyme jewelry exhibition banner",
       },
     ],
-    accentColor: "#540F0F",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "crancho-fmcg-packaging",
@@ -379,7 +379,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 2400,
     height: 1800,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "FMCG Pouch Packaging Die-lines",
       "Multi-SKU Flavor Color Coding",
@@ -412,7 +412,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Crispo product ad creative",
       },
     ],
-    accentColor: "#7A1F2B",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "nandanvan-luxury-real-estate",
@@ -456,7 +456,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 2000,
     height: 2000,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "Luxury Villa Marketing Identity",
       "Architectural Site Hoardings (20x10)",
@@ -489,7 +489,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Siddharth residential architecture creative",
       },
     ],
-    accentColor: "#540F0F",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "travel-festival-social-campaigns",
@@ -533,7 +533,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 2000,
     height: 2829,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "International Travel Tour Posters",
       "Festival Social Greeting Creatives",
@@ -571,7 +571,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "UAE National Day creative",
       },
     ],
-    accentColor: "#6E1414",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "monolithic-logo-systems",
@@ -614,7 +614,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 1280,
     height: 1051,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "Trademark-Ready Vector Logomarks",
       "Responsive Wordmark Systems",
@@ -652,7 +652,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Her cosmetics identity symbol",
       },
     ],
-    accentColor: "#540F0F",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "lumara-luxury-skincare",
@@ -696,7 +696,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "1/1",
     width: 1600,
     height: 1600,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "Sustainable Bottle & Jar Packaging Architecture",
       "Luxury Unboxing & Cartridge Design",
@@ -746,7 +746,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Lumara billboard campaign",
       },
     ],
-    accentColor: "#7A1F2B",
+    accentColor: "#8b1a1a",
   },
   {
     slug: "bright-minds-education-campaigns",
@@ -790,7 +790,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "4/5",
     width: 1400,
     height: 1750,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "Admissions Open Multi-Channel Campaign Kits",
       "Topper Felicitation & Merit Social Templates",
@@ -881,7 +881,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     aspectRatio: "16/9",
     width: 2400,
     height: 1350,
-    bgColor: "#F5F2EF",
+    bgColor: "#ffffff",
     deliverables: [
       "20x10 Highway Hoardings & Mega Banners",
       "Architectural 3x4 Showroom Standees",
@@ -930,7 +930,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
         alt: "Gourmet hospitality flyer",
       },
     ],
-    accentColor: "#6E1414",
+    accentColor: "#8b1a1a",
   },
 ];
 

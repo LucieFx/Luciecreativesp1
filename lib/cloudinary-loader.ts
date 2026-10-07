@@ -30,12 +30,13 @@ export default function cloudinaryLoader({
     return `${src}${separator}w=${width}&q=${quality || 80}&auto=format`;
   }
 
-  // YouTube thumbnail optimization: convert to modern WebP format
+  // YouTube thumbnail optimization: convert to modern WebP format with responsive sizing
   if (src.includes("img.youtube.com/vi/") || src.includes("i.ytimg.com/vi/")) {
+    const resName = width <= 320 ? "mqdefault.webp" : width <= 640 ? "hqdefault.webp" : "maxresdefault.webp";
     return src
       .replace("img.youtube.com/vi/", "i.ytimg.com/vi_webp/")
       .replace("i.ytimg.com/vi/", "i.ytimg.com/vi_webp/")
-      .replace(".jpg", ".webp");
+      .replace(/\/(maxresdefault|sddefault|hqdefault|mqdefault|default)\.(jpg|webp)/, `/${resName}`);
   }
 
   // If external non-Cloudinary URL, keep untouched

@@ -71,7 +71,7 @@ export const VEDAM_VILLAS_MULTI_VIDEOS: WorkVideoItem[] = [
     title: "Vedam Villas Luxury Tour with Taniya Oberoi",
     label: "Influencer Tour (9:16)",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790267065/lucie-creatives/videos/clients/vedam-villas/vedam-villas-influencer-tour.mp4",
-    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1790684877/lucie-creatives/portfolio/vedam-villas-influencer-tour-poster.jpg",
+    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_640/v1790684877/lucie-creatives/portfolio/vedam-villas-influencer-tour-poster.jpg",
     aspectRatio: "9/16",
     description:
       "Influencer-led architectural walkthrough blending authentic lifestyle presentation with luxury discovery, achieving record site-visit bookings.",
@@ -278,7 +278,7 @@ export const VIDEO_PROJECTS: WorkProject[] = [
       "Contributed to 63M+ organic video impressions, 42k saves, and drove 200+ direct showroom and model villa visits in 30 days.",
     mediaType: "video",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790267065/lucie-creatives/videos/clients/vedam-villas/vedam-villas-influencer-tour.mp4",
-    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1790684877/lucie-creatives/portfolio/vedam-villas-influencer-tour-poster.jpg",
+    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_640/v1790684877/lucie-creatives/portfolio/vedam-villas-influencer-tour-poster.jpg",
     aspectRatio: "9/16",
     deliverables: [
       "High-Retention Influencer Reel",
@@ -312,7 +312,7 @@ export const VIDEO_PROJECTS: WorkProject[] = [
     handle: "@vedamvillas",
     verified: true,
     avatar: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835345/lucie-creatives/portfolio/vedam-villas-architecture.jpg",
-    caption: "Step inside the most exclusive private residences in Baroda with @taniyaoberoi ✨ Architectural elegance meets bespoke living.",
+    caption: "Step inside the most exclusive private residences in Baroda with @taniyaoberoi. Architectural elegance meets bespoke living.",
     hashtags: ["#VedamVillas", "#LuxuryRealEstate", "#BarodaVillas"],
     audio: "Vedam Villas • Original Audio",
     likes: "24.8K",
@@ -1374,7 +1374,7 @@ export const VIDEO_PROJECTS: WorkProject[] = [
       "Drove 100% capacity bookings for opening weekend and secured 450+ foundational resort memberships within the first 60 days.",
     mediaType: "video",
     videoSrc: "https://res.cloudinary.com/oct7txvw/video/upload/v1790267038/lucie-creatives/videos/clients/nirva-resort/nirva-resort-cinema-commercial.mp4",
-    posterSrc: "/portfolio/video/nirva-resort-reel-frame.jpg",
+    posterSrc: "/portfolio/video/nirva-resort-reel-frame.webp",
     aspectRatio: "16/9",
     deliverables: [
       "4K Master Cinema Commercial (16:9)",

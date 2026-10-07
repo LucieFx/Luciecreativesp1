@@ -149,11 +149,12 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
             >
               <div className="relative h-7 sm:h-8 w-auto flex items-center">
                 <Image
-                  src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835250/lucie-creatives/logo/lucie-logo.png"
+                  src="/lucie-logo.webp"
                   alt="Lucie Creatives"
                   width={145}
                   height={46}
                   priority
+                  unoptimized
                   className="h-full w-auto object-contain"
                 />
               </div>
@@ -182,7 +183,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                         aria-haspopup="true"
                         className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-lg group select-none flex items-center gap-1.5 cursor-pointer ${
                           isActive
-                            ? "text-[#8B1A1A] font-semibold bg-[#8B1A1A]/[0.08]"
+                            ? "text-[#8B1A1A] font-semibold"
                             : "text-body hover:text-[#8B1A1A] hover:bg-neutral-100/70"
                         }`}
                       >
@@ -191,13 +192,15 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                           className={`w-3.5 h-3.5 transition-transform duration-200 ${
                             servicesDropdownOpen
                               ? "rotate-180 text-[#8B1A1A]"
+                              : isActive
+                              ? "text-[#8B1A1A]"
                               : "text-muted group-hover:text-[#8B1A1A]"
                           }`}
                         />
 
                         {isActive && (
                           <span
-                            className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full bg-[#8B1A1A]"
+                            className="absolute bottom-0 left-2.5 right-2.5 h-[2px] rounded-full bg-[#8B1A1A]"
                             aria-hidden="true"
                           />
                         )}
@@ -211,10 +214,11 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 6, scale: 0.97 }}
                             transition={{ duration: 0.16, ease: "easeOut" }}
-                            className="absolute top-full left-0 mt-2.5 w-80 rounded-2xl bg-white/98 backdrop-blur-xl border border-line/90 p-2 shadow-[0_20px_45px_-12px_rgba(0,0,0,0.16),0_4px_16px_rgba(0,0,0,0.06)] z-50 overflow-hidden"
+                            className="absolute top-full left-0 mt-2.5 w-[360px] sm:w-[380px] rounded-2xl bg-white border border-line p-2.5 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.04)] z-50 overflow-hidden"
                           >
-                            <div className="px-2.5 pt-2 pb-1.5 text-[10px] font-mono font-bold tracking-widest uppercase text-muted">
-                              Our Capabilities
+                            <div className="px-2.5 pt-1.5 pb-2 text-[10px] font-mono font-medium tracking-wider uppercase text-muted flex items-center justify-between">
+                              <span>Our Capabilities</span>
+                              <span className="text-[9px] font-medium text-slate-400">Services</span>
                             </div>
                             <div className="space-y-1">
                               {link.subLinks.map((sub) => {
@@ -224,16 +228,16 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                                     key={sub.href}
                                     href={sub.href}
                                     onClick={() => setServicesDropdownOpen(false)}
-                                    className={`group/item flex items-start gap-3 p-2.5 rounded-xl transition-all ${
+                                    className={`group/item flex items-start gap-3 p-2.5 rounded-xl transition-all border ${
                                       isSubActive
-                                        ? "bg-[#8B1A1A]/[0.08] text-[#8B1A1A]"
-                                        : "hover:bg-neutral-100/80 text-ink"
+                                        ? "bg-slate-50 border-slate-200/90 text-ink shadow-2xs"
+                                        : "hover:bg-neutral-100/80 text-ink border-transparent"
                                     }`}
                                   >
                                     <div
                                       className={`mt-0.5 p-2 rounded-lg shrink-0 transition-colors ${
                                         isSubActive
-                                          ? "bg-[#8B1A1A] text-white"
+                                          ? "bg-[#8B1A1A] text-white shadow-xs"
                                           : "bg-neutral-100 group-hover/item:bg-[#8B1A1A]/10 text-body group-hover/item:text-[#8B1A1A]"
                                       }`}
                                     >
@@ -241,12 +245,19 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                                       {sub.name.includes("Graphic") && <Palette className="w-4 h-4" />}
                                       {sub.name.includes("Web") && <Globe className="w-4 h-4" />}
                                     </div>
-                                    <div className="flex flex-col">
-                                      <div className="text-[13px] font-bold group-hover/item:text-[#8B1A1A] transition-colors leading-tight">
-                                        {sub.name}
+                                    <div className="flex flex-col flex-1 min-w-0">
+                                      <div className="flex items-center justify-between gap-2">
+                                        <span className={`text-[13px] font-semibold leading-tight ${
+                                          isSubActive ? "text-[#8B1A1A]" : "group-hover/item:text-[#8B1A1A]"
+                                        } transition-colors`}>
+                                          {sub.name}
+                                        </span>
+                                        {isSubActive && (
+                                          <span className="w-1.5 h-1.5 rounded-full bg-[#8B1A1A] shrink-0" aria-hidden="true" />
+                                        )}
                                       </div>
                                       {sub.description && (
-                                        <div className="text-[11px] text-body/80 font-normal leading-snug mt-0.5 line-clamp-1">
+                                        <div className="text-[11.5px] text-body/80 font-normal leading-snug mt-0.5">
                                           {sub.description}
                                         </div>
                                       )}
@@ -269,7 +280,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                     aria-current={isActive ? "page" : undefined}
                     className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-lg group select-none ${
                       isActive
-                        ? "text-[#8B1A1A] font-semibold bg-[#8B1A1A]/[0.08]"
+                        ? "text-[#8B1A1A] font-semibold"
                         : "text-body hover:text-[#8B1A1A] hover:bg-neutral-100/70"
                     }`}
                   >
@@ -277,7 +288,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
 
                     {isActive && (
                       <span
-                        className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full bg-[#8B1A1A]"
+                        className="absolute bottom-0 left-2.5 right-2.5 h-[2px] rounded-full bg-[#8B1A1A]"
                         aria-hidden="true"
                       />
                     )}
@@ -340,9 +351,9 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                       <button
                         type="button"
                         onClick={() => setMobileServicesOpen((prev) => !prev)}
-                        className={`group flex items-center justify-between text-2xl sm:text-3xl font-bold tracking-tight py-2.5 px-3.5 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] cursor-pointer ${
+                        className={`group flex items-center justify-between text-2xl sm:text-3xl font-semibold tracking-tight py-2.5 px-3.5 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] cursor-pointer ${
                           isActive
-                            ? "text-[#8B1A1A] bg-[#8B1A1A]/[0.08]"
+                            ? "text-[#8B1A1A] bg-neutral-100/80"
                             : "text-ink hover:text-[#8B1A1A] hover:bg-line/50"
                         }`}
                       >
@@ -370,10 +381,10 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                                   key={sub.href}
                                   href={sub.href}
                                   onClick={() => setMobileMenuOpen(false)}
-                                  className={`flex items-center justify-between py-2 px-3 rounded-xl text-base sm:text-lg font-semibold transition-all ${
+                                  className={`flex items-center justify-between py-2.5 px-3 rounded-xl text-base sm:text-lg font-medium transition-all border ${
                                     isSubActive
-                                      ? "text-[#8B1A1A] bg-[#8B1A1A]/[0.08]"
-                                      : "text-body hover:text-[#8B1A1A] hover:bg-line/40"
+                                      ? "text-[#8B1A1A] bg-slate-50 border-slate-200/90 shadow-2xs"
+                                      : "text-body hover:text-[#8B1A1A] hover:bg-line/40 border-transparent"
                                   }`}
                                 >
                                   <div className="flex items-center gap-2.5">
@@ -399,9 +410,9 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     aria-current={isActive ? "page" : undefined}
-                    className={`group flex items-center justify-between text-2xl sm:text-3xl font-bold tracking-tight py-2.5 px-3.5 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] ${
+                    className={`group flex items-center justify-between text-2xl sm:text-3xl font-semibold tracking-tight py-2.5 px-3.5 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] ${
                       isActive
-                        ? "text-[#8B1A1A] bg-[#8B1A1A]/[0.08]"
+                        ? "text-[#8B1A1A] bg-neutral-100/80"
                         : "text-ink hover:text-[#8B1A1A] hover:bg-line/50"
                     }`}
                   >
@@ -422,7 +433,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-b from-[#961D1D] to-[#781414] hover:from-[#8B1A1A] hover:to-[#6E1212] text-white font-semibold text-base rounded-xl py-4 shadow-[0_4px_16px_rgba(139,26,26,0.28)] active:scale-[0.98] transition-all"
+                className="w-full flex items-center justify-center gap-2 bg-[#8b1a1a] hover:opacity-90 text-white font-semibold text-base rounded-xl py-4 shadow-[0_4px_16px_rgba(139,26,26,0.28)] active:scale-[0.98] transition-all"
               >
                 <span>{primaryCtaLabel}</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -477,7 +488,7 @@ function MagneticNavbarCta({
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
-        className="relative overflow-hidden inline-flex items-center gap-1.5 bg-gradient-to-b from-[#961D1D] to-[#781414] hover:from-[#8B1A1A] hover:to-[#6E1212] text-white font-semibold text-xs sm:text-sm rounded-xl px-5 py-2.5 shadow-[0_4px_14px_rgba(139,26,26,0.28)] hover:shadow-[0_6px_20px_rgba(139,26,26,0.38)] active:scale-[0.97] transition-all duration-200 group/cta focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 select-none"
+        className="relative overflow-hidden inline-flex items-center gap-1.5 bg-[#8b1a1a] hover:opacity-90 text-white font-semibold text-xs sm:text-sm rounded-xl px-5 py-2.5 shadow-[0_4px_14px_rgba(139,26,26,0.28)] hover:shadow-[0_6px_20px_rgba(139,26,26,0.38)] active:scale-[0.97] transition-all duration-200 group/cta focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 select-none"
       >
         {/* Light shine sweep across button on hover */}
         <motion.span

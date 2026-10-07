@@ -84,7 +84,7 @@ export function AboutProcess() {
                 {/* Step Number & Icon */}
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-3xl font-black text-muted/60 group-hover:text-brand-red transition-colors font-mono">
+                    <span className="text-3xl font-black text-slate-600 group-hover:text-brand-red transition-colors font-mono">
                       {step.number}
                     </span>
                     <div className="w-10 h-10 rounded-2xl bg-brand-red-50 border border-brand-red/15 flex items-center justify-center text-brand-red group-hover:scale-110 transition-transform">

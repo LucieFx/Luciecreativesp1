@@ -102,7 +102,7 @@ export function IndustriesServed() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.02em] text-text-primary leading-[1.0] max-w-4xl text-balance">
             Industries &amp; businesses{" "}
-            <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
+            <span className="font-accent italic text-[#8b1a1a] text-[1.1em] tracking-normal inline">
               we accelerate.
             </span>
           </h2>
@@ -119,18 +119,18 @@ export function IndustriesServed() {
             return (
               <div
                 key={idx}
-                className="group p-8 rounded-3xl bg-white/80 border border-line/80 hover:border-[#7A1F2B]/40 hover:bg-white hover:shadow-[0_20px_45px_-10px_rgba(122,31,43,0.12)] transition-all duration-300 flex flex-col justify-between"
+                className="group p-8 rounded-3xl bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white hover:shadow-[0_20px_45px_-10px_rgba(139, 26, 26,0.12)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-6">
                     <Link
                       href={ind.regionHref}
-                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[10px] font-black text-body tracking-wider uppercase border border-line hover:border-[#7A1F2B]/40 hover:text-[#7A1F2B] transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[10px] font-black text-body tracking-wider uppercase border border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] transition-colors"
                     >
                       <span>{ind.geography}</span>
-                      <ArrowUpRight className="w-3 h-3 text-muted group-hover:text-[#7A1F2B]" />
+                      <ArrowUpRight className="w-3 h-3 text-muted group-hover:text-[#8b1a1a]" />
                     </Link>
-                    <div className="w-10 h-10 rounded-2xl bg-white border border-line text-[#7A1F2B] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
@@ -138,7 +138,7 @@ export function IndustriesServed() {
                   <h3 className="text-xl font-black text-text-primary tracking-tight mb-3">
                     <Link
                       href={ind.serviceHref}
-                      className="hover:text-[#7A1F2B] transition-colors"
+                      className="hover:text-[#8b1a1a] transition-colors"
                     >
                       {ind.title}
                     </Link>
@@ -156,7 +156,7 @@ export function IndustriesServed() {
                     </span>
                     <Link
                       href={ind.serviceHref}
-                      className="text-[11px] font-bold text-[#7A1F2B] hover:text-[#540F0F] inline-flex items-center gap-1 transition-colors"
+                      className="text-[11px] font-bold text-[#8b1a1a] hover:text-[#8b1a1a] hover:opacity-80 inline-flex items-center gap-1 transition-colors"
                     >
                       <span>{ind.serviceLabel}</span>
                       <ArrowUpRight className="w-3 h-3" />

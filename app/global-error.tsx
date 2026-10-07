@@ -19,7 +19,7 @@ export default function GlobalError({
   return (
     <html lang="en">
       <body className="bg-white text-ink font-sans antialiased min-h-screen flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-        <div className="absolute inset-0 dot-grid-pattern opacity-60 pointer-events-none" />
+        {null}
 
         <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center">
           <div className="w-16 h-16 rounded-2xl bg-white shadow-md border border-line flex items-center justify-center p-2.5 mb-6">
@@ -32,13 +32,13 @@ export default function GlobalError({
             />
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#7A1F2B] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
             <AlertCircle className="w-3.5 h-3.5" />
             <span>Critical Exception</span>
           </div>
 
           <h1 className="font-sans font-black text-3xl sm:text-5xl text-ink tracking-tight mb-3">
-            Something went <span className="text-[#7A1F2B] italic">wrong.</span>
+            Something went <span className="text-[#8b1a1a] italic">wrong.</span>
           </h1>
 
           <p className="text-body text-sm sm:text-base font-medium max-w-md mb-8 leading-relaxed">
@@ -49,14 +49,14 @@ export default function GlobalError({
             <button
               type="button"
               onClick={() => reset()}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#7A1F2B] hover:bg-[#631923] text-white rounded-xl font-bold text-sm tracking-wide shadow-md transition-all cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 text-white rounded-xl font-bold text-sm tracking-wide shadow-md transition-all cursor-pointer"
             >
               <RefreshCw className="w-4 h-4" />
               <span>Try Again</span>
             </button>
             <Link
               href="/"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#7A1F2B]/40 hover:text-[#7A1F2B] rounded-xl font-bold text-sm transition-all shadow-xs"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] rounded-xl font-bold text-sm transition-all shadow-xs"
             >
               <Home className="w-4 h-4" />
               <span>Go to Home</span>

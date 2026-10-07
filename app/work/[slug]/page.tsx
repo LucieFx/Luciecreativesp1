@@ -27,7 +27,6 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
-  Sparkles,
   CheckCircle2,
   TrendingUp,
   Layers,
@@ -44,6 +43,7 @@ import {
 import { constructMetadata } from "@/lib/seo-metadata";
 import { getCaseStudySchema } from "@/lib/schema-structured-data";
 import { extractYouTubeVideoId } from "@/lib/youtube";
+import { YouTubeEmbedPlayer } from "@/components/video/YouTubeEmbedPlayer";
 
 interface CaseStudyProps {
   params: Promise<{ slug: string }>;
@@ -360,12 +360,13 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             >
               {project.mediaType === "video" && project.videoSrc ? (
                 extractYouTubeVideoId(project.videoSrc) ? (
-                  <iframe
-                    src={`https://www.youtube.com/embed/${extractYouTubeVideoId(project.videoSrc)}?autoplay=1&mute=1&loop=1&playlist=${extractYouTubeVideoId(project.videoSrc)}&playsinline=1&rel=0`}
+                  <YouTubeEmbedPlayer
+                    videoId={extractYouTubeVideoId(project.videoSrc) || undefined}
                     title={project.title}
-                    className="w-full h-full border-0 aspect-[9/16]"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                    posterThumbnail={project.posterSrc}
+                    aspectRatio={project.aspectRatio === "9/16" ? "9/16" : "16/9"}
+                    priority={true}
+                    className="w-full h-full"
                   />
                 ) : (
                   <video
@@ -416,7 +417,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             {/* Left: Project Overview */}
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-black text-brand-red uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" aria-hidden="true" />
                 <span>Project Overview &amp; Context</span>
               </div>
 
@@ -427,7 +428,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
             {/* Right: Technologies & Production Tooling Stack */}
             <div className="lg:col-span-4">
-              <div className="p-6 rounded-3xl bg-white/70 border border-line/80">
+              <div className="p-6 rounded-lg bg-white border border-line">
                 <div className="flex items-center gap-2 text-xs font-black text-muted uppercase tracking-wider mb-3">
                   <Wrench className="w-3.5 h-3.5" />
                   <span>Technologies &amp; Stack</span>
@@ -621,7 +622,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
           <div className="p-6 sm:p-8 rounded-2xl bg-white border border-line">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-line">
               <div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-[#7A1F2B] block mb-1">
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#8b1a1a] block mb-1">
                   DISCIPLINE &amp; CAPABILITIES
                 </span>
                 <h3 className="text-lg sm:text-xl font-black text-ink uppercase tracking-tight">
@@ -631,14 +632,14 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               <div className="flex items-center gap-3 flex-wrap">
                 <Link
                   href={serviceCtx.primaryService.href}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#7A1F2B] text-white text-xs font-black hover:bg-[#631923] transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#8b1a1a] text-white text-xs font-black hover:bg-[#8b1a1a]/90 transition-colors"
                 >
                   <span>Explore {serviceCtx.primaryService.anchor}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-line text-ink text-xs font-black hover:border-[#7A1F2B]/40 hover:text-[#7A1F2B] transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-line text-ink text-xs font-black hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] transition-colors"
                 >
                   <span>Start a Project</span>
                 </Link>
@@ -653,7 +654,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
                 </span>
                 <Link
                   href={serviceCtx.primaryService.href}
-                  className="text-sm font-black text-ink hover:text-[#7A1F2B] transition-colors"
+                  className="text-sm font-black text-ink hover:text-[#8b1a1a] transition-colors"
                 >
                   {serviceCtx.primaryService.name}
                 </Link>
@@ -670,7 +671,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
                   </span>
                   <Link
                     href={serviceCtx.relatedServices[0].href}
-                    className="text-sm font-black text-ink hover:text-[#7A1F2B] transition-colors"
+                    className="text-sm font-black text-ink hover:text-[#8b1a1a] transition-colors"
                   >
                     {serviceCtx.relatedServices[0].name}
                   </Link>
@@ -688,17 +689,17 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
                   </span>
                   <Link
                     href={`/insights/${serviceCtx.relatedInsight.slug}`}
-                    className="text-xs font-bold text-ink hover:text-[#7A1F2B] group block transition-colors"
+                    className="text-xs font-bold text-ink hover:text-[#8b1a1a] group block transition-colors"
                   >
                     <span className="line-clamp-2 leading-snug">{serviceCtx.relatedInsight.title}</span>
                   </Link>
                 </div>
                 <Link
                   href={`/insights/${serviceCtx.relatedInsight.slug}`}
-                  className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#7A1F2B] mt-2 group hover:text-[#540F0F] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#8b1a1a] mt-2 group hover:text-[#8b1a1a] hover:opacity-80 transition-colors"
                 >
                   <span>Read full analysis</span>
-                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-3 h-3 transition-transform" />
                 </Link>
               </div>
 
@@ -712,10 +713,10 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
                     <Link
                       key={lIdx}
                       href={loc.href}
-                      className="text-xs font-bold text-body hover:text-[#7A1F2B] flex items-center justify-between group transition-colors"
+                      className="text-xs font-bold text-body hover:text-[#8b1a1a] flex items-center justify-between group transition-colors py-2 min-h-[36px]"
                     >
                       <span>• {loc.anchor}</span>
-                      <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                      <ArrowRight className="w-3 h-3 transition-transform" />
                     </Link>
                   ))}
                 </div>
@@ -766,7 +767,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
         <section className="w-full border-t border-line bg-[#8B1A1A] text-white">
           <Link
             href={`/work/${nextProject.slug}`}
-            className="group block w-full py-12 sm:py-16 px-6 sm:px-12 hover:bg-[#631923]/40 transition-colors relative overflow-hidden"
+            className="group block w-full py-12 sm:py-16 px-6 sm:px-12 hover:bg-[#8b1a1a]/40 transition-colors relative overflow-hidden"
           >
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div>
@@ -786,11 +787,11 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               </div>
 
               <div className="flex items-center gap-4 flex-shrink-0">
-                <span className="text-sm font-black uppercase tracking-wider text-white group-hover:translate-x-1 transition-transform">
+                <span className="text-sm font-black uppercase tracking-wider text-white transition-transform">
                   Explore Case Study
                 </span>
-                <div className="w-14 h-14 rounded-full bg-white text-[#7A1F2B] flex items-center justify-center shadow-lg group-hover:bg-red-50 group-hover:scale-110 transition-all">
-                  <ArrowRight className="w-6 h-6 text-[#7A1F2B]" />
+                <div className="w-14 h-14 rounded-full bg-white text-[#8b1a1a] flex items-center justify-center shadow-lg group-hover:bg-red-50 group-hover:scale-110 transition-all">
+                  <ArrowRight className="w-6 h-6 text-[#8b1a1a]" />
                 </div>
               </div>
             </div>

@@ -67,7 +67,7 @@ export function HomeFaq() {
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-[-0.02em] text-text-primary leading-[1.0] mb-6 text-balance">
               Clear answers to{" "}
-              <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
+              <span className="font-accent italic text-[#8b1a1a] text-[1.1em] tracking-normal inline">
                 commercial questions.
               </span>
             </h2>
@@ -76,8 +76,8 @@ export function HomeFaq() {
               Everything you need to know about our capabilities, collaboration workflows across Gujarat, sprint turnarounds, and intellectual property ownership.
             </p>
 
-            <div className="p-6 rounded-2xl bg-brand-red-50/60 border border-[#7A1F2B]/15 inline-block">
-              <div className="flex items-center gap-2 text-xs font-black text-[#7A1F2B] uppercase tracking-wider mb-1">
+            <div className="p-6 rounded-2xl bg-brand-red-50/60 border border-[#8b1a1a]/15 inline-block">
+              <div className="flex items-center gap-2 text-xs font-black text-[#8b1a1a] uppercase tracking-wider mb-1">
                 <HelpCircle className="w-4 h-4" />
                 <span>Have a custom requirement?</span>
               </div>
@@ -97,8 +97,8 @@ export function HomeFaq() {
                   onClick={() => toggleAccordion(idx)}
                   className={`rounded-2xl border transition-all duration-300 overflow-hidden cursor-pointer ${
                     isOpen
-                      ? "bg-brand-red-50/50 border-[#7A1F2B]/40 shadow-sm ring-1 ring-[#7A1F2B]/20"
-                      : "bg-white border-line hover:border-[#7A1F2B]/30 hover:bg-brand-red-50/40"
+                      ? "bg-brand-red-50/50 border-[#8b1a1a]/40 shadow-sm ring-1 ring-[#8b1a1a]/20"
+                      : "bg-white border-line hover:border-[#8b1a1a]/30 hover:bg-brand-red-50/40"
                   }`}
                 >
                   <button
@@ -106,12 +106,12 @@ export function HomeFaq() {
                       e.stopPropagation();
                       toggleAccordion(idx);
                     }}
-                    className="w-full flex items-center justify-between text-left gap-4 px-6 py-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7A1F2B] rounded-2xl cursor-pointer"
+                    className="w-full flex items-center justify-between text-left gap-4 px-6 py-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8b1a1a] rounded-2xl cursor-pointer"
                     aria-expanded={isOpen}
                   >
                     <span
                       className={`font-black text-sm md:text-base transition-colors ${
-                        isOpen ? "text-[#7A1F2B]" : "text-text-primary"
+                        isOpen ? "text-[#8b1a1a]" : "text-text-primary"
                       }`}
                     >
                       {faq.q}
@@ -119,7 +119,7 @@ export function HomeFaq() {
                     <div
                       className={`w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? "bg-[#7A1F2B] text-white rotate-180 scale-105"
+                          ? "bg-[#8b1a1a] text-white rotate-180 scale-105"
                           : "bg-slate-100 text-body border border-line"
                       }`}
                     >
@@ -133,7 +133,7 @@ export function HomeFaq() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <div className="pt-2 border-t border-[#7A1F2B]/15 text-body text-xs sm:text-sm leading-relaxed font-medium">
+                      <div className="pt-2 border-t border-[#8b1a1a]/15 text-body text-xs sm:text-sm leading-relaxed font-medium">
                         {faq.a}
                       </div>
                     </div>

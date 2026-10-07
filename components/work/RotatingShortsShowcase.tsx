@@ -12,7 +12,7 @@ import {
   Pause,
   Volume2,
   VolumeX,
-  Sparkles,
+  Film,
   ArrowUpRight,
   Maximize2,
   X,
@@ -84,7 +84,7 @@ function NowPlayingHUD({ compact = false }: { compact?: boolean }) {
       aria-hidden="true"
       className={`absolute ${
         compact ? "top-2 right-2 px-1.5 py-0.5" : "top-2.5 right-2.5 px-2 py-1"
-      } z-30 flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#FF4D5E]/40 text-white shadow-[0_4px_14px_rgba(122,31,43,0.45)] pointer-events-none transition-all duration-300`}
+      } z-30 flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#FF4D5E]/40 text-white shadow-[0_4px_14px_rgba(139, 26, 26,0.45)] pointer-events-none transition-all duration-300`}
     >
       {/* Pulsing ruby live beacon dot */}
       <span className="relative flex h-1.5 w-1.5">
@@ -294,28 +294,12 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
     <section
       id="short-form-videos"
       ref={sectionRef}
-      className="relative w-full py-16 sm:py-24 bg-[#FAFAF9] text-text-primary overflow-hidden select-none border-b border-line/90"
-      style={{
-        backgroundImage: `
-          radial-gradient(ellipse 70% 55% at 50% 25%, rgba(139, 26, 26, 0.055) 0%, rgba(139, 26, 26, 0.015) 55%, transparent 100%),
-          radial-gradient(circle at 10% 80%, rgba(139, 26, 26, 0.035) 0%, transparent 45%),
-          radial-gradient(circle at 90% 20%, rgba(139, 26, 26, 0.035) 0%, transparent 45%)
-        `,
-      }}
+      className="relative w-full py-16 sm:py-24 bg-[#ffffff] text-text-primary overflow-hidden select-none border-b border-line/90"
     >
-      {/* Background Micro-Dot Grid Texture matching maroon/white palette */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.35]"
-        style={{
-          backgroundImage: `radial-gradient(circle, #8B1A1A 0.75px, transparent 0.75px)`,
-          backgroundSize: "24px 24px",
-        }}
-      />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header with Unified System Architecture */}
         <WorkSectionHeading
-          badgeIcon={Sparkles}
+          badgeIcon={Film}
           badgeText="High-Retention Vertical Cinema"
           primaryWord="Short Form"
           accentWord="Reels"
@@ -331,7 +315,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                 {isMuted ? (
                   <VolumeX className="w-4 h-4 text-muted" />
                 ) : (
-                  <Volume2 className="w-4 h-4 text-[#7A1F2B]" />
+                  <Volume2 className="w-4 h-4 text-[#8b1a1a]" />
                 )}
                 <span className="hidden sm:inline">{isMuted ? "Muted" : "Sound On"}</span>
               </button>
@@ -365,12 +349,16 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                       <button
                         key={r.slug}
                         onClick={() => handleSelectReel(r)}
-                        className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                          isCurrent ? "w-5 bg-[#8B1A1A]" : "w-1.5 bg-[#8B1A1A]/25 hover:bg-[#8B1A1A]/50"
-                        }`}
+                        className="min-w-[24px] min-h-[24px] p-1 flex items-center justify-center cursor-pointer"
                         title={`Top Reel ${i + 1}: ${r.client}`}
                         aria-label={`View top reel ${i + 1}: ${r.client}`}
-                      />
+                      >
+                        <span
+                          className={`h-1.5 rounded-full transition-all duration-300 pointer-events-none ${
+                            isCurrent ? "w-5 bg-[#8B1A1A]" : "w-1.5 bg-[#8B1A1A]/25 hover:bg-[#8B1A1A]/50"
+                          }`}
+                        />
+                      </button>
                     );
                   })}
                 </div>
@@ -378,7 +366,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
             )}
 
             {/* The Single Phone (Height exact 576/1024 aspect ratio, responsive widths) */}
-            <div className="relative w-[260px] min-[360px]:w-[280px] sm:w-[320px] lg:w-[360px] xl:w-[380px] aspect-[576/1024] max-w-full drop-shadow-[0_25px_35px_rgba(122,31,43,0.28)] drop-shadow-[0_15px_20px_rgba(0,0,0,0.20)] overflow-hidden rounded-[48px]">
+            <div className="relative w-[260px] min-[360px]:w-[280px] sm:w-[320px] lg:w-[360px] xl:w-[380px] aspect-[576/1024] max-w-full drop-shadow-[0_25px_35px_rgba(139, 26, 26,0.28)] drop-shadow-[0_15px_20px_rgba(0,0,0,0.20)] overflow-hidden rounded-[48px]">
               <AnimatePresence mode="popLayout" initial={false}>
                 <motion.div
                   key={activeProject.slug}
@@ -422,7 +410,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
 
             {/* Metadata & Actions Under the Phone */}
             <div className="w-full max-w-sm text-center mt-5 sm:mt-6 px-2">
-              <span className="text-xs font-mono tracking-widest text-[#7A1F2B] font-bold uppercase block mb-1">
+              <span className="text-xs font-mono tracking-widest text-[#8b1a1a] font-bold uppercase block mb-1">
                 {activeProject.client}
               </span>
               <h3 className="text-base sm:text-lg font-black text-ink leading-snug mb-3.5 line-clamp-2">
@@ -440,7 +428,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
 
                 <Link
                   href={`/work/${activeProject.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white bg-[#7A1F2B] hover:bg-[#631923] px-5 sm:px-6 py-2.5 rounded-full transition-all shadow-red-btn hover:shadow-red-hover group/btn cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 px-5 sm:px-6 py-2.5 rounded-full transition-all shadow-red-btn hover:shadow-red-hover group/btn cursor-pointer"
                 >
                   <span>Case Study</span>
                   <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -464,8 +452,8 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                       onClick={() => handleCategorySelect(cat)}
                       className={`px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer shadow-2xs whitespace-nowrap ${
                         isActive
-                          ? "bg-[#7A1F2B] text-white border border-[#7A1F2B] shadow-sm"
-                          : "bg-white text-body border border-line hover:border-[#7A1F2B]/40 hover:text-[#7A1F2B]"
+                          ? "bg-[#8b1a1a] text-white border border-[#8b1a1a] shadow-sm"
+                          : "bg-white text-body border border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a]"
                       }`}
                     >
                       {cat}
@@ -487,7 +475,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                     aria-pressed={isActive}
                     className={`relative shrink-0 w-[calc((100%-2.2*14px)/3.2)] min-w-[105px] max-w-[135px] aspect-[9/16] rounded-2xl overflow-hidden snap-start transition-all duration-300 cursor-pointer text-left group ${
                       isActive
-                        ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_20px_rgba(255,77,94,0.35),0_8px_20px_rgba(122,31,43,0.22)] -translate-y-0.5"
+                        ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_20px_rgba(255,77,94,0.35),0_8px_20px_rgba(139, 26, 26,0.22)] -translate-y-0.5"
                         : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:border-[#8B1A1A]/30 bg-slate-950"
                     }`}
                   >
@@ -505,7 +493,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         <div
                           style={{
                             background:
-                              "conic-gradient(from 0deg, #FF4D5E 0%, #7A1F2B 20%, #FF808F 45%, #FFFFFF 50%, #FF808F 55%, #7A1F2B 80%, #FF4D5E 100%)",
+                              "conic-gradient(from 0deg, #FF4D5E 0%, #8b1a1a 20%, #FF808F 45%, #FFFFFF 50%, #FF808F 55%, #8b1a1a 80%, #FF4D5E 100%)",
                             animation: "spin-conic 3s linear infinite",
                           }}
                           className="absolute -inset-[150%] will-change-transform"
@@ -579,9 +567,9 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         }
                         aria-label={`Play ${reel.title}`}
                         aria-pressed={isActive}
-                        className={`relative w-full aspect-[9/16] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer text-left group hover:-translate-y-1 ${
+                        className={`relative w-full aspect-[9/16] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer text-left group ${
                           isActive
-                            ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_25px_rgba(255,77,94,0.35),0_12px_28px_rgba(122,31,43,0.25)] -translate-y-1"
+                            ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_25px_rgba(255,77,94,0.35),0_12px_28px_rgba(139, 26, 26,0.25)] -translate-y-1"
                             : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:shadow-[0_10px_24px_rgba(139,26,26,0.12)] hover:border-[#8B1A1A]/30 bg-slate-950"
                         }`}
                       >
@@ -599,7 +587,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                             <div
                               style={{
                                 background:
-                                  "conic-gradient(from 0deg, #FF4D5E 0%, #7A1F2B 20%, #FF808F 45%, #FFFFFF 50%, #FF808F 55%, #7A1F2B 80%, #FF4D5E 100%)",
+                                  "conic-gradient(from 0deg, #FF4D5E 0%, #8b1a1a 20%, #FF808F 45%, #FFFFFF 50%, #FF808F 55%, #8b1a1a 80%, #FF4D5E 100%)",
                                 animation: "spin-conic 3s linear infinite",
                               }}
                               className="absolute -inset-[150%] will-change-transform"

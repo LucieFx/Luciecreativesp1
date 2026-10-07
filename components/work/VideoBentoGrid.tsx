@@ -12,7 +12,6 @@ import {
   X,
   Film,
   Smartphone,
-  Sparkles,
   ChevronLeft,
   ChevronRight,
   Tv,
@@ -141,7 +140,7 @@ export function VideoBentoGrid({
       <div className="grid grid-cols-12 gap-5 sm:gap-6 lg:gap-8">
         {/* 1. Flagship 16:9 Cinema Commercial (Only rendered when an authentic 16:9 video exists) */}
         {has16x9 && flagship16x9 && (
-          <div className="col-span-12 group rounded-3xl bg-white border border-line shadow-md hover:shadow-xl overflow-hidden flex flex-col relative transition-all duration-300 hover:border-brand-red/40">
+          <div className="col-span-12 group rounded-xl bg-white border border-line shadow-xs overflow-hidden flex flex-col relative transition-colors duration-200 hover:border-brand-red/40">
             {/* Video Player Viewport */}
             <div
               className="relative w-full aspect-video bg-black cursor-pointer overflow-hidden"
@@ -217,7 +216,7 @@ export function VideoBentoGrid({
           return (
             <div
               key={reel.id}
-              className="col-span-12 sm:col-span-6 lg:col-span-4 group rounded-3xl bg-white border border-line shadow-sm hover:shadow-xl overflow-hidden flex flex-col transition-all duration-300 hover:border-brand-red/40"
+              className="col-span-12 sm:col-span-6 lg:col-span-4 group rounded-xl bg-white border border-line shadow-xs overflow-hidden flex flex-col transition-colors duration-200 hover:border-brand-red/40"
             >
               {/* Smartphone Aspect 9:16 Video Container */}
               <div className="relative w-full aspect-[9/16] bg-black overflow-hidden">
@@ -358,9 +357,9 @@ export function VideoBentoGrid({
               {/* Bottom Card Narrative */}
               <div className="p-5 bg-white text-ink border-t border-line/60 flex-1 flex flex-col justify-between space-y-3">
                 <div className="space-y-1.5">
-                  <h4 className="text-base font-bold text-ink tracking-tight leading-snug group-hover:text-brand-red transition-colors">
+                  <h3 className="text-base font-bold text-ink tracking-tight leading-snug group-hover:text-brand-red transition-colors">
                     {reel.title}
-                  </h4>
+                  </h3>
                   {reel.description && (
                     <p className="text-xs text-body font-normal leading-relaxed line-clamp-2">
                       {reel.description}
@@ -461,7 +460,7 @@ export function VideoBentoGrid({
             <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between overflow-y-auto bg-white text-ink border-t md:border-t-0 md:border-l border-line/60">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-redLight border border-brand-red/20 text-xs font-mono font-bold text-brand-red uppercase mb-4">
-                  <Sparkles className="w-3.5 h-3.5" />
+                  <span className="w-2 h-2 rounded-full bg-brand-red shrink-0" />
                   <span>{clientName}</span>
                 </div>
 

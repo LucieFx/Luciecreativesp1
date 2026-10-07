@@ -28,12 +28,12 @@ export function FeaturedPortfolio() {
   return (
     <section
       id="portfolio"
-      className="py-16 sm:py-24 px-4 sm:px-6 md:px-12 bg-white relative overflow-hidden"
+      className="py-16 sm:py-24 px-4 sm:px-6 md:px-12 bg-white relative overflow-visible"
     >
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-10 sm:mb-12">
-          <div className="mb-3 text-xs sm:text-sm font-semibold tracking-wider text-[#7A1F2B] uppercase">
+      <div className="max-w-7xl mx-auto relative z-10 overflow-visible">
+        {/* Section Header with smooth blur fade up */}
+        <Reveal delay={0} y={16} duration={0.65} className="flex flex-col items-center text-center mb-10 sm:mb-12 overflow-visible">
+          <div className="mb-3 text-xs sm:text-sm font-semibold tracking-wider text-[#8b1a1a] uppercase">
             Portfolio
           </div>
 
@@ -44,7 +44,7 @@ export function FeaturedPortfolio() {
           <p className="mt-4 text-[15px] sm:text-base md:text-[18px] text-slate-700 font-medium leading-relaxed max-w-2xl text-pretty">
             A few recent projects across video, design and web.
           </p>
-        </div>
+        </Reveal>
 
         {/* Category Tabs: Video Editing / Graphic Design */}
         <div className="flex items-center justify-center mb-10">
@@ -60,7 +60,7 @@ export function FeaturedPortfolio() {
               onClick={() => setActiveTab("video")}
               className={`px-5 py-2 rounded-full text-[14px] font-semibold transition-all duration-200 cursor-pointer ${
                 activeTab === "video"
-                  ? "bg-white text-[#7A1F2B] shadow-xs border border-line"
+                  ? "bg-white text-[#8b1a1a] shadow-xs border border-line"
                   : "text-slate-600 hover:text-ink"
               }`}
             >
@@ -73,7 +73,7 @@ export function FeaturedPortfolio() {
               onClick={() => setActiveTab("design")}
               className={`px-5 py-2 rounded-full text-[14px] font-semibold transition-all duration-200 cursor-pointer ${
                 activeTab === "design"
-                  ? "bg-white text-[#7A1F2B] shadow-xs border border-line"
+                  ? "bg-white text-[#8b1a1a] shadow-xs border border-line"
                   : "text-slate-600 hover:text-ink"
               }`}
             >
@@ -83,9 +83,9 @@ export function FeaturedPortfolio() {
         </div>
 
         {/* Equal-Height Portfolio Cards Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-14 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-14 items-stretch overflow-visible">
           {currentProjects.map((project, idx) => (
-            <Reveal key={project.slug} delay={idx * 0.08} className="h-full">
+            <Reveal key={project.slug} delay={idx * 0.08} duration={0.7} className="h-full overflow-visible">
               <PortfolioCard project={project} />
             </Reveal>
           ))}
@@ -97,7 +97,7 @@ export function FeaturedPortfolio() {
             href="/video-editing"
             variant="primary"
             size="lg"
-            className="px-7 py-3.5 text-xs sm:text-sm font-black rounded-xl shadow-red-btn !bg-[#7A1F2B] hover:!bg-[#631923]"
+            className="px-7 py-3.5 text-xs sm:text-sm font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
           >
             <span>Explore Video Editing</span>
             <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -106,7 +106,7 @@ export function FeaturedPortfolio() {
             href="/graphic-design"
             variant="secondary"
             size="lg"
-            className="px-7 py-3.5 text-xs sm:text-sm font-bold rounded-xl border border-line hover:border-[#7A1F2B]/40 text-ink hover:text-[#7A1F2B]"
+            className="px-7 py-3.5 text-xs sm:text-sm font-bold rounded-xl border border-line hover:border-[#8b1a1a]/40 text-ink hover:text-[#8b1a1a]"
           >
             <span>Explore Graphic Design</span>
             <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -122,7 +122,7 @@ function PortfolioCard({ project }: { project: WorkProject }) {
     <Link
       href={`/work/${project.slug}`}
       data-cursor="View"
-      className="group rounded-2xl overflow-hidden border border-line/90 bg-white hover:border-[#7A1F2B]/40 hover:shadow-xs transition-colors duration-200 flex flex-col justify-between h-full"
+      className="group rounded-2xl border border-line/90 bg-white hover:border-[#8b1a1a]/40 hover:shadow-lg hover:scale-[1.015] hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-between h-full will-change-transform overflow-visible"
     >
       <div>
         {/* Media Thumbnail Container with MaskReveal */}
@@ -150,13 +150,13 @@ function PortfolioCard({ project }: { project: WorkProject }) {
         {/* Text Info directly beneath the image */}
         <div className="p-6">
           <div className="flex items-center justify-between gap-4 mb-2.5">
-            <span className="text-[#7A1F2B] font-bold text-xs tracking-wider uppercase">
+            <span className="text-[#8b1a1a] font-bold text-xs tracking-wider uppercase">
               {project.client}
             </span>
             <span className="text-slate-500 font-mono text-xs">{project.year}</span>
           </div>
 
-          <h3 className="text-lg sm:text-xl font-bold text-ink tracking-tight mb-2.5 group-hover:text-[#7A1F2B] transition-colors leading-snug line-clamp-2">
+          <h3 className="text-lg sm:text-xl font-bold text-ink tracking-tight mb-2.5 group-hover:text-[#8b1a1a] transition-colors leading-snug line-clamp-2">
             {project.title}
           </h3>
 
@@ -180,7 +180,7 @@ function PortfolioCard({ project }: { project: WorkProject }) {
             ))}
           </div>
 
-          <span className="text-[#7A1F2B] font-bold inline-flex items-center gap-1 text-[14px] transition-transform shrink-0">
+          <span className="text-[#8b1a1a] font-bold inline-flex items-center gap-1 text-[14px] transition-transform shrink-0">
             <span>View Case</span>
             <ArrowUpRight className="w-4 h-4" />
           </span>

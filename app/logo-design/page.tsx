@@ -85,7 +85,7 @@ export default function LogoDesignPage() {
         {
           title: "Full Intellectual Property Transfer",
           description:
-            "You receive 100% full commercial copyright ownership and source vector files upon final delivery—no recurring fees or licensing claims.",
+            "You receive 100% full commercial copyright ownership and source vector files upon final delivery: no recurring fees or licensing claims.",
         },
         {
           title: "Seamless Brand Identity Integration",

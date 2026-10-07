@@ -15,7 +15,7 @@ export default function InsightCard({ insight }: InsightCardProps) {
     <Link
       href={`/insights/${insight.slug}`}
       data-cursor="Read"
-      className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#7A1F2B]/40 transition-all flex flex-col justify-between h-full"
+      className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between h-full"
     >
       <div>
         {insight.coverImage && (
@@ -31,7 +31,7 @@ export default function InsightCard({ insight }: InsightCardProps) {
         )}
 
         <div className="flex items-center justify-between text-xs text-muted font-bold mb-3">
-          <span className="text-[#7A1F2B] uppercase tracking-wider">
+          <span className="text-[#8b1a1a] uppercase tracking-wider">
             {insight.category}
           </span>
           <span className="inline-flex items-center gap-1">
@@ -39,9 +39,9 @@ export default function InsightCard({ insight }: InsightCardProps) {
             {insight.readingTime}
           </span>
         </div>
-        <h3 className="text-lg font-black text-ink group-hover:text-[#7A1F2B] transition-colors leading-snug mb-2 line-clamp-2">
+        <h2 className="text-lg font-black text-ink group-hover:text-[#8b1a1a] transition-colors leading-snug mb-2 line-clamp-2">
           {insight.title}
-        </h3>
+        </h2>
         <p className="text-xs font-medium text-body line-clamp-3 leading-relaxed">
           {insight.excerpt}
         </p>
@@ -51,7 +51,7 @@ export default function InsightCard({ insight }: InsightCardProps) {
         <span className="font-semibold text-muted">
           {insight.publishedDate}
         </span>
-        <span className="font-black text-[#7A1F2B] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+        <span className="font-black text-[#8b1a1a] transition-transform inline-flex items-center gap-1">
           Read Article <ArrowRight className="w-3 h-3" />
         </span>
       </div>

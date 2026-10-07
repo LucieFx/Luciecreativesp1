@@ -212,7 +212,7 @@ export function IPhoneReelsCard({
               autoPlay={isCenter && isInViewport && !reducedMotion}
               loop
               playsInline
-              preload={isCenter ? "auto" : "metadata"}
+              preload={isCenter && isInViewport ? "auto" : "none"}
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
               onEnded={(e) => {
@@ -232,8 +232,7 @@ export function IPhoneReelsCard({
               src={project.posterSrc}
               alt={`${project.title} - vertical reel showcase`}
               fill
-              priority={isCenter}
-              loading={isCenter ? "eager" : "lazy"}
+              loading="lazy"
               sizes="(max-width: 640px) 280px, 320px"
               className="object-cover"
               style={{
@@ -419,7 +418,7 @@ export function IPhoneReelsCard({
                 e.stopPropagation();
                 setIsLiked(!isLiked);
               }}
-              className="transition-colors cursor-pointer"
+              className="transition-colors cursor-pointer min-w-[24px] min-h-[24px] flex items-center justify-center"
             >
               <Heart
                 style={{
@@ -450,7 +449,7 @@ export function IPhoneReelsCard({
               type="button"
               aria-label="View comments"
               onClick={(e) => e.stopPropagation()}
-              className="text-white hover:opacity-80 transition-opacity cursor-pointer"
+              className="text-white hover:opacity-80 transition-opacity cursor-pointer min-w-[24px] min-h-[24px] flex items-center justify-center"
             >
               <MessageCircle
                 style={{
@@ -478,7 +477,7 @@ export function IPhoneReelsCard({
             type="button"
             aria-label="Share reel"
             onClick={(e) => e.stopPropagation()}
-            className="text-white hover:opacity-80 transition-opacity cursor-pointer"
+            className="text-white hover:opacity-80 transition-opacity cursor-pointer min-w-[24px] min-h-[24px] flex items-center justify-center"
           >
             <Send
               style={{
@@ -494,7 +493,7 @@ export function IPhoneReelsCard({
             type="button"
             aria-label="More options"
             onClick={(e) => e.stopPropagation()}
-            className="text-white hover:opacity-80 transition-opacity cursor-pointer"
+            className="text-white hover:opacity-80 transition-opacity cursor-pointer min-w-[24px] min-h-[24px] flex items-center justify-center"
           >
             <MoreHorizontal
               style={{
@@ -514,7 +513,7 @@ export function IPhoneReelsCard({
               borderRadius: "calc(6 * var(--pt))",
             }}
             onClick={(e) => e.stopPropagation()}
-            aria-label="Audio track"
+            aria-hidden="true"
           >
             <Image
               src={project.posterSrc}
@@ -794,11 +793,10 @@ export function IPhoneReelsCard({
        ───────────────────────────────────────────────────────────── */}
     <div className="absolute inset-0 z-35 pointer-events-none" aria-hidden="true">
       <Image
-        src="/iphone-frame.png"
+        src="/iphone-frame.webp"
         alt=""
         fill
-        priority={isCenter}
-        unoptimized
+        loading="lazy"
         sizes="(max-width: 640px) 280px, 380px"
         className="object-contain pointer-events-none select-none"
       />

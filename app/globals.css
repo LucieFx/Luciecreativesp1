@@ -6,42 +6,41 @@
   :root {
     color-scheme: light;
 
-    /* Single warm off-white token site-wide */
-    --bg-white: #FAF8F5;
+    /* Single Source of Truth Brand Colors */
+    --color-white: #ffffff;
+    --color-maroon: #8b1a1a;
 
-    /* Brand tokens: maroon/red + warm white only */
-    --brand-red: #8B1A1A;
-    --brand-maroon: #8B1A1A;
-    --brand-red-dark: #7A1F2B;
-    --brand-red-50: #F7EBEB;
+    /* Single white token site-wide */
+    --bg-white: var(--color-white);
+
+    /* Brand tokens: maroon + pure white only */
+    --brand-red: var(--color-maroon);
+    --brand-maroon: var(--color-maroon);
+    --brand-red-dark: var(--color-maroon);
+    --brand-red-50: var(--color-white);
 
     /* Legacy aliases aliased to flat brand maroon/white */
-    --brand-purple: #8B1A1A;
-    --brand-gradient: #8B1A1A;
-    --brand-text-gradient: #8B1A1A;
+    --brand-purple: var(--color-maroon);
+    --brand-gradient: var(--color-maroon);
+    --brand-text-gradient: var(--color-maroon);
 
     /* Semantic neutrals */
-    --white: var(--bg-white);
+    --white: var(--color-white);
     --ink: #141414;
     --body: #4B4B4B;
     --muted: #6B6B6B;
     --line: #E7E7E7;
 
     /* Surface tokens */
-    --background: var(--bg-white);
-    --surface: var(--bg-white);
-    --surface-alt: var(--bg-white);
+    --background: var(--color-white);
+    --surface: var(--color-white);
+    --surface-alt: var(--color-white);
 
     /* Legacy text tokens */
     --text-primary: #141414;
     --text-secondary: #4B4B4B;
     --border-light: #E7E7E7;
 
-    /* Typography System Variables */
-    --font-display: 'BBH Hegarty', sans-serif;
-    --font-accent: 'Instrument Serif', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-sans: var(--font-body);
   }
 
   html {
@@ -84,11 +83,21 @@
     color: inherit;
   }
 
-  ::selection {
-    background-color: #8B1A1A;
-    color: var(--bg-white);
-  }
 }
+
+/* Metric-matched fallback for Instrument Serif to guarantee 0.000 CLS on mobile h1 */
+@font-face {
+  font-family: "Instrument Serif Fallback";
+  src: local("Times New Roman");
+  font-style: italic;
+  font-weight: 400;
+  ascent-override: 113.4%;
+  descent-override: 35.5%;
+  line-gap-override: 0%;
+  size-adjust: 87.3%;
+}
+
+
 
 /*
  * Motion Safety Net: force content visible when JS is disabled or unavailable.
@@ -247,12 +256,15 @@ html[data-motion="off"] [data-mask] {
   background: #8B1A1A;
 }
 
-/* Clean Editorial Card Hover - 1px border only, no lift */
+/* Clean Editorial Card Hover - smooth subtle scale without cutting edges */
 .card-hover {
-  transition: border-color 0.2s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  will-change: transform, box-shadow;
+  overflow: visible !important;
 }
 
 .card-hover:hover {
+  transform: translate3d(0, -3px, 0) scale3d(1.015, 1.015, 1);
   border-color: rgba(139, 26, 26, 0.4);
 }
 
@@ -269,6 +281,32 @@ html[data-motion="off"] [data-mask] {
   animation: fadeIn 0.25s ease forwards;
 }
 
+/* Normal Smooth Blur Fade Up Motion without cutting edges */
+@keyframes blurFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0) scale3d(0.975, 0.975, 1);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    filter: blur(0px);
+  }
+}
+
+.motion-blur-fade-up {
+  animation: blurFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform, filter;
+  overflow: visible !important;
+}
+
+/* Universal safe overflow for cards so scaleup and shadows never cut off */
+[data-reveal],
+.card-clean-motion {
+  overflow: visible !important;
+}
+
 /* Skeleton Shimmer Loading State - Subtle neutral warm tones */
 @keyframes shimmer {
   0% {
@@ -282,11 +320,11 @@ html[data-motion="off"] [data-mask] {
 .skeleton-shimmer {
   background: linear-gradient(
     90deg,
-    #F3EFEA 0%,
-    #EBE5DE 35%,
-    #E4DDD5 50%,
-    #EBE5DE 65%,
-    #F3EFEA 100%
+    #ffffff 0%,
+    #f3f3f3 35%,
+    #e7e7e7 50%,
+    #f3f3f3 65%,
+    #ffffff 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -295,11 +333,11 @@ html[data-motion="off"] [data-mask] {
 .skeleton-shimmer-light {
   background: linear-gradient(
     90deg,
-    #FAF8F5 0%,
-    #F0ECE6 35%,
-    #E6E0D8 50%,
-    #F0ECE6 65%,
-    #FAF8F5 100%
+    #ffffff 0%,
+    #f3f3f3 35%,
+    #e7e7e7 50%,
+    #f3f3f3 65%,
+    #ffffff 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -342,7 +380,7 @@ html[data-motion="off"] [data-mask] {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #7A1F2B;
+  background-color: var(--color-maroon);
   opacity: 0;
   transition: opacity 0.25s ease;
   z-index: 0;
@@ -389,6 +427,24 @@ html[data-motion="off"] [data-mask] {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal],
+  [data-split],
+  [data-mask] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    visibility: visible !important;
+  }
+
   .link-underline::after {
     transition: none !important;
   }

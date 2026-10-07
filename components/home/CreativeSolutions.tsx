@@ -120,7 +120,7 @@ export function CreativeSolutions() {
       <div className="absolute inset-0 dot-grid-pattern opacity-60 pointer-events-none" />
 
       {/* Atmospheric Ambient Glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#7A1F2B]/[0.04] rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#8b1a1a]/[0.04] rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -129,7 +129,7 @@ export function CreativeSolutions() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-text-primary uppercase leading-[1.08] max-w-4xl text-balance">
             End-to-End Creative &amp;{" "}
-            <span className="text-[#7A1F2B] italic block sm:inline">
+            <span className="text-[#8b1a1a] italic block sm:inline">
               Digital Execution.
             </span>
           </h2>
@@ -146,20 +146,20 @@ export function CreativeSolutions() {
             return (
               <div
                 key={index}
-                className="group relative rounded-3xl p-7 sm:p-8 bg-white/80 backdrop-blur-xl border border-line hover:border-[#7A1F2B]/40 hover:shadow-[0_20px_45px_-10px_rgba(122,31,43,0.12)] transition-all duration-300 flex flex-col justify-between"
+                className="group relative rounded-3xl p-7 sm:p-8 bg-white/80 backdrop-blur-xl border border-line hover:border-[#8b1a1a]/40 hover:shadow-[0_20px_45px_-10px_rgba(139, 26, 26,0.12)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Top Badge & Icon */}
                   <div className="flex items-center justify-between gap-4 mb-6">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-red-50 text-[10px] font-black text-[#7A1F2B] tracking-wider uppercase border border-[#7A1F2B]/15">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#7A1F2B]" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-red-50 text-[10px] font-black text-[#8b1a1a] tracking-wider uppercase border border-[#8b1a1a]/15">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a]" />
                       {item.badge}
                     </span>
 
                     <Link
                       href={item.slug}
                       aria-label={item.anchorText}
-                      className="w-10 h-10 rounded-2xl bg-white border border-line group-hover:bg-[#7A1F2B] group-hover:border-[#7A1F2B] group-hover:text-white text-body flex items-center justify-center transition-all duration-300"
+                      className="w-10 h-10 rounded-2xl bg-white border border-line group-hover:bg-[#8b1a1a] group-hover:border-[#8b1a1a] group-hover:text-white text-body flex items-center justify-center transition-all duration-300"
                     >
                       <Icon className="w-5 h-5 transition-transform group-hover:scale-110" />
                     </Link>
@@ -169,7 +169,7 @@ export function CreativeSolutions() {
                   <h3 className="text-xl sm:text-2xl font-black text-text-primary tracking-tight mb-3">
                     <Link
                       href={item.slug}
-                      className="hover:text-[#7A1F2B] transition-colors"
+                      className="hover:text-[#8b1a1a] transition-colors"
                     >
                       {item.title}
                     </Link>
@@ -187,7 +187,7 @@ export function CreativeSolutions() {
                         key={cIdx}
                         className="flex items-center gap-2 text-xs font-bold text-body"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B] flex-shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a] flex-shrink-0" />
                         <span>{cap}</span>
                       </li>
                     ))}
@@ -198,7 +198,7 @@ export function CreativeSolutions() {
                 <div className="pt-4 border-t border-line/60 flex items-center justify-between text-xs font-black">
                   <Link
                     href={item.slug}
-                    className="inline-flex items-center gap-1.5 text-[#7A1F2B] hover:text-[#540F0F] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-[#8b1a1a] hover:text-[#8b1a1a] hover:opacity-80 transition-colors"
                   >
                     <span>{item.anchorText}</span>
                     <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -207,7 +207,7 @@ export function CreativeSolutions() {
                   {item.secondarySlug && (
                     <Link
                       href={item.secondarySlug}
-                      className="text-muted hover:text-[#7A1F2B] transition-colors"
+                      className="text-muted hover:text-[#8b1a1a] transition-colors"
                     >
                       {item.secondaryAnchorText}
                     </Link>

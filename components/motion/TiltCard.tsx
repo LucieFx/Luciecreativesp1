@@ -12,7 +12,7 @@ export function TiltCard({
   className = "",
 }: TiltCardProps) {
   return (
-    <div className={`relative transition-transform duration-200 ease-out hover:-translate-y-1 ${className}`}>
+    <div className={`relative transition-transform duration-200 ease-out ${className}`}>
       {children}
     </div>
   );

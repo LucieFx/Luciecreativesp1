@@ -232,8 +232,8 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                       href={WHATSAPP_CONFIG.defaultLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Message Lucie Creatives on WhatsApp"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl py-2.5 px-4 !bg-[#8B1A1A] hover:!bg-[#701515] text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-sm transition-all text-center"
+                      aria-label="Message us on WhatsApp — Lucie Creatives"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl py-2.5 px-4 !bg-[#8B1A1A] hover:!bg-[#8b1a1a]/90 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-sm transition-all text-center"
                     >
                       <WhatsAppIcon className="w-4 h-4 shrink-0 text-white" />
                       <span>Message us on WhatsApp</span>
@@ -256,14 +256,14 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                 </div>
                 <a
                   href={`mailto:${SITE_CONFIG.officialEmail}`}
-                  className="block font-extrabold text-lg md:text-xl text-text-primary hover:text-[#7A1F2B] transition-colors uppercase"
+                  className="block font-extrabold text-lg md:text-xl text-text-primary hover:text-[#8b1a1a] transition-colors uppercase"
                 >
                   {SITE_CONFIG.officialEmail}
                 </a>
 
                 <div className="pt-4 border-t border-line/60 grid grid-cols-1 gap-2.5 text-xs text-body font-medium">
                   <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#7A1F2B] shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a] shrink-0" />
                     <span>Direct review with our Founders</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -364,7 +364,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         href={WHATSAPP_CONFIG.defaultLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#8B1A1A] hover:bg-[#7A1F2B] text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-xs transition-colors"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#8B1A1A] hover:bg-[#8b1a1a] text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-xs transition-colors"
                       >
                         <WhatsAppIcon className="w-4 h-4 text-white" />
                         <span>Chat on WhatsApp</span>
@@ -377,6 +377,8 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                   <input
                     type="text"
                     name="hp_website"
+                    id="hp_website"
+                    aria-label="Do not fill this field"
                     value={formData.hp_website}
                     onChange={handleChange}
                     className="hidden"
@@ -731,8 +733,8 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                           disabled={status === "submitting"}
                           variant="primary"
                           size="lg"
-                          className="w-full sm:flex-1 h-12 rounded-lg !bg-[#8B1A1A] hover:!bg-[#701515] disabled:opacity-75 disabled:cursor-not-allowed text-white font-extrabold text-sm flex items-center justify-center gap-2"
-                          aria-label="Submit project discovery brief to Lucie Creatives"
+                          className="w-full sm:flex-1 h-12 rounded-lg !bg-[#8B1A1A] hover:!bg-[#8b1a1a]/90 disabled:opacity-75 disabled:cursor-not-allowed text-white font-extrabold text-sm flex items-center justify-center gap-2"
+                          aria-label={`${primaryCtaLabel} — Submit project discovery brief to Lucie Creatives`}
                         >
                           {status === "submitting" ? (
                             <>
@@ -757,7 +759,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                               ? "bg-[#8B1A1A] text-white border-2 border-[#8B1A1A]"
                               : "border-2 border-[#8B1A1A] text-[#8B1A1A] hover:bg-red-50"
                           }`}
-                          aria-label="Send project discovery brief on WhatsApp"
+                          aria-label="Send on WhatsApp — project discovery brief"
                         >
                           {whatsAppDispatched ? (
                             <m.div
@@ -818,9 +820,9 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
 
                   {/* What happens next block */}
                   <div className="mt-8 pt-6 border-t border-line/60">
-                    <h4 className="text-xs font-black uppercase tracking-wider text-body mb-3">
+                    <h2 className="text-xs font-black uppercase tracking-wider text-body mb-3">
                       What happens next
-                    </h4>
+                    </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       <div className="p-3.5 bg-white rounded-lg border border-line/60 text-xs font-medium text-body">
                         1. Send your brief

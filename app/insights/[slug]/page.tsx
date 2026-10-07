@@ -26,7 +26,6 @@ import {
   ArrowUpRight,
   CheckCircle2,
   ChevronDown,
-  Sparkles,
   BookOpen,
   AlertCircle,
   Info,
@@ -158,8 +157,8 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
             {/* Meta Category & Reading Time */}
             <div className="flex items-center gap-3 mb-6 flex-wrap">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-50 text-[11px] font-black text-[#7A1F2B] uppercase tracking-wider border border-[#7A1F2B]/20">
-                <Sparkles className="w-3 h-3 text-[#7A1F2B]" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-50 text-[11px] font-black text-[#8b1a1a] uppercase tracking-wider border border-[#8b1a1a]/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a] inline-block" aria-hidden="true" />
                 {article.category}
               </span>
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-muted">
@@ -185,7 +184,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
             {/* Author Attribution Card */}
             <div className="flex items-center justify-between py-4 border-y border-line text-xs sm:text-sm">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-slate-100 border border-line flex items-center justify-center text-[#7A1F2B] font-black">
+                <div className="w-10 h-10 rounded-full bg-slate-100 border border-line flex items-center justify-center text-[#8b1a1a] font-black">
                   <User className="w-5 h-5" />
                 </div>
                 <div>
@@ -216,7 +215,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
             {/* 2. EXECUTIVE KEY TAKEAWAYS */}
             {article.keyTakeaways?.length > 0 && (
               <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-white border border-line shadow-soft">
-                <div className="flex items-center gap-2 mb-4 text-[#7A1F2B]">
+                <div className="flex items-center gap-2 mb-4 text-[#8b1a1a]">
                   <BookOpen className="w-5 h-5" />
                   <h2 className="text-sm sm:text-base font-black uppercase tracking-widest text-ink">
                     Executive Summary &amp; Key Findings
@@ -225,7 +224,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                 <ul className="space-y-3">
                   {article.keyTakeaways.map((takeaway, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm font-medium text-body leading-relaxed">
-                      <CheckCircle2 className="w-4 h-4 text-[#7A1F2B] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#8b1a1a] shrink-0 mt-0.5" />
                       <span>{takeaway}</span>
                     </li>
                   ))}
@@ -245,7 +244,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                       <li key={item.id}>
                         <a
                           href={`#${item.id}`}
-                          className="text-xs sm:text-sm font-bold text-ink hover:text-[#7A1F2B] transition-colors flex items-center gap-2"
+                          className="text-xs sm:text-sm font-bold text-ink hover:text-[#8b1a1a] transition-colors flex items-center gap-2"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-slate-300" />
                           {item.title}
@@ -265,7 +264,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                     {sec.heading}
                   </h2>
                   {sec.subheading && (
-                    <h3 className="text-sm sm:text-base font-bold text-[#7A1F2B] mb-5">
+                    <h3 className="text-sm sm:text-base font-bold text-[#8b1a1a] mb-5">
                       {sec.subheading}
                     </h3>
                   )}
@@ -278,22 +277,14 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
                   {/* Section Callout if present */}
                   {sec.callout && (
-                    <div
-                      className={`mt-6 p-5 rounded-2xl border ${
-                        sec.callout.type === "warning"
-                          ? "bg-amber-50/70 border-amber-200 text-amber-950"
-                          : sec.callout.type === "tip"
-                          ? "bg-emerald-50/70 border-emerald-200 text-emerald-950"
-                          : "bg-blue-50/70 border-blue-200 text-blue-950"
-                      }`}
-                    >
-                      <div className="flex items-center gap-2 mb-2 font-black text-xs uppercase tracking-wider">
-                        {sec.callout.type === "warning" && <AlertCircle className="w-4 h-4 text-amber-600" />}
-                        {sec.callout.type === "tip" && <Lightbulb className="w-4 h-4 text-emerald-600" />}
-                        {sec.callout.type === "note" && <Info className="w-4 h-4 text-blue-600" />}
-                        <span>{sec.callout.title}</span>
+                    <div className="mt-6 p-5 rounded-lg border border-line bg-white text-ink">
+                      <div className="flex items-center gap-2 mb-2 font-black text-xs uppercase tracking-wider text-[#8B1A1A]">
+                        {sec.callout.type === "warning" && <AlertCircle className="w-4 h-4 text-[#8B1A1A]" />}
+                        {sec.callout.type === "tip" && <Lightbulb className="w-4 h-4 text-[#8B1A1A]" />}
+                        {sec.callout.type === "note" && <Info className="w-4 h-4 text-[#8B1A1A]" />}
+                        <span className="text-ink">{sec.callout.title}</span>
                       </div>
-                      <p className="text-xs sm:text-sm font-medium leading-relaxed">
+                      <p className="text-xs sm:text-sm font-medium leading-relaxed text-body">
                         {sec.callout.text}
                       </p>
                     </div>
@@ -301,7 +292,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
                   {/* Section Data Table if present */}
                   {sec.table && (
-                    <div className="mt-6 overflow-x-auto rounded-2xl border border-line shadow-soft">
+                    <div className="mt-6 overflow-x-auto rounded-lg border border-line shadow-xs">
                       <table className="w-full text-left text-xs sm:text-sm">
                         <thead className="bg-white border-b border-line/80 text-ink font-black uppercase text-[11px] tracking-wider">
                           <tr>
@@ -314,7 +305,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                         </thead>
                         <tbody className="divide-y divide-line/60 font-medium text-body">
                           {sec.table.rows.map((row, rIdx) => (
-                            <tr key={rIdx} className="hover:bg-white/50 transition-colors">
+                            <tr key={rIdx} className="hover:bg-line/20 transition-colors">
                               {row.map((cell, cIdx) => (
                                 <td key={cIdx} className="p-3 sm:p-4">
                                   {cell}
@@ -329,7 +320,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
                   {/* Section Key Takeaway */}
                   {sec.keyTakeaway && (
-                    <div className="mt-4 p-4 rounded-xl bg-white/60 border-l-4 border-[#7A1F2B] text-xs font-semibold text-body">
+                    <div className="mt-4 p-4 rounded-lg bg-white border border-line text-xs font-medium text-body">
                       <span className="font-black text-ink uppercase tracking-wider block mb-1">
                         Core Takeaway:
                       </span>
@@ -342,8 +333,8 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
             {/* 5. ARTICLE → PRIMARY SERVICE CONNECTION */}
             {article.primaryService && (
-              <div className="mt-16 p-8 sm:p-10 rounded-3xl bg-[#8B1A1A] text-white shadow-xl border border-white/20 relative overflow-hidden">
-                <span className="text-[11px] font-black uppercase tracking-widest text-red-100 bg-white/15 border border-white/25 px-3.5 py-1 rounded-full inline-block mb-3 backdrop-blur-sm">
+              <div className="mt-16 p-8 sm:p-10 rounded-lg bg-[#8B1A1A] text-white border border-[#8b1a1a] relative overflow-hidden">
+                <span className="text-[11px] font-black uppercase tracking-widest text-red-100 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full inline-block mb-3">
                   PRIMARY SERVICE DISCIPLINE
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-2">
@@ -355,10 +346,10 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                 <div className="flex items-center gap-4 flex-wrap">
                   <Link
                     href={article.primaryService.href}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#7A1F2B] hover:bg-red-50 hover:shadow-floating font-black text-xs transition-all shadow-md group"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#8b1a1a] hover:bg-red-50 hover:shadow-floating font-black text-xs transition-all shadow-md group"
                   >
                     <span>{article.primaryService.anchor}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#7A1F2B] group-hover:translate-x-0.5 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#8b1a1a] transition-transform" />
                   </Link>
                   {article.relatedServices?.map((rel, idx) => (
                     <Link
@@ -385,17 +376,17 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                     <Link
                       key={cs.slug}
                       href={`/work/${cs.slug}`}
-                      className="p-5 rounded-2xl bg-white border border-line hover:border-[#7A1F2B]/40 transition-all group flex flex-col justify-between"
+                      className="p-5 rounded-2xl bg-white border border-line hover:border-[#8b1a1a]/40 transition-all group flex flex-col justify-between"
                     >
                       <div>
-                        <span className="text-[10px] font-black uppercase tracking-wider text-[#7A1F2B] block mb-1">
+                        <span className="text-[10px] font-black uppercase tracking-wider text-[#8b1a1a] block mb-1">
                           {cs.category}
                         </span>
-                        <h4 className="text-base font-black text-ink group-hover:text-[#7A1F2B] transition-colors mb-2">
+                        <h4 className="text-base font-black text-ink group-hover:text-[#8b1a1a] transition-colors mb-2">
                           {cs.title}
                         </h4>
                       </div>
-                      <span className="text-xs font-black text-[#7A1F2B] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 mt-3">
+                      <span className="text-xs font-black text-[#8b1a1a] transition-transform inline-flex items-center gap-1 mt-3">
                         Inspect Case Study →
                       </span>
                     </Link>
@@ -408,7 +399,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
             {article.relatedLocation && (
               <div className="mt-12 p-6 rounded-2xl bg-white border border-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-line flex items-center justify-center text-[#7A1F2B] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-line flex items-center justify-center text-[#8b1a1a] shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -422,7 +413,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                 </div>
                 <Link
                   href={article.relatedLocation.href}
-                  className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all shrink-0"
+                  className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all shrink-0"
                 >
                   {article.relatedLocation.anchor} →
                 </Link>
@@ -440,11 +431,11 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                   {article.faqs.map((f, fIdx) => (
                     <details
                       key={fIdx}
-                      className="group rounded-2xl border border-line bg-white p-5 sm:p-6 transition-all hover:border-[#7A1F2B]/30 [&_summary::-webkit-details-marker]:hidden"
+                      className="group rounded-2xl border border-line bg-white p-5 sm:p-6 transition-all hover:border-[#8b1a1a]/30 [&_summary::-webkit-details-marker]:hidden"
                     >
                       <summary className="flex cursor-pointer items-center justify-between font-bold text-ink list-none text-sm sm:text-base">
                         <span>{f.q}</span>
-                        <ChevronDown className="w-4 h-4 text-muted transition-transform duration-300 group-open:rotate-180 group-open:text-[#7A1F2B] shrink-0 ml-4" />
+                        <ChevronDown className="w-4 h-4 text-muted transition-transform duration-300 group-open:rotate-180 group-open:text-[#8b1a1a] shrink-0 ml-4" />
                       </summary>
                       <p className="mt-3 text-xs sm:text-sm text-body font-medium leading-relaxed border-t border-line/60 pt-3">
                         {f.a}
@@ -459,7 +450,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
             <div className="mt-16 pt-8 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link
                 href="/insights"
-                className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-body hover:text-[#7A1F2B] transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-body hover:text-[#8b1a1a] transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>All Insights</span>
@@ -467,7 +458,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
               {nextArticle && (
                 <Link
                   href={`/insights/${nextArticle.slug}`}
-                  className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#7A1F2B] hover:translate-x-1 transition-transform text-right"
+                  className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#8b1a1a] transition-transform text-right"
                 >
                   <span>Next: {nextArticle.title.slice(0, 38)}...</span>
                   <ArrowRight className="w-3.5 h-3.5" />

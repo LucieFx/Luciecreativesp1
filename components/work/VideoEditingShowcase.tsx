@@ -194,7 +194,7 @@ export function VideoEditingShowcase() {
             </span>
           </h2>
 
-          <p className="mt-5 text-sm sm:text-base md:text-lg text-muted/60 font-medium leading-relaxed max-w-2xl text-pretty">
+          <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-300 font-medium leading-relaxed max-w-2xl text-pretty">
             Cinema-grade post-production engineered to command prestige and halt the scroll. Browse our complete production vault of original client videos across Gujarat &amp; India: from monumental 16:9 cinema films to viral 9:16 founder reels and luxury architectural walkthroughs.
           </p>
         </div>
@@ -210,7 +210,7 @@ export function VideoEditingShowcase() {
                 <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
                 <span className="uppercase tracking-wider">Flagship 16:9 Cinema Commercial</span>
               </div>
-              <div className="px-3.5 py-1.5 rounded-full bg-[#7A1F2B] text-xs font-mono font-bold text-white shadow-md">
+              <div className="px-3.5 py-1.5 rounded-full bg-[#8b1a1a] text-xs font-mono font-bold text-white shadow-md">
                 Client: {cinemaVideo.client}
               </div>
             </div>
@@ -247,7 +247,7 @@ export function VideoEditingShowcase() {
                   cinemaPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100 bg-black/40"
                 }`}
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#7A1F2B]/90 backdrop-blur-md text-white flex items-center justify-center shadow-2xl border border-white/20 transform transition-transform group-hover:scale-110">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#8b1a1a]/90 backdrop-blur-md text-white flex items-center justify-center shadow-2xl border border-white/20 transform transition-transform group-hover:scale-110">
                   {cinemaPlaying ? (
                     <Pause className="w-7 h-7 fill-current" />
                   ) : (
@@ -328,7 +328,7 @@ export function VideoEditingShowcase() {
                 <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
                   {cinemaVideo.title}
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-muted/60 font-medium leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
                   {cinemaVideo.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -348,7 +348,7 @@ export function VideoEditingShowcase() {
                   <div className="text-3xl font-black font-mono text-[#C4384B]">
                     {cinemaVideo.metric}
                   </div>
-                  <div className="text-xs font-bold text-muted">
+                  <div className="text-xs font-bold text-slate-300">
                     {cinemaVideo.metricLabel}
                   </div>
                 </div>
@@ -356,7 +356,7 @@ export function VideoEditingShowcase() {
                   href="/contact"
                   variant="primary"
                   size="sm"
-                  className="px-5 py-2.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#7A1F2B] hover:!bg-[#631923] text-white shrink-0"
+                  className="px-5 py-2.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 text-white shrink-0"
                 >
                   <span>Start a Project</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -380,7 +380,7 @@ export function VideoEditingShowcase() {
               <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
                 High-Retention Vertical Productions
               </h3>
-              <p className="text-xs sm:text-sm text-muted/60 font-medium mt-1">
+              <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">
                 Real client reels engineered for sub-1s thumb stopping, ACES color science, and proven engagement.
               </p>
             </div>
@@ -408,8 +408,8 @@ export function VideoEditingShowcase() {
                   }}
                   className={`px-4 py-2 rounded-full text-xs font-bold tracking-tight whitespace-nowrap transition-all duration-200 cursor-pointer border ${
                     isActive
-                      ? "bg-[#7A1F2B] text-white border-[#7A1F2B] shadow-md"
-                      : "bg-white/5 hover:bg-white/10 text-muted/60 border-white/10"
+                      ? "bg-[#8b1a1a] text-white border-[#8b1a1a] shadow-md"
+                      : "bg-white/5 hover:bg-white/10 text-white/80 border-white/10"
                   }`}
                 >
                   {category}
@@ -437,7 +437,7 @@ export function VideoEditingShowcase() {
             <div className="mt-12 flex justify-center">
               <button
                 onClick={() => setVisibleCount((prev) => Math.min(prev + 8, filteredReels.length))}
-                className="px-8 py-3.5 rounded-lg bg-white/10 hover:bg-[#7A1F2B] border border-white/15 text-xs font-black text-white uppercase tracking-wider transition-colors duration-200 cursor-pointer flex items-center gap-2 shadow-sm"
+                className="px-8 py-3.5 rounded-lg bg-white/10 hover:bg-[#8b1a1a] border border-white/15 text-xs font-black text-white uppercase tracking-wider transition-colors duration-200 cursor-pointer flex items-center gap-2 shadow-sm"
               >
                 <span>Load More Productions ({filteredReels.length - visibleCount} remaining)</span>
               </button>
@@ -446,15 +446,15 @@ export function VideoEditingShowcase() {
         </div>
 
         {/* Bottom Conversion Action Strip */}
-        <div className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-lg bg-[#7A1F2B] border border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+        <div className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-lg bg-[#8b1a1a] border border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
           <div>
-            <div className="text-xs font-mono font-bold text-[#C4384B] uppercase tracking-wider mb-2">
+            <div className="text-xs font-mono font-bold text-white/90 uppercase tracking-wider mb-2">
               Ready to Win Algorithmic Retention?
             </div>
-            <h4 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
               Scale Your Inbound Leads with Cinema-Grade Video
-            </h4>
-            <p className="mt-2 text-xs sm:text-sm text-muted/60 max-w-xl font-medium">
+            </h3>
+            <p className="mt-2 text-xs sm:text-sm text-white/90 max-w-xl font-medium">
               We manage end-to-end post-production for Gujarat&apos;s leading brands and creator founders. Turnaround in 24-48 hours.
             </p>
           </div>
@@ -463,14 +463,14 @@ export function VideoEditingShowcase() {
               href="/contact"
               variant="primary"
               size="md"
-              className="px-7 py-3.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#7A1F2B] hover:!bg-[#631923] text-white"
+              className="px-7 py-3.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 text-white"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4" />
             </MagneticButton>
             <Link
               href="/video-editing"
-              className="text-xs font-bold text-muted/60 hover:text-white underline underline-offset-4 transition-colors"
+              className="text-xs font-bold text-white/90 hover:text-white underline underline-offset-4 transition-colors"
             >
               View All Video Edits &amp; Reels →
             </Link>
@@ -691,7 +691,7 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
   return (
     <div
       ref={containerRef}
-      className="group relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900/90 hover:border-[#7A1F2B]/60 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl"
+      className="group relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900/90 hover:border-[#8b1a1a]/60 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl"
     >
       {/* 9:16 Video Frame */}
       <div
@@ -723,7 +723,7 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
           <span className="px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs">
             {reel.client}
           </span>
-          <span className="px-2 py-0.5 rounded-full bg-[#7A1F2B] text-[10px] font-mono font-bold text-white shadow-xs">
+          <span className="px-2 py-0.5 rounded-full bg-[#8b1a1a] text-[10px] font-mono font-bold text-white shadow-xs">
             {reel.metric}
           </span>
         </div>
@@ -747,7 +747,7 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
         <div className="absolute bottom-3 inset-x-3 flex items-center justify-between z-20">
           <button
             onClick={toggleCardMute}
-            className="p-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white transition-colors cursor-pointer"
+            className="w-7 h-7 min-w-[28px] min-h-[28px] flex items-center justify-center rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white transition-colors cursor-pointer"
             aria-label={isLocalMuted ? "Unmute reel" : "Mute reel"}
           >
             {isLocalMuted ? (
@@ -772,13 +772,13 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
           <h4 className="text-sm font-black text-white line-clamp-2 leading-snug group-hover:text-[#C4384B] transition-colors">
             {reel.title}
           </h4>
-          <p className="mt-1 text-[11px] text-muted font-medium line-clamp-2 leading-relaxed">
+          <p className="mt-1 text-[11px] text-slate-300 font-medium line-clamp-2 leading-relaxed">
             {reel.tagline}
           </p>
         </div>
 
         <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between text-xs">
-          <span className="text-[10px] font-mono font-medium text-muted">
+          <span className="text-[10px] font-mono font-medium text-slate-300">
             {reel.metricLabel}
           </span>
           <button

@@ -30,7 +30,7 @@ export default function CareersPage() {
   const roles = CAREER_ROLES;
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-ink font-sans flex flex-col justify-between">
+    <div className="min-h-screen bg-[#ffffff] text-ink font-sans flex flex-col justify-between">
       <Navbar />
 
       <main className="flex-grow pt-28 sm:pt-36 pb-20 px-4 sm:px-6 md:px-12 max-w-5xl mx-auto w-full">

@@ -20,30 +20,30 @@ const TEAM_ROLES = [
 
 export function HumanTrustSection() {
   return (
-    <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 md:px-12 bg-white border-b border-line/80 select-none">
-      <div className="max-w-7xl mx-auto">
-        {/* Team Header */}
-        <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
+    <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 md:px-12 bg-white border-b border-line/80 select-none overflow-visible">
+      <div className="max-w-7xl mx-auto overflow-visible">
+        {/* Team Header with smooth blur fade up */}
+        <Reveal delay={0} y={16} duration={0.65} className="flex flex-col items-center text-center mb-12 sm:mb-16 overflow-visible">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-[-0.02em] leading-[1.0] text-ink max-w-3xl text-balance">
             A small team,{" "}
-            <span className="font-accent italic text-[#7A1F2B] font-normal">
+            <span className="font-accent italic text-[#8b1a1a] font-normal">
               working directly with you
             </span>
           </h2>
           <p className="mt-4 text-[15px] sm:text-base md:text-[18px] text-slate-700 font-medium leading-relaxed max-w-2xl text-pretty">
             A small, focused studio working directly with you from discovery to delivery. No account managers or bloated handoffs.
           </p>
-        </div>
+        </Reveal>
 
         {/* Roles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20 sm:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20 sm:mb-24 overflow-visible">
           {TEAM_ROLES.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <Reveal key={item.role} delay={idx * 0.1} className="h-full">
-                <div className="p-6 sm:p-8 rounded-2xl bg-white border border-line/90 shadow-xs hover:border-[#7A1F2B]/40 transition-colors flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left h-full">
+              <Reveal key={item.role} delay={idx * 0.1} duration={0.7} className="h-full overflow-visible">
+                <div className="p-6 sm:p-8 rounded-2xl bg-white border border-line/90 shadow-xs hover:border-[#8b1a1a]/40 hover:shadow-lg hover:scale-[1.015] hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left h-full will-change-transform overflow-visible">
                   {/* Role Icon Box */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-brand-red-50 border border-brand-red/20 flex items-center justify-center text-[#7A1F2B] shrink-0 shadow-xs">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-brand-red-50 border border-brand-red/20 flex items-center justify-center text-[#8b1a1a] shrink-0 shadow-xs">
                     <Icon className="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.75]" />
                   </div>
 
@@ -62,27 +62,27 @@ export function HumanTrustSection() {
           })}
         </div>
 
-        {/* Testimonials Header */}
-        <div className="flex flex-col items-center text-center mb-10 sm:mb-12">
-          <div className="mb-2 text-xs sm:text-sm font-semibold tracking-wider text-[#7A1F2B] uppercase">
+        {/* Testimonials Header with smooth blur fade up */}
+        <Reveal delay={0} y={16} duration={0.65} className="flex flex-col items-center text-center mb-10 sm:mb-12 overflow-visible">
+          <div className="mb-2 text-xs sm:text-sm font-semibold tracking-wider text-[#8b1a1a] uppercase">
             Client Feedback
           </div>
-          <h3 className="text-2xl sm:text-3xl font-display font-black text-ink tracking-[-0.02em] leading-[1.0] text-balance">
+          <h2 className="text-2xl sm:text-3xl font-display font-black text-ink tracking-[-0.02em] leading-[1.0] text-balance">
             What clients say
-          </h3>
+          </h2>
           <p className="mt-3 text-[14px] sm:text-[15px] text-slate-600 max-w-xl">
             Feedback from recent collaborations across video, web, and graphic design.
           </p>
-        </div>
+        </Reveal>
 
         {/* Testimonials Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 overflow-visible">
           {HOME_TESTIMONIALS.slice(0, 3).map((item, idx) => (
-            <Reveal key={item.id} delay={idx * 0.1} className="h-full">
-              <div className="p-6 sm:p-7 rounded-2xl bg-slate-50/60 border border-line/90 hover:bg-white hover:border-[#7A1F2B]/40 hover:shadow-xs transition-all duration-200 flex flex-col justify-between h-full">
+            <Reveal key={item.id} delay={idx * 0.1} duration={0.7} className="h-full overflow-visible">
+              <div className="p-6 sm:p-7 rounded-2xl bg-slate-50/60 border border-line/90 hover:bg-white hover:border-[#8b1a1a]/40 hover:shadow-lg hover:scale-[1.015] hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-between h-full will-change-transform overflow-visible">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <Quote className="w-5 h-5 text-[#7A1F2B]/70" />
+                    <Quote className="w-5 h-5 text-[#8b1a1a]/70" />
                     <span className="text-xs font-semibold text-slate-600 bg-white border border-line/80 px-2.5 py-0.5 rounded-md shadow-xs">
                       {item.discipline}
                     </span>

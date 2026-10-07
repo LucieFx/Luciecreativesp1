@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
@@ -14,7 +14,8 @@ const bbhHegarty = localFont({
   ],
   variable: "--font-display",
   display: "swap",
-  fallback: ["sans-serif"],
+  fallback: ["Arial", "sans-serif"],
+  adjustFontFallback: "Arial",
   preload: true,
 });
 
@@ -24,7 +25,8 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
   weight: "400",
   style: "italic",
-  fallback: ["serif"],
+  fallback: ["Times New Roman", "serif"],
+  adjustFontFallback: true,
   preload: true,
 });
 
@@ -33,15 +35,6 @@ const inter = Inter({
   variable: "--font-body",
   display: "swap",
   fallback: ["sans-serif"],
-  preload: true,
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-  weight: ["400", "700"],
-  fallback: ["monospace"],
   preload: false,
 });
 
@@ -88,11 +81,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
@@ -124,7 +113,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bbhHegarty.variable} ${instrumentSerif.variable} ${inter.variable} ${jetbrainsMono.variable} font-body scroll-smooth bg-white text-ink`}
+      className={`${bbhHegarty.variable} ${instrumentSerif.variable} ${inter.variable} font-body scroll-smooth bg-white text-ink`}
     >
       <head>
         <meta name="color-scheme" content="light" />

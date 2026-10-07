@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
-import { Marquee, SplitText } from "@/components/motion";
-import { m, useReducedMotion } from "framer-motion";
-import { EASE_OUT } from "@/lib/motion";
 
 export interface HeroChip {
   label: string;
@@ -47,7 +44,11 @@ export function PageHero({
   graphicDesignMotion = false,
   reelThumbnails = [],
 }: PageHeroProps) {
-  const shouldReduceMotion = useReducedMotion();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
@@ -77,14 +78,14 @@ export function PageHero({
   const loopThumbnails = useMemo(() => {
     if (!reelThumbnails || reelThumbnails.length === 0) return [];
     let list = [...reelThumbnails];
-    while (list.length < 20) {
+    while (list.length < 10) {
       list = [...list, ...reelThumbnails];
     }
-    return list;
+    return list.slice(0, 10);
   }, [reelThumbnails]);
 
   return (
-    <section className="relative w-full min-h-[520px] sm:min-h-[580px] lg:h-[76vh] lg:max-h-[740px] overflow-hidden bg-[#8B1A1A] flex items-end select-none pt-28 pb-10 sm:pb-14">
+    <section className="relative w-full min-h-[680px] sm:min-h-[620px] lg:h-[76vh] lg:max-h-[740px] overflow-hidden bg-[#8B1A1A] flex flex-col justify-start select-none pt-28 pb-10 sm:pb-14">
       {/* 1. Solid Red Background with Subtle Depth Vignette */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
@@ -113,10 +114,10 @@ export function PageHero({
       )}
 
       {/* Continuous background reel loop string for phone & display */}
-      {timelineEditMotion && loopThumbnails.length > 0 && (
+      {timelineEditMotion && isMounted && loopThumbnails.length > 0 && (
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-[35%] sm:top-1/2 -translate-y-1/2 z-[2] opacity-45 sm:opacity-50 pointer-events-none select-none overflow-hidden"
+          className="hidden sm:block absolute inset-x-0 top-[35%] sm:top-1/2 -translate-y-1/2 z-[2] opacity-45 sm:opacity-50 pointer-events-none select-none overflow-hidden"
         >
           {/* Edge fade masks for seamless boundary transitions on wide display */}
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#8B1A1A] to-transparent z-10 pointer-events-none" />
@@ -135,6 +136,7 @@ export function PageHero({
                     src={thumb.posterSrc}
                     alt={thumb.title || "Reel thumbnail"}
                     fill
+                    loading="lazy"
                     sizes="(max-width: 640px) 76px, (max-width: 1024px) 112px, 128px"
                     className="object-cover"
                   />
@@ -157,6 +159,7 @@ export function PageHero({
                     src={thumb.posterSrc}
                     alt={thumb.title || "Reel thumbnail"}
                     fill
+                    loading="lazy"
                     sizes="(max-width: 640px) 76px, (max-width: 1024px) 112px, 128px"
                     className="object-cover"
                   />
@@ -190,93 +193,49 @@ export function PageHero({
       {/* 2. Hero Content */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white/90 text-xs font-black uppercase tracking-widest mb-4 shadow-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 border border-white/30 text-white/95 text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
           <span>{badge}</span>
         </div>
 
-        {/* Primary H1: Timeline Edit Jump-Cuts + Sweeping Maroon Playhead */}
-        {timelineEditMotion && !shouldReduceMotion ? (
-          <div className="max-w-4xl">
-            <h1
-              className="text-white font-black tracking-tight leading-[1.05] text-[clamp(2.1rem,6.4vw,6.2rem)] text-balance"
-              aria-label={`${headlinePrefix} ${headlineItalicAccent} ${headlineSuffix}`.trim()}
-            >
-              {words.map((item, wIdx) => (
-                <m.span
-                  key={wIdx}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    delay: wIdx * 0.12,
-                    duration: 0.04, // Jump-cut snap appearance
-                    ease: "easeOut",
-                  }}
-                  className={`inline-block mr-[0.28em] last:mr-0 ${
-                    item.isAccent
-                      ? "italic text-white/90 tracking-tight"
-                      : ""
-                  }`}
-                  aria-hidden="true"
-                >
-                  {item.text}
-                </m.span>
-              ))}
-            </h1>
-
-            {/* Thin maroon playhead sweeping under the headline */}
-            <div
-              className="relative w-full max-w-2xl h-[2px] mt-4 bg-white/15 overflow-visible rounded-full"
-              aria-hidden="true"
-            >
-              <m.div
-                initial={{ width: "0%" }}
-                animate={{ width: "100%" }}
-                transition={{
-                  duration: 1.15,
-                  delay: 0.15,
-                  ease: EASE_OUT,
-                }}
-                className="absolute top-0 left-0 h-full bg-[#FF4D5E] relative shadow-[0_0_10px_#FF4D5E]"
-              >
-                {/* Needle playhead ticker */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-1.5 h-3.5 bg-white rounded-xs shadow-md border border-[#FF4D5E]" />
-              </m.div>
-            </div>
-          </div>
-        ) : graphicDesignMotion && !shouldReduceMotion ? (
-          <div className="max-w-4xl">
-            <SplitText
-              as="h1"
-              className="text-white font-display font-black tracking-[-0.02em] leading-[1.0] text-[clamp(2.1rem,6.4vw,5.5rem)] text-balance"
-              accentWords={[headlineItalicAccent.replace(/[.,]/g, "")]}
-              accentClassName="font-accent italic text-white text-[1.1em] tracking-normal inline"
-              markerHighlight={true}
-              markerClassName="absolute -inset-x-1.5 bottom-1 sm:bottom-2 h-[38%] bg-white/20 -z-1 rounded-xs pointer-events-none"
-            >
-              {`${headlinePrefix} *${headlineItalicAccent}*${headlineSuffix ? ` ${headlineSuffix}` : ""}`}
-            </SplitText>
-          </div>
-        ) : (
-          <h1 className="text-white font-display font-black tracking-[-0.02em] leading-[1.0] text-[clamp(2.1rem,6.4vw,5.5rem)] text-balance max-w-4xl">
+        {/* Primary H1: Instant High-Impact SSR Typography */}
+        <div
+          className="max-w-4xl overflow-visible min-h-[110px] sm:min-h-[100px] lg:min-h-[140px]"
+          style={{ contain: "layout style" }}
+        >
+          <h1 className="text-white font-display font-black tracking-[-0.02em] leading-[1.0] text-[clamp(2.1rem,6.4vw,5.5rem)] text-balance">
             {headlinePrefix}{" "}
             <span className="font-accent italic text-white text-[1.1em] tracking-normal inline">
               {headlineItalicAccent}
             </span>
             {headlineSuffix && ` ${headlineSuffix}`}
           </h1>
-        )}
+
+          {timelineEditMotion && (
+            <div
+              className="relative w-full max-w-2xl h-[2px] mt-4 bg-white/15 overflow-visible rounded-full"
+              aria-hidden="true"
+            >
+              <div className="absolute top-0 left-0 h-full w-full bg-[#FF4D5E] relative shadow-[0_0_10px_#FF4D5E]">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-1.5 h-3.5 bg-white rounded-xs shadow-md border border-[#FF4D5E]" />
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Subheadline */}
-        <p className="mt-4 text-sm sm:text-base text-white/80 font-medium max-w-xl text-balance">
+        <p
+          className="mt-4 text-sm sm:text-base text-white/80 font-medium max-w-xl text-balance min-h-[48px] sm:min-h-0"
+          style={{ contain: "layout style" }}
+        >
           {subheadline}
         </p>
 
         {/* Two Buttons: Primary CTA + Anchor Scroll */}
-        <div className="mt-6 flex flex-wrap items-center gap-3">
+        <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <Link
             href={primaryButton.href}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-line/60 text-[#8B1A1A] text-xs sm:text-sm font-black uppercase tracking-wider shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-line/60 text-[#8B1A1A] text-xs sm:text-sm font-semibold uppercase tracking-wider shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
           >
             <span>{primaryButton.label}</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -285,34 +244,27 @@ export function PageHero({
           <a
             href={secondaryButton.href}
             onClick={(e) => handleAnchorClick(e, secondaryButton.href)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs sm:text-sm font-bold uppercase tracking-wider backdrop-blur-md hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/20 hover:bg-white/30 border border-white/35 text-white text-xs sm:text-sm font-semibold uppercase tracking-wider hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
           >
             <span>{secondaryButton.label}</span>
             <ArrowDown className="w-3.5 h-3.5" />
           </a>
         </div>
 
-        {/* Chips: Fade in with stagger */}
+        {/* Chips: Clean, stable chips */}
         <div className="mt-6 flex flex-wrap items-center gap-2 sm:gap-2.5">
           {chips.map((chip, idx) => (
-            <m.a
+            <a
               key={idx}
-              initial={(timelineEditMotion || graphicDesignMotion) && !shouldReduceMotion ? { opacity: 0, y: 10 } : false}
-              animate={(timelineEditMotion || graphicDesignMotion) && !shouldReduceMotion ? { opacity: 1, y: 0 } : false}
-              transition={{
-                duration: 0.35,
-                delay: 0.6 + idx * 0.09,
-                ease: EASE_OUT,
-              }}
               href={chip.href || "#"}
               onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                 if (chip.href) handleAnchorClick(e, chip.href);
               }}
-              className="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 text-white text-xs font-semibold backdrop-blur-sm transition-all flex items-center gap-1.5 cursor-pointer hover:border-white/40"
+              className="px-3.5 py-1.5 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer hover:border-white/50"
             >
               {chip.icon && <span>{chip.icon}</span>}
               <span>{chip.label}</span>
-            </m.a>
+            </a>
           ))}
         </div>
       </div>

@@ -1,58 +1,29 @@
-# Lucie Creatives — Digital Creative & Growth Agency
+# Lucie Creatives
 
-> Lucie Creatives is a premier full-stack digital creative and growth agency. We specialize in high-retention short-form video editing, cinematic widescreen commercial films, monolithic visual branding systems, and algorithmic social media growth.
+> Premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.
 
-## Core Capabilities
-- Short Form Videos: Scroll-stopping 9:16 viral reels, TikToks, YouTube shorts with sub-1-second hooks, kinetic typography, and audio triggers.
-- Long Form Videos: 16:9 widescreen commercial films, 4K brand documentaries, 3D product keynote reveals, DaVinci Resolve color grading.
-- Graphic Design: Monolithic brand identity design systems, editorial lookbooks, physical packaging architecture, digital marketing assets.
-- Social Media Growth: Algorithmic content pipelines, organic reach scaling, community acquisition.
+## Main Pages
 
-## Key Pages & Navigation
-- Home: https://luciecreatives.in/
-- Work & Portfolio: https://luciecreatives.in/work
-- Web Development Portfolio: https://luciecreatives.in/dev
-- About Agency: https://luciecreatives.in/about
-- Contact & Discovery: https://luciecreatives.in/contact
+### [Home](https://luciecreatives.in/)
+Lucie Creatives is a premier video editing and web development agency serving ambitious brands worldwide with cinematic video editing, high-performance web development, graphic design, and branding.
 
-## Primary Services
-- Web Development: https://luciecreatives.in/web-development
-- Video Editing: https://luciecreatives.in/video-editing
-- Graphic Design: https://luciecreatives.in/graphic-design
-- Branding: https://luciecreatives.in/branding
-- UI/UX Design: https://luciecreatives.in/ui-ux-design
-- Logo Design: https://luciecreatives.in/logo-design
-- Social Media Design: https://luciecreatives.in/social-media-design
+### [Video Editing](https://luciecreatives.in/video-editing)
+Short-form reels, kinetic typography, DaVinci Resolve color grading, and cinematic commercial video editing engineered for high audience retention.
 
-## Regional Geographies
-- Gujarat Hub: https://luciecreatives.in/gujarat
-- Ahmedabad Hub: https://luciecreatives.in/ahmedabad
-- Surat Hub: https://luciecreatives.in/surat
+### [Graphic Design](https://luciecreatives.in/graphic-design)
+Monolithic brand identity systems, product packaging architecture, high-converting social media creatives, and out-of-home (OOH) billboard design.
 
-## Legal & Compliance
-- Privacy Policy: https://luciecreatives.in/privacy
-- Terms of Service: https://luciecreatives.in/terms
+### [Web Development](https://luciecreatives.in/web-development)
+Custom website development, responsive website design, sub-second Next.js and React web applications, e-commerce platforms, and SEO-optimized digital systems.
 
-## Selected Case Studies
-- Vedam Villas Influencer & Architecture Tour: https://luciecreatives.in/work/vedam-villas-influencer-tour
-- Leaders Diary Nishant Patel Podcast Clips: https://luciecreatives.in/work/leaders-diary-nishant-patel
-- Maruti Buildcon Construction & Reveal Series: https://luciecreatives.in/work/maruti-buildcon-vertical-reels
-- Nirva Resort Poolside & Luxury Lifestyle: https://luciecreatives.in/work/nirva-resort-vertical-reels
-- Nirva Club & Resort 4K Cinema Commercial: https://luciecreatives.in/work/nirva-resort-cinema-commercial
-- Maruti Buildcon Construction Master Tour: https://luciecreatives.in/work/maruti-buildcon-construction-master
-- Vedam Villas Architectural Master Film: https://luciecreatives.in/work/vedam-villas-architectural-master
-- Speczo Luxury Eyewear System: https://luciecreatives.in/work/speczo-luxury-eyewear
-- Onirique Parfums 3D Identity: https://luciecreatives.in/work/onirique-parfums-identity
-- Lumara Botanical Skincare Suite: https://luciecreatives.in/work/lumara-luxury-skincare
-- Nirva Luxury Resort OOH System: https://luciecreatives.in/work/nirva-resort-environmental-branding
-- Rhyme Fine Jewels Haute Joaillerie Print: https://luciecreatives.in/work/rhyme-haute-joaillerie
-- Crancho Snacks FMCG Packaging: https://luciecreatives.in/work/crancho-fmcg-packaging
-- Nandanvan Estates Luxury Real Estate: https://luciecreatives.in/work/nandanvan-luxury-real-estate
-- Bright Minds Education & Admissions: https://luciecreatives.in/work/bright-minds-education-campaigns
-- OOH Billboards & Commercial Print: https://luciecreatives.in/work/ooh-billboards-commercial-print
-- Travel & Festival Social Campaigns: https://luciecreatives.in/work/travel-festival-social-campaigns
-- Monolithic Logo Systems: https://luciecreatives.in/work/monolithic-logo-systems
+### [Work / Portfolio](https://luciecreatives.in/#work)
+Selected commercial client projects and case studies across luxury real estate, architecture, hospitality, consumer goods, and digital platforms.
 
-## Contact & Inquiries
-- Official Email: hello@luciecreatives.in
-- Location: SF • London • Mumbai
+### [About](https://luciecreatives.in/about)
+Agency leadership, culture, and conviction. We engineer unfair cultural advantages for ambitious brands through cinematic storytelling and sub-second digital craft.
+
+### [Careers](https://luciecreatives.in/careers)
+Career openings at Lucie Creatives for talented Video Editors and Graphic Designers looking to craft high-retention brand media and monolithic visual identities.
+
+### [Contact](https://luciecreatives.in/contact)
+Schedule a project discovery call with Lucie Creatives leadership to discuss web development, graphic design, video editing, or branding.

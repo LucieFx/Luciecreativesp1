@@ -36,8 +36,8 @@ export function LongFormCinemaShowcase({ projects }: LongFormCinemaShowcaseProps
       } bg-white text-text-primary overflow-hidden border-b border-line`}
     >
       {/* Background Ambience */}
-      <div className="absolute top-1/3 right-10 w-[600px] h-[600px] bg-brand-red/[0.03] rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[500px] h-[500px] bg-brand-red/[0.03] rounded-full blur-[140px] pointer-events-none" />
+      {null}
+      {null}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header with Unified System Architecture */}
@@ -232,7 +232,7 @@ function CinemaProjectPanel({
               muted={isMuted}
               loop
               playsInline
-              preload="metadata"
+              preload="none"
               onError={() => setIsPlaying(false)}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 z-0 ${
                 isPlaying ? "opacity-100" : "opacity-0 pointer-events-none"

@@ -8,6 +8,7 @@ export interface LighthouseScores {
   accessibility: number | null;
   bestPractices: number | null;
   seo: number | null;
+  agenticBrowsing?: string;
   mode: "Mobile" | "Desktop";
   measuredOn: string;
 }
@@ -27,68 +28,94 @@ export interface WebProject {
   poster?: string;
   lighthouse: LighthouseScores;
   reportImage?: string;
+  fullPreviewImage?: string;
   permissionToShow: boolean;
 }
 
 export const WEB_PROJECTS_DATA: WebProject[] = [
   {
-    slug: "1xl-holdings",
-    title: "1XL Holdings",
-    category: "Fintech & Corporate",
+    slug: "forever-films",
+    title: "Forever Films",
+    category: "Cinema & Luxury Photography",
     status: "client",
     description:
-      "Investor platform for a Dubai holding company featuring portfolio ecosystems and capital-raising pages. Built with a structured data layout to ensure fast, clear disclosure navigation.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    screenshotDesktop: "/projects/1xl.png",
-    screenshotMobile: "/projects/1xl.png", // TODO: Add dedicated mobile screenshot (replace with /projects/1xl-mobile.png)
-    scrollVideo: undefined, // TODO: Add 720p scroll walkthrough video (15-20s, mp4)
-    poster: "/projects/1xl.png",
+      "Luxury wedding cinematography flagship with sub-second route transitions, dark-mode visual storytelling, and bespoke editorial typography.",
+    stack: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    screenshotDesktop: "/projects/forever-films-desktop.png",
+    screenshotMobile: "/projects/forever-films-mobile.png",
+    fullPreviewImage: "/projects/forever-films-full-desktop.png",
+    poster: "/projects/forever-films-desktop.png",
     lighthouse: {
-      performance: null, // TODO: replace with real measured score
-      accessibility: null, // TODO: replace with real measured score
-      bestPractices: null, // TODO: replace with real measured score
-      seo: null, // TODO: replace with real measured score
+      performance: 95,
+      accessibility: 96,
+      bestPractices: 100,
+      seo: 100,
       mode: "Desktop",
-      measuredOn: "Sept 2026",
+      measuredOn: "Oct 2026",
     },
-    reportImage: undefined, // TODO: Add Lighthouse report screenshot path (e.g. /projects/1xl-lighthouse-report.png)
+    reportImage: "/projects/forever-films-lighthouse-report.png",
     permissionToShow: true,
   },
   {
-    slug: "nandanvan-realty",
-    title: "Nandanvan Realty",
-    category: "Real Estate & Architecture",
+    slug: "media-house",
+    title: "Media House Agency",
+    category: "Influencer Marketing & Media",
     status: "client",
     description:
-      "Digital flagship platform showcasing architectural real estate developments across Gujarat. Includes interactive floor plan views and streamlined prospective buyer inquiry funnels.",
-    stack: ["Next.js", "React", "Tailwind CSS", "GSAP"],
-    screenshotDesktop: "/projects/nandanvan-realty-web.jpg",
-    screenshotMobile: "/projects/nandanvan-realty-web.jpg", // TODO: Add dedicated mobile screenshot (replace with /projects/nandanvan-mobile.png)
-    scrollVideo: undefined, // TODO: Add 720p scroll walkthrough video (15-20s, mp4)
-    poster: "/projects/nandanvan-realty-web.jpg",
+      "Creator talent and influencer management platform with interactive roster showcases, brand decks, and real-time campaign metrics.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+    screenshotDesktop: "/projects/mediahouse-desktop.png",
+    screenshotMobile: "/projects/mediahouse-mobile.png",
+    fullPreviewImage: "/projects/mediahouse-full-desktop.png",
+    poster: "/projects/mediahouse-desktop.png",
     lighthouse: {
-      performance: null, // TODO: replace with real measured score
-      accessibility: null, // TODO: replace with real measured score
-      bestPractices: null, // TODO: replace with real measured score
-      seo: null, // TODO: replace with real measured score
-      mode: "Mobile",
-      measuredOn: "Sept 2026",
+      performance: 99,
+      accessibility: 96,
+      bestPractices: 100,
+      seo: 100,
+      agenticBrowsing: "3/3",
+      mode: "Desktop",
+      measuredOn: "Oct 2026",
     },
-    reportImage: undefined, // TODO: Add Lighthouse report screenshot path (e.g. /projects/nandanvan-lighthouse-report.png)
+    reportImage: "/projects/mediahouse-lighthouse-report.png",
     permissionToShow: true,
   },
   {
-    slug: "doxx-print",
-    title: "Doxx",
+    slug: "kaption",
+    title: "Kaption",
+    category: "AI SaaS & Video Tech",
+    status: "client",
+    description:
+      "AI-powered captioning SaaS for 50+ Indic languages with sub-second speech processing, 99.2% accuracy, and high-retention typography.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Web Audio API", "AI Speech API"],
+    screenshotDesktop: "/projects/kaption-desktop.png",
+    screenshotMobile: "/projects/kaption-mobile.png",
+    fullPreviewImage: "/projects/kaption-full-desktop.png",
+    poster: "/projects/kaption-desktop.png",
+    lighthouse: {
+      performance: 94,
+      accessibility: 98,
+      bestPractices: 100,
+      seo: 100,
+      mode: "Desktop",
+      measuredOn: "Oct 2026",
+    },
+    reportImage: "/projects/kaption-lighthouse-report.png",
+    permissionToShow: true,
+  },
+  {
+    slug: "copease",
+    title: "CopEase",
     category: "Retail Tech & SaaS",
     status: "client",
     description:
-      "High-speed QR printing platform for Indian print and xerox counters. Eliminates WhatsApp download bottlenecks with zero-app QR file drops, instant printer queues, and auto-purge privacy.",
+      "Zero-app QR file transfer and print queue kiosk for Indian xerox shops, eliminating WhatsApp download friction with instant auto-purge privacy.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets"],
-    screenshotDesktop: "/projects/doxx.png",
-    screenshotMobile: "/projects/doxx-mobile.png",
+    screenshotDesktop: "/projects/copease-desktop.webp",
+    screenshotMobile: "/projects/copease-mobile.webp",
+    fullPreviewImage: "/projects/copease-full-desktop.webp",
     scrollVideo: undefined,
-    poster: "/projects/doxx.png",
+    poster: "/projects/copease-desktop.webp",
     lighthouse: {
       performance: 99,
       accessibility: 79,
@@ -97,30 +124,7 @@ export const WEB_PROJECTS_DATA: WebProject[] = [
       mode: "Desktop",
       measuredOn: "Oct 2026",
     },
-    reportImage: "/projects/doxx-lighthouse-report.png",
-    permissionToShow: true,
-  },
-  {
-    slug: "media-house",
-    title: "Media House Agency",
-    category: "Media & Production",
-    status: "concept",
-    description:
-      "A fast, editorial web concept crafted for creative media and video production agencies. Demonstrates fluid media layouts and low-latency asset delivery without heavy framework overhead.",
-    stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    screenshotDesktop: "/projects/mediahouse.png",
-    screenshotMobile: "/projects/mediahouse.png", // TODO: Add dedicated mobile screenshot (replace with /projects/mediahouse-mobile.png)
-    scrollVideo: undefined, // TODO: Add 720p scroll walkthrough video (15-20s, mp4)
-    poster: "/projects/mediahouse.png",
-    lighthouse: {
-      performance: null, // TODO: replace with real measured score
-      accessibility: null, // TODO: replace with real measured score
-      bestPractices: null, // TODO: replace with real measured score
-      seo: null, // TODO: replace with real measured score
-      mode: "Desktop",
-      measuredOn: "Sept 2026",
-    },
-    reportImage: undefined, // TODO: Add Lighthouse report screenshot path (e.g. /projects/mediahouse-lighthouse-report.png)
+    reportImage: "/projects/copease-lighthouse-report.png",
     permissionToShow: true,
   },
 ];

@@ -22,7 +22,7 @@ export function CaseStudyConversionFooter({ projectTitle }: CaseStudyConversionF
       <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end flex-wrap">
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-brand-red text-white text-xs font-bold hover:bg-[#6E1414] transition-all shadow-xs shrink-0"
+          className="inline-flex items-center justify-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-brand-red text-white text-xs font-bold hover:bg-[#8b1a1a]/90 transition-all shadow-xs shrink-0"
         >
           <span>Start a project</span>
           <ArrowUpRight className="w-3.5 h-3.5" />

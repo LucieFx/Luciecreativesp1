@@ -20,8 +20,8 @@ export default function NotFound() {
         </div>
 
         {/* 404 Status Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#7A1F2B] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-4 shadow-xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#7A1F2B] inline-block" aria-hidden="true" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-4 shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a] inline-block" aria-hidden="true" />
           <span>Error 404: Page Not Found</span>
         </div>
 
@@ -44,7 +44,7 @@ export default function NotFound() {
         <div className="flex items-center justify-center gap-3.5 flex-wrap w-full sm:w-auto mb-10">
           <Link
             href="/"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#7A1F2B] hover:bg-[#631923] text-white rounded-lg font-bold text-sm tracking-wide shadow-xs transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 text-white rounded-lg font-bold text-sm tracking-wide shadow-xs transition-colors"
           >
             <Home className="w-4 h-4" />
             <span>Back to Home</span>
@@ -52,7 +52,7 @@ export default function NotFound() {
 
           <Link
             href="/contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-ink border border-line hover:border-[#7A1F2B]/40 hover:text-[#7A1F2B] rounded-lg font-bold text-sm transition-colors shadow-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-ink border border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] rounded-lg font-bold text-sm transition-colors shadow-xs"
           >
             <span>Contact Agency</span>
           </Link>
@@ -61,28 +61,28 @@ export default function NotFound() {
         {/* Helpful Destinations Quick Strip */}
         <div className="pt-6 border-t border-line/80 w-full">
           <div className="flex items-center justify-center gap-1.5 text-xs font-mono font-bold text-muted uppercase tracking-wider mb-3">
-            <Compass className="w-3.5 h-3.5 text-[#7A1F2B]" />
+            <Compass className="w-3.5 h-3.5 text-[#8b1a1a]" />
             <span>Explore Active Portfolios</span>
           </div>
 
           <div className="flex items-center justify-center gap-2 flex-wrap text-xs font-bold">
             <Link
               href="/web-development"
-              className="px-3 py-1.5 rounded-lg bg-white hover:bg-red-50 text-body hover:text-[#7A1F2B] border border-line transition-colors flex items-center gap-1"
+              className="px-3 py-1.5 rounded-lg bg-white hover:bg-red-50 text-body hover:text-[#8b1a1a] border border-line transition-colors flex items-center gap-1"
             >
               <span>Web Development</span>
               <ArrowRight className="w-3 h-3" />
             </Link>
             <Link
               href="/video-editing"
-              className="px-3 py-1.5 rounded-lg bg-white hover:bg-red-50 text-body hover:text-[#7A1F2B] border border-line transition-colors flex items-center gap-1"
+              className="px-3 py-1.5 rounded-lg bg-white hover:bg-red-50 text-body hover:text-[#8b1a1a] border border-line transition-colors flex items-center gap-1"
             >
               <span>Video Editing</span>
               <ArrowRight className="w-3 h-3" />
             </Link>
             <Link
               href="/graphic-design"
-              className="px-3 py-1.5 rounded-lg bg-white hover:bg-red-50 text-body hover:text-[#7A1F2B] border border-line transition-colors flex items-center gap-1"
+              className="px-3 py-1.5 rounded-lg bg-white hover:bg-red-50 text-body hover:text-[#8b1a1a] border border-line transition-colors flex items-center gap-1"
             >
               <span>Graphic Design</span>
               <ArrowRight className="w-3 h-3" />

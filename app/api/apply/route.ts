@@ -150,7 +150,7 @@ export async function POST(request: Request) {
               </div>
               <div class="row" style="border-bottom: none;">
                 <div class="label">Attached CV</div>
-                <div class="value">📎 ${fileName} (${fileSizeKb} KB)</div>
+                <div class="value">${fileName} (${fileSizeKb} KB)</div>
               </div>
             </div>
             <div class="footer">

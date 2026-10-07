@@ -33,7 +33,7 @@ export function UiUxShowcase() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.02em] text-text-primary leading-[1.0] max-w-4xl text-balance">
             Human-centered UI/UX &amp;{" "}
-            <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
+            <span className="font-accent italic text-[#8b1a1a] text-[1.1em] tracking-normal inline">
               fluid product journeys.
             </span>
           </h2>
@@ -46,9 +46,9 @@ export function UiUxShowcase() {
         {/* 3-Column UI/UX Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {/* Card 1: Figma Design Systems */}
-          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#7A1F2B]/40 transition-all duration-300">
+          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#7A1F2B] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 <Layers className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-black text-text-primary tracking-tight mb-3">
@@ -59,11 +59,11 @@ export function UiUxShowcase() {
               </p>
               <ul className="space-y-2 pt-4 border-t border-line/60 text-xs font-bold text-body">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a]" />
                   <span>Atomic Component Hierarchy</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a]" />
                   <span>Light &amp; Dark Theme Tokens</span>
                 </li>
               </ul>
@@ -71,9 +71,9 @@ export function UiUxShowcase() {
           </div>
 
           {/* Card 2: Interactive Prototypes & CRO */}
-          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#7A1F2B]/40 transition-all duration-300">
+          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#7A1F2B] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 <MousePointerClick className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-black text-text-primary tracking-tight mb-3">
@@ -84,11 +84,11 @@ export function UiUxShowcase() {
               </p>
               <ul className="space-y-2 pt-4 border-t border-line/60 text-xs font-bold text-body">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a]" />
                   <span>Frictionless User Journey Flows</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a]" />
                   <span>Conversion Funnel Optimization</span>
                 </li>
               </ul>
@@ -96,9 +96,9 @@ export function UiUxShowcase() {
           </div>
 
           {/* Card 3: Responsive Web & SaaS Design */}
-          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#7A1F2B]/40 transition-all duration-300">
+          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#7A1F2B] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 <Monitor className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-black text-text-primary tracking-tight mb-3">
@@ -109,11 +109,11 @@ export function UiUxShowcase() {
               </p>
               <ul className="space-y-2 pt-4 border-t border-line/60 text-xs font-bold text-body">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a]" />
                   <span>Responsive Web &amp; SaaS Layouts</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a]" />
                   <span>Developer Handoff Redlines</span>
                 </li>
               </ul>
@@ -127,7 +127,7 @@ export function UiUxShowcase() {
             href="/ui-ux-design"
             variant="primary"
             size="md"
-            className="px-7 py-3.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#7A1F2B] hover:!bg-[#631923]"
+            className="px-7 py-3.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
           >
             <span>Explore Full UI/UX Capabilities</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -135,7 +135,7 @@ export function UiUxShowcase() {
 
           <Link
             href="/work/vedam-villas-influencer-tour"
-            className="text-xs font-black text-[#7A1F2B] hover:underline"
+            className="text-xs font-black text-[#8b1a1a] hover:underline"
           >
             View Vedam Villas Showcase Project →
           </Link>

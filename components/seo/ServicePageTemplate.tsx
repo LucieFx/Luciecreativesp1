@@ -163,7 +163,7 @@ export function ServicePageTemplate({
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-black tracking-[-0.02em] text-ink leading-[1.0] max-w-5xl text-balance">
               {headlineRegular}{" "}
-              <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
+              <span className="font-accent italic text-[#8b1a1a] text-[1.1em] tracking-normal inline">
                 {headlineItalic}
               </span>
             </h1>
@@ -178,7 +178,7 @@ export function ServicePageTemplate({
                 href="/contact"
                 variant="primary"
                 size="lg"
-                className="px-8 py-4 text-sm font-black rounded-2xl shadow-red-btn !bg-[#8B1A1A] hover:!bg-[#631923]"
+                className="px-8 py-4 text-sm font-black rounded-2xl shadow-red-btn !bg-[#8B1A1A] hover:!bg-[#8b1a1a]/90"
               >
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -200,7 +200,7 @@ export function ServicePageTemplate({
                 <span>Zero Outsourcing • Direct Team</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#7A1F2B] shrink-0" />
+                <Clock className="w-4 h-4 text-[#8b1a1a] shrink-0" />
                 <span>Rapid Sprint Turnaround</span>
               </div>
               <div className="flex items-center gap-2">
@@ -208,7 +208,7 @@ export function ServicePageTemplate({
                 <span>Strict NDA &amp; IP Protection</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#7A1F2B] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#8b1a1a] shrink-0" />
                 <span>Serving Gujarat &amp; Global Brands</span>
               </div>
             </div>
@@ -229,11 +229,11 @@ export function ServicePageTemplate({
               {capabilities.map((c, i) => (
                 <div
                   key={i}
-                  className="p-6 sm:p-7 rounded-xl bg-white border border-line shadow-xs flex flex-col justify-between hover:border-[#7A1F2B]/30 transition-colors"
+                  className="p-6 sm:p-7 rounded-xl bg-white border border-line shadow-xs flex flex-col justify-between hover:border-[#8b1a1a]/30 transition-colors"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#FDF2F2] text-[#7A1F2B] border border-[#7A1F2B]/20">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#FDF2F2] text-[#8b1a1a] border border-[#8b1a1a]/20">
                         {c.tag}
                       </span>
                       <span className="text-xs font-mono font-bold text-muted">
@@ -261,7 +261,7 @@ export function ServicePageTemplate({
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-bold text-body">
                   {deliverables.map((d, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#7A1F2B] shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#8b1a1a] shrink-0" />
                       <span>{d}</span>
                     </div>
                   ))}
@@ -289,13 +289,13 @@ export function ServicePageTemplate({
                 {benefits.map((b, idx) => (
                   <div
                     key={idx}
-                    className="p-7 rounded-3xl bg-white/80 border border-line/80 hover:border-[#7A1F2B]/40 hover:bg-white transition-all flex flex-col justify-between group"
+                    className="p-7 rounded-3xl bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white transition-all flex flex-col justify-between group"
                   >
                     <div>
-                      <div className="w-8 h-8 rounded-xl bg-brand-red-50 text-[#7A1F2B] border border-[#7A1F2B]/15 flex items-center justify-center font-mono font-black text-xs mb-5 group-hover:bg-[#7A1F2B] group-hover:text-white transition-colors">
+                      <div className="w-8 h-8 rounded-xl bg-brand-red-50 text-[#8b1a1a] border border-[#8b1a1a]/15 flex items-center justify-center font-mono font-black text-xs mb-5 group-hover:bg-[#8b1a1a] group-hover:text-white transition-colors">
                         0{idx + 1}
                       </div>
-                      <h3 className="text-lg font-black text-ink uppercase tracking-tight mb-2 group-hover:text-[#7A1F2B] transition-colors">
+                      <h3 className="text-lg font-black text-ink uppercase tracking-tight mb-2 group-hover:text-[#8b1a1a] transition-colors">
                         {b.title}
                       </h3>
                       <p className="text-sm font-medium text-body leading-relaxed">
@@ -325,7 +325,7 @@ export function ServicePageTemplate({
                   key={i}
                   className="p-6 rounded-3xl bg-white border border-line shadow-soft relative"
                 >
-                  <div className="text-3xl font-black text-[#7A1F2B]/30 mb-4 font-mono">
+                  <div className="text-3xl font-black text-[#8b1a1a] mb-4 font-mono">
                     {p.step}
                   </div>
                   <h3 className="text-base font-black text-ink uppercase tracking-tight mb-2">
@@ -353,7 +353,7 @@ export function ServicePageTemplate({
                 </div>
                 <Link
                   href="/video-editing"
-                  className="text-xs font-black uppercase tracking-wider text-[#7A1F2B] transition-transform inline-flex items-center gap-1.5"
+                  className="text-xs font-black uppercase tracking-wider text-[#8b1a1a] transition-transform inline-flex items-center gap-1.5"
                 >
                   <span>Explore All Projects</span>
                   <ArrowRight className="w-4 h-4" />
@@ -365,16 +365,16 @@ export function ServicePageTemplate({
                   <Link
                     key={p.slug}
                     href={`/work/${p.slug}`}
-                    className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#7A1F2B]/40 transition-all flex flex-col justify-between"
+                    className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center justify-between text-xs text-muted font-bold mb-3">
-                        <span className="text-[#7A1F2B] uppercase tracking-wider">
+                        <span className="text-[#8b1a1a] uppercase tracking-wider">
                           {p.category}
                         </span>
                         <span>Client: {p.client}</span>
                       </div>
-                      <h3 className="text-xl font-black text-ink group-hover:text-[#7A1F2B] transition-colors leading-snug mb-2">
+                      <h3 className="text-xl font-black text-ink group-hover:text-[#8b1a1a] transition-colors leading-snug mb-2">
                         {p.title}
                       </h3>
                       <p className="text-xs font-medium text-body line-clamp-2">
@@ -384,14 +384,14 @@ export function ServicePageTemplate({
 
                     <div className="mt-6 pt-4 border-t border-line/60 flex items-center justify-between text-xs">
                       <div>
-                        <span className="font-extrabold text-[#7A1F2B] text-base">
+                        <span className="font-extrabold text-[#8b1a1a] text-base">
                           {p.outcomeMetric}
                         </span>
                         <span className="text-muted font-semibold ml-1.5">
                           {p.outcomeLabel}
                         </span>
                       </div>
-                      <span className="font-black text-[#7A1F2B] transition-transform inline-flex items-center gap-1">
+                      <span className="font-black text-[#8b1a1a] transition-transform inline-flex items-center gap-1">
                         Read Study →
                       </span>
                     </div>
@@ -415,7 +415,7 @@ export function ServicePageTemplate({
                 </div>
                 <Link
                   href="/insights"
-                  className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#7A1F2B] transition-transform"
+                  className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#8b1a1a] transition-transform"
                 >
                   <span>View All Insights</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -427,16 +427,16 @@ export function ServicePageTemplate({
                   <Link
                     key={art.slug}
                     href={`/insights/${art.slug}`}
-                    className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#7A1F2B]/40 transition-all flex flex-col justify-between"
+                    className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center justify-between text-xs text-muted font-bold mb-3">
-                        <span className="text-[#7A1F2B] uppercase tracking-wider">
+                        <span className="text-[#8b1a1a] uppercase tracking-wider">
                           {art.category}
                         </span>
                         <span>{art.readingTime}</span>
                       </div>
-                      <h3 className="text-lg font-black text-ink group-hover:text-[#7A1F2B] transition-colors leading-snug mb-2 line-clamp-2">
+                      <h3 className="text-lg font-black text-ink group-hover:text-[#8b1a1a] transition-colors leading-snug mb-2 line-clamp-2">
                         {art.title}
                       </h3>
                       <p className="text-xs font-medium text-body line-clamp-3">
@@ -448,7 +448,7 @@ export function ServicePageTemplate({
                       <span className="text-muted font-semibold truncate max-w-[160px]">
                         By {art.author.name}
                       </span>
-                      <span className="font-black text-[#7A1F2B] transition-transform inline-flex items-center gap-1 shrink-0">
+                      <span className="font-black text-[#8b1a1a] transition-transform inline-flex items-center gap-1 shrink-0">
                         Read Guide →
                       </span>
                     </div>
@@ -484,7 +484,7 @@ export function ServicePageTemplate({
                       <span>{item.q}</span>
                       <ChevronDown
                         className={`w-4 h-4 text-muted shrink-0 transition-transform duration-200 ${
-                          isOpen ? "rotate-180 text-[#7A1F2B]" : ""
+                          isOpen ? "rotate-180 text-[#8b1a1a]" : ""
                         }`}
                       />
                     </button>
@@ -514,49 +514,49 @@ export function ServicePageTemplate({
             <div className="flex items-center gap-2.5 flex-wrap">
               <Link
                 href="/global"
-                className="px-3.5 py-2 rounded-xl bg-[#7A1F2B] text-white border border-[#7A1F2B] text-xs font-black hover:bg-[#631923] transition-all shadow-xs"
+                className="px-3.5 py-2 rounded-xl bg-[#8b1a1a] text-white border border-[#8b1a1a] text-xs font-black hover:bg-[#8b1a1a]/90 transition-all shadow-xs"
               >
                 Global (Worldwide) →
               </Link>
               <Link
                 href="/india"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 India (National) →
               </Link>
               <Link
                 href="/gujarat"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Gujarat →
               </Link>
               <Link
                 href="/ahmedabad"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Ahmedabad →
               </Link>
               <Link
                 href="/surat"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Surat →
               </Link>
               <Link
                 href="/mumbai"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Mumbai →
               </Link>
               <Link
                 href="/delhi"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Delhi NCR →
               </Link>
               <Link
                 href="/bengaluru"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Bengaluru →
               </Link>
@@ -576,9 +576,9 @@ export function ServicePageTemplate({
                   <Link
                     key={idx}
                     href={rel.href}
-                    className="p-5 rounded-2xl bg-white border border-line hover:border-[#7A1F2B]/30 hover:shadow-soft transition-all group"
+                    className="p-5 rounded-2xl bg-white border border-line hover:border-[#8b1a1a]/30 hover:shadow-soft transition-all group"
                   >
-                    <div className="text-sm font-black text-ink group-hover:text-[#7A1F2B] transition-colors flex items-center justify-between mb-1">
+                    <div className="text-sm font-black text-ink group-hover:text-[#8b1a1a] transition-colors flex items-center justify-between mb-1">
                       <span>{rel.name}</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform" />
                     </div>

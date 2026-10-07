@@ -130,7 +130,7 @@ function ProjectPanel({
               ) : (
                 <Image
                   src={project.posterSrc}
-                  alt={`${project.title} — ${project.client} graphic design case`}
+                  alt={`${project.title}: ${project.client} graphic design case`}
                   fill
                   sizes="(max-width: 768px) 100vw, 1200px"
                   onLoad={() => setMediaReady(true)}
@@ -210,7 +210,7 @@ function StatQuoteBreak({ stat }: { stat: StatBreakItem }) {
 
         {/* Explicit Attribution */}
         <div className="pt-2 text-xs sm:text-sm font-mono uppercase tracking-widest text-red-200 font-bold">
-          <span>— {stat.author}</span>
+          <span>{stat.author}</span>
           {stat.role && <span className="text-white/70 ml-2 font-normal">[{stat.role}]</span>}
         </div>
 

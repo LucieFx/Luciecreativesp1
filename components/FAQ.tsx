@@ -15,7 +15,7 @@ export function FAQ() {
   return (
     <section id="faq" className="py-24 md:py-36 px-6 md:px-12 bg-white relative overflow-hidden font-bold">
       {/* Background Dots Overlay Pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-70 pointer-events-none" />
+      {null}
 
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionLabel text="FREQUENTLY ASKED QUESTIONS" className="mb-10" />

@@ -50,31 +50,31 @@ export function WorkHeroReel({ onLoaded }: WorkHeroReelProps) {
           Cinema-grade commercial spot editing, high-retention vertical reels, and distinctive brand identities engineered for market dominance.
         </p>
 
-        {/* 3. QUICK DISCIPLINE JUMP ANCHORS IN SOLID PROPER WHITE */}
+        {/* 3. QUICK DISCIPLINE JUMP ANCHORS */}
         <div className="mt-7 flex flex-wrap items-center gap-2 sm:gap-2.5">
           <a
             href="#short-form-videos"
-            className="px-4 py-2 rounded-full bg-white hover:bg-brand-red-50 border border-white text-ink hover:text-brand-red text-xs font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
-            <span>📱 9:16 Vertical Reels</span>
+            <span>9:16 Vertical Reels</span>
           </a>
           <a
             href="#long-form-videos"
-            className="px-4 py-2 rounded-full bg-white hover:bg-brand-red-50 border border-white text-ink hover:text-brand-red text-xs font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
-            <span>🎬 16:9 Cinema Commercials</span>
+            <span>16:9 Cinema Commercials</span>
           </a>
           <a
             href="#graphic-design"
-            className="px-4 py-2 rounded-full bg-white hover:bg-brand-red-50 border border-white text-ink hover:text-brand-red text-xs font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
-            <span>🎨 Brand Identity &amp; Packaging</span>
+            <span>Brand Identity &amp; Packaging</span>
           </a>
           <a
             href="#stat-break"
-            className="px-4 py-2 rounded-full bg-white hover:bg-brand-red-50 border border-white text-ink hover:text-brand-red text-xs font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
-            <span>📈 {SITE_STATS.viewsLabel} Client Impact</span>
+            <span>{SITE_STATS.viewsLabel} Client Impact</span>
           </a>
         </div>
       </div>

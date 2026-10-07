@@ -12,6 +12,7 @@ interface YouTubeEmbedPlayerProps {
   posterThumbnail?: string;
   aspectRatio?: "16/9" | "9/16" | "4/3";
   autoPlayOnScroll?: boolean; // Maintained for prop compatibility, but facade loads iframe on click only
+  priority?: boolean;
   className?: string;
   onPlay?: () => void;
   onPause?: () => void;
@@ -24,6 +25,7 @@ export function YouTubeEmbedPlayer({
   posterThumbnail,
   aspectRatio = "16/9",
   className = "",
+  priority = false,
   onPlay,
 }: YouTubeEmbedPlayerProps) {
   const reactId = useId();
@@ -49,8 +51,11 @@ export function YouTubeEmbedPlayer({
 
   return (
     <div
-      className={`relative w-full ${aspectClass} overflow-hidden rounded-2xl bg-slate-950 group select-none ${className}`}
+      className={`relative w-full ${aspectClass} overflow-hidden rounded-xl bg-slate-950 group select-none ${className}`}
     >
+      {/* Background skeleton shimmer preventing layout shift */}
+      <div className="absolute inset-0 bg-slate-900 pointer-events-none" aria-hidden="true" />
+
       {isPlaying && videoId ? (
         <iframe
           id={playerId}
@@ -59,7 +64,7 @@ export function YouTubeEmbedPlayer({
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
-          className="w-full h-full border-0 absolute inset-0"
+          className="w-full h-full border-0 absolute inset-0 z-10"
         />
       ) : (
         /* Poster + Play button facade: Zero network overhead until clicked */
@@ -67,16 +72,17 @@ export function YouTubeEmbedPlayer({
           type="button"
           onClick={handlePlayClick}
           aria-label={`Play video: ${title}`}
-          className="absolute inset-0 w-full h-full cursor-pointer text-left block focus:outline-hidden focus-visible:ring-2 focus-visible:ring-brand-red p-0 border-0 bg-transparent"
+          className="absolute inset-0 w-full h-full cursor-pointer text-left block focus:outline-hidden focus-visible:ring-2 focus-visible:ring-brand-red p-0 border-0 bg-transparent z-10"
         >
           <Image
             src={resolvedPoster}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            loading="lazy"
+            priority={priority}
+            loading={priority ? undefined : "lazy"}
             unoptimized={resolvedPoster.includes("ytimg.com") || resolvedPoster.includes("youtube.com")}
-            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+            className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 ease-out"
           />
 
           {/* Protective Cinematographic Gradient */}
@@ -84,8 +90,8 @@ export function YouTubeEmbedPlayer({
 
           {/* Centered Play Button Facade */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#7A1F2B]/90 backdrop-blur-md border border-white/30 text-white flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:bg-[#8B1A1A] transition-all duration-300">
-              <Play className="w-6 h-6 fill-white ml-0.5" />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#8B1A1A] text-white flex items-center justify-center shadow-md group-hover:scale-105 group-hover:bg-[#8b1a1a] transition-transform duration-200">
+              <Play className="w-5 h-5 fill-white ml-0.5" />
             </div>
           </div>
 

@@ -19,9 +19,9 @@ export const CAREER_ROLES: CareerRole[] = [
     type: "Full-time",
     location: "Ahmedabad / Hybrid or Remote",
     shortDescription:
-      "Cut short-form (Reels/Shorts) and long-form video for client brands — turning raw footage into content that's fast, clean, and on-brand.",
+      "Cut short-form (Reels/Shorts) and long-form video for client brands, turning raw footage into content that's fast, clean, and on-brand.",
     intro:
-      "You'll cut short-form and long-form video for our clients — turning raw footage into content that's fast, clean, and on-brand. This is a hands-on editing role, not a strategy seat.",
+      "You'll cut short-form and long-form video for our clients, turning raw footage into content that's fast, clean, and on-brand. This is a hands-on editing role, not a strategy seat.",
     whatYouWillDo: [
       "Edit short-form (Reels/Shorts) and long-form video for client brands",
       "Color grade, sound design, and add motion graphics/captions as needed",
@@ -48,9 +48,9 @@ export const CAREER_ROLES: CareerRole[] = [
     type: "Full-time",
     location: "Ahmedabad / Hybrid or Remote",
     shortDescription:
-      "Design visual assets across social, brand, and client deliverables — from social creatives to brand decks and campaign visuals.",
+      "Design visual assets across social, brand, and client deliverables, from social creatives to brand decks and campaign visuals.",
     intro:
-      "You'll design visual assets across social, brand, and client deliverables — from social creatives to brand decks and campaign visuals. You'll work closely with the video and social teams to keep everything on-brand.",
+      "You'll design visual assets across social, brand, and client deliverables, from social creatives to brand decks and campaign visuals. You'll work closely with the video and social teams to keep everything on-brand.",
     whatYouWillDo: [
       "Design social media creatives, carousels, and campaign visuals",
       "Build and maintain brand guidelines for client accounts",

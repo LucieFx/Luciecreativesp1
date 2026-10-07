@@ -47,7 +47,7 @@ export async function POST(request: Request) {
           <style>
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px; color: #0f172a; }
             .card { background-color: #ffffff; max-width: 620px; margin: 0 auto; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
-            .header { background-color: #7A1F2B; color: #ffffff; padding: 28px 32px; }
+            .header { background-color: #8b1a1a; color: #ffffff; padding: 28px 32px; }
             .header h1 { margin: 0 0 6px 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
             .header p { margin: 0; font-size: 13px; color: #fecdd3; }
             .content { padding: 28px 32px; }

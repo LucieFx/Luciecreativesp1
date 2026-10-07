@@ -12,7 +12,6 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
-  Sparkles,
   Ratio,
 } from "lucide-react";
 
@@ -305,16 +304,16 @@ export function CaseStudyBentoGallery({
             <div
               key={idx}
               onClick={() => setActiveLightboxIndex(idx)}
-              className={`${colSpanClass} group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-line/90 shadow-sm hover:shadow-xl hover:border-brand-red/40 transition-all duration-300 flex flex-col justify-between cursor-pointer`}
+              className={`${colSpanClass} group relative rounded-xl overflow-hidden bg-white border border-line shadow-xs hover:border-brand-red/40 transition-colors duration-200 flex flex-col justify-between cursor-pointer`}
             >
               {/* Top Bar Floating Meta Pill */}
               <div className="absolute top-3 inset-x-3 sm:top-4 sm:inset-x-4 flex items-center justify-between pointer-events-none z-20">
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-sm">
-                  <Sparkles className="w-2.5 h-2.5 text-brand-red" />
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" />
                   <span>{specs.badge}</span>
                 </span>
 
-                <span className="w-7 h-7 rounded-full bg-white/90 backdrop-blur-md border border-line shadow-sm text-ink flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                <span className="w-7 h-7 rounded-md bg-white/90 backdrop-blur-md border border-line shadow-xs text-ink flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   <Maximize2 className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -322,7 +321,7 @@ export function CaseStudyBentoGallery({
               {/* Native Pixel-Ratio Matched Photo Placeholder Container */}
               <MaskReveal direction="up" duration={0.6} className="w-full">
                 <div
-                  className={`relative w-full ${specs.aspectClass} overflow-hidden bg-[#F5F2EF] flex items-center justify-center p-2 sm:p-3`}
+                  className={`relative w-full ${specs.aspectClass} overflow-hidden bg-[#ffffff] flex items-center justify-center p-2 sm:p-3`}
                 >
                   {/* Subtle Backdrop Ambient Glow (Clean & Low Contrast) */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -336,7 +335,7 @@ export function CaseStudyBentoGallery({
                   </div>
 
                   {/* Subtle Studio Framed Card for Maximum Photographic Fidelity */}
-                  <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-xs ring-1 ring-black/5 flex items-center justify-center bg-white/40">
+                  <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xs ring-1 ring-black/5 flex items-center justify-center bg-white/40">
                     <Image
                       src={still.src}
                       alt={still.alt || `${projectTitle}: ${still.caption} - ${industry}`}

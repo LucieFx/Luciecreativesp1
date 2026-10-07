@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 import path from "path";
+import { checkPlaceholderTestimonials } from "./lib/testimonials";
+
+// Build-time audit check for placeholder testimonials
+checkPlaceholderTestimonials();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  devIndicators: false,
   outputFileTracingRoot: path.join(__dirname),
 
   compiler: {
@@ -61,10 +66,33 @@ const nextConfig: NextConfig = {
     ],
   },
   async headers() {
+    const cspDirectives = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://s.ytimg.com https://www.google.com https://www.gstatic.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' blob: data: https://res.cloudinary.com https://images.unsplash.com https://assets.mixkit.co https://img.youtube.com https://i.ytimg.com https://cdn.luciecreatives.in https://luciecreatives.in",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "connect-src 'self' https://res.cloudinary.com https://luciecreatives.in https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+      "media-src 'self' blob: https://res.cloudinary.com https://assets.mixkit.co",
+      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://youtube.com https://player.vimeo.com https://vimeo.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self' https://wa.me https://api.whatsapp.com",
+      "frame-ancestors 'self'",
+    ].join("; ");
+
     return [
       {
         source: "/:path*",
         headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains",
+          },
+          {
+            key: "Content-Security-Policy-Report-Only",
+            value: cspDirectives,
+          },
           {
             key: "X-Content-Type-Options",
             value: "nosniff",

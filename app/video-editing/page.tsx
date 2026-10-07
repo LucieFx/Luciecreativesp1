@@ -1,14 +1,31 @@
 import React from "react";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/work/shared/PageHero";
-import { RotatingShortsShowcase } from "@/components/work/RotatingShortsShowcase";
 import { WorkStatBreak } from "@/components/work/WorkStatBreak";
-import { LongFormCinemaShowcase } from "@/components/work/LongFormCinemaShowcase";
-import { ProcessStrip } from "@/components/work/shared/ProcessStrip";
-import { CrossLinkStrip } from "@/components/work/shared/CrossLinkStrip";
-import { WorkClosingCta } from "@/components/work/WorkClosingCta";
+
+const RotatingShortsShowcase = dynamic(
+  () => import("@/components/work/RotatingShortsShowcase").then((mod) => mod.RotatingShortsShowcase),
+  { ssr: true }
+);
+const LongFormCinemaShowcase = dynamic(
+  () => import("@/components/work/LongFormCinemaShowcase").then((mod) => mod.LongFormCinemaShowcase),
+  { ssr: true }
+);
+const ProcessStrip = dynamic(
+  () => import("@/components/work/shared/ProcessStrip").then((mod) => mod.ProcessStrip),
+  { ssr: true }
+);
+const CrossLinkStrip = dynamic(
+  () => import("@/components/work/shared/CrossLinkStrip").then((mod) => mod.CrossLinkStrip),
+  { ssr: true }
+);
+const WorkClosingCta = dynamic(
+  () => import("@/components/work/WorkClosingCta").then((mod) => mod.WorkClosingCta),
+  { ssr: true }
+);
 import { getShortFormProjects, getLongFormProjects, getAllShortFormReelThumbnails } from "@/lib/video-work-data";
 import { STAT_BREAK } from "@/lib/work-data";
 import { SITE_STATS } from "@/lib/site-stats";
@@ -55,9 +72,9 @@ export default function VideoEditingPage() {
           headlineItalicAccent="scroll past."
           subheadline="Short-form reels and cinematic commercials, edited for attention and built to grow your brand."
           chips={[
-            { label: "9:16 Vertical Reels", icon: "📱", href: "#short-form-videos" },
-            { label: "16:9 Cinema Commercials", icon: "🎬", href: "#long-form-videos" },
-            { label: `${SITE_STATS.viewsLabel} Client Impact`, icon: "📈", href: "#stat-break" },
+            { label: "9:16 Vertical Reels", href: "#short-form-videos" },
+            { label: "16:9 Cinema Commercials", href: "#long-form-videos" },
+            { label: `${SITE_STATS.viewsLabel} Client Impact`, href: "#stat-break" },
           ]}
           primaryButton={{
             label: "Start a project",

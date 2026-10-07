@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { SITE_CONFIG, NAV_LINKS, WHATSAPP_CONFIG } from "@/lib/constants";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import React from "react";
+import { SITE_CONFIG, WHATSAPP_CONFIG } from "@/lib/constants";
+import { ArrowUpRight } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 import Image from "next/image";
 import Link from "next/link";
-
 
 const SERVICE_LINKS = [
   { name: "Web Development", href: "/web-development" },
@@ -56,37 +55,6 @@ interface FooterProps {
 
 export function Footer({ contactEmail }: FooterProps = {}) {
   const displayEmail = contactEmail || SITE_CONFIG.officialEmail;
-  const [times, setTimes] = useState({
-    sf: "00:00:00",
-    london: "00:00:00",
-    mumbai: "00:00:00",
-  });
-
-  useEffect(() => {
-    const updateClocks = () => {
-      const now = new Date();
-
-      const formatTime = (timeZone: string) => {
-        return new Intl.DateTimeFormat("en-US", {
-          timeZone,
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: true,
-        }).format(now);
-      };
-
-      setTimes({
-        sf: formatTime("America/Los_Angeles"),
-        london: formatTime("Europe/London"),
-        mumbai: formatTime("Asia/Kolkata"),
-      });
-    };
-
-    updateClocks();
-    const interval = setInterval(updateClocks, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
@@ -101,41 +69,18 @@ export function Footer({ contactEmail }: FooterProps = {}) {
 
   return (
     <footer className="bg-white text-text-primary pt-16 pb-12 px-4 sm:px-6 md:px-12 border-t border-brand-red/20 shadow-[0_-20px_50px_rgba(130,3,3,0.04)] relative overflow-hidden font-normal select-none">
-      {/* Background dot pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-50 pointer-events-none" />
-
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Global Live Clocks & Operational Status Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-10 mb-12 border-b border-line/60">
-          <div className="flex items-center gap-2 bg-brand-red-50 px-3.5 py-1.5 rounded-full border border-brand-red/15 text-xs text-brand-red">
-            <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
-            <span>Operational Status: All Agency Nodes Online • Sprints Active</span>
-          </div>
-
-          {/* Live World Clocks */}
-          <div className="flex items-center gap-4 sm:gap-6 text-xs text-body font-bold flex-wrap">
-            <div className="flex items-center gap-1.5">
-              <span className="text-muted">SF:</span>
-              <span className="font-mono text-ink">{times.sf}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="text-muted">LDN:</span>
-              <span className="font-mono text-ink">{times.london}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="text-muted">BOM:</span>
-              <span className="font-mono text-ink">{times.mumbai}</span>
-            </div>
-          </div>
-        </div>
-
         {/* Accessible Section Heading for Screen Readers */}
         <h2 className="sr-only">Footer Navigation</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-14 border-b border-line/60">
           {/* Brand Info */}
           <div className="lg:col-span-3">
-            <Link href="/" className="flex items-center mb-5 group">
+            <Link
+              href="/"
+              aria-label="Lucie Creatives Home"
+              className="flex items-center mb-5 group"
+            >
               <div className="relative h-10 w-auto group-hover:scale-105 transition-transform">
                 <Image
                   src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835250/lucie-creatives/logo/lucie-logo.png"
@@ -146,12 +91,12 @@ export function Footer({ contactEmail }: FooterProps = {}) {
                 />
               </div>
             </Link>
-            <p className="text-muted text-xs sm:text-sm font-normal leading-relaxed max-w-sm mb-5">
+            <p className="text-slate-600 text-[14px] sm:text-[15px] font-normal leading-relaxed max-w-sm mb-5">
               {SITE_CONFIG.description}
             </p>
-            <div className="text-xs text-brand-red font-black uppercase tracking-wider flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="text-[13px] text-brand-red font-bold flex flex-wrap items-center gap-x-4 gap-y-2">
               <div className="flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block shrink-0" aria-hidden="true" />
                 <a
                   href={`mailto:${displayEmail}`}
                   className="hover:underline hover:opacity-85 transition-opacity cursor-pointer"
@@ -165,7 +110,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
                   href={WHATSAPP_CONFIG.defaultLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Message Lucie Creatives on WhatsApp"
+                  aria-label={`${WHATSAPP_CONFIG.displayText} — Message Lucie Creatives on WhatsApp`}
                   className="hover:underline hover:opacity-85 transition-opacity cursor-pointer"
                 >
                   {WHATSAPP_CONFIG.displayText}
@@ -176,15 +121,15 @@ export function Footer({ contactEmail }: FooterProps = {}) {
 
           {/* Primary Services */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-black text-text-tertiary uppercase tracking-wider mb-4">
+            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4">
               Services
             </h3>
-            <ul className="space-y-2 font-medium text-xs sm:text-sm">
+            <ul className="space-y-2.5 font-medium text-[14px]">
               {SERVICE_LINKS.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-body hover:text-brand-red transition-colors inline-block"
+                    className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                   >
                     {link.name}
                   </Link>
@@ -195,14 +140,14 @@ export function Footer({ contactEmail }: FooterProps = {}) {
 
           {/* Platform */}
           <div className="lg:col-span-2">
-            <h3 className="text-xs font-black text-text-tertiary uppercase tracking-wider mb-4">
+            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4">
               Platform
             </h3>
-            <ul className="space-y-2 font-medium text-xs sm:text-sm">
+            <ul className="space-y-2.5 font-medium text-[14px]">
               <li>
                 <Link
                   href="/video-editing"
-                  className="text-body hover:text-brand-red transition-colors inline-block"
+                  className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                 >
                   Video Editing
                 </Link>
@@ -210,7 +155,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
               <li>
                 <Link
                   href="/graphic-design"
-                  className="text-body hover:text-brand-red transition-colors inline-block"
+                  className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                 >
                   Graphic Design
                 </Link>
@@ -218,7 +163,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
               <li>
                 <Link
                   href="/dev"
-                  className="text-body hover:text-brand-red transition-colors inline-block"
+                  className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                 >
                   Web Development
                 </Link>
@@ -226,7 +171,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
               <li>
                 <Link
                   href="/about"
-                  className="text-body hover:text-brand-red transition-colors inline-block"
+                  className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                 >
                   About
                 </Link>
@@ -234,7 +179,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
               <li>
                 <Link
                   href="/contact"
-                  className="text-body hover:text-brand-red transition-colors inline-block"
+                  className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                 >
                   Contact
                 </Link>
@@ -242,7 +187,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
               <li>
                 <Link
                   href="/insights"
-                  className="text-body hover:text-brand-red transition-colors inline-block"
+                  className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                 >
                   Insights
                 </Link>
@@ -260,14 +205,14 @@ export function Footer({ contactEmail }: FooterProps = {}) {
 
           {/* Hiring */}
           <div className="lg:col-span-2">
-            <h3 className="text-xs font-black text-text-tertiary uppercase tracking-wider mb-4">
+            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4">
               Hiring
             </h3>
-            <ul className="space-y-2 font-medium text-xs sm:text-sm">
+            <ul className="space-y-2.5 font-medium text-[14px]">
               <li>
                 <Link
                   href="/careers"
-                  className="text-body hover:text-brand-red transition-colors inline-block"
+                  className="text-slate-700 hover:text-brand-red transition-colors inline-block"
                 >
                   Careers
                 </Link>
@@ -277,7 +222,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
 
           {/* Socials */}
           <div className="lg:col-span-2">
-            <h3 className="text-xs font-black text-text-tertiary uppercase tracking-wider mb-4">
+            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4">
               Socials
             </h3>
             <ul className="space-y-2.5 text-xs font-medium">
@@ -289,14 +234,14 @@ export function Footer({ contactEmail }: FooterProps = {}) {
                     rel="noopener noreferrer"
                     title={s.name}
                     aria-label={`${s.name} (${s.handle})`}
-                    className="flex items-center justify-between py-2 px-2.5 rounded-xl bg-white/80 hover:bg-red-50 border border-line/60 hover:border-brand-red/30 text-body hover:text-brand-red transition-all group"
+                    className="flex items-center justify-between py-2 px-2.5 rounded-xl bg-white/80 hover:bg-red-50 border border-line/60 hover:border-brand-red/30 text-slate-700 hover:text-brand-red transition-all group"
                   >
-                    <span className="flex items-center text-body group-hover:text-brand-red group-hover:scale-110 transition-all shrink-0">
+                    <span className="flex items-center text-slate-700 group-hover:text-brand-red group-hover:scale-110 transition-all shrink-0">
                       <SocialIcon name={s.name} className="w-4 h-4" />
                     </span>
-                    <span className="text-brand-red text-[11px] font-black group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                    <span className="text-brand-red text-xs font-bold transition-transform flex items-center gap-1">
                       {s.handle}
-                      <ArrowUpRight className="w-3 h-3" />
+                      <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </a>
                 </li>
@@ -306,10 +251,10 @@ export function Footer({ contactEmail }: FooterProps = {}) {
         </div>
 
         {/* Bottom Legal & Back to Top Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted font-medium relative z-10">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-slate-600 font-medium relative z-10">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-3 text-center sm:text-left">
             <span>© {new Date().getFullYear()} LUCIE CREATIVES AGENCY. ALL RIGHTS RESERVED.</span>
-            <span className="hidden sm:inline text-muted/60">•</span>
+            <span className="hidden sm:inline text-slate-400">•</span>
             <span>
               Designed and Developed by{" "}
               <a
@@ -334,16 +279,13 @@ export function Footer({ contactEmail }: FooterProps = {}) {
               className="group p-2.5 bg-white border border-brand-red/20 hover:border-brand-red hover:bg-brand-redLight text-brand-red transition-all rounded-xl flex items-center justify-center shadow-soft hover:shadow-floating focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:outline-none cursor-pointer overflow-hidden relative"
               aria-label="Back to top"
             >
-              <div className="relative w-4 h-4 overflow-hidden">
-                <ArrowUpRight className="w-4 h-4 -rotate-45 text-brand-red transition-transform duration-300 group-hover:-translate-y-4" />
-                <ArrowUpRight className="w-4 h-4 -rotate-45 text-brand-red transition-transform duration-300 translate-y-4 group-hover:translate-y-0 absolute inset-0" />
-              </div>
+              <ArrowUpRight className="w-4 h-4 -rotate-45 text-brand-red" />
             </button>
           </div>
         </div>
-
-
       </div>
     </footer>
   );
 }
+
+export default Footer;

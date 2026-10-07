@@ -96,7 +96,7 @@ async function run() {
   console.log('Saved raw cropped uploaded assets.');
 
   // Let's generate:
-  // (A) Solid Crimson LC Mark & Full Logo (#820303)
+  // (A) Solid Crimson LC Mark & Full Logo (#8b1a1a)
   // (B) Pure White LC Mark & Full Logo (#FFFFFF)
   // (C) Gradient / Theme LC Mark
   // (D) High-res vectors and cleanly trimmed PNGs

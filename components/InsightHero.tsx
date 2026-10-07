@@ -7,7 +7,7 @@ export default function InsightHero() {
     <div className="text-center mb-8">
       <h1 className="text-4xl sm:text-6xl font-display font-black tracking-[-0.02em] text-ink leading-[1.0] text-balance">
         Insights &{" "}
-        <span className="font-accent italic text-[#7A1F2B] text-[1.1em] tracking-normal inline">
+        <span className="font-accent italic text-[#8b1a1a] text-[1.1em] tracking-normal inline">
           expert guides
         </span>
       </h1>

@@ -90,7 +90,7 @@ export default function UiUxDesignPage() {
         {
           title: "Data-Informed Design Decisions",
           description:
-            "We design based on behavioral heuristics, usability testing, and session analytics—replacing internal guesswork with empirical validation.",
+            "We design based on behavioral heuristics, usability testing, and session analytics, replacing internal guesswork with empirical validation.",
         },
       ]}
       processTitle="OUR 4-STAGE PRODUCT DESIGN SPRINT"

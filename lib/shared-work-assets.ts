@@ -231,7 +231,7 @@ export const NIRVA_BRAND_IDENTITY_SYSTEM: BrandIdentitySystem = {
     },
     {
       name: "Alabaster Ivory",
-      hex: "#FDFBF7",
+      hex: "#ffffff",
       role: "Pristine negative space, editorial paper substrates, and sunlit surface breathability.",
     },
     {

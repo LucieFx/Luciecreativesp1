@@ -49,7 +49,7 @@ export function MagneticButton({
       {children}
       {showArrow && (
         <svg
-          className="w-4 h-4 btn-arrow-slide transition-transform duration-300 group-hover:translate-x-1"
+          className="w-4 h-4 btn-arrow-slide transition-transform duration-300"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

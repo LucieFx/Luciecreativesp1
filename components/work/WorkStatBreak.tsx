@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { StatBreakItem } from "@/lib/work-data";
 import { SITE_STATS } from "@/lib/site-stats";
-import { TrendingUp, ShieldCheck, Sparkles } from "lucide-react";
+import { TrendingUp, ShieldCheck } from "lucide-react";
 import { motion, useReducedMotion, useInView } from "framer-motion";
 
 interface WorkStatBreakProps {
@@ -44,8 +44,8 @@ export function WorkStatBreak({ statBreak }: WorkStatBreakProps) {
       className="relative w-full py-16 sm:py-24 bg-white text-text-primary overflow-hidden border-b border-line select-none"
     >
       {/* Background Subtle Gradient & Dot Pattern */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-brand-red/[0.04] rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute inset-0 dot-grid-pattern opacity-30 pointer-events-none" />
+      {null}
+      {null}
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 relative z-10 text-center">
         {/* Metric Eyebrow Badge */}
@@ -77,11 +77,11 @@ export function WorkStatBreak({ statBreak }: WorkStatBreakProps) {
         </div>
 
         {/* Visual Supporting Element: Compounding Growth Sparkline Curve */}
-        <div className="max-w-3xl mx-auto bg-white border border-line/90 rounded-2xl p-4 sm:p-8 shadow-xs mb-12 text-left">
+        <div className="max-w-3xl mx-auto bg-white border border-line/90 rounded-lg p-4 sm:p-8 shadow-xs mb-12 text-left">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-line/60">
             <div>
               <div className="text-xs font-black text-ink uppercase tracking-wider flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-brand-red" />
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" aria-hidden="true" />
                 <span>Exponential Retention Arc • 4-Quarter Trajectory</span>
               </div>
               <p className="text-xs text-muted font-medium mt-0.5">
@@ -241,7 +241,7 @@ export function WorkStatBreak({ statBreak }: WorkStatBreakProps) {
         {/* Attribution */}
         {statBreak.author && (
           <div className="mt-6 flex items-center justify-center gap-2 text-xs font-mono tracking-widest text-brand-red font-black uppercase">
-            <span>— {statBreak.author}</span>
+            <span>{statBreak.author}</span>
             {statBreak.role && <span className="text-muted">[{statBreak.role}]</span>}
           </div>
         )}

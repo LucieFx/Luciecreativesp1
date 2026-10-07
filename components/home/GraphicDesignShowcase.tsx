@@ -10,7 +10,6 @@ import {
   Box,
   BookOpen,
   Layers,
-  Sparkles,
 } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { MagneticButton } from "@/components/ui/MagneticButton";
@@ -22,10 +21,10 @@ export function GraphicDesignShowcase() {
       className="py-16 sm:py-24 px-4 sm:px-6 md:px-12 bg-white relative overflow-hidden font-bold"
     >
       {/* Dot Grid Pattern */}
-      <div className="absolute inset-0 dot-grid-pattern opacity-50 pointer-events-none" />
+      {null}
 
       {/* Atmospheric Glow */}
-      <div className="absolute top-1/3 right-10 w-[550px] h-[550px] bg-[#7A1F2B]/[0.04] rounded-full blur-[160px] pointer-events-none" />
+      {null}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Label & Header */}
@@ -34,7 +33,7 @@ export function GraphicDesignShowcase() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-text-primary uppercase leading-[1.08] max-w-4xl text-balance">
             Monolithic Design &amp;{" "}
-            <span className="text-[#7A1F2B] italic block sm:inline">
+            <span className="text-[#8b1a1a] italic block sm:inline">
               Editorial Precision.
             </span>
           </h2>
@@ -49,7 +48,7 @@ export function GraphicDesignShowcase() {
           {/* Left Column: Feature Highlights */}
           <div className="lg:col-span-6 space-y-6">
             <div className="p-8 rounded-3xl bg-white/80 border border-line/80">
-              <div className="flex items-center gap-3 mb-4 text-[#7A1F2B]">
+              <div className="flex items-center gap-3 mb-4 text-[#8b1a1a]">
                 <Box className="w-5 h-5" />
                 <h3 className="text-xl font-black text-text-primary">
                   Structural Packaging Architecture
@@ -72,7 +71,7 @@ export function GraphicDesignShowcase() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white/80 border border-line/80">
-              <div className="flex items-center gap-3 mb-4 text-[#7A1F2B]">
+              <div className="flex items-center gap-3 mb-4 text-[#8b1a1a]">
                 <BookOpen className="w-5 h-5" />
                 <h3 className="text-xl font-black text-text-primary">
                   Editorial &amp; Publication Design
@@ -99,7 +98,7 @@ export function GraphicDesignShowcase() {
                 href="/graphic-design"
                 variant="primary"
                 size="md"
-                className="px-6 py-3 text-xs font-black rounded-xl shadow-red-btn !bg-[#7A1F2B] hover:!bg-[#631923]"
+                className="px-6 py-3 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
               >
                 <span>Explore Graphic Design Services</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -107,7 +106,7 @@ export function GraphicDesignShowcase() {
 
               <Link
                 href="/work/nirva-resort-environmental-branding"
-                className="text-xs font-black text-[#7A1F2B] hover:underline"
+                className="text-xs font-black text-[#8b1a1a] hover:underline"
               >
                 View Nirva Resort Case Study →
               </Link>
@@ -116,7 +115,7 @@ export function GraphicDesignShowcase() {
 
           {/* Right Column: Case Study Visual Feature */}
           <div className="lg:col-span-6">
-            <div className="group relative rounded-3xl overflow-hidden border border-line bg-white shadow-floating hover:border-[#7A1F2B]/40 transition-all">
+            <div className="group relative rounded-3xl overflow-hidden border border-line bg-white shadow-floating hover:border-[#8b1a1a]/40 transition-all">
               <div className="relative w-full overflow-hidden bg-slate-100">
                 <Image
                   src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835298/lucie-creatives/portfolio/graphic-design/nirva-club/hero-main-hoarding.webp"
@@ -135,13 +134,13 @@ export function GraphicDesignShowcase() {
               </div>
 
               <div className="p-7 text-ink bg-white">
-                <div className="flex items-center gap-2 text-xs font-bold text-[#7A1F2B] uppercase tracking-wider mb-2">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#8b1a1a] uppercase tracking-wider mb-2">
                   <span>Featured Case Study</span>
                   <span>•</span>
                   <span>OOH &amp; Environmental Branding</span>
                 </div>
 
-                <h4 className="text-2xl font-black mb-2 text-ink group-hover:text-[#7A1F2B] transition-colors">
+                <h4 className="text-2xl font-black mb-2 text-ink group-hover:text-[#8b1a1a] transition-colors">
                   Nirva Luxury Resort OOH &amp; Brand Architecture
                 </h4>
 
@@ -153,7 +152,7 @@ export function GraphicDesignShowcase() {
                   <span className="text-muted">Client: Nirva Club &amp; Resort</span>
                   <Link
                     href="/work/nirva-resort-environmental-branding"
-                    className="text-[#7A1F2B] hover:underline inline-flex items-center gap-1 font-black transition-colors"
+                    className="text-[#8b1a1a] hover:underline inline-flex items-center gap-1 font-black transition-colors"
                   >
                     <span>Read Full Case Study</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />

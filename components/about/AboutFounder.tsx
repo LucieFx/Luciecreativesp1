@@ -71,7 +71,7 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
               <div className="p-4 rounded-lg bg-surface-alt/70 border border-line flex items-start gap-3">
                 <Target className="w-4 h-4 text-brand-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-ink">Direct Access</h4>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-ink">Direct Access</h3>
                   <p className="text-[11px] text-body mt-0.5 font-normal">Direct communication with the builders, no account managers.</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
               <div className="p-4 rounded-lg bg-surface-alt/70 border border-line flex items-start gap-3">
                 <Zap className="w-4 h-4 text-brand-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-ink">High Velocity</h4>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-ink">High Velocity</h3>
                   <p className="text-[11px] text-body mt-0.5 font-normal">Agile 7 to 14 day sprints with sub-24h critical turnaround.</p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
               <div className="p-4 rounded-lg bg-surface-alt/70 border border-line flex items-start gap-3">
                 <ShieldCheck className="w-4 h-4 text-brand-red shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-ink">True Ownership</h4>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-ink">True Ownership</h3>
                   <p className="text-[11px] text-body mt-0.5 font-normal">Total skin in the game &amp; 100% commercial IP transfer.</p>
                 </div>
               </div>

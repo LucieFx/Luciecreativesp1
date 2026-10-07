@@ -65,7 +65,7 @@ export function Testimonials() {
             return (
               <div
                 key={`${t.id}-${idx}`}
-                className="group relative w-[320px] sm:w-[380px] bg-white p-7 rounded-2xl border border-line/90 shadow-xs hover:border-[#7A1F2B]/40 transition-colors duration-200 flex flex-col justify-between flex-shrink-0"
+                className="group relative w-[320px] sm:w-[380px] bg-white p-7 rounded-2xl border border-line/90 shadow-xs hover:border-[#8b1a1a]/40 transition-colors duration-200 flex flex-col justify-between flex-shrink-0"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

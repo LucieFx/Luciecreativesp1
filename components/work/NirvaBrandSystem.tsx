@@ -60,7 +60,7 @@ export function NirvaBrandSystem({
     >
       <div className="p-8 sm:p-12 rounded-3xl bg-white text-ink border border-line shadow-xl relative overflow-hidden space-y-12">
         {/* Ambient Top Glow */}
-        <div className="absolute top-0 right-1/4 w-[400px] h-[300px] bg-brand-red/[0.04] rounded-full blur-[120px] pointer-events-none" />
+        {null}
 
         {/* Section Title */}
         <div className="max-w-3xl relative z-10 space-y-2">

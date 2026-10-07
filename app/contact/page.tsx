@@ -64,25 +64,25 @@ export default function ContactPage() {
             <div className="flex items-center gap-3 flex-wrap">
               <Link
                 href="/web-development"
-                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Web Development →
               </Link>
               <Link
                 href="/video-editing"
-                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Video Editing →
               </Link>
               <Link
                 href="/graphic-design"
-                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Graphic Design →
               </Link>
               <Link
                 href="/gujarat"
-                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#7A1F2B] hover:border-[#7A1F2B]/40 transition-all"
+                className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Gujarat Hub →
               </Link>

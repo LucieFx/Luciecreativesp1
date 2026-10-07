@@ -51,7 +51,7 @@ export function HomeLocations() {
       <div className="absolute inset-0 dot-grid-pattern opacity-50 pointer-events-none" />
 
       {/* Atmospheric Glow */}
-      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#7A1F2B]/[0.04] rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#8b1a1a]/[0.04] rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Label & Header */}
@@ -60,7 +60,7 @@ export function HomeLocations() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-text-primary uppercase leading-[1.08] max-w-4xl text-balance">
             Direct Founder Partnership,{" "}
-            <span className="text-[#7A1F2B] italic block sm:inline">
+            <span className="text-[#8b1a1a] italic block sm:inline">
               Zero Agency Bloat.
             </span>
           </h2>
@@ -71,7 +71,7 @@ export function HomeLocations() {
         </div>
 
         {/* Founder Spotlight Hero Banner */}
-        <div className="mb-14 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#7A1F2B] via-[#631923] to-[#451016] text-white shadow-xl relative overflow-hidden">
+        <div className="mb-14 p-8 sm:p-12 rounded-3xl bg-[#8b1a1a] text-white shadow-xl relative overflow-hidden">
           <div className="absolute inset-0 dot-grid-pattern opacity-15 pointer-events-none" />
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.06] rounded-full blur-3xl pointer-events-none" />
 
@@ -110,9 +110,9 @@ export function HomeLocations() {
             <div className="shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3 w-full sm:w-auto">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white text-[#7A1F2B] hover:bg-slate-100 transition-all font-black text-sm shadow-md group"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white text-[#8b1a1a] hover:bg-slate-100 transition-all font-black text-sm shadow-md group"
               >
-                <Calendar className="w-4 h-4 text-[#7A1F2B]" />
+                <Calendar className="w-4 h-4 text-[#8b1a1a]" />
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
@@ -133,14 +133,14 @@ export function HomeLocations() {
             return (
               <div
                 key={pillar.title}
-                className="p-8 rounded-3xl bg-white/70 border border-line/80 hover:border-[#7A1F2B]/30 hover:bg-white transition-all shadow-xs hover:shadow-xl flex flex-col justify-between group"
+                className="p-8 rounded-3xl bg-white/70 border border-line/80 hover:border-[#8b1a1a]/30 hover:bg-white transition-all shadow-xs hover:shadow-xl flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-[10px] font-black uppercase tracking-wider text-[#7A1F2B] bg-red-50 border border-red-100 px-3 py-1 rounded-full">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[#8b1a1a] bg-red-50 border border-red-100 px-3 py-1 rounded-full">
                       {pillar.badge}
                     </span>
-                    <div className="w-10 h-10 rounded-2xl bg-white border border-line flex items-center justify-center group-hover:bg-[#7A1F2B] group-hover:text-white group-hover:border-transparent transition-all shadow-xs">
+                    <div className="w-10 h-10 rounded-2xl bg-white border border-line flex items-center justify-center group-hover:bg-[#8b1a1a] group-hover:text-white group-hover:border-transparent transition-all shadow-xs">
                       <Icon className="w-4 h-4" />
                     </div>
                   </div>

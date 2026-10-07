@@ -138,7 +138,7 @@ export function BoringVsOursReveal() {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        className="relative w-full aspect-[4/5] max-h-[560px] rounded-3xl overflow-hidden bg-[#F5F2EF] border border-line/90 shadow-xl touch-none cursor-ew-resize"
+        className="relative w-full aspect-[4/5] max-h-[560px] rounded-3xl overflow-hidden bg-[#ffffff] border border-line/90 shadow-xl touch-none cursor-ew-resize"
       >
         {/* BASE LAYER: Boring version (CSS only: grayscale, low contrast, slight blur) */}
         <div
@@ -231,9 +231,9 @@ export function BoringVsOursReveal() {
             aria-valuenow={Math.round(sliderPos)}
             tabIndex={0}
             onKeyDown={handleKeyDown}
-            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-xl border-2 border-[#7A1F2B]/25 flex items-center justify-center cursor-ew-resize pointer-events-auto focus:outline-none focus:ring-2 focus:ring-[#7A1F2B] hover:scale-105 active:scale-95 transition-transform"
+            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-xl border-2 border-[#8b1a1a]/25 flex items-center justify-center cursor-ew-resize pointer-events-auto focus:outline-none focus:ring-2 focus:ring-[#8b1a1a] hover:scale-105 active:scale-95 transition-transform"
           >
-            <ChevronsLeftRight className="w-4 h-4 text-[#7A1F2B]" />
+            <ChevronsLeftRight className="w-4 h-4 text-[#8b1a1a]" />
           </div>
         </div>
       </div>
@@ -250,7 +250,7 @@ export function BoringVsOursReveal() {
                 onClick={() => handleTabClick(idx)}
                 className={`px-3.5 py-1 rounded-full text-xs font-mono font-bold transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? "bg-white text-[#7A1F2B] shadow-xs border border-line"
+                    ? "bg-white text-[#8b1a1a] shadow-xs border border-line"
                     : "text-muted hover:text-ink"
                 }`}
               >

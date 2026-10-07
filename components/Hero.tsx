@@ -24,20 +24,23 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
       {null}
 
       {/* Main Grid: Split Layout (Headline & Narrative on Left, Phone Showcase on Right) */}
-      <div className="max-w-7xl mx-auto w-full relative z-10 pt-2 pb-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto w-full relative z-10 pt-2 pb-0 overflow-visible">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center overflow-visible">
           {/* LEFT COLUMN: Agency Narrative & Actions */}
-          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left z-10 overflow-visible min-h-[375px] sm:min-h-0">
             {/* Eyebrow: Simple, clean service discipline indicator */}
-            <div className="mb-4 text-xs sm:text-sm font-semibold tracking-wider text-[#7A1F2B] uppercase">
+            <div
+              className="mb-4 text-xs sm:text-sm font-semibold tracking-wider text-[#8b1a1a] uppercase min-h-[32px] sm:min-h-0 flex items-center"
+              style={{ contain: "layout style" }}
+            >
               Video Editing · Graphic Design · Web Development
             </div>
 
             {/* Single H1 on the page: "Boring gets scrolled past." */}
-            <h1 className="tracking-[-0.02em] text-text-primary mb-4 text-balance font-display font-black text-[clamp(2.1rem,6vw,4.8rem)] leading-[1.0]">
+            <h1 className="tracking-[-0.02em] text-text-primary mb-4 text-balance font-display font-black text-[clamp(2.1rem,6vw,4.8rem)] leading-[1.05]">
               <span className="inline-block mr-3">Boring</span>
               <span className="inline-block mr-3">gets</span>
-              <span className="font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal inline-block">
+              <span className="font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal inline">
                 scrolled past.
               </span>
             </h1>
@@ -53,7 +56,7 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                className="w-full sm:w-auto px-6 sm:px-7 py-3.5 text-sm sm:text-base font-black rounded-2xl shadow-red-btn !bg-[#7A1F2B] hover:!bg-[#631923]"
+                className="w-full sm:w-auto px-6 sm:px-7 py-3.5 text-sm sm:text-base font-black rounded-2xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 hover:scale-[1.02] transition-transform"
               >
                 <span>{primaryCtaLabel}</span>
               </MagneticButton>
@@ -69,7 +72,7 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
                     window.location.hash = "portfolio";
                   }
                 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-bold rounded-2xl border-2 border-slate-900/15 hover:border-slate-900/40 text-ink bg-transparent hover:bg-brand-red-50 transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-bold rounded-2xl border-2 border-slate-900/15 hover:border-slate-900/40 text-ink bg-transparent hover:bg-brand-red-50 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 <span>See our work</span>
                 <ArrowRight className="w-4 h-4 text-body" />
@@ -77,8 +80,11 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Stacked Adaptive Cards Showcase (with 2D Static Fallback Error Boundary) */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center z-20 w-full">
+          {/* RIGHT COLUMN: Stacked Adaptive Cards Showcase */}
+          <div
+            className="lg:col-span-5 flex flex-col items-center justify-center z-20 w-full overflow-visible min-h-[520px] sm:min-h-[580px] md:min-h-[650px]"
+            style={{ contain: "layout style" }}
+          >
             <HeroShowcaseErrorBoundary>
               <StackedAdaptiveCards />
             </HeroShowcaseErrorBoundary>

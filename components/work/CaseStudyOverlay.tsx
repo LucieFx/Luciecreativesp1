@@ -215,7 +215,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
           className="group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer"
           aria-label={`Previous project: ${prevProject.title}`}
         >
-          <ChevronLeft className="w-5 h-5 transition-transform group-hover:-translate-x-0.5" />
+          <ChevronLeft className="w-5 h-5 transition-transform" />
           <span className="max-w-0 overflow-hidden whitespace-nowrap text-xs font-bold text-white/90 transition-all duration-300 group-hover:max-w-xs group-hover:pr-2">
             {prevProject.title}
           </span>
@@ -232,7 +232,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
           <span className="max-w-0 overflow-hidden whitespace-nowrap text-xs font-bold text-white/90 transition-all duration-300 group-hover:max-w-xs group-hover:pl-2">
             {nextProject.title}
           </span>
-          <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
+          <ChevronRight className="w-5 h-5 transition-transform" />
         </button>
       </div>
 
@@ -457,7 +457,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
                     className="group relative rounded-xl overflow-hidden border border-line bg-white/60 cursor-pointer shadow-2xs hover:shadow-md transition-shadow"
                   >
                     <MaskReveal direction="up" duration={0.6} className="w-full">
-                      <div className="relative w-full aspect-[4/3] bg-[#F5F2EF] p-2 flex items-center justify-center">
+                      <div className="relative w-full aspect-[4/3] bg-[#ffffff] p-2 flex items-center justify-center">
                         <Image
                           src={still.src}
                           alt={still.alt || still.caption}

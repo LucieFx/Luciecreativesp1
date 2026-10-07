@@ -6,7 +6,7 @@ export function ContinuousPageSpine() {
       className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 select-none"
       aria-hidden="true"
     >
-      <div className="absolute inset-0 dot-grid-pattern pointer-events-none opacity-[0.45]" />
+      {null}
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible"
         viewBox="0 0 1440 5400"
@@ -26,7 +26,7 @@ export function ContinuousPageSpine() {
             C 1100 3950, 420 4080, 260 4450 
             C 140 4750, 540 5050, 1480 5350
           "
-          stroke="#7A1F2B"
+          stroke="#8b1a1a"
           strokeWidth="2.8"
           strokeOpacity={0.22}
           strokeLinecap="round"
