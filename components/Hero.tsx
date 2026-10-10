@@ -59,13 +59,9 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
               {/* Single H1 on the page: "Boring gets scrolled past." */}
               <motion.h1
                 className="tracking-[-0.02em] text-text-primary mb-4 text-balance font-display font-semibold text-[clamp(2.1rem,6vw,4.8rem)] leading-[1.05] relative z-10"
-                initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
-                transition={
-                  shouldReduceMotion
-                    ? { duration: 0 }
-                    : { delay: 0.95, duration: 0.5, ease: [0.16, 1, 0.3, 1] }
-                }
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 <span className="inline-block mr-3">Boring</span>
                 <span className="inline-block mr-3">gets</span>

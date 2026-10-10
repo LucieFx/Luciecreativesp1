@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     devtoolSegmentExplorer: false,
+    optimizePackageImports: ["framer-motion", "lucide-react", "gsap"],
   },
   webpack: (config) => {
     return config;
@@ -114,7 +115,16 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/:all*(svg|jpg|png|webp|avif|ico|woff|woff2)",
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2|mp4|webm)",
         headers: [
           {
             key: "Cache-Control",

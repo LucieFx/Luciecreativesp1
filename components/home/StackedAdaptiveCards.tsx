@@ -587,12 +587,12 @@ export function StackedAdaptiveCards() {
              ================================================================== */}
           <motion.div
             className="absolute left-[20px] top-[40px] w-[640px] h-[400px] z-10"
-            initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 40, filter: "blur(10px)" }}
+            initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 40 }}
             animate={
               isReady
                 ? shouldReduceMotion
                   ? { opacity: 1 }
-                  : { opacity: 1, y: 0, filter: "blur(0px)" }
+                  : { opacity: 1, y: 0 }
                 : {}
             }
             transition={
@@ -763,12 +763,12 @@ export function StackedAdaptiveCards() {
              ================================================================== */}
           <motion.div
             className="absolute left-[520px] top-[110px] w-[200px] h-[420px] z-30"
-            initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 40, filter: "blur(10px)" }}
+            initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 40 }}
             animate={
               isReady
                 ? shouldReduceMotion
                   ? { opacity: 1 }
-                  : { opacity: 1, y: 0, filter: "blur(0px)" }
+                  : { opacity: 1, y: 0 }
                 : {}
             }
             transition={
@@ -808,8 +808,11 @@ export function StackedAdaptiveCards() {
                   className="absolute top-[34px] left-3 right-3 h-[2px] bg-white/25 rounded-full overflow-hidden z-40 pointer-events-none"
                 >
                   <div
-                    className="h-full bg-white/90 rounded-full transition-all duration-100 ease-linear"
-                    style={{ width: `${videoProgress}%` }}
+                    className="h-full w-full bg-white/90 rounded-full origin-left will-change-transform"
+                    style={{
+                      transform: `scaleX(${videoProgress / 100})`,
+                      transition: "transform 100ms linear",
+                    }}
                   />
                 </div>
 
@@ -842,6 +845,7 @@ export function StackedAdaptiveCards() {
                           ref={videoRef}
                           src={currentPhoneItem.videoSrc}
                           poster={currentPhoneItem.posterSrc}
+                          preload="metadata"
                           muted
                           playsInline
                           autoPlay

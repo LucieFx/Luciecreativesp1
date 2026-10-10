@@ -641,6 +641,7 @@ const SlotCard = React.memo(function SlotCard({
   isMorphSettled,
 }: SlotCardProps) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -662,6 +663,7 @@ const SlotCard = React.memo(function SlotCard({
 
   const handleMouseEnter = useCallback(() => {
     if (activeTab !== "video" || !videoItem?.videoPreview) return;
+    setShouldLoadVideo(true);
 
     if (isMorphSettled()) {
       if (videoRef.current) {
@@ -757,20 +759,21 @@ const SlotCard = React.memo(function SlotCard({
                 src={videoItem.thumbnail}
                 alt={videoItem.title}
                 className="w-full h-full object-cover object-center select-none"
-                // @ts-ignore
-                fetchPriority="high"
-                loading="eager"
+                loading="lazy"
+                decoding="async"
               />
 
-              {/* Video Preview on Desktop Hover */}
-              {videoItem.videoPreview && (
+              {/* Video Preview on Desktop Hover (loaded on demand) */}
+              {videoItem.videoPreview && shouldLoadVideo && (
                 <video
                   ref={videoRef}
                   src={videoItem.videoPreview}
                   muted
                   loop
                   playsInline
-                  preload="none"
+                  autoPlay
+                  preload="auto"
+                  onCanPlay={() => setIsVideoPlaying(true)}
                   className={`absolute inset-0 w-full h-full object-cover pointer-events-none transition-opacity duration-300 ${
                     isVideoPlaying ? "opacity-100" : "opacity-0"
                   }`}
@@ -816,9 +819,8 @@ const SlotCard = React.memo(function SlotCard({
                 src={designItem.thumbnail}
                 alt={designItem.title}
                 className="w-full h-full object-cover object-center select-none"
-                // @ts-ignore
-                fetchPriority="high"
-                loading="eager"
+                loading="lazy"
+                decoding="async"
               />
 
               {/* Category Chip (Design) */}
