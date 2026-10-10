@@ -23,12 +23,12 @@ export function MagneticButton({
   ...props
 }: MagneticButtonProps) {
   const baseStyles =
-    "relative inline-flex items-center justify-center font-bold tracking-tight transition-all duration-300 focus:outline-none select-none cursor-pointer rounded-xl group";
+    "relative inline-flex items-center justify-center font-bold tracking-tight transition-all duration-300 focus:outline-none select-none cursor-pointer rounded-control group";
 
   const sizeStyles = {
-    sm: "px-5 py-2.5 text-xs font-semibold rounded-lg",
-    md: "px-6 py-3.5 text-sm font-bold rounded-xl",
-    lg: "px-8 py-4 text-base font-bold rounded-xl shadow-red-btn",
+    sm: "px-5 py-2.5 text-xs font-semibold rounded-control",
+    md: "px-6 py-3.5 text-sm font-bold rounded-control",
+    lg: "px-8 py-4 text-base font-bold rounded-control shadow-red-btn",
   }[size];
 
   const variantStyles = {
@@ -37,7 +37,7 @@ export function MagneticButton({
     secondary:
       "bg-white text-text-primary border border-border-light hover:border-brand-red hover:text-brand-red hover:bg-brand-redLight/40 shadow-soft",
     outline:
-      "bg-transparent text-text-secondary border border-border-light hover:border-brand-red hover:text-brand-red hover:bg-white rounded-lg",
+      "bg-transparent text-text-secondary border border-border-light hover:border-brand-red hover:text-brand-red hover:bg-white rounded-control",
     ghost:
       "bg-transparent text-text-secondary hover:text-brand-red hover:bg-brand-redLight/50",
   }[variant];

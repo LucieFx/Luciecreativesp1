@@ -119,18 +119,18 @@ export function IndustriesServed() {
             return (
               <div
                 key={idx}
-                className="group p-8 rounded-3xl bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white hover:shadow-[0_20px_45px_-10px_rgba(139, 26, 26,0.12)] transition-all duration-300 flex flex-col justify-between"
+                className="group p-8 rounded-card bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white hover:shadow-[0_20px_45px_-10px_rgba(139, 26, 26,0.12)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-6">
                     <Link
                       href={ind.regionHref}
-                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[10px] font-black text-body tracking-wider uppercase border border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-white text-[10px] font-black text-body tracking-wider uppercase border border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] transition-colors"
                     >
                       <span>{ind.geography}</span>
                       <ArrowUpRight className="w-3 h-3 text-muted group-hover:text-[#8b1a1a]" />
                     </Link>
-                    <div className="w-10 h-10 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-control bg-white border border-line text-[#8b1a1a] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
@@ -166,7 +166,7 @@ export function IndustriesServed() {
                     {ind.deliverables.map((del, dIdx) => (
                       <span
                         key={dIdx}
-                        className="px-2.5 py-0.5 rounded-md bg-white border border-line text-body text-[11px] font-bold"
+                        className="px-2.5 py-0.5 rounded-control bg-white border border-line text-body text-[11px] font-bold"
                       >
                         {del}
                       </span>

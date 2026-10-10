@@ -1,0 +1,176 @@
+{
+  "pathname": "/mumbai",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689933860\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689933860\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689933860\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/mumbai/page.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/not-found.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://luciecreatives.in/mumbai#service",
+      "name": "Creative Digital Agency Services in Mumbai by Lucie Creatives",
+      "serviceType": "Creative Digital Agency Services in Mumbai",
+      "description": "Lucie Creatives serves businesses in Mumbai with elite creative and digital services. As India's financial capital and entertainment powerhouse, Mumbai demands uncompromising speed, polish, and commercial impact. We partner with fintech platforms, media conglomerates, fashion labels, and venture-backed startups to deliver high-performance web development, cinematic video editing, strategic graphic design, and distinctive logo design for businesses across Mumbai.",
+      "url": "https://luciecreatives.in/mumbai",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Mumbai"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Lucie Creatives work with businesses in Mumbai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve businesses in Mumbai through our agile, remote-first collaboration model. Each project runs through structured sprint cycles with dedicated Slack and WhatsApp communication channels, weekly video strategy sessions, and live Figma and Frame.io review workspaces for real-time feedback and iteration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Lucie Creatives different from other web development agencies serving Mumbai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike agencies relying on WordPress templates, our web development uses modern Next.js, React, and TypeScript stack delivering sub-second load speeds, 95+ Lighthouse performance scores, and enterprise-grade security. We specialize in fintech portals, headless e-commerce, and high-conversion SaaS platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of video editing does Lucie Creatives handle for Mumbai brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We produce cinematic brand films, entertainment and fashion content edits, founder interview series, corporate documentaries, high-retention Instagram Reels, YouTube content, and paid advertising video creative — all with DaVinci Resolve color grading and custom sound design."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Lucie Creatives create investor-ready pitch decks and branding for Mumbai startups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our graphic design and branding services regularly produce high-stakes investor pitch decks, product one-pagers, brand identity books, and marketing collateral specifically designed to help venture-backed Mumbai startups secure funding rounds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Lucie Creatives have a physical office in Mumbai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lucie Creatives operates as a remote-first creative agency serving businesses in Mumbai and across India. Our remote collaboration model ensures enterprise-grade quality with direct founder oversight, without geographic constraints. We communicate via dedicated channels with sub-24-hour response times."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "India",
+          "item": "https://luciecreatives.in/india"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mumbai",
+          "item": "https://luciecreatives.in/mumbai"
+        }
+      ]
+    }
+  ]
+}

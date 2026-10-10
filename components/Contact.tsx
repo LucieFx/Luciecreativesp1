@@ -186,7 +186,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
           {/* Left Column: Single Consolidated Heading & Contact Info */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-50 text-[11px] font-black text-[#8B1A1A] uppercase tracking-wider border border-[#8B1A1A]/15 mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-control bg-red-50 text-[11px] font-black text-[#8B1A1A] uppercase tracking-wider border border-[#8B1A1A]/15 mb-4">
                 <span>Direct Inquiry &amp; Discovery</span>
               </div>
 
@@ -207,7 +207,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
               <m.div
                 whileHover={{ y: -4 }}
                 transition={SPRING_SOFT}
-                className="p-4 sm:p-5 bg-white rounded-2xl border border-line shadow-soft mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-shadow hover:shadow-elevated"
+                className="p-4 sm:p-5 bg-white rounded-card border border-line shadow-soft mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-shadow hover:shadow-elevated"
               >
                 <div className="space-y-3">
                   <div>
@@ -218,7 +218,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                           WhatsApp
                         </span>
                       </div>
-                      <span className="text-[11px] font-bold text-muted bg-slate-100 px-2.5 py-0.5 rounded-full">
+                      <span className="text-[11px] font-bold text-muted bg-slate-100 px-2.5 py-0.5 rounded-control">
                         Messages only
                       </span>
                     </div>
@@ -233,7 +233,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Message us on WhatsApp — Lucie Creatives"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl py-2.5 px-4 !bg-[#8B1A1A] hover:!bg-[#8b1a1a]/90 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-sm transition-all text-center"
+                      className="inline-flex items-center justify-center gap-2 rounded-control py-2.5 px-4 !bg-[#8B1A1A] hover:!bg-[#8b1a1a]/90 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-sm transition-all text-center"
                     >
                       <WhatsAppIcon className="w-4 h-4 shrink-0 text-white" />
                       <span>Message us on WhatsApp</span>
@@ -247,7 +247,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
               </m.div>
 
               {/* Verified Agency Trust Card (Email Card) - Shown Second */}
-              <div className="p-6 bg-white rounded-2xl border border-line shadow-soft mb-6 space-y-4">
+              <div className="p-6 bg-white rounded-card border border-line shadow-soft mb-6 space-y-4">
                 <div className="flex items-center gap-2 text-[#8B1A1A]">
                   <Mail className="w-4 h-4" />
                   <span className="text-xs font-bold uppercase tracking-wider">
@@ -326,7 +326,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                     transition={{ delay: 0.25, duration: 0.4 }}
                     className="max-w-md mx-auto"
                   >
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-[#8B1A1A] text-xs font-black uppercase tracking-wider mb-3">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-red-50 border border-red-200 text-[#8B1A1A] text-xs font-black uppercase tracking-wider mb-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#8B1A1A] inline-block" aria-hidden="true" />
                       <span>Brief Dispatched Successfully</span>
                     </div>
@@ -412,7 +412,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         onFocus={() => setFocusedField("name")}
                         onBlur={() => setFocusedField(null)}
                         placeholder={focusedField === "name" || formData.name ? "Alex Vance" : ""}
-                        className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
+                        className={`w-full h-14 bg-white/80 border rounded-control px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
                           nameError
                             ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/15"
                             : focusedField === "name"
@@ -457,7 +457,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         onFocus={() => setFocusedField("email")}
                         onBlur={() => setFocusedField(null)}
                         placeholder={focusedField === "email" || formData.email ? "alex@company.com" : ""}
-                        className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
+                        className={`w-full h-14 bg-white/80 border rounded-control px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
                           focusedField === "email"
                             ? "border-[#8B1A1A] ring-2 ring-[#8B1A1A]/15 shadow-[0_0_15px_rgba(139,26,26,0.14)]"
                             : "border-line"
@@ -495,7 +495,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         onFocus={() => setFocusedField("company")}
                         onBlur={() => setFocusedField(null)}
                         placeholder={focusedField === "company" || formData.company ? "Brand Name Co" : ""}
-                        className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
+                        className={`w-full h-14 bg-white/80 border rounded-control px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
                           focusedField === "company"
                             ? "border-[#8B1A1A] ring-2 ring-[#8B1A1A]/15 shadow-[0_0_15px_rgba(139,26,26,0.14)]"
                             : "border-line"
@@ -531,7 +531,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         onFocus={() => setFocusedField("phone")}
                         onBlur={() => setFocusedField(null)}
                         placeholder={focusedField === "phone" || formData.phone ? "+91 98765 43210" : ""}
-                        className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
+                        className={`w-full h-14 bg-white/80 border rounded-control px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all ${
                           focusedField === "phone"
                             ? "border-[#8B1A1A] ring-2 ring-[#8B1A1A]/15 shadow-[0_0_15px_rgba(139,26,26,0.14)]"
                             : "border-line"
@@ -567,7 +567,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         onChange={handleChange}
                         onFocus={() => setFocusedField("service")}
                         onBlur={() => setFocusedField(null)}
-                        className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all cursor-pointer ${
+                        className={`w-full h-14 bg-white/80 border rounded-control px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all cursor-pointer ${
                           focusedField === "service"
                             ? "border-[#8B1A1A] ring-2 ring-[#8B1A1A]/15 shadow-[0_0_15px_rgba(139,26,26,0.14)]"
                             : "border-line"
@@ -609,7 +609,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                         onChange={handleChange}
                         onFocus={() => setFocusedField("budget")}
                         onBlur={() => setFocusedField(null)}
-                        className={`w-full h-14 bg-white/80 border rounded-xl px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all cursor-pointer ${
+                        className={`w-full h-14 bg-white/80 border rounded-control px-4 pt-5 pb-1.5 text-text-primary text-sm font-medium focus:outline-none transition-all cursor-pointer ${
                           focusedField === "budget"
                             ? "border-[#8B1A1A] ring-2 ring-[#8B1A1A]/15 shadow-[0_0_15px_rgba(139,26,26,0.14)]"
                             : "border-line"
@@ -659,7 +659,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
                           ? "Tell us about your brand vision, target timeline, and goals..."
                           : ""
                       }
-                      className={`w-full min-h-[140px] bg-white/80 border rounded-xl p-4 pt-7 text-text-primary text-sm font-medium focus:outline-none transition-all resize-none ${
+                      className={`w-full min-h-[140px] bg-white/80 border rounded-control p-4 pt-7 text-text-primary text-sm font-medium focus:outline-none transition-all resize-none ${
                         focusedField === "message"
                           ? "border-[#8B1A1A] ring-2 ring-[#8B1A1A]/15 shadow-[0_0_15px_rgba(139,26,26,0.14)]"
                           : "border-line"
@@ -676,7 +676,7 @@ export function Contact({ primaryCtaLabel = "Start a Project" }: ContactProps = 
 
                   {/* Error Banner */}
                   {status === "error" && (
-                    <div role="alert" aria-live="polite" className="p-3.5 bg-red-50 rounded-xl border border-red-200 text-red-700 text-xs font-bold flex items-center gap-2">
+                    <div role="alert" aria-live="polite" className="p-3.5 bg-red-50 rounded-control border border-red-200 text-red-700 text-xs font-bold flex items-center gap-2">
                       <AlertCircle className="w-4 h-4 flex-shrink-0" />
                       <span>{errorMessage}</span>
                     </div>

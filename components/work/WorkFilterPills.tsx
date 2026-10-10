@@ -51,7 +51,7 @@ export function WorkFilterPills({
               <button
                 key={f}
                 onClick={() => handleFilterClick(f)}
-                className={`relative px-4 py-2 rounded-full text-xs font-black tracking-wider uppercase transition-all duration-300 flex items-center gap-2 cursor-pointer border ${
+                className={`relative px-4 py-2 rounded-control text-xs font-black tracking-wider uppercase transition-all duration-300 flex items-center gap-2 cursor-pointer border ${
                   isActive
                     ? "bg-brand-red text-white border-brand-red shadow-red-btn scale-105"
                     : "bg-line/40 hover:bg-line/70 text-body hover:text-ink border-line"
@@ -59,7 +59,7 @@ export function WorkFilterPills({
               >
                 <span>{f}</span>
                 <span
-                  className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
+                  className={`text-[10px] px-1.5 py-0.5 rounded-control font-mono ${
                     isActive ? "bg-white/20 text-white" : "bg-line text-body font-bold"
                   }`}
                 >
@@ -73,7 +73,7 @@ export function WorkFilterPills({
         <div className="hidden md:flex items-center gap-2">
           <Link
             href="/dev"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-line/40 hover:bg-line/70 border border-line text-xs font-bold text-body hover:text-brand-red transition-all group"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-control bg-line/40 hover:bg-line/70 border border-line text-xs font-bold text-body hover:text-brand-red transition-all group"
           >
             <span>Explore Development</span>
             <span className="text-brand-red transition-transform">→</span>

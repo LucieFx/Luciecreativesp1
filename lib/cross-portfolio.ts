@@ -25,7 +25,9 @@ export function normalizeClientId(client?: string): string {
   // Multi-brand / composite collections that cannot be attributed to a single client
   if (
     lower.includes("sivanta, stylez") ||
-    lower.includes("nirva club, kalpvriksh") ||
+    lower.includes("sivaanta, stylzzy") ||
+    lower.includes("oasis international & commercial") ||
+    lower.includes("bright school, ideal academy") ||
     lower.includes("creator authority suite")
   ) {
     return "";
@@ -221,27 +223,26 @@ export function getNavigationProjectContext(
         (p) =>
           p.slug === "speczo-luxury-eyewear" ||
           p.slug === "onirique-parfums-identity" ||
-          p.slug === "lumara-luxury-skincare"
+          p.slug === "lumara-luxury-skincare" ||
+          p.slug === "monolithic-logo-systems"
       );
-    } else if (categoryFilter === "OOH Print & Billboards") {
+    } else if (categoryFilter === "Hospitality & Real Estate") {
       list = grid.filter(
         (p) =>
           p.slug === "nirva-resort-environmental-branding" ||
-          p.slug === "ooh-billboards-commercial-print" ||
           p.slug === "nandanvan-luxury-real-estate"
       );
-    } else if (categoryFilter === "Haute Jewels & FMCG") {
+    } else if (categoryFilter === "Retail, Jewelry & FMCG") {
       list = grid.filter(
         (p) =>
           p.slug === "rhyme-haute-joaillerie" ||
           p.slug === "crancho-fmcg-packaging"
       );
-    } else if (categoryFilter === "Education, Social & Logos") {
+    } else if (categoryFilter === "Education & Social Campaigns") {
       list = grid.filter(
         (p) =>
           p.slug === "bright-minds-education-campaigns" ||
-          p.slug === "travel-festival-social-campaigns" ||
-          p.slug === "monolithic-logo-systems"
+          p.slug === "travel-festival-social-campaigns"
       );
     }
 

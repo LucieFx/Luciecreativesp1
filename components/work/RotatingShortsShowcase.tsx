@@ -84,7 +84,7 @@ function NowPlayingHUD({ compact = false }: { compact?: boolean }) {
       aria-hidden="true"
       className={`absolute ${
         compact ? "top-2 right-2 px-1.5 py-0.5" : "top-2.5 right-2.5 px-2 py-1"
-      } z-30 flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#FF4D5E]/40 text-white shadow-[0_4px_14px_rgba(139, 26, 26,0.45)] pointer-events-none transition-all duration-300`}
+      } z-30 flex items-center gap-1.5 rounded-control bg-black/85 backdrop-blur-md border border-[#FF4D5E]/40 text-white shadow-[0_4px_14px_rgba(139, 26, 26,0.45)] pointer-events-none transition-all duration-300`}
     >
       {/* Pulsing ruby live beacon dot */}
       <span className="relative flex h-1.5 w-1.5">
@@ -94,10 +94,10 @@ function NowPlayingHUD({ compact = false }: { compact?: boolean }) {
 
       {/* 4-bar dynamic audio equalizer */}
       <div className="flex items-end gap-[1.5px] h-2.5">
-        <span className="w-[1.5px] bg-white rounded-full animate-eq-bar-1" />
-        <span className="w-[1.5px] bg-[#FF4D5E] rounded-full animate-eq-bar-2" />
-        <span className="w-[1.5px] bg-white rounded-full animate-eq-bar-3" />
-        <span className="w-[1.5px] bg-[#FF4D5E] rounded-full animate-eq-bar-4" />
+        <span className="w-[1.5px] bg-white rounded-sm animate-eq-bar-1" />
+        <span className="w-[1.5px] bg-[#FF4D5E] rounded-sm animate-eq-bar-2" />
+        <span className="w-[1.5px] bg-white rounded-sm animate-eq-bar-3" />
+        <span className="w-[1.5px] bg-[#FF4D5E] rounded-sm animate-eq-bar-4" />
       </div>
 
       <span className="text-[8.5px] font-mono font-black tracking-wider uppercase text-white/95 leading-none">
@@ -309,7 +309,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
               {/* Audio Toggle Button */}
               <button
                 onClick={() => setIsMuted(!isMuted)}
-                className="px-3.5 py-2 rounded-full bg-white hover:bg-line/60 border border-line text-xs font-bold flex items-center gap-2 text-ink transition-all cursor-pointer shadow-2xs"
+                className="px-3.5 py-2 rounded-control bg-white hover:bg-line/60 border border-line text-xs font-bold flex items-center gap-2 text-ink transition-all cursor-pointer shadow-2xs"
                 title={isMuted ? "Unmute Audio" : "Mute Audio"}
               >
                 {isMuted ? (
@@ -338,7 +338,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
           >
             {/* Top 3 Auto-Rotation Indicator */}
             {top3Reels.length > 1 && (
-              <div className="flex items-center gap-2 mb-3.5 px-3 py-1 rounded-full bg-white/90 border border-[#8B1A1A]/15 shadow-2xs">
+              <div className="flex items-center gap-2 mb-3.5 px-3 py-1 rounded-control bg-white/90 border border-[#8B1A1A]/15 shadow-2xs">
                 <span className="text-[10px] font-mono tracking-wider uppercase text-[#8B1A1A] font-bold">
                   Auto-Rotating Top 3 ({Math.max(1, top3Reels.findIndex((r) => r.slug === activeProject.slug) + 1)}/3)
                 </span>
@@ -354,7 +354,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         aria-label={`View top reel ${i + 1}: ${r.client}`}
                       >
                         <span
-                          className={`h-1.5 rounded-full transition-all duration-300 pointer-events-none ${
+                          className={`h-1.5 rounded-sm transition-all duration-300 pointer-events-none ${
                             isCurrent ? "w-5 bg-[#8B1A1A]" : "w-1.5 bg-[#8B1A1A]/25 hover:bg-[#8B1A1A]/50"
                           }`}
                         />
@@ -365,34 +365,29 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
               </div>
             )}
 
-            {/* The Single Phone (Height exact 576/1024 aspect ratio, responsive widths) */}
-            <div className="relative w-[260px] min-[360px]:w-[280px] sm:w-[320px] lg:w-[360px] xl:w-[380px] aspect-[576/1024] max-w-full drop-shadow-[0_25px_35px_rgba(139, 26, 26,0.28)] drop-shadow-[0_15px_20px_rgba(0,0,0,0.20)] overflow-hidden rounded-[48px]">
-              <AnimatePresence mode="popLayout" initial={false}>
+            {/* The Single Phone (Responsive width, sleek 9:16 ratio) */}
+            <div className="relative w-[270px] min-[360px]:w-[290px] sm:w-[320px] lg:w-[340px] xl:w-[350px] max-w-full drop-shadow-[0_25px_35px_rgba(139,26,26,0.22)] drop-shadow-[0_15px_20px_rgba(0,0,0,0.18)]">
+              <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={activeProject.slug}
                   initial={
                     reducedMotion
                       ? false
-                      : { x: "100%", opacity: 0.85, filter: "blur(8px)" }
+                      : { opacity: 0, scale: 0.94, y: 16 }
                   }
                   animate={
                     reducedMotion
                       ? false
-                      : { x: "0%", opacity: 1, filter: "blur(0px)" }
+                      : { opacity: 1, scale: 1, y: 0 }
                   }
                   exit={
                     reducedMotion
                       ? undefined
-                      : {
-                          x: "-100%",
-                          opacity: 0.8,
-                          filter: "blur(8px)",
-                        }
+                      : { opacity: 0, scale: 0.96, y: -12 }
                   }
                   transition={{
-                    x: { type: "spring", stiffness: 340, damping: 24, mass: 0.8 },
-                    opacity: { duration: 0.25 },
-                    filter: { duration: 0.25 },
+                    duration: 0.45,
+                    ease: [0.16, 1, 0.3, 1], // Apple cubic-bezier curve for fluid smoothness
                   }}
                   className="w-full h-full"
                 >
@@ -420,7 +415,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
               <div className="flex items-center justify-center gap-2.5 sm:gap-3 flex-wrap">
                 <button
                   onClick={() => setTheaterProject(activeProject)}
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-ink hover:text-ink bg-white hover:bg-line/60 px-4 sm:px-5 py-2.5 rounded-full border border-line/90 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-ink hover:text-ink bg-white hover:bg-line/60 px-4 sm:px-5 py-2.5 rounded-control border border-line/90 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
                 >
                   <Maximize2 className="w-4 h-4 text-body" />
                   <span>Watch Full</span>
@@ -428,7 +423,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
 
                 <Link
                   href={`/work/${activeProject.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 px-5 sm:px-6 py-2.5 rounded-full transition-all shadow-red-btn hover:shadow-red-hover group/btn cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 px-5 sm:px-6 py-2.5 rounded-control transition-all shadow-red-btn hover:shadow-red-hover group/btn cursor-pointer"
                 >
                   <span>Case Study</span>
                   <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -450,7 +445,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                     <button
                       key={cat}
                       onClick={() => handleCategorySelect(cat)}
-                      className={`px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer shadow-2xs whitespace-nowrap ${
+                      className={`px-3.5 py-1.5 rounded-control text-xs font-bold tracking-wide transition-all cursor-pointer shadow-2xs whitespace-nowrap ${
                         isActive
                           ? "bg-[#8b1a1a] text-white border border-[#8b1a1a] shadow-sm"
                           : "bg-white text-body border border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a]"
@@ -473,7 +468,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                     onClick={() => handleSelectReel(reel, true)}
                     aria-label={`Play ${reel.title}`}
                     aria-pressed={isActive}
-                    className={`relative shrink-0 w-[calc((100%-2.2*14px)/3.2)] min-w-[105px] max-w-[135px] aspect-[9/16] rounded-2xl overflow-hidden snap-start transition-all duration-300 cursor-pointer text-left group ${
+                    className={`relative shrink-0 w-[calc((100%-2.2*14px)/3.2)] min-w-[105px] max-w-[135px] aspect-[9/16] rounded-media overflow-hidden snap-start transition-all duration-300 cursor-pointer text-left group ${
                       isActive
                         ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_20px_rgba(255,77,94,0.35),0_8px_20px_rgba(139, 26, 26,0.22)] -translate-y-0.5"
                         : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:border-[#8B1A1A]/30 bg-slate-950"
@@ -483,7 +478,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                     {isActive && !reducedMotion && (
                       <div
                         aria-hidden="true"
-                        className="absolute -inset-[2px] rounded-[18px] pointer-events-none p-[2px] z-20 overflow-hidden"
+                        className="absolute -inset-[2px] rounded-media pointer-events-none p-[2px] z-20 overflow-hidden"
                         style={{
                           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                           WebkitMaskComposite: "xor",
@@ -508,10 +503,10 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         className="absolute inset-x-0 h-10 bg-gradient-to-b from-transparent via-[#FF4D5E]/20 to-transparent pointer-events-none animate-radar-sweep"
                       />
                       <div className="flex items-center gap-1 opacity-25">
-                        <div className="w-1 h-3 bg-[#FF4D5E] rounded-full animate-pulse" />
-                        <div className="w-1 h-6 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:200ms]" />
-                        <div className="w-1 h-8 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:400ms]" />
-                        <div className="w-1 h-4 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:300ms]" />
+                        <div className="w-1 h-3 bg-[#FF4D5E] rounded-sm animate-pulse" />
+                        <div className="w-1 h-6 bg-[#FF4D5E] rounded-sm animate-pulse [animation-delay:200ms]" />
+                        <div className="w-1 h-8 bg-[#FF4D5E] rounded-sm animate-pulse [animation-delay:400ms]" />
+                        <div className="w-1 h-4 bg-[#FF4D5E] rounded-sm animate-pulse [animation-delay:300ms]" />
                       </div>
                     </div>
 
@@ -567,7 +562,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         }
                         aria-label={`Play ${reel.title}`}
                         aria-pressed={isActive}
-                        className={`relative w-full aspect-[9/16] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer text-left group ${
+                        className={`relative w-full aspect-[9/16] rounded-media overflow-hidden transition-all duration-300 cursor-pointer text-left group ${
                           isActive
                             ? "ring-2 ring-[#FF4D5E] ring-offset-2 ring-offset-white shadow-[0_0_25px_rgba(255,77,94,0.35),0_12px_28px_rgba(139, 26, 26,0.25)] -translate-y-1"
                             : "border border-[#8B1A1A]/10 shadow-[0_4px_16px_rgba(139,26,26,0.06)] hover:shadow-[0_10px_24px_rgba(139,26,26,0.12)] hover:border-[#8B1A1A]/30 bg-slate-950"
@@ -577,7 +572,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                         {isActive && !reducedMotion && (
                           <div
                             aria-hidden="true"
-                            className="absolute -inset-[2px] rounded-[18px] pointer-events-none p-[2.5px] z-20 overflow-hidden"
+                            className="absolute -inset-[2px] rounded-media pointer-events-none p-[2.5px] z-20 overflow-hidden"
                             style={{
                               WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                               WebkitMaskComposite: "xor",
@@ -602,11 +597,11 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                             className="absolute inset-x-0 h-12 bg-gradient-to-b from-transparent via-[#FF4D5E]/20 to-transparent pointer-events-none animate-radar-sweep"
                           />
                           <div className="flex items-center gap-1.5 opacity-25">
-                            <div className="w-1 h-4 bg-[#FF4D5E] rounded-full animate-pulse" />
-                            <div className="w-1 h-8 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:200ms]" />
-                            <div className="w-1 h-12 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:400ms]" />
-                            <div className="w-1 h-6 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:300ms]" />
-                            <div className="w-1 h-3 bg-[#FF4D5E] rounded-full animate-pulse [animation-delay:150ms]" />
+                            <div className="w-1 h-4 bg-[#FF4D5E] rounded-sm animate-pulse" />
+                            <div className="w-1 h-8 bg-[#FF4D5E] rounded-sm animate-pulse [animation-delay:200ms]" />
+                            <div className="w-1 h-12 bg-[#FF4D5E] rounded-sm animate-pulse [animation-delay:400ms]" />
+                            <div className="w-1 h-6 bg-[#FF4D5E] rounded-sm animate-pulse [animation-delay:300ms]" />
+                            <div className="w-1 h-3 bg-[#FF4D5E] rounded-sm animate-pulse [animation-delay:150ms]" />
                           </div>
                         </div>
 
@@ -641,7 +636,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                 <div className="mt-8 flex justify-center">
                   <button
                     onClick={() => setShowAll((prev) => !prev)}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white hover:bg-[#8B1A1A]/5 border border-[#8B1A1A]/20 hover:border-[#8B1A1A]/40 text-xs font-bold text-[#8B1A1A] transition-all cursor-pointer shadow-2xs hover:shadow-xs"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-control bg-white hover:bg-[#8B1A1A]/5 border border-[#8B1A1A]/20 hover:border-[#8B1A1A]/40 text-xs font-bold text-[#8B1A1A] transition-all cursor-pointer shadow-2xs hover:shadow-xs"
                   >
                     <span>
                       {showAll
@@ -674,13 +669,13 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
             aria-modal="true"
           >
             <div
-              className="relative w-full max-w-4xl bg-white border border-line rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
+              className="relative w-full max-w-4xl bg-white border border-line rounded-card overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
               <button
                 onClick={() => setTheaterProject(null)}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-40 p-2.5 rounded-full bg-black/60 md:bg-white/90 text-white md:text-ink hover:scale-105 active:scale-95 transition-all cursor-pointer border border-white/20 md:border-line shadow-md"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-40 p-2.5 rounded-control bg-black/60 md:bg-white/90 text-white md:text-ink hover:scale-105 active:scale-95 transition-all cursor-pointer border border-white/20 md:border-line shadow-md"
                 aria-label="Close theater modal"
               >
                 <X className="w-5 h-5" />
@@ -780,7 +775,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
               {/* Right Column: Case Details & Brief */}
               <div className="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto bg-white text-ink border-t md:border-t-0 md:border-l border-line/60">
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-redLight border border-brand-red/20 text-xs font-mono font-bold text-brand-red uppercase mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-control bg-brand-redLight border border-brand-red/20 text-xs font-mono font-bold text-brand-red uppercase mb-4">
                     <span>{theaterProject.client}</span>
                   </div>
 
@@ -810,7 +805,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                   </div>
 
                   {/* Documented Outcome Metric Block */}
-                  <div className="mt-6 p-4 rounded-2xl bg-brand-redLight/40 border border-brand-red/20 flex items-center justify-between">
+                  <div className="mt-6 p-4 rounded-card bg-brand-redLight/40 border border-brand-red/20 flex items-center justify-between">
                     <div>
                       <div className="text-[10px] font-mono uppercase tracking-wider text-muted">
                         Documented Commercial Result
@@ -834,7 +829,7 @@ export function RotatingShortsShowcase({ projects }: RotatingShortsShowcaseProps
                   <Link
                     href={`/work/${theaterProject.slug}`}
                     onClick={() => setTheaterProject(null)}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-red hover:bg-brand-redDark text-white text-xs font-black transition-all shadow-red-btn"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-control bg-brand-red hover:bg-brand-redDark text-white text-xs font-black transition-all shadow-red-btn"
                   >
                     <span>Explore Full Case Study</span>
                     <ArrowUpRight className="w-4 h-4" />

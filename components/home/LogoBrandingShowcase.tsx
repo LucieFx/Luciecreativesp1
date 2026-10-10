@@ -45,10 +45,10 @@ export function LogoBrandingShowcase() {
         {/* 2-Card Pillar Comparison Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Pillar 1: Logo Design */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
+          <div className="p-8 sm:p-10 rounded-card bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[10px] font-black text-[#8b1a1a] tracking-wider uppercase border border-[#8b1a1a]/15">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-red-50 text-[10px] font-black text-[#8b1a1a] tracking-wider uppercase border border-[#8b1a1a]/15">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a]" />
                   VECTOR GEOMETRY
                 </span>
@@ -90,10 +90,10 @@ export function LogoBrandingShowcase() {
           </div>
 
           {/* Pillar 2: Holistic Branding */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
+          <div className="p-8 sm:p-10 rounded-card bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[10px] font-black text-[#8b1a1a] tracking-wider uppercase border border-[#8b1a1a]/15">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-red-50 text-[10px] font-black text-[#8b1a1a] tracking-wider uppercase border border-[#8b1a1a]/15">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a]" />
                   ENTERPRISE IDENTITY
                 </span>
@@ -136,7 +136,7 @@ export function LogoBrandingShowcase() {
         </div>
 
         {/* Bottom Callout */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-red-50/60 border border-[#8b1a1a]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="p-6 sm:p-8 rounded-card bg-red-50/60 border border-[#8b1a1a]/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
             <span className="text-xs font-black text-[#8b1a1a] uppercase tracking-wider block mb-1">
               PROVEN CASE STUDY
@@ -147,7 +147,7 @@ export function LogoBrandingShowcase() {
           </div>
           <Link
             href="/work/omni-global-campaign"
-            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-white border border-[#8b1a1a]/20 text-xs font-black text-[#8b1a1a] hover:bg-white hover:border-[#8b1a1a] transition-all shadow-sm flex-shrink-0"
+            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-control bg-white border border-[#8b1a1a]/20 text-xs font-black text-[#8b1a1a] hover:bg-white hover:border-[#8b1a1a] transition-all shadow-sm flex-shrink-0"
           >
             <span>Read Omni Case Study</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

@@ -136,7 +136,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
         <div className="max-w-6xl mx-auto w-full relative">
           <nav
             aria-label="Primary Navigation"
-            className="w-full rounded-xl pointer-events-auto flex items-center justify-between select-none relative bg-white border border-line text-ink shadow-[0_8px_30px_rgba(0,0,0,0.06),0_2px_8px_rgba(0,0,0,0.04)] py-2.5 sm:py-3.5 px-3.5 sm:px-8"
+            className="w-full rounded-card pointer-events-auto flex items-center justify-between select-none relative bg-white border border-line text-ink shadow-[0_8px_30px_rgba(0,0,0,0.06),0_2px_8px_rgba(0,0,0,0.04)] py-2.5 sm:py-3.5 px-3.5 sm:px-8"
           >
             {/* SECTION 1: Logo (Left) */}
             <Link
@@ -145,7 +145,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
               title="Lucie Creatives — Return to Homepage"
               scroll={true}
               onClick={handleLogoClick}
-              className="flex items-center group py-0.5 px-1 rounded-xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 cursor-pointer relative z-30"
+              className="flex items-center group py-0.5 px-1 rounded-control transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 cursor-pointer relative z-30"
             >
               <div className="relative h-7 sm:h-8 w-auto flex items-center">
                 <Image
@@ -181,7 +181,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                         onClick={() => setServicesDropdownOpen((prev) => !prev)}
                         aria-expanded={servicesDropdownOpen}
                         aria-haspopup="true"
-                        className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-lg group select-none flex items-center gap-1.5 cursor-pointer ${
+                        className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-control group select-none flex items-center gap-1.5 cursor-pointer ${
                           isActive
                             ? "text-[#8B1A1A] font-semibold"
                             : "text-body hover:text-[#8B1A1A] hover:bg-neutral-100/70"
@@ -200,7 +200,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
 
                         {isActive && (
                           <span
-                            className="absolute bottom-0 left-2.5 right-2.5 h-[2px] rounded-full bg-[#8B1A1A]"
+                            className="absolute bottom-0 left-2.5 right-2.5 h-[2px] rounded-control bg-[#8B1A1A]"
                             aria-hidden="true"
                           />
                         )}
@@ -214,7 +214,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 6, scale: 0.97 }}
                             transition={{ duration: 0.16, ease: "easeOut" }}
-                            className="absolute top-full left-0 mt-2.5 w-[360px] sm:w-[380px] rounded-2xl bg-white border border-line p-2.5 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.04)] z-50 overflow-hidden"
+                            className="absolute top-full left-0 mt-2.5 w-[360px] sm:w-[380px] rounded-card bg-white border border-line p-2.5 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.04)] z-50 overflow-hidden"
                           >
                             <div className="px-2.5 pt-1.5 pb-2 text-[10px] font-mono font-medium tracking-wider uppercase text-muted flex items-center justify-between">
                               <span>Our Capabilities</span>
@@ -228,14 +228,14 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                                     key={sub.href}
                                     href={sub.href}
                                     onClick={() => setServicesDropdownOpen(false)}
-                                    className={`group/item flex items-start gap-3 p-2.5 rounded-xl transition-all border ${
+                                    className={`group/item flex items-start gap-3 p-2.5 rounded-control transition-all border ${
                                       isSubActive
                                         ? "bg-slate-50 border-slate-200/90 text-ink shadow-2xs"
                                         : "hover:bg-neutral-100/80 text-ink border-transparent"
                                     }`}
                                   >
                                     <div
-                                      className={`mt-0.5 p-2 rounded-lg shrink-0 transition-colors ${
+                                      className={`mt-0.5 p-2 rounded-control-inner shrink-0 transition-colors ${
                                         isSubActive
                                           ? "bg-[#8B1A1A] text-white shadow-xs"
                                           : "bg-neutral-100 group-hover/item:bg-[#8B1A1A]/10 text-body group-hover/item:text-[#8B1A1A]"
@@ -278,7 +278,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                     key={link.href}
                     href={link.href}
                     aria-current={isActive ? "page" : undefined}
-                    className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-lg group select-none ${
+                    className={`relative whitespace-nowrap px-3.5 py-1.5 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-sans font-medium tracking-[-0.01em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-1 rounded-control group select-none ${
                       isActive
                         ? "text-[#8B1A1A] font-semibold"
                         : "text-body hover:text-[#8B1A1A] hover:bg-neutral-100/70"
@@ -288,7 +288,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
 
                     {isActive && (
                       <span
-                        className="absolute bottom-0 left-2.5 right-2.5 h-[2px] rounded-full bg-[#8B1A1A]"
+                        className="absolute bottom-0 left-2.5 right-2.5 h-[2px] rounded-control bg-[#8B1A1A]"
                         aria-hidden="true"
                       />
                     )}
@@ -307,7 +307,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                 aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-nav-menu"
-                className="min-[1080px]:hidden relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center bg-line/60 hover:bg-line text-ink transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 cursor-pointer"
+                className="min-[1080px]:hidden relative w-9 h-9 sm:w-10 sm:h-10 rounded-control flex items-center justify-center bg-line/60 hover:bg-line text-ink transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 cursor-pointer"
               >
                 {mobileMenuOpen ? (
                   <X className="w-5 h-5 text-ink" />
@@ -351,7 +351,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                       <button
                         type="button"
                         onClick={() => setMobileServicesOpen((prev) => !prev)}
-                        className={`group flex items-center justify-between text-2xl sm:text-3xl font-semibold tracking-tight py-2.5 px-3.5 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] cursor-pointer ${
+                        className={`group flex items-center justify-between text-2xl sm:text-3xl font-semibold tracking-tight py-2.5 px-3.5 rounded-control transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] cursor-pointer ${
                           isActive
                             ? "text-[#8B1A1A] bg-neutral-100/80"
                             : "text-ink hover:text-[#8B1A1A] hover:bg-line/50"
@@ -381,7 +381,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                                   key={sub.href}
                                   href={sub.href}
                                   onClick={() => setMobileMenuOpen(false)}
-                                  className={`flex items-center justify-between py-2.5 px-3 rounded-xl text-base sm:text-lg font-medium transition-all border ${
+                                  className={`flex items-center justify-between py-2.5 px-3 rounded-control text-base sm:text-lg font-medium transition-all border ${
                                     isSubActive
                                       ? "text-[#8B1A1A] bg-slate-50 border-slate-200/90 shadow-2xs"
                                       : "text-body hover:text-[#8B1A1A] hover:bg-line/40 border-transparent"
@@ -410,7 +410,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     aria-current={isActive ? "page" : undefined}
-                    className={`group flex items-center justify-between text-2xl sm:text-3xl font-semibold tracking-tight py-2.5 px-3.5 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] ${
+                    className={`group flex items-center justify-between text-2xl sm:text-3xl font-semibold tracking-tight py-2.5 px-3.5 rounded-control transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] ${
                       isActive
                         ? "text-[#8B1A1A] bg-neutral-100/80"
                         : "text-ink hover:text-[#8B1A1A] hover:bg-line/50"
@@ -433,7 +433,7 @@ export function Navbar({ primaryCtaLabel = "Start a Project" }: NavbarProps = {}
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 bg-[#8b1a1a] hover:opacity-90 text-white font-semibold text-base rounded-xl py-4 shadow-[0_4px_16px_rgba(139,26,26,0.28)] active:scale-[0.98] transition-all"
+                className="w-full flex items-center justify-center gap-2 bg-[#8b1a1a] hover:opacity-90 text-white font-semibold text-base rounded-control py-4 shadow-[0_4px_16px_rgba(139,26,26,0.28)] active:scale-[0.98] transition-all"
               >
                 <span>{primaryCtaLabel}</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -488,7 +488,7 @@ function MagneticNavbarCta({
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
-        className="relative overflow-hidden inline-flex items-center gap-1.5 bg-[#8b1a1a] hover:opacity-90 text-white font-semibold text-xs sm:text-sm rounded-xl px-5 py-2.5 shadow-[0_4px_14px_rgba(139,26,26,0.28)] hover:shadow-[0_6px_20px_rgba(139,26,26,0.38)] active:scale-[0.97] transition-all duration-200 group/cta focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 select-none"
+        className="relative overflow-hidden inline-flex items-center gap-1.5 bg-[#8b1a1a] hover:opacity-90 text-white font-semibold text-xs sm:text-sm rounded-control px-5 py-2.5 shadow-[0_4px_14px_rgba(139,26,26,0.28)] hover:shadow-[0_6px_20px_rgba(139,26,26,0.38)] active:scale-[0.97] transition-all duration-200 group/cta focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] focus-visible:ring-offset-2 select-none"
       >
         {/* Light shine sweep across button on hover */}
         <motion.span

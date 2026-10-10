@@ -1,0 +1,204 @@
+{
+  "pathname": "/insights/ecommerce-website-design-conversion-architecture",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=640&amp;q=80&amp;auto=format 640w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=750&amp;q=80&amp;auto=format 750w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=828&amp;q=80&amp;auto=format 828w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1080&amp;q=80&amp;auto=format 1080w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1200&amp;q=80&amp;auto=format 1200w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1920&amp;q=80&amp;auto=format 1920w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=2048&amp;q=80&amp;auto=format 2048w\" imageSizes=\"(max-width: 1024px) 100vw, 896px\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689966361\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689966361\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689966361\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/insights/%5Bslug%5D/page.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "https://luciecreatives.in/insights/ecommerce-website-design-conversion-architecture#article",
+      "headline": "Designing E-Commerce Websites That Convert: UI/UX, Performance, and Cart Architecture",
+      "name": "Designing E-Commerce Websites That Convert: UI/UX, Performance, and Cart Architecture",
+      "description": "A masterclass in high-converting e-commerce web design. Explore mobile-first Product Detail Page (PDP) hierarchy, sub-second checkout engineering, and how headless architecture unlocks higher Average Order Value.",
+      "url": "https://luciecreatives.in/insights/ecommerce-website-design-conversion-architecture",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop&q=80",
+      "datePublished": "2026-01-22",
+      "dateModified": "2026-02-25",
+      "articleSection": "Web Development",
+      "author": {
+        "@type": "Person",
+        "name": "Lucie Creatives Digital Commerce Practice",
+        "jobTitle": "E-Commerce Architecture & CRO"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://luciecreatives.in/insights/ecommerce-website-design-conversion-architecture"
+      },
+      "about": {
+        "@type": "Service",
+        "name": "Web Development",
+        "url": "https://luciecreatives.in/web-development"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Designing E-Commerce Websites That Convert: UI/UX, Performance, and Cart Architecture",
+          "item": "https://luciecreatives.in/insights/ecommerce-website-design-conversion-architecture"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is headless commerce and is it worth the investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Headless commerce separates your frontend website interface (built with custom Next.js) from the backend commerce database (such as Shopify). It is ideal for scaling brands seeking sub-second load times, bespoke UI animations, and international multi-currency agility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I reduce high shopping cart abandonment on my current website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introduce single-click payment methods (Apple Pay, Google Pay, UPI), implement a dynamic slide-out cart with a free-shipping progress meter, remove mandatory account creation, and ensure zero unexpected fees at the final step."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does website performance affect return on ad spend (ROAS)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Faster landing pages yield higher Google Ads Quality Scores and lower Meta CPCs, leading directly to lower acquisition costs and higher conversion rates on paid campaigns."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Web Development",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Designing E-Commerce Websites That Convert: UI/UX, Performance, and Cart Architecture"
+        }
+      ]
+    }
+  ]
+}

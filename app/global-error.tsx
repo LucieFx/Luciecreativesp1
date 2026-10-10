@@ -22,7 +22,7 @@ export default function GlobalError({
         {null}
 
         <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center">
-          <div className="w-16 h-16 rounded-2xl bg-white shadow-md border border-line flex items-center justify-center p-2.5 mb-6">
+          <div className="w-16 h-16 rounded-control bg-white shadow-md border border-line flex items-center justify-center p-2.5 mb-6">
             <Image
               src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835253/lucie-creatives/logo/lucie-mark.png"
               alt="Lucie Creatives Logo"
@@ -32,7 +32,7 @@ export default function GlobalError({
             />
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
             <AlertCircle className="w-3.5 h-3.5" />
             <span>Critical Exception</span>
           </div>
@@ -49,14 +49,14 @@ export default function GlobalError({
             <button
               type="button"
               onClick={() => reset()}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 text-white rounded-xl font-bold text-sm tracking-wide shadow-md transition-all cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 text-white rounded-control font-bold text-sm tracking-wide shadow-md transition-all cursor-pointer"
             >
               <RefreshCw className="w-4 h-4" />
               <span>Try Again</span>
             </button>
             <Link
               href="/"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] rounded-xl font-bold text-sm transition-all shadow-xs"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] rounded-control font-bold text-sm transition-all shadow-xs"
             >
               <Home className="w-4 h-4" />
               <span>Go to Home</span>

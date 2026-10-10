@@ -36,7 +36,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
         <button
           onClick={onClose}
-          className="p-2.5 bg-surface-alt text-text-secondary hover:bg-brand-redLight hover:text-brand-red transition-colors rounded-xl border border-border-light"
+          className="p-2.5 bg-surface-alt text-text-secondary hover:bg-brand-redLight hover:text-brand-red transition-colors rounded-control border border-border-light"
           aria-label="Close menu"
         >
           <X className="w-5 h-5" />
@@ -59,7 +59,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <a
           href="/contact"
           onClick={onClose}
-          className="mt-6 inline-flex items-center justify-between w-full p-5 bg-brand-red hover:bg-brand-redDark text-white shadow-red-btn font-bold text-lg transition-all rounded-2xl"
+          className="mt-6 inline-flex items-center justify-between w-full p-5 bg-brand-red hover:bg-brand-redDark text-white shadow-red-btn font-bold text-lg transition-all rounded-control"
         >
           <span>Start a Project</span>
           <ArrowUpRight className="w-6 h-6" />

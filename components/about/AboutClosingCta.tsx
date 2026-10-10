@@ -13,7 +13,7 @@ export function AboutClosingCta({ primaryCtaLabel = "Start a Project" }: AboutCl
     <section className="relative w-full py-20 lg:py-28 bg-[#8B1A1A] text-white overflow-hidden select-none">
       <div className="max-w-5xl mx-auto px-6 sm:px-12 relative z-10 text-center">
         {/* Category Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-red-100 text-xs font-black tracking-widest uppercase mb-6 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-white/10 border border-white/20 text-red-100 text-xs font-black tracking-widest uppercase mb-6 backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" aria-hidden="true" />
           <span>Creative Partnership</span>
         </div>

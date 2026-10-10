@@ -12,7 +12,7 @@ export function WorkClosingCta({ primaryCtaLabel = "Start a Project" }: WorkClos
   return (
     <section className="relative w-full py-12 sm:py-16 bg-[#8B1A1A] text-white flex items-center justify-center px-6 sm:px-12 md:px-16 overflow-hidden select-none border-t border-white/20">
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#8b1a1a] text-white text-xs font-black uppercase tracking-widest border border-white/20">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-control bg-[#8b1a1a] text-white text-xs font-black uppercase tracking-widest border border-white/20">
           <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" aria-hidden="true" />
           <span>START YOUR SPRINT</span>
         </div>

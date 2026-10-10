@@ -1,0 +1,938 @@
+[
+  {
+    "location": "Case Study Hero Poster: speczo-luxury-eyewear",
+    "slug": "speczo-luxury-eyewear",
+    "client": "Speczo Optics",
+    "industry": "Luxury Eyewear & Optical Architecture",
+    "role": "Hero Poster",
+    "title": "Speczo Eyewear Monolithic Identity & Packaging",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835336/lucie-creatives/portfolio/graphic-design/speczo/hero-frame-box.webp"
+  },
+  {
+    "location": "Process Still: speczo-luxury-eyewear",
+    "slug": "speczo-luxury-eyewear",
+    "client": "Speczo Optics",
+    "industry": "Luxury Eyewear & Optical Architecture",
+    "role": "Process Still",
+    "title": "Tactile business card mockups with debossed typography",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835334/lucie-creatives/portfolio/graphic-design/speczo/business-cards.webp"
+  },
+  {
+    "location": "Process Still: speczo-luxury-eyewear",
+    "slug": "speczo-luxury-eyewear",
+    "client": "Speczo Optics",
+    "industry": "Luxury Eyewear & Optical Architecture",
+    "role": "Process Still",
+    "title": "Geometric brand color palette and system token matrices",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835334/lucie-creatives/portfolio/graphic-design/speczo/color-palette.webp"
+  },
+  {
+    "location": "Process Still: speczo-luxury-eyewear",
+    "slug": "speczo-luxury-eyewear",
+    "client": "Speczo Optics",
+    "industry": "Luxury Eyewear & Optical Architecture",
+    "role": "Process Still",
+    "title": "Corporate letterhead and corporate identity stationery",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835337/lucie-creatives/portfolio/graphic-design/speczo/letterhead.webp"
+  },
+  {
+    "location": "Process Still: speczo-luxury-eyewear",
+    "slug": "speczo-luxury-eyewear",
+    "client": "Speczo Optics",
+    "industry": "Luxury Eyewear & Optical Architecture",
+    "role": "Process Still",
+    "title": "Responsive optical e-commerce digital experience",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835339/lucie-creatives/portfolio/graphic-design/speczo/website-mockup.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: onirique-parfums-identity",
+    "slug": "onirique-parfums-identity",
+    "client": "Onirique Parfums",
+    "industry": "Haute Parfumerie & Luxury Cosmetics",
+    "role": "Hero Poster",
+    "title": "Onirique Parfums 3D CGI & Visual Identity",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creatives/portfolio/graphic-design/onirique/hero-perfume-trio.webp"
+  },
+  {
+    "location": "Process Still: onirique-parfums-identity",
+    "slug": "onirique-parfums-identity",
+    "client": "Onirique Parfums",
+    "industry": "Haute Parfumerie & Luxury Cosmetics",
+    "role": "Process Still",
+    "title": "Atmospheric product render with cinematic lighting",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835314/lucie-creatives/portfolio/graphic-design/onirique/fantasy-product.webp"
+  },
+  {
+    "location": "Process Still: onirique-parfums-identity",
+    "slug": "onirique-parfums-identity",
+    "client": "Onirique Parfums",
+    "industry": "Haute Parfumerie & Luxury Cosmetics",
+    "role": "Process Still",
+    "title": "Unforgettable campaign visual engineered for social conversion",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835317/lucie-creatives/portfolio/graphic-design/onirique/social-campaign.webp"
+  },
+  {
+    "location": "Process Still: onirique-parfums-identity",
+    "slug": "onirique-parfums-identity",
+    "client": "Onirique Parfums",
+    "industry": "Haute Parfumerie & Luxury Cosmetics",
+    "role": "Process Still",
+    "title": "Seasonal retail campaign creative with gold typography",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835316/lucie-creatives/portfolio/graphic-design/onirique/offer-campaign.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: nirva-resort-environmental-branding",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "role": "Hero Poster",
+    "title": "Nirva Luxury Resort OOH & Brand Architecture",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835298/lucie-creatives/portfolio/graphic-design/nirva-club/hero-main-hoarding.webp"
+  },
+  {
+    "location": "Process Still: nirva-resort-environmental-branding",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "role": "Process Still",
+    "title": "3x4 high-contrast exhibition and reception standee mockup",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835309/lucie-creatives/portfolio/graphic-design/nirva-club/standy-mockup.webp"
+  },
+  {
+    "location": "Process Still: nirva-resort-environmental-branding",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "role": "Process Still",
+    "title": "Ultra-wide highway hoarding architecture for grand opening",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835293/lucie-creatives/portfolio/graphic-design/nirva-club/billboard-opening.webp"
+  },
+  {
+    "location": "Process Still: nirva-resort-environmental-branding",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "role": "Process Still",
+    "title": "Kalpvriksh restaurant fine dining marketing creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-creative.webp"
+  },
+  {
+    "location": "Process Still: nirva-resort-environmental-branding",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "role": "Process Still",
+    "title": "Weekend lifestyle and day picnic promotional creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835296/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: rhyme-haute-joaillerie",
+    "slug": "rhyme-haute-joaillerie",
+    "client": "Rhyme Jewels Atelier",
+    "industry": "Fine Jewelry & Haute Joaillerie",
+    "role": "Hero Poster",
+    "title": "Rhyme Fine Jewels Haute Joaillerie Print",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835326/lucie-creatives/portfolio/graphic-design/rhyme-jewels/hero-jewelry-campaign.webp"
+  },
+  {
+    "location": "Process Still: rhyme-haute-joaillerie",
+    "slug": "rhyme-haute-joaillerie",
+    "client": "Rhyme Jewels Atelier",
+    "industry": "Fine Jewelry & Haute Joaillerie",
+    "role": "Process Still",
+    "title": "Macro earrings editorial crop showcasing intricate filigree",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835323/lucie-creatives/portfolio/graphic-design/rhyme-jewels/earrings-editorial.webp"
+  },
+  {
+    "location": "Process Still: rhyme-haute-joaillerie",
+    "slug": "rhyme-haute-joaillerie",
+    "client": "Rhyme Jewels Atelier",
+    "industry": "Fine Jewelry & Haute Joaillerie",
+    "role": "Process Still",
+    "title": "Handcrafted pendant jewelry art direction with dark contrast",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835327/lucie-creatives/portfolio/graphic-design/rhyme-jewels/pendant-still.webp"
+  },
+  {
+    "location": "Process Still: rhyme-haute-joaillerie",
+    "slug": "rhyme-haute-joaillerie",
+    "client": "Rhyme Jewels Atelier",
+    "industry": "Fine Jewelry & Haute Joaillerie",
+    "role": "Process Still",
+    "title": "Daily gold rate dynamic typographic update system",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835325/lucie-creatives/portfolio/graphic-design/rhyme-jewels/gold-rate-system.webp"
+  },
+  {
+    "location": "Process Still: rhyme-haute-joaillerie",
+    "slug": "rhyme-haute-joaillerie",
+    "client": "Rhyme Jewels Atelier",
+    "industry": "Fine Jewelry & Haute Joaillerie",
+    "role": "Process Still",
+    "title": "Large-format jewelry exhibition entrance banner",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835324/lucie-creatives/portfolio/graphic-design/rhyme-jewels/exhibition-print.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: crancho-fmcg-packaging",
+    "slug": "crancho-fmcg-packaging",
+    "client": "Crancho Consumer Foods",
+    "industry": "FMCG, Snack Foods & Retail Packaging",
+    "role": "Hero Poster",
+    "title": "Crancho Snacks FMCG Packaging Architecture",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp"
+  },
+  {
+    "location": "Process Still: crancho-fmcg-packaging",
+    "slug": "crancho-fmcg-packaging",
+    "client": "Crancho Consumer Foods",
+    "industry": "FMCG, Snack Foods & Retail Packaging",
+    "role": "Process Still",
+    "title": "Multi-flavor SKU pouch packaging layout comparison",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835265/lucie-creatives/portfolio/graphic-design/crancho-snacks/chips-variant-mockup.webp"
+  },
+  {
+    "location": "Process Still: crancho-fmcg-packaging",
+    "slug": "crancho-fmcg-packaging",
+    "client": "Crancho Consumer Foods",
+    "industry": "FMCG, Snack Foods & Retail Packaging",
+    "role": "Process Still",
+    "title": "Dynamic retail launch poster with high-contrast typography",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835267/lucie-creatives/portfolio/graphic-design/crancho-snacks/crancho-poster-1.webp"
+  },
+  {
+    "location": "Process Still: crancho-fmcg-packaging",
+    "slug": "crancho-fmcg-packaging",
+    "client": "Crancho Consumer Foods",
+    "industry": "FMCG, Snack Foods & Retail Packaging",
+    "role": "Process Still",
+    "title": "Crispo product reveal creative engineered for paid display ads",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835268/lucie-creatives/portfolio/graphic-design/crancho-snacks/crispo-poster.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: nandanvan-luxury-real-estate",
+    "slug": "nandanvan-luxury-real-estate",
+    "client": "Nandanvan Realty Group",
+    "industry": "Luxury Real Estate & Architectural Developments",
+    "role": "Hero Poster",
+    "title": "Nandanvan Estates Luxury Architectural Branding",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835288/lucie-creatives/portfolio/graphic-design/nandanvan-estates/bungalows-campaign.webp"
+  },
+  {
+    "location": "Process Still: nandanvan-luxury-real-estate",
+    "slug": "nandanvan-luxury-real-estate",
+    "client": "Nandanvan Realty Group",
+    "industry": "Luxury Real Estate & Architectural Developments",
+    "role": "Process Still",
+    "title": "5 BHK luxury bungalows launch campaign creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835289/lucie-creatives/portfolio/graphic-design/nandanvan-estates/hero-luxury-address.webp"
+  },
+  {
+    "location": "Process Still: nandanvan-luxury-real-estate",
+    "slug": "nandanvan-luxury-real-estate",
+    "client": "Nandanvan Realty Group",
+    "industry": "Luxury Real Estate & Architectural Developments",
+    "role": "Process Still",
+    "title": "Clubhouse amenities and resort-style living marketing creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835290/lucie-creatives/portfolio/graphic-design/nandanvan-estates/lifestyle-creative.webp"
+  },
+  {
+    "location": "Process Still: nandanvan-luxury-real-estate",
+    "slug": "nandanvan-luxury-real-estate",
+    "client": "Nandanvan Realty Group",
+    "industry": "Luxury Real Estate & Architectural Developments",
+    "role": "Process Still",
+    "title": "Siddharth residential architectural identity and elevation creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835291/lucie-creatives/portfolio/graphic-design/nandanvan-estates/siddharth-architecture.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: travel-festival-social-campaigns",
+    "slug": "travel-festival-social-campaigns",
+    "client": "Mitraa & Regional Tourism",
+    "industry": "Travel, Tourism & Cultural Festival Marketing",
+    "role": "Hero Poster",
+    "title": "Omnichannel Travel & Cultural Festival Creatives",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835329/lucie-creatives/portfolio/graphic-design/social-campaigns/hero-dubai-travel.webp"
+  },
+  {
+    "location": "Process Still: travel-festival-social-campaigns",
+    "slug": "travel-festival-social-campaigns",
+    "client": "Mitraa & Regional Tourism",
+    "industry": "Travel, Tourism & Cultural Festival Marketing",
+    "role": "Process Still",
+    "title": "Explore Vietnam multi-destination promotional poster",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835333/lucie-creatives/portfolio/graphic-design/social-campaigns/vietnam-campaign.webp"
+  },
+  {
+    "location": "Process Still: travel-festival-social-campaigns",
+    "slug": "travel-festival-social-campaigns",
+    "client": "Mitraa & Regional Tourism",
+    "industry": "Travel, Tourism & Cultural Festival Marketing",
+    "role": "Process Still",
+    "title": "Bali holiday package high-conversion social ad creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835328/lucie-creatives/portfolio/graphic-design/social-campaigns/bali-creative.webp"
+  },
+  {
+    "location": "Process Still: travel-festival-social-campaigns",
+    "slug": "travel-festival-social-campaigns",
+    "client": "Mitraa & Regional Tourism",
+    "industry": "Travel, Tourism & Cultural Festival Marketing",
+    "role": "Process Still",
+    "title": "Rath Yatra cultural festival greeting creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835331/lucie-creatives/portfolio/graphic-design/social-campaigns/rathyatra-festival.webp"
+  },
+  {
+    "location": "Process Still: travel-festival-social-campaigns",
+    "slug": "travel-festival-social-campaigns",
+    "client": "Mitraa & Regional Tourism",
+    "industry": "Travel, Tourism & Cultural Festival Marketing",
+    "role": "Process Still",
+    "title": "UAE National Day greeting and corporate communication",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835331/lucie-creatives/portfolio/graphic-design/social-campaigns/uae-national-day.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: monolithic-logo-systems",
+    "slug": "monolithic-logo-systems",
+    "client": "Sivanta, Stylez & Enterprise Brands",
+    "industry": "Corporate Identity, Apparel & Luxury Retail",
+    "role": "Hero Poster",
+    "title": "Monolithic Logomarks & Identity Symbols",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835278/lucie-creatives/portfolio/graphic-design/logo-systems/hero-sivanta-logo.webp"
+  },
+  {
+    "location": "Process Still: monolithic-logo-systems",
+    "slug": "monolithic-logo-systems",
+    "client": "Sivanta, Stylez & Enterprise Brands",
+    "industry": "Corporate Identity, Apparel & Luxury Retail",
+    "role": "Process Still",
+    "title": "Stylez apparel brand mark and modern heraldic crest",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835280/lucie-creatives/portfolio/graphic-design/logo-systems/stylez-brand-symbol.webp"
+  },
+  {
+    "location": "Process Still: monolithic-logo-systems",
+    "slug": "monolithic-logo-systems",
+    "client": "Sivanta, Stylez & Enterprise Brands",
+    "industry": "Corporate Identity, Apparel & Luxury Retail",
+    "role": "Process Still",
+    "title": "Madhav enterprise corporate wordmark and geometric seal",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835279/lucie-creatives/portfolio/graphic-design/logo-systems/madhav-identity.webp"
+  },
+  {
+    "location": "Process Still: monolithic-logo-systems",
+    "slug": "monolithic-logo-systems",
+    "client": "Sivanta, Stylez & Enterprise Brands",
+    "industry": "Corporate Identity, Apparel & Luxury Retail",
+    "role": "Process Still",
+    "title": "Divine luxury crest and vector monogram mark",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835276/lucie-creatives/portfolio/graphic-design/logo-systems/divine-crest.webp"
+  },
+  {
+    "location": "Process Still: monolithic-logo-systems",
+    "slug": "monolithic-logo-systems",
+    "client": "Sivanta, Stylez & Enterprise Brands",
+    "industry": "Corporate Identity, Apparel & Luxury Retail",
+    "role": "Process Still",
+    "title": "Her beauty and cosmetics identity symbol suite",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835277/lucie-creatives/portfolio/graphic-design/logo-systems/her-identity.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: lumara-luxury-skincare",
+    "slug": "lumara-luxury-skincare",
+    "client": "Lumara Organics",
+    "industry": "Luxury Skincare, Botanical Cosmetics & Wellness",
+    "role": "Hero Poster",
+    "title": "Lumara Botanical Skincare & Identity Suite",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835284/lucie-creatives/portfolio/graphic-design/lumara/hero.webp"
+  },
+  {
+    "location": "Process Still: lumara-luxury-skincare",
+    "slug": "lumara-luxury-skincare",
+    "client": "Lumara Organics",
+    "industry": "Luxury Skincare, Botanical Cosmetics & Wellness",
+    "role": "Process Still",
+    "title": "Sustainable unboxing cartons and tactile embossed packaging",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835285/lucie-creatives/portfolio/graphic-design/lumara/packaging-box.webp"
+  },
+  {
+    "location": "Process Still: lumara-luxury-skincare",
+    "slug": "lumara-luxury-skincare",
+    "client": "Lumara Organics",
+    "industry": "Luxury Skincare, Botanical Cosmetics & Wellness",
+    "role": "Process Still",
+    "title": "Botanical skincare glass bottle mockup and label typography",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835283/lucie-creatives/portfolio/graphic-design/lumara/cosmetics-bottle.webp"
+  },
+  {
+    "location": "Process Still: lumara-luxury-skincare",
+    "slug": "lumara-luxury-skincare",
+    "client": "Lumara Organics",
+    "industry": "Luxury Skincare, Botanical Cosmetics & Wellness",
+    "role": "Process Still",
+    "title": "Harmonious typography hierarchy and earthy botanical palette",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835287/lucie-creatives/portfolio/graphic-design/lumara/typography-palette.webp"
+  },
+  {
+    "location": "Process Still: lumara-luxury-skincare",
+    "slug": "lumara-luxury-skincare",
+    "client": "Lumara Organics",
+    "industry": "Luxury Skincare, Botanical Cosmetics & Wellness",
+    "role": "Process Still",
+    "title": "Corporate stationery, business cards, and identity guidelines",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835282/lucie-creatives/portfolio/graphic-design/lumara/brand-stationery.webp"
+  },
+  {
+    "location": "Process Still: lumara-luxury-skincare",
+    "slug": "lumara-luxury-skincare",
+    "client": "Lumara Organics",
+    "industry": "Luxury Skincare, Botanical Cosmetics & Wellness",
+    "role": "Process Still",
+    "title": "Editorial social feed visual system and product carousels",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835286/lucie-creatives/portfolio/graphic-design/lumara/social-grid.webp"
+  },
+  {
+    "location": "Process Still: lumara-luxury-skincare",
+    "slug": "lumara-luxury-skincare",
+    "client": "Lumara Organics",
+    "industry": "Luxury Skincare, Botanical Cosmetics & Wellness",
+    "role": "Process Still",
+    "title": "Large-format outdoor lifestyle campaign visual",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835281/lucie-creatives/portfolio/graphic-design/lumara/billboard-lifestyle.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: bright-minds-education-campaigns",
+    "slug": "bright-minds-education-campaigns",
+    "client": "Bright School & Ideal Academic Group",
+    "industry": "Education, Higher Academics & Healthcare Institutions",
+    "role": "Hero Poster",
+    "title": "Bright Minds Academic & Healthcare Visual System",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835272/lucie-creatives/portfolio/graphic-design/education-campaigns/bright-school-admissions.webp"
+  },
+  {
+    "location": "Process Still: bright-minds-education-campaigns",
+    "slug": "bright-minds-education-campaigns",
+    "client": "Bright School & Ideal Academic Group",
+    "industry": "Education, Higher Academics & Healthcare Institutions",
+    "role": "Process Still",
+    "title": "Ideal Academy admission campaign with structured enrollment details",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835274/lucie-creatives/portfolio/graphic-design/education-campaigns/ideal-academy-campaign.webp"
+  },
+  {
+    "location": "Process Still: bright-minds-education-campaigns",
+    "slug": "bright-minds-education-campaigns",
+    "client": "Bright School & Ideal Academic Group",
+    "industry": "Education, Higher Academics & Healthcare Institutions",
+    "role": "Process Still",
+    "title": "Metrocity Education career pathways campaign",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835275/lucie-creatives/portfolio/graphic-design/education-campaigns/metrocity-education.webp"
+  },
+  {
+    "location": "Process Still: bright-minds-education-campaigns",
+    "slug": "bright-minds-education-campaigns",
+    "client": "Bright School & Ideal Academic Group",
+    "industry": "Education, Higher Academics & Healthcare Institutions",
+    "role": "Process Still",
+    "title": "Bhagyalaxmi Nursing College professional healthcare admissions",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835271/lucie-creatives/portfolio/graphic-design/education-campaigns/bhagyalaxmi-nursing.webp"
+  },
+  {
+    "location": "Process Still: bright-minds-education-campaigns",
+    "slug": "bright-minds-education-campaigns",
+    "client": "Bright School & Ideal Academic Group",
+    "industry": "Education, Higher Academics & Healthcare Institutions",
+    "role": "Process Still",
+    "title": "Merit & Topper recognition social proof graphics",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835275/lucie-creatives/portfolio/graphic-design/education-campaigns/topper-success-story.webp"
+  },
+  {
+    "location": "Process Still: bright-minds-education-campaigns",
+    "slug": "bright-minds-education-campaigns",
+    "client": "Bright School & Ideal Academic Group",
+    "industry": "Education, Higher Academics & Healthcare Institutions",
+    "role": "Process Still",
+    "title": "Commerce & career orientation visual communications",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835273/lucie-creatives/portfolio/graphic-design/education-campaigns/future-commerce.webp"
+  },
+  {
+    "location": "Process Still: bright-minds-education-campaigns",
+    "slug": "bright-minds-education-campaigns",
+    "client": "Bright School & Ideal Academic Group",
+    "industry": "Education, Higher Academics & Healthcare Institutions",
+    "role": "Process Still",
+    "title": "Admissions 2026 high-retention banner creative",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835269/lucie-creatives/portfolio/graphic-design/education-campaigns/admissions-2026.webp"
+  },
+  {
+    "location": "Case Study Hero Poster: ooh-billboards-commercial-print",
+    "slug": "ooh-billboards-commercial-print",
+    "client": "Nirva Club, Kalpvriksh & Commercial Enterprises",
+    "industry": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
+    "role": "Hero Poster",
+    "title": "Grand-Scale OOH Billboards & Commercial Print Suites",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp"
+  },
+  {
+    "location": "Process Still: ooh-billboards-commercial-print",
+    "slug": "ooh-billboards-commercial-print",
+    "client": "Nirva Club, Kalpvriksh & Commercial Enterprises",
+    "industry": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
+    "role": "Process Still",
+    "title": "Nirva Club Monumental Pre-Launch 20x10 Highway Hoarding",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-skyline-hoarding.webp"
+  },
+  {
+    "location": "Process Still: ooh-billboards-commercial-print",
+    "slug": "ooh-billboards-commercial-print",
+    "client": "Nirva Club, Kalpvriksh & Commercial Enterprises",
+    "industry": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
+    "role": "Process Still",
+    "title": "High-impact outdoor highway billboard execution",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp"
+  },
+  {
+    "location": "Process Still: ooh-billboards-commercial-print",
+    "slug": "ooh-billboards-commercial-print",
+    "client": "Nirva Club, Kalpvriksh & Commercial Enterprises",
+    "industry": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
+    "role": "Process Still",
+    "title": "Nirva Club multi-generational lifestyle hoarding banner",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835321/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-family-hoarding.webp"
+  },
+  {
+    "location": "Process Still: ooh-billboards-commercial-print",
+    "slug": "ooh-billboards-commercial-print",
+    "client": "Nirva Club, Kalpvriksh & Commercial Enterprises",
+    "industry": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
+    "role": "Process Still",
+    "title": "Architectural 3x4 event standee for clubhouse exhibitions",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835320/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-architectural-standee.webp"
+  },
+  {
+    "location": "Process Still: ooh-billboards-commercial-print",
+    "slug": "ooh-billboards-commercial-print",
+    "client": "Nirva Club, Kalpvriksh & Commercial Enterprises",
+    "industry": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
+    "role": "Process Still",
+    "title": "Kalpvriksh gourmet restaurant promotional flyer and menu highlights",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835318/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/kalpvriksh-restaurant-flyer.webp"
+  },
+  {
+    "location": "Process Still: ooh-billboards-commercial-print",
+    "slug": "ooh-billboards-commercial-print",
+    "client": "Nirva Club, Kalpvriksh & Commercial Enterprises",
+    "industry": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
+    "role": "Process Still",
+    "title": "Gourmet hospitality promotional flyer and culinary branding",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835317/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/gourmet-hospitality-flyer.webp"
+  },
+  {
+    "location": "Nirva Gallery [Monumental OOH & Highway Hoarding Architecture]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Monumental OOH & Highway Hoarding Architecture",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835301/lucie-creatives/portfolio/graphic-design/nirva-club/main-hoarding-grand.jpg",
+    "title": "Monumental 20×10 Highway Hoarding Architecture",
+    "caption": "Primary grand launch billboard engineered with mathematical viewing distance contrast for transit corridors."
+  },
+  {
+    "location": "Nirva Gallery [Monumental OOH & Highway Hoarding Architecture]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Monumental OOH & Highway Hoarding Architecture",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835305/lucie-creatives/portfolio/graphic-design/nirva-club/nirva-opening-soon.jpg",
+    "title": "Highway Opening Teaser Hoarding",
+    "caption": "High-contrast architectural teaser sequence announcing the upcoming inauguration."
+  },
+  {
+    "location": "Nirva Gallery [Monumental OOH & Highway Hoarding Architecture]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Monumental OOH & Highway Hoarding Architecture",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835298/lucie-creatives/portfolio/graphic-design/nirva-club/hero-main-hoarding.webp",
+    "title": "Flagship Hoarding Identity & Architectural Key Visual",
+    "caption": "Brand anchor visual integrating resort elevation rendering with foundational club crest."
+  },
+  {
+    "location": "Nirva Gallery [Kalpvriksh Fine Dining & Culinary Identity]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Kalpvriksh Fine Dining & Culinary Identity",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835300/lucie-creatives/portfolio/graphic-design/nirva-club/kalpvriksh-restaurant-post.jpg",
+    "title": "Kalpvriksh Multi-Cuisine Fine Dining Campaign",
+    "caption": "Warm ambiance gastronomy identity designed with rich gold flourishes and heritage serif typography."
+  },
+  {
+    "location": "Nirva Gallery [Kalpvriksh Fine Dining & Culinary Identity]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Kalpvriksh Fine Dining & Culinary Identity",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835312/lucie-creatives/portfolio/graphic-design/nirva-club/weekend-restaurant-post.jpg",
+    "title": "Sunday Luxury Brunch & Evening Dining Post",
+    "caption": "Social media and table-standee campaign celebrating weekend chef-special culinary tastings."
+  },
+  {
+    "location": "Nirva Gallery [Kalpvriksh Fine Dining & Culinary Identity]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Kalpvriksh Fine Dining & Culinary Identity",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835293/lucie-creatives/portfolio/graphic-design/nirva-club/august-buffet-post.jpg",
+    "title": "Independence Weekend Special Buffet Campaign",
+    "caption": "Holiday feast campaign featuring live counter highlights and festive family seating arrangements."
+  },
+  {
+    "location": "Nirva Gallery [Kalpvriksh Fine Dining & Culinary Identity]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Kalpvriksh Fine Dining & Culinary Identity",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835309/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-flyer-menu.jpg",
+    "title": "Kalpvriksh Multi-Course Menu & Flyer System",
+    "caption": "Structured menu typography with botanical motif accents and luxury price formatting."
+  },
+  {
+    "location": "Nirva Gallery [Kalpvriksh Fine Dining & Culinary Identity]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Kalpvriksh Fine Dining & Culinary Identity",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-creative.webp",
+    "title": "Epicurean Experience Brochure Insert",
+    "caption": "Tactile print menu fold-out highlighting organic locally sourced ingredients and poolside seating."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835299/lucie-creatives/portfolio/graphic-design/nirva-club/janmashtami-celebration-post.jpg",
+    "title": "Janmashtami Cultural Festival Creative",
+    "caption": "Bespoke cultural greeting card merging sacred symbolism with resort luxury aesthetics."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835302/lucie-creatives/portfolio/graphic-design/nirva-club/monsoon-season-post.jpg",
+    "title": "Monsoon Retreat Campaign",
+    "caption": "Atmospheric seasonal creative framing rain-soaked stone gardens and cozy indoor dining."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835294/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic-campaign.jpg",
+    "title": "Family Weekend Day Picnic & Olympic Pool Campaign",
+    "caption": "Comprehensive leisure package collateral featuring poolside cabanas, rain dance, and banquet dining."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835310/lucie-creatives/portfolio/graphic-design/nirva-club/summer-mode-post.jpg",
+    "title": "Summer Mode Activation Creative",
+    "caption": "Vibrant seasonal social creative driving weekday poolside bookings and private cabana reservations."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835311/lucie-creatives/portfolio/graphic-design/nirva-club/summer-package-post.jpg",
+    "title": "All-Inclusive Summer Staycation Package",
+    "caption": "Feature breakdown of suite stays, buffet inclusions, and water-park amenities."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/rakshabandhan-offer-post.jpg",
+    "title": "Raksha Bandhan Celebratory Suite Offer",
+    "caption": "Warm festive family staycation creative with curated gifting touchpoints."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835303/lucie-creatives/portfolio/graphic-design/nirva-club/mothers-day-post.jpg",
+    "title": "Mother's Day Reverence Creative",
+    "caption": "Editorial tribute card celebrating maternal bonding in tranquil resort garden settings."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835296/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic.webp",
+    "title": "Day Picnic Print Flyer & Digital WhatsApp Blast",
+    "caption": "Omnichannel day picnic guide distributed to 25,000+ club patrons across South Gujarat."
+  },
+  {
+    "location": "Nirva Gallery [Seasonal Festivals & Resort Experience Campaigns]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Seasonal Festivals & Resort Experience Campaigns",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835309/lucie-creatives/portfolio/graphic-design/nirva-club/standy-mockup.webp",
+    "title": "3×4 Reception & Lobby Standee Architecture",
+    "caption": "High-contrast vertical banner installed in the main reception pavilion."
+  },
+  {
+    "location": "Nirva Gallery [Guest Welcome Experience & Membership Stationery]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Guest Welcome Experience & Membership Stationery",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835313/lucie-creatives/portfolio/graphic-design/nirva-club/welcome-letter-card.jpg",
+    "title": "VIP Guest Welcome Letter & Letterhead Suite",
+    "caption": "Gold-embossed personal welcome stationery placed in suites upon guest check-in."
+  },
+  {
+    "location": "Nirva Gallery [Guest Welcome Experience & Membership Stationery]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Guest Welcome Experience & Membership Stationery",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835306/lucie-creatives/portfolio/graphic-design/nirva-club/photo-frame-mockup.jpg",
+    "title": "Bespoke Resort Memory Photo Frame Design",
+    "caption": "Custom handcrafted souvenir frame gifted to founding members with commemorative photos."
+  },
+  {
+    "location": "Nirva Gallery [Guest Welcome Experience & Membership Stationery]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Guest Welcome Experience & Membership Stationery",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835297/lucie-creatives/portfolio/graphic-design/nirva-club/grand-opening-flyer.jpg",
+    "title": "Grand Inauguration Invitation Collateral",
+    "caption": "Gold-accented physical invitation collateral distributed to foundational club trustees and VIP guests."
+  },
+  {
+    "location": "Nirva Gallery [Guest Welcome Experience & Membership Stationery]",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "category": "Guest Welcome Experience & Membership Stationery",
+    "role": "Gallery Item",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835293/lucie-creatives/portfolio/graphic-design/nirva-club/billboard-opening.webp",
+    "title": "Highway Opening Panoramic Banner",
+    "caption": "Wide-aspect roadside visibility banner deployed across Surat and Gujarat transit corridors."
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Travel Social",
+    "role": "Marquee Creative",
+    "title": "Explore Vietnam Direct Booking Ad",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835333/lucie-creatives/portfolio/graphic-design/social-campaigns/vietnam-campaign.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Festival Campaign",
+    "role": "Marquee Creative",
+    "title": "Rath Yatra Cultural Festival Greeting",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835331/lucie-creatives/portfolio/graphic-design/social-campaigns/rathyatra-festival.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Haute Joaillerie",
+    "role": "Marquee Creative",
+    "title": "Rhyme High Jewelry Earrings Editorial",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835323/lucie-creatives/portfolio/graphic-design/rhyme-jewels/earrings-editorial.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "National Day",
+    "role": "Marquee Creative",
+    "title": "UAE National Day Corporate Greeting",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835331/lucie-creatives/portfolio/graphic-design/social-campaigns/uae-national-day.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "FMCG Retail",
+    "role": "Marquee Creative",
+    "title": "Crispo Tangy Tomato Packaging Pouch",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835268/lucie-creatives/portfolio/graphic-design/crancho-snacks/crispo-poster.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Hospitality Creative",
+    "role": "Marquee Creative",
+    "title": "Kalpvriksh Gourmet Weekend Dining",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-creative.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Retail Grid",
+    "role": "Marquee Creative",
+    "title": "Rhyme Daily Market Gold Rate System",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835325/lucie-creatives/portfolio/graphic-design/rhyme-jewels/gold-rate-system.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Travel Social",
+    "role": "Marquee Creative",
+    "title": "Bali Holiday Package Direct-Response",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835328/lucie-creatives/portfolio/graphic-design/social-campaigns/bali-creative.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Vector Mark",
+    "role": "Marquee Creative",
+    "title": "Sivanta Luxury Monogram & Identity",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835278/lucie-creatives/portfolio/graphic-design/logo-systems/hero-sivanta-logo.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Fashion Brand",
+    "role": "Marquee Creative",
+    "title": "Stylez Contemporary Apparel Monogram",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835280/lucie-creatives/portfolio/graphic-design/logo-systems/stylez-brand-symbol.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Corporate Crest",
+    "role": "Marquee Creative",
+    "title": "Madhav Architectural Crest & Identity",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835279/lucie-creatives/portfolio/graphic-design/logo-systems/madhav-identity.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Real Estate",
+    "role": "Marquee Creative",
+    "title": "Nandanvan 5 BHK Bungalows Campaign",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835288/lucie-creatives/portfolio/graphic-design/nandanvan-estates/bungalows-campaign.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "FMCG Pouch",
+    "role": "Marquee Creative",
+    "title": "Crancho Peri Peri Crunchy Pouch",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835267/lucie-creatives/portfolio/graphic-design/crancho-snacks/crancho-poster-1.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Resort Lifestyle",
+    "role": "Marquee Creative",
+    "title": "Nirva Club Family Weekend Day Picnic",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835296/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Jewelry Artboard",
+    "role": "Marquee Creative",
+    "title": "Rhyme Solitaire Pendant Exhibition",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835327/lucie-creatives/portfolio/graphic-design/rhyme-jewels/pendant-still.webp"
+  },
+  {
+    "location": "Graphic Design Page: Similar Creatives Marquee",
+    "slug": "marquee",
+    "client": "Various",
+    "industry": "Commercial Print",
+    "role": "Marquee Creative",
+    "title": "Gourmet Hospitality Seasonal Menu Flyer",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835317/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/gourmet-hospitality-flyer.webp"
+  },
+  {
+    "location": "Home Page: FeaturedPortfolio (Graphic Design Tab)",
+    "slug": "design-nandanvan",
+    "client": "Nandanvan Estates Luxury Architectural Branding",
+    "industry": "Brand Identity",
+    "role": "Home Portfolio Card",
+    "title": "Nandanvan Estates Luxury Architectural Branding",
+    "href": "/work/nandanvan-luxury-real-estate",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835288/lucie-creatives/portfolio/graphic-design/nandanvan-estates/bungalows-campaign.webp"
+  },
+  {
+    "location": "Home Page: FeaturedPortfolio (Graphic Design Tab)",
+    "slug": "design-speczo",
+    "client": "Speczo Eyewear Monolithic Identity & Packaging",
+    "industry": "Packaging Suite",
+    "role": "Home Portfolio Card",
+    "title": "Speczo Eyewear Monolithic Identity & Packaging",
+    "href": "/work/speczo-luxury-eyewear",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835336/lucie-creatives/portfolio/graphic-design/speczo/hero-frame-box.webp"
+  },
+  {
+    "location": "Home Page: FeaturedPortfolio (Graphic Design Tab)",
+    "slug": "design-onirique",
+    "client": "Onirique Parfums 3D CGI & Visual Identity",
+    "industry": "3D CGI & Identity",
+    "role": "Home Portfolio Card",
+    "title": "Onirique Parfums 3D CGI & Visual Identity",
+    "href": "/work/onirique-parfums-identity",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835315/lucie-creatives/portfolio/graphic-design/onirique/hero-perfume-trio.webp"
+  },
+  {
+    "location": "Home Page: GraphicDesignShowcase Section",
+    "slug": "nirva-resort-environmental-branding",
+    "client": "Nirva Club & Resort",
+    "industry": "Hospitality, Luxury Leisure & Clubs",
+    "role": "Home Section Feature",
+    "title": "Nirva Luxury Resort OOH & Brand Architecture",
+    "src": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835298/lucie-creatives/portfolio/graphic-design/nirva-club/hero-main-hoarding.webp"
+  }
+]

@@ -176,7 +176,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
   };
 
   return (
-    <div className="rounded-3xl bg-white border border-line/90 shadow-xs p-6 sm:p-10 relative overflow-hidden">
+    <div className="rounded-card bg-white border border-line/90 shadow-xs p-6 sm:p-10 relative overflow-hidden">
       <div className="border-b border-line/60 pb-6 mb-8">
         <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#8B1A1A] block mb-1">
           APPLICATION FORM
@@ -192,7 +192,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
       {statusMessage && (
         <div
           role="alert"
-          className={`p-4 sm:p-5 rounded-2xl mb-8 flex items-start gap-3.5 border ${
+          className={`p-4 sm:p-5 rounded-card mb-8 flex items-start gap-3.5 border ${
             statusMessage.type === "success"
               ? "bg-brand-red-50 border-brand-red/20 text-ink"
               : "bg-red-50 border-red-200 text-red-900"
@@ -232,7 +232,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               value={formData.name}
               onChange={handleChange}
               placeholder="e.g. Full Name"
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             />
           </div>
 
@@ -251,7 +251,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               value={formData.email}
               onChange={handleChange}
               placeholder="e.g. aakash@example.com"
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             />
           </div>
         </div>
@@ -272,7 +272,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               value={formData.phone}
               onChange={handleChange}
               placeholder="+91 98765 43210"
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             />
           </div>
 
@@ -290,7 +290,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               value={formData.city}
               onChange={handleChange}
               placeholder="e.g. Surat, Ahmedabad, Vadodara"
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             />
           </div>
         </div>
@@ -310,7 +310,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
             value={formData.portfolio}
             onChange={handleChange}
             placeholder="https://behance.net/yourprofile or Google Drive link"
-            className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+            className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
           />
         </div>
 
@@ -329,7 +329,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               required
               value={formData.experience}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             >
               <option value="">Select experience level</option>
               <option value="0 to 1 yr">0 to 1 yr</option>
@@ -352,7 +352,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               required
               value={formData.noticePeriod}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             >
               <option value="">Select notice duration</option>
               <option value="Immediate">Immediate</option>
@@ -381,7 +381,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               value={formData.currentSalary}
               onChange={handleChange}
               placeholder="e.g. 25000"
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             />
           </div>
 
@@ -401,7 +401,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
               value={formData.expectedSalary}
               onChange={handleChange}
               placeholder="e.g. 35000"
-              className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+              className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
             />
           </div>
         </div>
@@ -422,7 +422,7 @@ export function CareerApplicationForm({ role }: CareerApplicationFormProps) {
             value={formData.location}
             onChange={handleChange}
             placeholder="e.g. Adajan, Surat or Satellite, Ahmedabad"
-            className="w-full px-4 py-3 rounded-xl border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
+            className="w-full px-4 py-3 rounded-control border border-line bg-white/50 text-ink placeholder:text-muted text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#8B1A1A]/20 focus:border-[#8B1A1A] transition-all"
           />
         </div>
 

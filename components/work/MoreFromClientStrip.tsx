@@ -40,7 +40,7 @@ export function MoreFromClientStrip({ clientName, cards, onNavigate }: MoreFromC
               key={card.id}
               href={card.href}
               onClick={handleClick}
-              className="group relative bg-white/80 hover:bg-white rounded-xl sm:rounded-2xl border border-line/80 hover:border-brand-red/40 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col"
+              className="group relative bg-white/80 hover:bg-white rounded-card border border-line/80 hover:border-brand-red/40 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col"
             >
               <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#ffffff]">
                 <Image

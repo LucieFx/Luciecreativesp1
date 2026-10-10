@@ -79,7 +79,7 @@ export function AboutProcess() {
             return (
               <div
                 key={step.number}
-                className="relative p-6 sm:p-7 rounded-3xl bg-white border border-line/80 shadow-card hover:border-brand-red/40 hover:shadow-elevated transition-all flex flex-col justify-between group"
+                className="relative p-6 sm:p-7 rounded-card bg-white border border-line/80 shadow-card hover:border-brand-red/40 hover:shadow-elevated transition-all flex flex-col justify-between group"
               >
                 {/* Step Number & Icon */}
                 <div>
@@ -87,7 +87,7 @@ export function AboutProcess() {
                     <span className="text-3xl font-black text-slate-600 group-hover:text-brand-red transition-colors font-mono">
                       {step.number}
                     </span>
-                    <div className="w-10 h-10 rounded-2xl bg-brand-red-50 border border-brand-red/15 flex items-center justify-center text-brand-red group-hover:scale-110 transition-transform">
+                    <div className="w-10 h-10 rounded-control bg-brand-red-50 border border-brand-red/15 flex items-center justify-center text-brand-red group-hover:scale-110 transition-transform">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>

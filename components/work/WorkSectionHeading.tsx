@@ -37,7 +37,7 @@ export function WorkSectionHeading({
     >
       <div className="max-w-2xl">
         {/* Eyebrow Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-redLight border border-brand-red/20 text-brand-red text-xs font-black tracking-widest uppercase mb-4 shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-control bg-brand-redLight border border-brand-red/20 text-brand-red text-xs font-black tracking-widest uppercase mb-4 shadow-xs">
           {Icon && <Icon className="w-3.5 h-3.5" />}
           <span>{badgeText}</span>
         </div>

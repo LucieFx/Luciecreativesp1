@@ -1,0 +1,154 @@
+{
+  "pathname": "/work/ambica-interior-craft",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689952598\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689952598\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689952598\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/work/%5Bslug%5D/page.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://luciecreatives.in/work/ambica-interior-craft#article",
+      "headline": "Ambica Interior Gallery: Material Precision & Craft — Ambica Interior Gallery Case Study",
+      "name": "Ambica Interior Gallery: Material Precision & Craft — Ambica Interior Gallery Case Study",
+      "description": "A sensory vertical reel focusing on wood veneers, fluted panels, and custom joinery detailing.",
+      "url": "https://luciecreatives.in/work/ambica-interior-craft",
+      "image": "https://img.youtube.com/vi/F66vpDy_qQY/maxresdefault.jpg",
+      "datePublished": "2026-01-01",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://luciecreatives.in/work/ambica-interior-craft"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Interior Design"
+        },
+        {
+          "@type": "Thing",
+          "name": "Interior Architecture & Bespoke Millwork"
+        }
+      ],
+      "mentions": {
+        "@type": "Organization",
+        "name": "Ambica Interior Gallery"
+      },
+      "keywords": "Premiere Pro, DaVinci Resolve, Material Craft Reel, Macro Foley Design"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Editing",
+          "item": "https://luciecreatives.in/video-editing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ambica Interior Gallery: Material Precision & Craft",
+          "item": "https://luciecreatives.in/work/ambica-interior-craft"
+        }
+      ]
+    }
+  ]
+}

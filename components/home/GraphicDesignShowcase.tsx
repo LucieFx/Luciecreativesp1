@@ -47,7 +47,7 @@ export function GraphicDesignShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Feature Highlights */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="p-8 rounded-3xl bg-white/80 border border-line/80">
+            <div className="p-8 rounded-card bg-white/80 border border-line/80">
               <div className="flex items-center gap-3 mb-4 text-[#8b1a1a]">
                 <Box className="w-5 h-5" />
                 <h3 className="text-xl font-black text-text-primary">
@@ -58,19 +58,19 @@ export function GraphicDesignShowcase() {
                 Factory-ready die-lines, debossed foil stamping, tactile stock curation, and 3D ray-traced product renders engineered for luxury retail and international export compliance.
               </p>
               <div className="flex flex-wrap gap-2 text-xs font-bold text-body">
-                <span className="px-3 py-1 rounded-full bg-white border border-line">
+                <span className="px-3 py-1 rounded-control bg-white border border-line">
                   CMYK &amp; Pantone Spot
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white border border-line">
+                <span className="px-3 py-1 rounded-control bg-white border border-line">
                   Dieline Construction
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white border border-line">
+                <span className="px-3 py-1 rounded-control bg-white border border-line">
                   3D Packaging CGI
                 </span>
               </div>
             </div>
 
-            <div className="p-8 rounded-3xl bg-white/80 border border-line/80">
+            <div className="p-8 rounded-card bg-white/80 border border-line/80">
               <div className="flex items-center gap-3 mb-4 text-[#8b1a1a]">
                 <BookOpen className="w-5 h-5" />
                 <h3 className="text-xl font-black text-text-primary">
@@ -81,13 +81,13 @@ export function GraphicDesignShowcase() {
                 High-contrast investor pitch decks, corporate annual reports, luxury lookbooks, and multi-slide carousels governed by mathematical typography scales.
               </p>
               <div className="flex flex-wrap gap-2 text-xs font-bold text-body">
-                <span className="px-3 py-1 rounded-full bg-white border border-line">
+                <span className="px-3 py-1 rounded-control bg-white border border-line">
                   Baseline Grid Alignment
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white border border-line">
+                <span className="px-3 py-1 rounded-control bg-white border border-line">
                   Investor Pitch Decks
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white border border-line">
+                <span className="px-3 py-1 rounded-control bg-white border border-line">
                   Brand Lookbooks
                 </span>
               </div>
@@ -98,7 +98,7 @@ export function GraphicDesignShowcase() {
                 href="/graphic-design"
                 variant="primary"
                 size="md"
-                className="px-6 py-3 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
+                className="px-6 py-3 text-xs font-black rounded-control shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
               >
                 <span>Explore Graphic Design Services</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -115,7 +115,7 @@ export function GraphicDesignShowcase() {
 
           {/* Right Column: Case Study Visual Feature */}
           <div className="lg:col-span-6">
-            <div className="group relative rounded-3xl overflow-hidden border border-line bg-white shadow-floating hover:border-[#8b1a1a]/40 transition-all">
+            <div className="group relative rounded-media overflow-hidden border border-line bg-white shadow-floating hover:border-[#8b1a1a]/40 transition-all">
               <div className="relative w-full overflow-hidden bg-slate-100">
                 <Image
                   src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835298/lucie-creatives/portfolio/graphic-design/nirva-club/hero-main-hoarding.webp"
@@ -127,7 +127,7 @@ export function GraphicDesignShowcase() {
                 />
 
                 {/* Floating Metric Badge */}
-                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-line text-xs font-black text-ink flex items-center gap-1.5 shadow-sm">
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-control border border-line text-xs font-black text-ink flex items-center gap-1.5 shadow-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
                   <span>Monumental OOH System</span>
                 </div>

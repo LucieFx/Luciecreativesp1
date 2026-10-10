@@ -91,7 +91,7 @@ function ProjectPanel({
         href={`/work/${project.slug}`}
         data-cursor-hover="true"
         data-cursor-text="VIEW"
-        className="group relative w-full max-w-6xl block rounded-3xl overflow-hidden shadow-2xl border border-line/80 bg-ink transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,26,26,0.25)] hover:border-brand-red/40"
+        className="group relative w-full max-w-6xl block rounded-media overflow-hidden shadow-2xl border border-line/80 bg-ink transition-all duration-500 hover:shadow-[0_25px_60px_rgba(139,26,26,0.25)] hover:border-brand-red/40"
       >
         {/* Aspect Ratio Container filling ~80%+ viewport height */}
         <div
@@ -104,7 +104,7 @@ function ProjectPanel({
           {/* Skeleton Shimmer State: Shown until media is within margin and ready */}
           {(!isInLoadMargin || !mediaReady) && (
             <div className="absolute inset-0 z-10 skeleton-shimmer flex items-center justify-center">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/40">
+              <div className="w-12 h-12 rounded-control border border-white/20 flex items-center justify-center text-white/40">
                 <Play className="w-5 h-5 ml-0.5" />
               </div>
             </div>
@@ -147,7 +147,7 @@ function ProjectPanel({
 
           {/* Top-Right: Category & Year Liquid-Glass Badge */}
           <div className="absolute top-5 right-5 sm:top-7 sm:right-7 z-20 pointer-events-none">
-            <div className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-black tracking-wider uppercase flex items-center gap-2 shadow-lg">
+            <div className="px-3.5 py-1.5 rounded-control bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-black tracking-wider uppercase flex items-center gap-2 shadow-lg">
               <span className="w-2 h-2 rounded-full bg-brand-red" />
               <span>{project.category}</span>
               <span className="text-white/50">• {project.year}</span>
@@ -156,7 +156,7 @@ function ProjectPanel({
 
           {/* Bottom-Left: Liquid-Glass Client Name Pill & Project Meta */}
           <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-20 max-w-2xl text-left pointer-events-none">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-black uppercase tracking-wider mb-3 shadow-lg">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-black uppercase tracking-wider mb-3 shadow-lg">
               <Sparkles className="w-3.5 h-3.5 text-brand-redLight" />
               <span>{project.client}</span>
             </div>
@@ -173,7 +173,7 @@ function ProjectPanel({
           {/* Final Project: Prominent "View case study →" Button */}
           {isFinal && (
             <div className="absolute bottom-6 right-6 sm:bottom-10 sm:right-10 z-20">
-              <span className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-brand-red hover:bg-brand-redDark text-white text-xs sm:text-sm font-black uppercase tracking-wider shadow-red-btn transition-transform group-hover:scale-105 pointer-events-auto">
+              <span className="inline-flex items-center gap-2 px-6 py-3.5 rounded-control bg-brand-red hover:bg-brand-redDark text-white text-xs sm:text-sm font-black uppercase tracking-wider shadow-red-btn transition-transform group-hover:scale-105 pointer-events-auto">
                 <span>View Case Study</span>
                 <ArrowUpRight className="w-4 h-4" />
               </span>
@@ -183,7 +183,7 @@ function ProjectPanel({
           {/* Non-Final: Subtle Corner Arrow Icon */}
           {!isFinal && (
             <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-20 pointer-events-none">
-              <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center group-hover:bg-brand-red group-hover:scale-110 transition-all shadow-md">
+              <div className="w-10 h-10 rounded-control bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center group-hover:bg-brand-red group-hover:scale-110 transition-all shadow-md">
                 <ArrowUpRight className="w-4 h-4" />
               </div>
             </div>
@@ -199,7 +199,7 @@ function StatQuoteBreak({ stat }: { stat: StatBreakItem }) {
   return (
     <section className="relative w-full py-24 sm:py-32 my-12 bg-[#8B1A1A] text-white px-6 sm:px-12 md:px-20 overflow-hidden border-y border-white/10 select-none">
       <div className="max-w-5xl mx-auto relative z-10 text-center space-y-6">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white/90 text-xs font-black uppercase tracking-widest">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-control bg-white/15 backdrop-blur-md border border-white/20 text-white/90 text-xs font-black uppercase tracking-widest">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Founders&apos; Conviction</span>
         </div>

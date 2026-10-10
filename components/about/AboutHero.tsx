@@ -25,7 +25,7 @@ export function AboutHero() {
         </div>
 
         {/* Category Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-maroon-50 border border-maroon-100 text-maroon-700 text-xs font-black tracking-widest uppercase shadow-xs">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-control bg-maroon-50 border border-maroon-100 text-maroon-700 text-xs font-black tracking-widest uppercase shadow-xs">
           <span className="w-1.5 h-1.5 rounded-full bg-[#8B1A1A] inline-block" aria-hidden="true" />
           <span>About Lucie Creatives</span>
         </div>

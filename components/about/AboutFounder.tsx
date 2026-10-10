@@ -46,7 +46,7 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
   return (
     <section className="relative w-full py-16 sm:py-24 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto select-none">
       <div className="max-w-4xl mx-auto">
-        <div className="p-8 sm:p-12 lg:p-16 rounded-xl bg-white border border-line shadow-xs relative overflow-hidden text-center">
+        <div className="p-8 sm:p-12 lg:p-16 rounded-card bg-white border border-line shadow-xs relative overflow-hidden text-center">
           <div className="relative z-10 space-y-8">
             {/* Header Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-red-50 border border-brand-red/20 text-[#8B1A1A] text-xs font-mono font-bold uppercase tracking-wider">
@@ -114,7 +114,7 @@ export function AboutFounder({ founders = "Founders" }: AboutFounderProps) {
                       rel="noopener noreferrer"
                       title={social.name}
                       aria-label={`${social.name} (${social.handle})`}
-                      className="w-9 h-9 rounded-xl bg-surface-alt border border-line hover:border-[#8B1A1A]/30 hover:bg-brand-red-50 text-body hover:text-[#8B1A1A] flex items-center justify-center transition-all shadow-xs"
+                      className="w-9 h-9 rounded-control bg-surface-alt border border-line hover:border-[#8B1A1A]/30 hover:bg-brand-red-50 text-body hover:text-[#8B1A1A] flex items-center justify-center transition-all shadow-xs"
                     >
                       <SocialIcon name={social.name} className="w-3.5 h-3.5" />
                     </a>

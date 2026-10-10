@@ -72,14 +72,14 @@ export function IndustriesCondensedStrip() {
               >
                 <Link
                   href="/industries"
-                  className="group p-6 sm:p-7 rounded-2xl bg-white border border-line/90 shadow-xs hover:shadow-md hover:border-[#8b1a1a]/40 transition-all duration-300 flex flex-col justify-between h-full"
+                  className="group p-6 sm:p-7 rounded-card bg-white border border-line/90 shadow-xs hover:shadow-md hover:border-[#8b1a1a]/40 transition-all duration-300 flex flex-col justify-between h-full"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-xs font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-line/70">
+                      <span className="text-xs font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-control border border-line/70">
                         {sector.badge}
                       </span>
-                      <div className="w-9 h-9 rounded-xl bg-red-50 text-[#8b1a1a] flex items-center justify-center group-hover:bg-[#8b1a1a] group-hover:text-white transition-colors">
+                      <div className="w-9 h-9 rounded-control bg-red-50 text-[#8b1a1a] flex items-center justify-center group-hover:bg-[#8b1a1a] group-hover:text-white transition-colors">
                         <Icon className="w-4 h-4" />
                       </div>
                     </div>

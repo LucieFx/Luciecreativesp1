@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { WorkProject } from "@/lib/work-data";
 import { extractYouTubeVideoId } from "@/lib/youtube";
-import { IPHONE_FRAME } from "./iphone-frame-constants";
+import { IPHONE_FRAME, IPHONE_SCREEN_MASK_DATA_URI } from "./iphone-frame-constants";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface IPhoneReelsCardProps {
@@ -146,51 +146,30 @@ export function IPhoneReelsCard({
     <div
       className="relative w-full select-none"
       style={{
-        aspectRatio: IPHONE_FRAME.aspectRatio,
+        aspectRatio: "576 / 1024",
       }}
     >
       {/* ─────────────────────────────────────────────────────────────
-          LAYER A: CLIPPED SCREEN (via iphone-screen-mask.png)
-          mask-image cuts the rounded rectangle shape. No border-radius or clip-path.
+          INNER SCREEN VIEWPORT (Positioned inside the hardware frame cutout)
          ───────────────────────────────────────────────────────────── */}
       <div
-        className="absolute inset-0 pointer-events-auto"
+        className="absolute overflow-hidden bg-black text-white cursor-pointer rounded-[44px]"
         style={{
-          maskImage: "url(/iphone-screen-mask.png)",
-          WebkitMaskImage: "url(/iphone-screen-mask.png)",
-          maskSize: "100% 100%",
-          WebkitMaskSize: "100% 100%",
-          maskRepeat: "no-repeat",
-          WebkitMaskRepeat: "no-repeat",
+          top: "4.98%",
+          bottom: "4.98%",
+          left: "13.37%",
+          right: "13.20%",
+          containerType: "inline-size",
+          fontFamily:
+            '-apple-system, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+          // Define --pt based on the 423px screen cutout width
+          // @ts-expect-error custom CSS variable for container queries
+          "--pt": "calc(100cqw / 423)",
         }}
+        onClick={handleScreenClick}
       >
-        {/* Inside Layer A: screen div positioned absolutely at measured insets */}
-        <div
-          className="absolute overflow-hidden text-white"
-          style={{
-            top: `${IPHONE_FRAME.screenInsets.topPercent}%`,
-            bottom: `${IPHONE_FRAME.screenInsets.bottomPercent}%`,
-            left: `${IPHONE_FRAME.screenInsets.leftPercent}%`,
-            right: `${IPHONE_FRAME.screenInsets.rightPercent}%`,
-            containerType: "inline-size",
-            fontFamily:
-              '-apple-system, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-            // Define --pt for all child elements
-            // @ts-expect-error custom CSS variable for container queries
-            "--pt": "calc(100cqw / 393)",
-          }}
-          onClick={handleScreenClick}
-        >
-          {/* ── VIDEO / POSTER MEDIA LAYER ── */}
-          <div
-            className="absolute overflow-hidden bg-black"
-            style={{
-              top: "-2px",
-              bottom: "-2px",
-              left: "-2px",
-              right: "-2px",
-            }}
-          >
+        {/* ── VIDEO / POSTER MEDIA LAYER ── */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden bg-black">
           {isCenter && youtubeId ? (
             <iframe
               key={`yt-stage-${project.slug}`}
@@ -245,7 +224,7 @@ export function IPhoneReelsCard({
           {isCenter && !isPlaying && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/20 pointer-events-none z-15">
               <div
-                className="rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white/90"
+                className="rounded-control bg-black/60 backdrop-blur-md flex items-center justify-center text-white/90"
                 style={{
                   width: "calc(54 * var(--pt))",
                   height: "calc(54 * var(--pt))",
@@ -648,7 +627,7 @@ export function IPhoneReelsCard({
 
           {/* Audio Row (Translucent marquee pill) */}
           <div
-            className="inline-flex items-center overflow-hidden bg-black/40 backdrop-blur-md rounded-full text-white/90"
+            className="inline-flex items-center overflow-hidden bg-black/40 backdrop-blur-md rounded-control text-white/90"
             style={{
               gap: "calc(5 * var(--pt))",
               paddingLeft: "calc(8 * var(--pt))",
@@ -785,22 +764,20 @@ export function IPhoneReelsCard({
           </div>
         </div>
       </div>
-    </div>
 
-    {/* ─────────────────────────────────────────────────────────────
-        LAYER B: HARDWARE FRAME PNG OVERLAY ON TOP
-        Absolute inset 0, pointer-events: none, aria-hidden, via next/image
-       ───────────────────────────────────────────────────────────── */}
-    <div className="absolute inset-0 z-35 pointer-events-none" aria-hidden="true">
-      <Image
-        src="/iphone-frame.webp"
-        alt=""
-        fill
-        loading="lazy"
-        sizes="(max-width: 640px) 280px, 380px"
-        className="object-contain pointer-events-none select-none"
-      />
+      {/* ─────────────────────────────────────────────────────────────
+          HARDWARE FRAME PNG OVERLAY (Layer B: /iphone-frame.png)
+         ───────────────────────────────────────────────────────────── */}
+      <div className="absolute inset-0 pointer-events-none z-35" aria-hidden="true">
+        <Image
+          src="/iphone-frame.png"
+          alt=""
+          fill
+          unoptimized
+          priority
+          className="object-contain pointer-events-none select-none drop-shadow-2xl"
+        />
+      </div>
     </div>
-  </div>
   );
 }

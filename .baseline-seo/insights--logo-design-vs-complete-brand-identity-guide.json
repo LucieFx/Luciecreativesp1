@@ -1,0 +1,204 @@
+{
+  "pathname": "/insights/logo-design-vs-complete-brand-identity-guide",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=640&amp;q=80&amp;auto=format 640w, https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=750&amp;q=80&amp;auto=format 750w, https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=828&amp;q=80&amp;auto=format 828w, https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1080&amp;q=80&amp;auto=format 1080w, https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1200&amp;q=80&amp;auto=format 1200w, https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1920&amp;q=80&amp;auto=format 1920w, https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=2048&amp;q=80&amp;auto=format 2048w\" imageSizes=\"(max-width: 1024px) 100vw, 896px\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689965534\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689965534\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689965534\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/insights/%5Bslug%5D/page.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "https://luciecreatives.in/insights/logo-design-vs-complete-brand-identity-guide#article",
+      "headline": "Logo Design vs. Complete Brand Identity: What Growing Businesses Actually Need",
+      "name": "Logo Design vs. Complete Brand Identity: What Growing Businesses Actually Need",
+      "description": "A standalone logo is not a brand. Discover why modern enterprises require cohesive brand architecture—typography hierarchies, color systems, grid rules, and packaging die-lines—to establish market authority.",
+      "url": "https://luciecreatives.in/insights/logo-design-vs-complete-brand-identity-guide",
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&auto=format&fit=crop&q=80",
+      "datePublished": "2025-11-20",
+      "dateModified": "2026-01-28",
+      "articleSection": "Branding",
+      "author": {
+        "@type": "Person",
+        "name": "Lucie Creatives Brand Design Guild",
+        "jobTitle": "Creative Direction & Identity Systems"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://luciecreatives.in/insights/logo-design-vs-complete-brand-identity-guide"
+      },
+      "about": {
+        "@type": "Service",
+        "name": "Branding",
+        "url": "https://luciecreatives.in/branding"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Logo Design vs. Complete Brand Identity: What Growing Businesses Actually Need",
+          "item": "https://luciecreatives.in/insights/logo-design-vs-complete-brand-identity-guide"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the primary difference between a logo and a brand identity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A logo is a single graphic mark or signature symbol used to identify a business. A brand identity is the complete visual, typographic, and tonal system—including type scales, color palettes, grid rules, voice, and packaging—that defines how the entire company communicates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I trademark my brand identity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While you can trademark a standalone logo mark and wordmark, registering your brand's unique color arrangements, slogans, and distinctive trade dress provides robust legal protection against counterfeiters and imitators."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should an established business refresh its brand identity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High-performing brands rarely change their core identity radically. Instead, they execute strategic visual refreshes every 5 to 7 years to modernize typographic scales, digital screen responsiveness, and digital asset libraries while maintaining core recognition."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Branding",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Logo Design vs. Complete Brand Identity: What Growing Businesses Actually Need"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "pathname": "/work/crancho-fmcg-packaging",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_640/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp 640w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_750/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp 750w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_828/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp 828w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_1080/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp 1080w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_1200/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp 1200w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_1920/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp 1920w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_2048/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp 2048w\" imageSizes=\"(max-width: 768px) 100vw, 1200px\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689954818\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689954818\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689954818\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/work/%5Bslug%5D/page.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://luciecreatives.in/work/crancho-fmcg-packaging#article",
+      "headline": "Crancho Snacks FMCG Packaging Architecture — Crancho Consumer Foods Case Study",
+      "name": "Crancho Snacks FMCG Packaging Architecture — Crancho Consumer Foods Case Study",
+      "description": "Crancho Foods required a complete packaging overhaul for their retail snack food lines. We designed bold pouch die-lines, appetizing flavor color palettes, ingredient callouts, and 3D retail mockups for national distribution.",
+      "url": "https://luciecreatives.in/work/crancho-fmcg-packaging",
+      "image": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835269/lucie-creatives/portfolio/graphic-design/crancho-snacks/hero-chips-mockup.webp",
+      "datePublished": "2026-01-01",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://luciecreatives.in/work/crancho-fmcg-packaging"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Graphic Design"
+        },
+        {
+          "@type": "Thing",
+          "name": "FMCG, Snack Foods & Retail Packaging"
+        }
+      ],
+      "mentions": {
+        "@type": "Organization",
+        "name": "Crancho Consumer Foods"
+      },
+      "keywords": "Illustrator, Photoshop, Cinema 4D, InDesign, FMCG Pouch Packaging Die-lines, Multi-SKU Flavor Color Coding, Photorealistic 3D Pouch Mockups, Point-of-Sale Retail Display Banners"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Graphic Design",
+          "item": "https://luciecreatives.in/graphic-design"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Crancho Snacks FMCG Packaging Architecture",
+          "item": "https://luciecreatives.in/work/crancho-fmcg-packaging"
+        }
+      ]
+    }
+  ]
+}

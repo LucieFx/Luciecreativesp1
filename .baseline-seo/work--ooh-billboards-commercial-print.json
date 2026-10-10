@@ -1,0 +1,154 @@
+{
+  "pathname": "/work/ooh-billboards-commercial-print",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_640/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp 640w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_750/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp 750w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_828/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp 828w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_1080/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp 1080w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_1200/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp 1200w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_1920/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp 1920w, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_2048/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp 2048w\" imageSizes=\"(max-width: 768px) 100vw, 1200px\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689956285\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689956285\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689956285\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/work/%5Bslug%5D/page.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://luciecreatives.in/work/ooh-billboards-commercial-print#article",
+      "headline": "Grand-Scale OOH Billboards & Commercial Print Suites — Nirva Club, Kalpvriksh & Commercial Enterprises Case Study",
+      "name": "Grand-Scale OOH Billboards & Commercial Print Suites — Nirva Club, Kalpvriksh & Commercial Enterprises Case Study",
+      "description": "Comprehensive large-format print and OOH advertising systems spanning monumental 20x10 highway hoardings, luxury architectural showroom standees, gourmet hospitality menus and flyers, and environmental brand installations.",
+      "url": "https://luciecreatives.in/work/ooh-billboards-commercial-print",
+      "image": "https://res.cloudinary.com/oct7txvw/image/upload/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp",
+      "datePublished": "2026-01-01",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://luciecreatives.in/work/ooh-billboards-commercial-print"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Graphic Design"
+        },
+        {
+          "@type": "Thing",
+          "name": "Out-of-Home (OOH) Advertising, Architecture & Commercial Print"
+        }
+      ],
+      "mentions": {
+        "@type": "Organization",
+        "name": "Nirva Club, Kalpvriksh & Commercial Enterprises"
+      },
+      "keywords": "CorelDRAW, Adobe Illustrator, Photoshop, Large-Format Prepress, 20x10 Highway Hoardings & Mega Banners, Architectural 3x4 Showroom Standees, Restaurant Promotional Flyers & Menus, Large-Format Commercial Print Suites, Print-Ready Prepress Master Vector Packages"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Graphic Design",
+          "item": "https://luciecreatives.in/graphic-design"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Grand-Scale OOH Billboards & Commercial Print Suites",
+          "item": "https://luciecreatives.in/work/ooh-billboards-commercial-print"
+        }
+      ]
+    }
+  ]
+}

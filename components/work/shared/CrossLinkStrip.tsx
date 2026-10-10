@@ -89,7 +89,7 @@ export function CrossLinkStrip({
             {/* Left Content Area */}
             <div className="max-w-3xl space-y-4">
               {/* Category Pill */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red-50 border border-brand-red/20 text-brand-red text-xs font-black uppercase tracking-widest shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-control bg-brand-red-50 border border-brand-red/20 text-brand-red text-xs font-black uppercase tracking-widest shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-brand-red shrink-0" />
                 <span>{eyebrow}</span>
               </div>

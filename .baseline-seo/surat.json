@@ -1,0 +1,182 @@
+{
+  "pathname": "/surat",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689932988\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689932988\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689932988\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/surat/page.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/not-found.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://luciecreatives.in/surat#service",
+      "name": "Creative Digital Agency Services in Surat by Lucie Creatives",
+      "serviceType": "Creative Digital Agency Services in Surat",
+      "description": "Lucie Creatives is an elite creative agency serving businesses in Surat. Renowned worldwide for diamond innovation, advanced textile manufacturing, and burgeoning consumer brands, Surat commands high-prestige creative execution. We empower Surat's industry leaders with world-class web development in Surat, luxury graphic design in Surat, cinema-grade video editing in Surat, and distinctive logo design in Surat.",
+      "url": "https://luciecreatives.in/surat",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Surat"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Lucie Creatives serve clients as a creative agency in Surat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We operate as a dedicated creative partner serving businesses in Surat through agile, remote-first sprint pods. We hold structured weekly creative syncs, share interactive design proofs via Figma and Frame.io, and ensure rapid iterations with no geographic friction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes your graphic design in Surat unique for jewelry and textile brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We engineer production-ready structural dielines for rigid luxury boxes, embossed foil sleeves, fabric hangtags, and seasonal lookbooks. We coordinate directly with your print and packaging manufacturing partners to guarantee flawless finish quality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you shoot or edit macro footage with your video editing in Surat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our video editing post-production team specializes in macro probe lens color grading, optical dispersion simulation, and audio sound foley tailored for lab-grown diamonds, jewelry, and luxury apparel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does your web development in Surat support direct-to-consumer (D2C) brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build custom headless Shopify and Next.js e-commerce storefronts that load in under a second, offer real-time product filtering, and optimize mobile checkout funnels to maximize customer average order value (AOV)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you create custom logo design in Surat suitable for hallmarks and engraving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our logo design services produce clean geometric vectors calibrated for precision laser engraving on jewelry and timepieces, as well as digital favicons and large-format showroom displays."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "India",
+          "item": "https://luciecreatives.in/india"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gujarat",
+          "item": "https://luciecreatives.in/gujarat"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Surat",
+          "item": "https://luciecreatives.in/surat"
+        }
+      ]
+    }
+  ]
+}

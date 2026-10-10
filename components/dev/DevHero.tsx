@@ -1,10 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import { Code2, ArrowLeft, ArrowUpRight } from "lucide-react";
-import { SplitText, Reveal } from "@/components/motion";
-import { DevHeroBrowserMock } from "./DevHeroBrowserMock";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import {
+  motion,
+  useReducedMotion,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 
 const FEATURE_CHIPS = [
   { label: "Next.js 15 & TypeScript" },
@@ -13,27 +17,84 @@ const FEATURE_CHIPS = [
   { label: "100% Mobile Responsive" },
 ];
 
-export function DevHero() {
+interface LenisInstance {
+  scrollTo: (
+    target: string | HTMLElement,
+    options?: { offset?: number; duration?: number }
+  ) => void;
+}
 
-  const handleScrollToProjects = (e: React.MouseEvent) => {
+function MagneticButton({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const shouldReduceMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const springConfig = { stiffness: 250, damping: 20, mass: 0.5 };
+  const smoothX = useSpring(x, springConfig);
+  const smoothY = useSpring(y, springConfig);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (shouldReduceMotion || !ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const offsetX = e.clientX - centerX;
+    const offsetY = e.clientY - centerY;
+    // Set x/y to about 22% and 30% of cursor offset
+    x.set(offsetX * 0.22);
+    y.set(offsetY * 0.30);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        x: smoothX,
+        y: smoothY,
+      }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export function DevHero() {
+  const shouldReduceMotion = useReducedMotion();
+
+  const handleScrollToProjects = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (typeof window !== "undefined") {
-      const lenis = (window as any).__lenis;
+      const lenis = (window as unknown as { __lenis?: LenisInstance }).__lenis;
       if (lenis && typeof lenis.scrollTo === "function") {
-        lenis.scrollTo("#websites-weve-built", { offset: -40, duration: 1.2 });
+        lenis.scrollTo("#project-showcase", { offset: 0, duration: 1.2 });
       } else {
-        const target = document.getElementById("websites-weve-built");
+        const target =
+          document.getElementById("project-showcase") ||
+          document.getElementById("websites-weve-built");
         target?.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
 
+  const heroWords = ["Websites", "that", "feel"];
+
   return (
     <section className="relative w-full pt-32 sm:pt-40 pb-16 lg:pb-24 bg-white text-text-primary overflow-visible border-b border-line">
-      {/* Background Dot Grid Pattern */}
-      {null}
-      {null}
-
       <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10 overflow-visible">
         {/* Navigation Breadcrumb */}
         <div className="mb-8 flex items-center justify-between flex-wrap gap-4">
@@ -50,42 +111,79 @@ export function DevHero() {
           </span>
         </div>
 
-        {/* Hero Header with blur fade up */}
-        <Reveal delay={0} y={16} duration={0.65} className="max-w-4xl overflow-visible">
+        {/* Hero Header */}
+        <div className="max-w-4xl overflow-visible">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-redLight border border-brand-red/20 text-[#8B1A1A] text-xs font-mono font-bold tracking-wider uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-red inline-block" />
             <span>Web Development</span>
           </div>
 
-          <SplitText
-            as="h1"
-            className="text-4xl sm:text-6xl lg:text-7xl font-display font-semibold text-ink tracking-[-0.02em] leading-[1.05] text-balance"
-            accentWords={["alive."]}
-            accentClassName="font-accent italic text-brand-red text-[1.1em] tracking-normal inline"
-          >
-            Websites that feel *alive.*
-          </SplitText>
+          {/* Word-by-word headline reveal */}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-semibold text-ink tracking-[-0.02em] leading-[1.05] text-balance">
+            {heroWords.map((word, i) => (
+              <span
+                key={word}
+                className="overflow-hidden inline-block mr-[0.25em]"
+              >
+                <motion.span
+                  className="inline-block"
+                  initial={shouldReduceMotion ? false : { y: "110%" }}
+                  animate={{ y: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: i * 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
+            <span className="overflow-hidden inline-block align-baseline">
+              <motion.span
+                className="inline-block font-accent italic text-[#8B1A1A] text-[1.05em] tracking-normal"
+                initial={
+                  shouldReduceMotion
+                    ? false
+                    : { y: "110%", filter: "blur(10px)", skewY: 6 }
+                }
+                animate={{ y: 0, filter: "blur(0px)", skewY: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.55,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                alive.
+              </motion.span>
+            </span>
+          </h1>
 
           <p className="mt-6 text-base sm:text-xl font-medium text-body leading-relaxed max-w-2xl text-pretty">
-            Fast, clean Next.js websites and web apps for brands that want more than a template.
+            Fast, clean Next.js websites and web apps for brands that want more
+            than a template.
           </p>
 
-          {/* Action Buttons */}
+          {/* Action Buttons with magnetic physics */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm tracking-wide transition-all hover:scale-[1.02] shadow-xs will-change-transform"
-            >
-              <span>Start a Project</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            <MagneticButton>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm tracking-wide transition-all hover:scale-[1.02] shadow-xs will-change-transform"
+              >
+                <span>Start a Project</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </MagneticButton>
 
-            <button
-              onClick={handleScrollToProjects}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-line bg-white hover:bg-brand-red-50 text-ink font-bold text-sm tracking-wide transition-all hover:scale-[1.02] cursor-pointer will-change-transform"
-            >
-              <span>See our work</span>
-            </button>
+            <MagneticButton>
+              <button
+                onClick={handleScrollToProjects}
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-line bg-white hover:bg-brand-red-50 text-ink font-bold text-sm tracking-wide transition-all hover:scale-[1.02] cursor-pointer will-change-transform"
+              >
+                <span>See our work</span>
+              </button>
+            </MagneticButton>
           </div>
 
           {/* Feature Chips */}
@@ -100,13 +198,10 @@ export function DevHero() {
               </div>
             ))}
           </div>
-        </Reveal>
-
-        {/* Hero Visual: Self-Building Browser Window Mock with blur fade up */}
-        <Reveal delay={0.15} y={24} duration={0.75} className="w-full mt-10 overflow-visible">
-          <DevHeroBrowserMock />
-        </Reveal>
+        </div>
       </div>
     </section>
   );
 }
+
+export default DevHero;

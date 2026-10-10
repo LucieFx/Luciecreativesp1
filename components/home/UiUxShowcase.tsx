@@ -46,9 +46,9 @@ export function UiUxShowcase() {
         {/* 3-Column UI/UX Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {/* Card 1: Figma Design Systems */}
-          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
+          <div className="p-8 rounded-card bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-control bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 <Layers className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-black text-text-primary tracking-tight mb-3">
@@ -71,9 +71,9 @@ export function UiUxShowcase() {
           </div>
 
           {/* Card 2: Interactive Prototypes & CRO */}
-          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
+          <div className="p-8 rounded-card bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-control bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 <MousePointerClick className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-black text-text-primary tracking-tight mb-3">
@@ -96,9 +96,9 @@ export function UiUxShowcase() {
           </div>
 
           {/* Card 3: Responsive Web & SaaS Design */}
-          <div className="p-8 rounded-3xl bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
+          <div className="p-8 rounded-card bg-white/80 border border-line/80 flex flex-col justify-between group hover:border-[#8b1a1a]/40 transition-all duration-300">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-control bg-white border border-line text-[#8b1a1a] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 <Monitor className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-black text-text-primary tracking-tight mb-3">
@@ -127,7 +127,7 @@ export function UiUxShowcase() {
             href="/ui-ux-design"
             variant="primary"
             size="md"
-            className="px-7 py-3.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
+            className="px-7 py-3.5 text-xs font-black rounded-control shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
           >
             <span>Explore Full UI/UX Capabilities</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

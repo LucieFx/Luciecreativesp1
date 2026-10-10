@@ -203,14 +203,14 @@ export function VideoEditingShowcase() {
             PART A: FLAGSHIP 16:9 CINEMA SPOTLIGHT (Nirva Resort)
            ───────────────────────────────────────────────────────────── */}
         <div className="mb-14 sm:mb-20">
-          <div className="group relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900/90 shadow-2xl transition-all">
+          <div className="group relative rounded-media overflow-hidden border border-white/10 bg-slate-900/90 shadow-2xl transition-all">
             {/* Top Floating Badge Bar */}
             <div className="absolute top-4 inset-x-4 sm:inset-x-6 flex items-center justify-between z-30 pointer-events-none">
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/20 text-xs font-black text-white shadow-lg">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-slate-950/85 backdrop-blur-md border border-white/20 text-xs font-black text-white shadow-lg">
                 <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
                 <span className="uppercase tracking-wider">Flagship 16:9 Cinema Commercial</span>
               </div>
-              <div className="px-3.5 py-1.5 rounded-full bg-[#8b1a1a] text-xs font-mono font-bold text-white shadow-md">
+              <div className="px-3.5 py-1.5 rounded-control bg-[#8b1a1a] text-xs font-mono font-bold text-white shadow-md">
                 Client: {cinemaVideo.client}
               </div>
             </div>
@@ -247,7 +247,7 @@ export function VideoEditingShowcase() {
                   cinemaPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100 bg-black/40"
                 }`}
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#8b1a1a]/90 backdrop-blur-md text-white flex items-center justify-center shadow-2xl border border-white/20 transform transition-transform group-hover:scale-110">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-control bg-[#8b1a1a]/90 backdrop-blur-md text-white flex items-center justify-center shadow-2xl border border-white/20 transform transition-transform group-hover:scale-110">
                   {cinemaPlaying ? (
                     <Pause className="w-7 h-7 fill-current" />
                   ) : (
@@ -356,7 +356,7 @@ export function VideoEditingShowcase() {
                   href="/contact"
                   variant="primary"
                   size="sm"
-                  className="px-5 py-2.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 text-white shrink-0"
+                  className="px-5 py-2.5 text-xs font-black rounded-control shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 text-white shrink-0"
                 >
                   <span>Start a Project</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -388,7 +388,7 @@ export function VideoEditingShowcase() {
             {/* Global Reels Audio Toggle Button */}
             <button
               onClick={() => setReelsMuted(!reelsMuted)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold text-white transition-all cursor-pointer self-start md:self-auto shrink-0"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-control bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold text-white transition-all cursor-pointer self-start md:self-auto shrink-0"
             >
               {reelsMuted ? <VolumeX className="w-4 h-4 text-red-400" /> : <Volume2 className="w-4 h-4 text-brand-red" />}
               <span>{reelsMuted ? "All Reels Muted (Click to Enable Sound)" : "Reel Sound Active"}</span>
@@ -406,7 +406,7 @@ export function VideoEditingShowcase() {
                     setActiveCategory(category);
                     setVisibleCount(8);
                   }}
-                  className={`px-4 py-2 rounded-full text-xs font-bold tracking-tight whitespace-nowrap transition-all duration-200 cursor-pointer border ${
+                  className={`px-4 py-2 rounded-control text-xs font-bold tracking-tight whitespace-nowrap transition-all duration-200 cursor-pointer border ${
                     isActive
                       ? "bg-[#8b1a1a] text-white border-[#8b1a1a] shadow-md"
                       : "bg-white/5 hover:bg-white/10 text-white/80 border-white/10"
@@ -463,7 +463,7 @@ export function VideoEditingShowcase() {
               href="/contact"
               variant="primary"
               size="md"
-              className="px-7 py-3.5 text-xs font-black rounded-xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 text-white"
+              className="px-7 py-3.5 text-xs font-black rounded-control shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 text-white"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -489,13 +489,13 @@ export function VideoEditingShowcase() {
           aria-modal="true"
         >
           <div
-            className="relative w-full max-w-5xl bg-white border border-line rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh]"
+            className="relative w-full max-w-5xl bg-white border border-line rounded-card overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedVideo(null)}
-              className="absolute top-4 right-4 z-40 p-2 rounded-full bg-line/50 hover:bg-line text-body transition-colors cursor-pointer border border-line shadow-xs"
+              className="absolute top-4 right-4 z-40 p-2 rounded-control bg-line/50 hover:bg-line text-body transition-colors cursor-pointer border border-line shadow-xs"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -551,7 +551,7 @@ export function VideoEditingShowcase() {
                 </p>
 
                 {/* Outcome Metric Callout */}
-                <div className="mt-5 p-4 rounded-2xl bg-brand-redLight/40 border border-brand-red/20 flex items-center gap-4">
+                <div className="mt-5 p-4 rounded-card bg-brand-redLight/40 border border-brand-red/20 flex items-center gap-4">
                   <div className="text-3xl font-black font-mono text-brand-red">
                     {selectedVideo.metric}
                   </div>
@@ -605,7 +605,7 @@ export function VideoEditingShowcase() {
                   href="/contact"
                   variant="primary"
                   size="sm"
-                  className="px-6 py-2.5 text-xs font-black rounded-xl shadow-red-btn !bg-brand-red hover:!bg-brand-redDark text-white"
+                  className="px-6 py-2.5 text-xs font-black rounded-control shadow-red-btn !bg-brand-red hover:!bg-brand-redDark text-white"
                 >
                   <span>Start a Project</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -691,7 +691,7 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
   return (
     <div
       ref={containerRef}
-      className="group relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900/90 hover:border-[#8b1a1a]/60 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl"
+      className="group relative rounded-media overflow-hidden border border-white/10 bg-slate-900/90 hover:border-[#8b1a1a]/60 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl"
     >
       {/* 9:16 Video Frame */}
       <div
@@ -720,10 +720,10 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
 
         {/* Top Badges */}
         <div className="absolute top-3 inset-x-3 flex items-center justify-between z-20 pointer-events-none">
-          <span className="px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs">
+          <span className="px-2.5 py-1 rounded-control bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs">
             {reel.client}
           </span>
-          <span className="px-2 py-0.5 rounded-full bg-[#8b1a1a] text-[10px] font-mono font-bold text-white shadow-xs">
+          <span className="px-2 py-0.5 rounded-control bg-[#8b1a1a] text-[10px] font-mono font-bold text-white shadow-xs">
             {reel.metric}
           </span>
         </div>
@@ -734,7 +734,7 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
             isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100 bg-black/30"
           }`}
         >
-          <div className="w-12 h-12 rounded-full bg-black/70 backdrop-blur-md text-white flex items-center justify-center shadow-xl border border-white/20">
+          <div className="w-12 h-12 rounded-control bg-black/70 backdrop-blur-md text-white flex items-center justify-center shadow-xl border border-white/20">
             {isPlaying ? (
               <Pause className="w-5 h-5 fill-current" />
             ) : (
@@ -747,7 +747,7 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
         <div className="absolute bottom-3 inset-x-3 flex items-center justify-between z-20">
           <button
             onClick={toggleCardMute}
-            className="w-7 h-7 min-w-[28px] min-h-[28px] flex items-center justify-center rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white transition-colors cursor-pointer"
+            className="w-7 h-7 min-w-[28px] min-h-[28px] flex items-center justify-center rounded-control bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white transition-colors cursor-pointer"
             aria-label={isLocalMuted ? "Unmute reel" : "Mute reel"}
           >
             {isLocalMuted ? (
@@ -757,7 +757,7 @@ function ReelCard({ reel, isGlobalMuted, onExpand }: ReelCardProps) {
             )}
           </button>
 
-          <span className="px-2 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[10px] font-mono font-semibold text-white/90">
+          <span className="px-2 py-1 rounded-control bg-black/70 backdrop-blur-md border border-white/10 text-[10px] font-mono font-semibold text-white/90">
             {reel.duration}
           </span>
         </div>

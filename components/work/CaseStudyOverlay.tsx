@@ -212,7 +212,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
       <div className="hidden lg:flex fixed left-4 top-1/2 -translate-y-1/2 z-50">
         <button
           onClick={() => handleNavigate(prevProject.slug, -1)}
-          className="group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer"
+          className="group relative flex items-center gap-2 p-3.5 rounded-control bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer"
           aria-label={`Previous project: ${prevProject.title}`}
         >
           <ChevronLeft className="w-5 h-5 transition-transform" />
@@ -226,7 +226,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
       <div className="hidden lg:flex fixed right-4 top-1/2 -translate-y-1/2 z-50">
         <button
           onClick={() => handleNavigate(nextProject.slug, 1)}
-          className="group relative flex items-center gap-2 p-3.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer"
+          className="group relative flex items-center gap-2 p-3.5 rounded-control bg-black/70 hover:bg-black/90 text-white border border-white/20 hover:border-white/40 shadow-xl backdrop-blur-md transition-all duration-200 cursor-pointer"
           aria-label={`Next project: ${nextProject.title}`}
         >
           <span className="max-w-0 overflow-hidden whitespace-nowrap text-xs font-bold text-white/90 transition-all duration-300 group-hover:max-w-xs group-hover:pl-2">
@@ -247,12 +247,12 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
         animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
         exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.94 }}
         transition={SPRING_SOFT}
-        className="relative w-full max-w-[1100px] max-h-[92vh] flex flex-col bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-line"
+        className="relative w-full max-w-[1100px] max-h-[92vh] flex flex-col bg-white rounded-card shadow-2xl overflow-hidden border border-line"
       >
         {/* Sticky Top Header with Close Button */}
         <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-md px-5 sm:px-8 py-3.5 border-b border-line/60 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2 min-w-0">
-            <span className="px-2.5 py-1 rounded-full bg-brand-redLight text-brand-red border border-brand-red/20 text-[11px] font-black uppercase tracking-wider shrink-0">
+            <span className="px-2.5 py-1 rounded-control bg-brand-redLight text-brand-red border border-brand-red/20 text-[11px] font-black uppercase tracking-wider shrink-0">
               {project.category}
             </span>
             <span className="text-xs font-mono text-muted truncate hidden sm:inline">
@@ -264,7 +264,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
             <button
               ref={closeBtnRef}
               onClick={handleClose}
-              className="p-2 rounded-full text-muted hover:text-ink bg-slate-100 hover:bg-line transition-colors cursor-pointer"
+              className="p-2 rounded-control text-muted hover:text-ink bg-slate-100 hover:bg-line transition-colors cursor-pointer"
               aria-label="Close case study"
               title="Close (Esc)"
             >
@@ -326,7 +326,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
             ) : (
               <motion.div
                 layoutId={`case-image-${project.slug}`}
-                className={`relative mx-auto rounded-2xl overflow-hidden shadow-lg ${
+                className={`relative mx-auto rounded-media overflow-hidden shadow-lg ${
                   project.mediaType === "video" ? "bg-black" : "bg-slate-50"
                 } border border-line ${
                   project.aspectRatio === "9/16"
@@ -376,7 +376,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
           </div>
 
           {/* 3. Metric & Deliverables Highlight Card */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-5 sm:p-6 bg-white rounded-2xl border border-line">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-5 sm:p-6 bg-white rounded-card border border-line">
             <div className="md:col-span-4 flex flex-col justify-center border-b md:border-b-0 md:border-r border-line pb-4 md:pb-0 md:pr-4">
               <span className="text-2xl sm:text-3xl font-black text-brand-red font-mono">
                 {project.outcomeMetric}
@@ -454,7 +454,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
                   <div
                     key={i}
                     onClick={() => setActiveStillIndex(i)}
-                    className="group relative rounded-xl overflow-hidden border border-line bg-white/60 cursor-pointer shadow-2xs hover:shadow-md transition-shadow"
+                    className="group relative rounded-media overflow-hidden border border-line bg-white/60 cursor-pointer shadow-2xs hover:shadow-md transition-shadow"
                   >
                     <MaskReveal direction="up" duration={0.6} className="w-full">
                       <div className="relative w-full aspect-[4/3] bg-[#ffffff] p-2 flex items-center justify-center">
@@ -511,14 +511,14 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
           <div className="flex lg:hidden items-center justify-between gap-3 pt-6 border-t border-line">
             <button
               onClick={() => handleNavigate(prevProject.slug, -1)}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-line text-ink text-xs font-bold transition-colors cursor-pointer truncate"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-control bg-slate-100 hover:bg-line text-ink text-xs font-bold transition-colors cursor-pointer truncate"
             >
               <ChevronLeft className="w-4 h-4 shrink-0" />
               <span className="truncate">Prev: {prevProject.title}</span>
             </button>
             <button
               onClick={() => handleNavigate(nextProject.slug, 1)}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-line text-ink text-xs font-bold transition-colors cursor-pointer truncate"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-control bg-slate-100 hover:bg-line text-ink text-xs font-bold transition-colors cursor-pointer truncate"
             >
               <span className="truncate">Next: {nextProject.title}</span>
               <ChevronRight className="w-4 h-4 shrink-0" />
@@ -554,7 +554,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
               >
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-mono font-bold text-brand-red uppercase tracking-wider bg-brand-redLight px-2 py-0.5 rounded-full border border-brand-red/20">
+                    <span className="text-xs font-mono font-bold text-brand-red uppercase tracking-wider bg-brand-redLight px-2 py-0.5 rounded-control border border-brand-red/20">
                       Visual Artifact
                     </span>
                     <span className="text-muted font-bold">•</span>
@@ -572,7 +572,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
                 <button
                   onClick={() => setActiveStillIndex(null)}
                   aria-label="Close high-resolution viewer"
-                  className="p-2.5 rounded-full bg-slate-100 hover:bg-line text-ink border border-line shadow-sm transition-colors cursor-pointer"
+                  className="p-2.5 rounded-control bg-slate-100 hover:bg-line text-ink border border-line shadow-sm transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -595,7 +595,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
                       )
                     }
                     aria-label="Previous image"
-                    className="absolute left-2 sm:left-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
+                    className="absolute left-2 sm:left-6 z-30 p-3.5 rounded-control bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
                   >
                     <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
                   </button>
@@ -624,7 +624,7 @@ export function CaseStudyOverlay({ slug }: CaseStudyOverlayProps) {
                       )
                     }
                     aria-label="Next image"
-                    className="absolute right-2 sm:right-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
+                    className="absolute right-2 sm:right-6 z-30 p-3.5 rounded-control bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
                   >
                     <ChevronRight className="w-6 h-6 stroke-[2.5]" />
                   </button>

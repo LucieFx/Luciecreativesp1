@@ -27,7 +27,7 @@ export default function PrivacyPage() {
 
           {/* Header Badge & Title */}
           <div className="mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-redLight text-brand-red text-xs font-black uppercase tracking-wider border border-brand-red/20 mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-brand-redLight text-brand-red text-xs font-black uppercase tracking-wider border border-brand-red/20 mb-4">
               <ShieldCheck className="w-4 h-4" />
               <span>DPDP Act 2023 Compliance &amp; Governance</span>
             </div>

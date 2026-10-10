@@ -15,11 +15,11 @@ export default function InsightCard({ insight }: InsightCardProps) {
     <Link
       href={`/insights/${insight.slug}`}
       data-cursor="Read"
-      className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between h-full"
+      className="group p-6 rounded-card bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between h-full"
     >
       <div>
         {insight.coverImage && (
-          <div className="relative w-full aspect-16/9 rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-line/60">
+          <div className="relative w-full aspect-16/9 rounded-media overflow-hidden mb-5 bg-slate-100 border border-line/60">
             <Image
               src={insight.coverImage}
               alt={insight.coverImageAlt || insight.title}

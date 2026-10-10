@@ -53,7 +53,7 @@ export function ClientLogoStrip() {
           {CLIENT_LOGOS.map((client, idx) => (
             <div
               key={`${client.name}-${idx}`}
-              className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-slate-50/80 border border-line/80 hover:border-brand-red/40 hover:bg-white transition-all duration-200 cursor-default group/logo"
+              className="inline-flex items-center gap-3 px-5 py-3 rounded-control bg-slate-50/80 border border-line/80 hover:border-brand-red/40 hover:bg-white transition-all duration-200 cursor-default group/logo"
             >
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 leading-none">
@@ -83,7 +83,7 @@ export function ClientLogoStrip() {
           ].map((stat, sIdx) => (
             <div
               key={sIdx}
-              className="flex flex-col items-center sm:items-start justify-center gap-1.5 p-4 rounded-xl bg-slate-50/50 sm:bg-transparent border border-line/60 sm:border-0 text-center sm:text-left"
+              className="flex flex-col items-center sm:items-start justify-center gap-1.5 p-4 rounded-control bg-slate-50/50 sm:bg-transparent border border-line/60 sm:border-0 text-center sm:text-left"
             >
               <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-ink tracking-tight">
                 <CountUp

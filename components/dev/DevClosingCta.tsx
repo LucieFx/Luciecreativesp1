@@ -15,13 +15,13 @@ export function DevClosingCta({ primaryCtaLabel = "Start a Project" }: DevClosin
     >
       <div className="max-w-6xl mx-auto relative z-10">
         <div
-          className="relative bg-[#8B1A1A] rounded-3xl py-18 sm:py-24 px-6 sm:px-12 md:px-16 text-center overflow-hidden shadow-2xl border border-white/20"
+          className="relative bg-[#8B1A1A] rounded-card py-18 sm:py-24 px-6 sm:px-12 md:px-16 text-center overflow-hidden shadow-2xl border border-white/20"
         >
           <div
             className="relative z-10 max-w-3xl mx-auto"
           >
             {/* Clean Brand Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider mb-6 border border-white/30 backdrop-blur-xs">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-control bg-white/20 text-white text-xs font-bold uppercase tracking-wider mb-6 border border-white/30 backdrop-blur-xs">
               <Code2 className="w-3.5 h-3.5" />
               <span>Full-Stack Engineering Sprints</span>
             </div>
@@ -47,7 +47,7 @@ export function DevClosingCta({ primaryCtaLabel = "Start a Project" }: DevClosin
                   href="/contact"
                   variant="secondary"
                   size="lg"
-                  className="relative z-10 bg-white text-[#8B1A1A] hover:bg-brand-red-50 border-none shadow-xl rounded-2xl font-black text-sm px-8 py-4 uppercase tracking-wider transition-all duration-200"
+                  className="relative z-10 bg-white text-[#8B1A1A] hover:bg-brand-red-50 border-none shadow-xl rounded-control font-black text-sm px-8 py-4 uppercase tracking-wider transition-all duration-200"
                 >
                   <span>{primaryCtaLabel}</span>
                   <ArrowUpRight className="w-4 h-4 ml-1" />

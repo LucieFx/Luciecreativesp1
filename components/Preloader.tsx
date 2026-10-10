@@ -41,7 +41,7 @@ export function Preloader() {
     >
       <div className="relative flex flex-col items-center gap-4">
         {/* Lucie Creatives Centered Logo Badge */}
-        <div className="w-24 h-24 bg-white rounded-3xl shadow-floating border border-line/60 flex items-center justify-center p-4 animate-pulse">
+        <div className="w-24 h-24 bg-white rounded-card shadow-floating border border-line/60 flex items-center justify-center p-4 animate-pulse">
           <Image
             src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835253/lucie-creatives/logo/lucie-mark.png"
             alt="Lucie Creatives Logo"
@@ -58,9 +58,9 @@ export function Preloader() {
         </div>
 
         {/* Progress Bar */}
-        <div className="w-48 h-1 bg-surface-muted rounded-full relative overflow-hidden mt-1">
+        <div className="w-48 h-1 bg-surface-muted rounded-sm relative overflow-hidden mt-1">
           <div
-            className="h-full bg-[#8b1a1a] rounded-full transition-all duration-150 ease-out"
+            className="h-full bg-[#8b1a1a] rounded-sm transition-all duration-150 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>

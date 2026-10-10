@@ -20,7 +20,7 @@ export default function NotFound() {
         </div>
 
         {/* 404 Status Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-4 shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-4 shadow-xs">
           <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a] inline-block" aria-hidden="true" />
           <span>Error 404: Page Not Found</span>
         </div>

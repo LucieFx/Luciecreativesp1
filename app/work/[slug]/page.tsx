@@ -301,16 +301,16 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             <div className="flex flex-wrap items-center gap-2">
               <Link
                 href={serviceCtx.primaryService.href}
-                className="px-3 py-1 rounded-full bg-brand-redLight text-brand-red border border-brand-red/20 text-xs font-black uppercase tracking-wider hover:bg-brand-red hover:text-white transition-colors"
+                className="px-3 py-1 rounded-control bg-brand-redLight text-brand-red border border-brand-red/20 text-xs font-black uppercase tracking-wider hover:bg-brand-red hover:text-white transition-colors"
                 title={`View ${serviceCtx.primaryService.anchor}`}
               >
                 {project.category}
               </Link>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-line text-xs font-bold text-body">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-slate-100 border border-line text-xs font-bold text-body">
                 <Briefcase className="w-3.5 h-3.5 text-muted" />
                 <span>{project.industry}</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-line text-xs font-bold text-body">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-slate-100 border border-line text-xs font-bold text-body">
                 <Calendar className="w-3.5 h-3.5 text-muted" />
                 <span>{project.year}</span>
               </span>
@@ -344,7 +344,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             />
           ) : (
             <div
-              className={`relative mx-auto rounded-3xl overflow-hidden shadow-xl ${
+              className={`relative mx-auto rounded-media overflow-hidden shadow-xl ${
                 project.mediaType === "video" ? "bg-black" : "bg-white"
               } border border-line ${
                 project.aspectRatio === "9/16"
@@ -437,7 +437,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
                   {project.tools.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1.5 rounded-xl bg-white border border-line text-xs font-black text-body shadow-xs"
+                      className="px-3 py-1.5 rounded-control bg-white border border-line text-xs font-black text-body shadow-xs"
                     >
                       {t}
                     </span>
@@ -456,7 +456,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               {project.deliverables.map((item, idx) => (
                 <li
                   key={idx}
-                  className="flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/70 border border-line/80 text-xs sm:text-sm font-semibold text-ink hover:border-brand-red/30 hover:bg-brand-red-50 transition-colors shadow-2xs"
+                  className="flex items-center gap-3 p-3.5 sm:p-4 rounded-card bg-white/70 border border-line/80 text-xs sm:text-sm font-semibold text-ink hover:border-brand-red/30 hover:bg-brand-red-50 transition-colors shadow-2xs"
                 >
                   <CheckCircle2 className="w-4 h-4 text-brand-red flex-shrink-0" />
                   <span className="leading-snug">{item}</span>
@@ -470,9 +470,9 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
         <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-10 sm:mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* The Challenge */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-[#8B1A1A] text-white shadow-card border border-white/20 relative overflow-hidden flex flex-col justify-between">
+            <div className="p-8 sm:p-10 rounded-card bg-[#8B1A1A] text-white shadow-card border border-white/20 relative overflow-hidden flex flex-col justify-between">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 border border-white/20 text-red-100 text-xs font-black uppercase tracking-wider mb-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-control bg-white/15 border border-white/20 text-red-100 text-xs font-black uppercase tracking-wider mb-5">
                   <Target className="w-3.5 h-3.5 text-red-200" />
                   <span>The Challenge</span>
                 </div>
@@ -490,9 +490,9 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             </div>
 
             {/* Strategic Approach */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-line shadow-soft flex flex-col justify-between">
+            <div className="p-8 sm:p-10 rounded-card bg-white border border-line shadow-soft flex flex-col justify-between">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-redLight text-brand-red text-xs font-black uppercase tracking-wider mb-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-control bg-brand-redLight text-brand-red text-xs font-black uppercase tracking-wider mb-5">
                   <Compass className="w-3.5 h-3.5" />
                   <span>The Strategic Approach</span>
                 </div>
@@ -530,7 +530,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             {project.processSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="p-6 sm:p-7 rounded-2xl bg-white border border-line hover:border-brand-red/30 transition-colors relative flex flex-col justify-between group"
+                className="p-6 sm:p-7 rounded-card bg-white border border-line hover:border-brand-red/30 transition-colors relative flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
@@ -583,9 +583,9 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
         {/* 7. Final Outcome & Verified Metric Narrative */}
         <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-10 sm:mb-12">
-          <div className="p-6 sm:p-10 rounded-2xl bg-[#8B1A1A] text-white shadow-lg border border-white/20 relative overflow-hidden">
+          <div className="p-6 sm:p-10 rounded-card bg-[#8B1A1A] text-white shadow-lg border border-white/20 relative overflow-hidden">
             <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 text-xs font-black text-red-100 uppercase tracking-wider mb-2.5 px-3 py-1 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 text-xs font-black text-red-100 uppercase tracking-wider mb-2.5 px-3 py-1 rounded-control bg-white/15 border border-white/20 backdrop-blur-sm">
                 <TrendingUp className="w-3.5 h-3.5 text-red-200" />
                 <span>Final Commercial Outcome</span>
               </div>
@@ -602,7 +602,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
         {/* 8. Client Testimonial Quote */}
         {project.testimonial && (
           <section className="px-6 sm:px-12 max-w-5xl mx-auto mb-10 sm:mb-12">
-            <div className="p-6 sm:p-10 rounded-2xl bg-white border border-line text-center relative overflow-hidden">
+            <div className="p-6 sm:p-10 rounded-card bg-white border border-line text-center relative overflow-hidden">
               <Quote className="w-8 h-8 text-brand-red/25 mx-auto mb-3" />
               <blockquote className="font-serif italic font-normal text-text-primary text-lg sm:text-2xl max-w-3xl mx-auto leading-relaxed mb-4">
                 &ldquo;{project.testimonial.quote}&rdquo;
@@ -619,7 +619,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
         {/* 9. Related Services & Internal Cross-Link System */}
         <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-10 sm:mb-12">
-          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-line">
+          <div className="p-6 sm:p-8 rounded-card bg-white border border-line">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-line">
               <div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-[#8b1a1a] block mb-1">
@@ -632,14 +632,14 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               <div className="flex items-center gap-3 flex-wrap">
                 <Link
                   href={serviceCtx.primaryService.href}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#8b1a1a] text-white text-xs font-black hover:bg-[#8b1a1a]/90 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-control bg-[#8b1a1a] text-white text-xs font-black hover:bg-[#8b1a1a]/90 transition-colors"
                 >
                   <span>Explore {serviceCtx.primaryService.anchor}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-line text-ink text-xs font-black hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-control bg-white border border-line text-ink text-xs font-black hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] transition-colors"
                 >
                   <span>Start a Project</span>
                 </Link>
@@ -648,7 +648,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
               {/* Primary Service */}
-              <div className="p-5 rounded-xl bg-white border border-line shadow-xs">
+              <div className="p-5 rounded-card bg-white border border-line shadow-xs">
                 <span className="text-[10px] font-bold text-muted uppercase tracking-wider block mb-1">
                   Core Discipline
                 </span>
@@ -665,7 +665,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
               {/* Related Discipline 1 */}
               {serviceCtx.relatedServices[0] && (
-                <div className="p-5 rounded-xl bg-white border border-line shadow-xs">
+                <div className="p-5 rounded-card bg-white border border-line shadow-xs">
                   <span className="text-[10px] font-bold text-muted uppercase tracking-wider block mb-1">
                     Related Discipline
                   </span>
@@ -682,7 +682,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               )}
 
               {/* Related Insight */}
-              <div className="p-5 rounded-xl bg-white border border-line shadow-xs flex flex-col justify-between">
+              <div className="p-5 rounded-card bg-white border border-line shadow-xs flex flex-col justify-between">
                 <div>
                   <span className="text-[10px] font-bold text-muted uppercase tracking-wider block mb-1">
                     Strategy Insight
@@ -704,7 +704,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               </div>
 
               {/* Regional Collaboration */}
-              <div className="p-5 rounded-xl bg-white border border-line shadow-xs">
+              <div className="p-5 rounded-card bg-white border border-line shadow-xs">
                 <span className="text-[10px] font-bold text-muted uppercase tracking-wider block mb-1.5">
                   Regional Collaboration
                 </span>
@@ -733,9 +733,9 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
         {/* 10. Direct Project Inquiry CTA Banner */}
         <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-10 sm:mb-12">
-          <div className="p-6 sm:p-10 rounded-2xl bg-[#8B1A1A] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+          <div className="p-6 sm:p-10 rounded-card bg-[#8B1A1A] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
             <div className="max-w-xl text-center md:text-left">
-              <span className="text-[10px] font-black uppercase tracking-widest text-red-200 bg-white/10 px-3 py-1 rounded-full inline-block mb-2.5">
+              <span className="text-[10px] font-black uppercase tracking-widest text-red-200 bg-white/10 px-3 py-1 rounded-control inline-block mb-2.5">
                 TAILORED SPRINT COLLABORATION
               </span>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-1.5">
@@ -748,14 +748,14 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             <div className="flex items-center gap-3 flex-wrap justify-center md:justify-end flex-shrink-0">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#8B1A1A] text-xs font-black uppercase tracking-wider hover:bg-red-50 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-control bg-white text-[#8B1A1A] text-xs font-black uppercase tracking-wider hover:bg-red-50 transition-all"
               >
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <Link
                 href={project.category === "Graphic Design" ? "/graphic-design" : "/video-editing"}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-black uppercase tracking-wider transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-control bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-black uppercase tracking-wider transition-colors"
               >
                 <span>{project.category === "Graphic Design" ? "Browse Graphic Design" : "Browse Video Editing"}</span>
               </Link>
@@ -771,7 +771,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
           >
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div>
-                <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-red-100 bg-white/15 border border-white/20 px-3.5 py-1 rounded-full backdrop-blur-sm mb-2.5">
+                <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-red-100 bg-white/15 border border-white/20 px-3.5 py-1 rounded-control backdrop-blur-sm mb-2.5">
                   <span>NEXT CASE STUDY</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-white" />
                   <span>{nextProject.category}</span>
@@ -790,7 +790,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
                 <span className="text-sm font-black uppercase tracking-wider text-white transition-transform">
                   Explore Case Study
                 </span>
-                <div className="w-14 h-14 rounded-full bg-white text-[#8b1a1a] flex items-center justify-center shadow-lg group-hover:bg-red-50 group-hover:scale-110 transition-all">
+                <div className="w-14 h-14 rounded-control bg-white text-[#8b1a1a] flex items-center justify-center shadow-lg group-hover:bg-red-50 group-hover:scale-110 transition-all">
                   <ArrowRight className="w-6 h-6 text-[#8b1a1a]" />
                 </div>
               </div>

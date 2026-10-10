@@ -234,7 +234,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
                     rel="noopener noreferrer"
                     title={s.name}
                     aria-label={`${s.name} (${s.handle})`}
-                    className="flex items-center justify-between py-2 px-2.5 rounded-xl bg-white/80 hover:bg-red-50 border border-line/60 hover:border-brand-red/30 text-slate-700 hover:text-brand-red transition-all group"
+                    className="flex items-center justify-between py-2 px-2.5 rounded-control bg-white/80 hover:bg-red-50 border border-line/60 hover:border-brand-red/30 text-slate-700 hover:text-brand-red transition-all group"
                   >
                     <span className="flex items-center text-slate-700 group-hover:text-brand-red group-hover:scale-110 transition-all shrink-0">
                       <SocialIcon name={s.name} className="w-4 h-4" />
@@ -276,7 +276,7 @@ export function Footer({ contactEmail }: FooterProps = {}) {
             </Link>
             <button
               onClick={scrollToTop}
-              className="group p-2.5 bg-white border border-brand-red/20 hover:border-brand-red hover:bg-brand-redLight text-brand-red transition-all rounded-xl flex items-center justify-center shadow-soft hover:shadow-floating focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:outline-none cursor-pointer overflow-hidden relative"
+              className="group p-2.5 bg-white border border-brand-red/20 hover:border-brand-red hover:bg-brand-redLight text-brand-red transition-all rounded-control flex items-center justify-center shadow-soft hover:shadow-floating focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:outline-none cursor-pointer overflow-hidden relative"
               aria-label="Back to top"
             >
               <ArrowUpRight className="w-4 h-4 -rotate-45 text-brand-red" />

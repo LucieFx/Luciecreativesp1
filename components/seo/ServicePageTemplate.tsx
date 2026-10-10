@@ -178,7 +178,7 @@ export function ServicePageTemplate({
                 href="/contact"
                 variant="primary"
                 size="lg"
-                className="px-8 py-4 text-sm font-black rounded-2xl shadow-red-btn !bg-[#8B1A1A] hover:!bg-[#8b1a1a]/90"
+                className="px-8 py-4 text-sm font-black rounded-control shadow-red-btn !bg-[#8B1A1A] hover:!bg-[#8b1a1a]/90"
               >
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -186,7 +186,7 @@ export function ServicePageTemplate({
 
               <Link
                 href="/video-editing"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-line/50 hover:bg-line/80 border border-line text-body text-sm font-bold transition-all"
+                className="inline-flex items-center gap-2 px-6 py-4 rounded-control bg-line/50 hover:bg-line/80 border border-line text-body text-sm font-bold transition-all"
               >
                 <span>View Video Editing</span>
                 <ArrowRight className="w-4 h-4" />
@@ -229,7 +229,7 @@ export function ServicePageTemplate({
               {capabilities.map((c, i) => (
                 <div
                   key={i}
-                  className="p-6 sm:p-7 rounded-xl bg-white border border-line shadow-xs flex flex-col justify-between hover:border-[#8b1a1a]/30 transition-colors"
+                  className="p-6 sm:p-7 rounded-card bg-white border border-line shadow-xs flex flex-col justify-between hover:border-[#8b1a1a]/30 transition-colors"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
@@ -254,7 +254,7 @@ export function ServicePageTemplate({
 
             {/* Deliverables Checklist (if provided) */}
             {deliverables.length > 0 && (
-              <div className="mt-12 p-6 sm:p-8 rounded-xl bg-white border border-line shadow-xs">
+              <div className="mt-12 p-6 sm:p-8 rounded-card bg-white border border-line shadow-xs">
                 <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-muted mb-4">
                   Standard Production Deliverables
                 </h3>
@@ -289,10 +289,10 @@ export function ServicePageTemplate({
                 {benefits.map((b, idx) => (
                   <div
                     key={idx}
-                    className="p-7 rounded-3xl bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white transition-all flex flex-col justify-between group"
+                    className="p-7 rounded-card bg-white/80 border border-line/80 hover:border-[#8b1a1a]/40 hover:bg-white transition-all flex flex-col justify-between group"
                   >
                     <div>
-                      <div className="w-8 h-8 rounded-xl bg-brand-red-50 text-[#8b1a1a] border border-[#8b1a1a]/15 flex items-center justify-center font-mono font-black text-xs mb-5 group-hover:bg-[#8b1a1a] group-hover:text-white transition-colors">
+                      <div className="w-8 h-8 rounded-control bg-brand-red-50 text-[#8b1a1a] border border-[#8b1a1a]/15 flex items-center justify-center font-mono font-black text-xs mb-5 group-hover:bg-[#8b1a1a] group-hover:text-white transition-colors">
                         0{idx + 1}
                       </div>
                       <h3 className="text-lg font-black text-ink uppercase tracking-tight mb-2 group-hover:text-[#8b1a1a] transition-colors">
@@ -323,7 +323,7 @@ export function ServicePageTemplate({
               {processSteps.map((p, i) => (
                 <div
                   key={i}
-                  className="p-6 rounded-3xl bg-white border border-line shadow-soft relative"
+                  className="p-6 rounded-card bg-white border border-line shadow-soft relative"
                 >
                   <div className="text-3xl font-black text-[#8b1a1a] mb-4 font-mono">
                     {p.step}
@@ -365,7 +365,7 @@ export function ServicePageTemplate({
                   <Link
                     key={p.slug}
                     href={`/work/${p.slug}`}
-                    className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
+                    className="group p-6 rounded-card bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center justify-between text-xs text-muted font-bold mb-3">
@@ -427,7 +427,7 @@ export function ServicePageTemplate({
                   <Link
                     key={art.slug}
                     href={`/insights/${art.slug}`}
-                    className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
+                    className="group p-6 rounded-card bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center justify-between text-xs text-muted font-bold mb-3">
@@ -475,7 +475,7 @@ export function ServicePageTemplate({
                 return (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-line overflow-hidden transition-colors"
+                    className="rounded-control border border-line overflow-hidden transition-colors"
                   >
                     <button
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
@@ -514,49 +514,49 @@ export function ServicePageTemplate({
             <div className="flex items-center gap-2.5 flex-wrap">
               <Link
                 href="/global"
-                className="px-3.5 py-2 rounded-xl bg-[#8b1a1a] text-white border border-[#8b1a1a] text-xs font-black hover:bg-[#8b1a1a]/90 transition-all shadow-xs"
+                className="px-3.5 py-2 rounded-control bg-[#8b1a1a] text-white border border-[#8b1a1a] text-xs font-black hover:bg-[#8b1a1a]/90 transition-all shadow-xs"
               >
                 Global (Worldwide) →
               </Link>
               <Link
                 href="/india"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                className="px-3.5 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 India (National) →
               </Link>
               <Link
                 href="/gujarat"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                className="px-3.5 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Gujarat →
               </Link>
               <Link
                 href="/ahmedabad"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                className="px-3.5 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Ahmedabad →
               </Link>
               <Link
                 href="/surat"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                className="px-3.5 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Surat →
               </Link>
               <Link
                 href="/mumbai"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                className="px-3.5 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Mumbai →
               </Link>
               <Link
                 href="/delhi"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                className="px-3.5 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Delhi NCR →
               </Link>
               <Link
                 href="/bengaluru"
-                className="px-3.5 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                className="px-3.5 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
               >
                 Bengaluru →
               </Link>
@@ -576,7 +576,7 @@ export function ServicePageTemplate({
                   <Link
                     key={idx}
                     href={rel.href}
-                    className="p-5 rounded-2xl bg-white border border-line hover:border-[#8b1a1a]/30 hover:shadow-soft transition-all group"
+                    className="p-5 rounded-card bg-white border border-line hover:border-[#8b1a1a]/30 hover:shadow-soft transition-all group"
                   >
                     <div className="text-sm font-black text-ink group-hover:text-[#8b1a1a] transition-colors flex items-center justify-between mb-1">
                       <span>{rel.name}</span>
@@ -605,7 +605,7 @@ export function ServicePageTemplate({
               href="/contact"
               variant="secondary"
               size="lg"
-              className="bg-white text-[#8B1A1A] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-2xl shadow-elevated"
+              className="bg-white text-[#8B1A1A] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-control shadow-elevated"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4 ml-1" />

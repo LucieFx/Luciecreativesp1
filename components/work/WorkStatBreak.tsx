@@ -49,7 +49,7 @@ export function WorkStatBreak({ statBreak }: WorkStatBreakProps) {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 relative z-10 text-center">
         {/* Metric Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-redLight border border-brand-red/20 text-brand-red text-xs font-black tracking-widest uppercase mb-6 shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-brand-redLight border border-brand-red/20 text-brand-red text-xs font-black tracking-widest uppercase mb-6 shadow-xs">
           <TrendingUp className="w-3.5 h-3.5" />
           <span>Compounding Growth Metric</span>
         </div>
@@ -88,7 +88,7 @@ export function WorkStatBreak({ statBreak }: WorkStatBreakProps) {
                 Calculated across video completions, virality ratios, and repeat digital impressions.
               </p>
             </div>
-            <div className="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-brand-red bg-brand-red-50 px-2.5 py-1 rounded-full border border-brand-red/20">
+            <div className="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-brand-red bg-brand-red-50 px-2.5 py-1 rounded-control border border-brand-red/20">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
               <span>{SITE_STATS.reachLabel}</span>
             </div>
@@ -221,7 +221,7 @@ export function WorkStatBreak({ statBreak }: WorkStatBreakProps) {
             {CLIENT_BRANDS.map((b) => (
               <div
                 key={b.name}
-                className="px-3.5 py-1.5 rounded-xl bg-white border border-line/80 shadow-xs flex items-center gap-2"
+                className="px-3.5 py-1.5 rounded-control bg-white border border-line/80 shadow-xs flex items-center gap-2"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-red" />
                 <span className="text-xs font-black text-ink font-mono tracking-wider">{b.name}</span>

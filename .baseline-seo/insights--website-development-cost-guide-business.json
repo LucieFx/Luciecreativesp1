@@ -1,0 +1,212 @@
+{
+  "pathname": "/insights/website-development-cost-guide-business",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=640&amp;q=80&amp;auto=format 640w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=750&amp;q=80&amp;auto=format 750w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=828&amp;q=80&amp;auto=format 828w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1080&amp;q=80&amp;auto=format 1080w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1200&amp;q=80&amp;auto=format 1200w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=1920&amp;q=80&amp;auto=format 1920w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&amp;auto=format&amp;fit=crop&amp;q=80&amp;w=2048&amp;q=80&amp;auto=format 2048w\" imageSizes=\"(max-width: 1024px) 100vw, 896px\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689964959\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689964959\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689964959\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/insights/%5Bslug%5D/page.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "https://luciecreatives.in/insights/website-development-cost-guide-business#article",
+      "headline": "How Much Does a Custom Business Website Cost? A Practical Guide for Modern Brands",
+      "name": "How Much Does a Custom Business Website Cost? A Practical Guide for Modern Brands",
+      "description": "A transparent breakdown of business website costs in 2026. Understand the differences between template-based sites and custom engineering, hidden maintenance fees, and how technical performance drives commercial ROI.",
+      "url": "https://luciecreatives.in/insights/website-development-cost-guide-business",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop&q=80",
+      "datePublished": "2025-10-14",
+      "dateModified": "2026-01-15",
+      "articleSection": "Web Development",
+      "author": {
+        "@type": "Person",
+        "name": "Lucie Creatives Technical Strategy Group",
+        "jobTitle": "Engineering & Digital Growth Division"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://luciecreatives.in/insights/website-development-cost-guide-business"
+      },
+      "about": {
+        "@type": "Service",
+        "name": "Web Development",
+        "url": "https://luciecreatives.in/web-development"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How Much Does a Custom Business Website Cost? A Practical Guide for Modern Brands",
+          "item": "https://luciecreatives.in/insights/website-development-cost-guide-business"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does a custom business website take to design and develop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard 8 to 15 page custom enterprise website typically takes 4 to 8 weeks from initial discovery and wireframing through design sprints, frontend engineering, CMS integration, and final QA testing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is a custom Next.js website better for SEO than WordPress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Next.js pre-renders HTML on the server or at build time (SSG), delivering fully assembled semantic code to search engine crawlers in milliseconds. WordPress frequently relies on heavy database queries and dozens of plugin scripts that slow down Time to First Byte (TTFB) and degrade Core Web Vitals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can non-technical team members update copy and blog posts on a custom site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We integrate intuitive headless CMS platforms like Sanity or Strapi. Marketing teams can edit copy, update images, create case studies, and publish articles through a streamlined editorial interface without touching code."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical monthly cost to maintain an enterprise business website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ongoing technical maintenance, hosting, security updates, and performance monitoring typically range from ₹5,000 to ₹25,000 monthly, depending on feature velocity, traffic scale, and database requirements."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Web Development",
+          "item": "https://luciecreatives.in/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How Much Does a Custom Business Website Cost? A Practical Guide for Modern Brands"
+        }
+      ]
+    }
+  ]
+}

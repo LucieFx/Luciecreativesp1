@@ -51,7 +51,7 @@ export function YouTubeEmbedPlayer({
 
   return (
     <div
-      className={`relative w-full ${aspectClass} overflow-hidden rounded-xl bg-slate-950 group select-none ${className}`}
+      className={`relative w-full ${aspectClass} overflow-hidden rounded-media bg-slate-950 group select-none ${className}`}
     >
       {/* Background skeleton shimmer preventing layout shift */}
       <div className="absolute inset-0 bg-slate-900 pointer-events-none" aria-hidden="true" />
@@ -90,7 +90,7 @@ export function YouTubeEmbedPlayer({
 
           {/* Centered Play Button Facade */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#8B1A1A] text-white flex items-center justify-center shadow-md group-hover:scale-105 group-hover:bg-[#8b1a1a] transition-transform duration-200">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-control bg-[#8B1A1A] text-white flex items-center justify-center shadow-md group-hover:scale-105 group-hover:bg-[#8b1a1a] transition-transform duration-200">
               <Play className="w-5 h-5 fill-white ml-0.5" />
             </div>
           </div>

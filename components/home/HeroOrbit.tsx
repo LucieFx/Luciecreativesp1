@@ -301,7 +301,7 @@ export function HeroOrbit({ className = "" }: HeroOrbitProps) {
                     }
               }
             >
-              <div className="w-10 h-10 rounded-full bg-white border border-[#8B1A1A]/15 shadow-[0_2px_10px_rgba(139,26,26,0.06)] flex items-center justify-center hover:scale-110 hover:border-[#8B1A1A]/40 transition-transform duration-200">
+              <div className="w-10 h-10 rounded-control bg-white border border-[#8B1A1A]/15 shadow-[0_2px_10px_rgba(139,26,26,0.06)] flex items-center justify-center hover:scale-110 hover:border-[#8B1A1A]/40 transition-transform duration-200">
                 {ICONS[chip.idx]}
               </div>
             </motion.div>
@@ -351,7 +351,7 @@ export function HeroOrbit({ className = "" }: HeroOrbitProps) {
                   }
             }
           >
-            <div className="w-10 h-10 rounded-full bg-white border border-[#8B1A1A]/15 shadow-[0_2px_8px_rgba(139,26,26,0.06)] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-control bg-white border border-[#8B1A1A]/15 shadow-[0_2px_8px_rgba(139,26,26,0.06)] flex items-center justify-center">
               {ICONS[chip.idx]}
             </div>
           </motion.div>
@@ -395,7 +395,7 @@ export function HeroOrbit({ className = "" }: HeroOrbitProps) {
                   }
             }
           >
-            <div className="w-9 h-9 rounded-full bg-white border border-[#8B1A1A]/15 shadow-[0_2px_8px_rgba(139,26,26,0.06)] flex items-center justify-center">
+            <div className="w-9 h-9 rounded-control bg-white border border-[#8B1A1A]/15 shadow-[0_2px_8px_rgba(139,26,26,0.06)] flex items-center justify-center">
               {ICONS[chip.idx]}
             </div>
           </motion.div>

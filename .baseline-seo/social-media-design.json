@@ -1,0 +1,260 @@
+{
+  "pathname": "/social-media-design",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689928504\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689928504\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689928504\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/social-media-design/page.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/not-found.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://luciecreatives.in/social-media-design#service",
+      "name": "Social Media Design by Lucie Creatives",
+      "serviceType": "Social Media Design",
+      "description": "In an era of endless scrolling, mediocre graphics get ignored. We engineer high-velocity social media design systems that capture attention within the first fraction of a second. From data-dense multi-slide carousels to synchronized feed aesthetics and high-converting paid ad sets, we turn casual scrollers into passionate brand advocates.",
+      "url": "https://luciecreatives.in/social-media-design",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmedabad"
+        },
+        {
+          "@type": "City",
+          "name": "Surat"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        {
+          "@type": "City",
+          "name": "Bengaluru"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Social Media Design Deliverables",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-Slide Educational Carousels",
+              "description": "Curated multi-slide layouts designed for swipe-through velocity on LinkedIn and Instagram, featuring high-contrast typography, technical diagrams, and actionable takeaways."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "High-Converting Paid Ad Creatives",
+              "description": "Static and kinetic ad creatives split-tested for Meta, Instagram, and LinkedIn ads, optimized for maximum click-through rates (CTR) and lower customer acquisition costs."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Omnichannel Feed Aesthetic Systems",
+              "description": "Cohesive color palettes, typographic hierarchies, and layout rhythms that transform your Instagram or LinkedIn grid into a unified, high-prestige editorial publication."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Infographics & Technical Data Visuals",
+              "description": "Translating intricate industry benchmarks, research statistics, and technical workflows into highly shareable, visually intuitive social media graphics."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Story, Highlight & Channel Branding",
+              "description": "Custom story layouts, branded highlight covers, and click-optimized YouTube/video thumbnails engineered for high click-through rates."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Agile Figma Social Template Suites",
+              "description": "Custom-built Figma template packages that empower your internal marketing team to produce on-brand social assets in minutes without friction."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What social platforms do you design assets for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We design across all major digital platforms including LinkedIn, Instagram (Feed, Stories, Reels covers), X (Twitter), YouTube (Community posts and Thumbnails), and Meta Ads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you provide editable templates so our internal team can post quickly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We build complete, organized Figma template suites with locked style components and auto-layout text boxes so your team can rapidly generate on-brand graphics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does batch delivery work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We operate on scheduled monthly or bi-weekly sprints. We deliver all approved graphics in organized folders categorized by date and format, ready for your social media manager to schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you write the copy for the social media posts as well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can work either way. We can design around your existing copy and outlines, or our creative strategists can draft compelling headlines, carousel slide text, and captions for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you design static ads for our paid marketing campaigns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Direct-response paid ad creatives are a key specialty; we design high-converting visual variations specifically structured for A/B testing on Meta and LinkedIn."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://luciecreatives.in/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Social Media Design",
+          "item": "https://luciecreatives.in/social-media-design"
+        }
+      ]
+    }
+  ]
+}

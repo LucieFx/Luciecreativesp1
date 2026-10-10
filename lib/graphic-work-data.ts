@@ -12,7 +12,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     title: "Speczo Eyewear Monolithic Identity & Packaging",
     client: "Speczo Optics",
     category: "Graphic Design",
-    industry: "Luxury Eyewear & Optical Architecture",
+    industry: "Retail & Eyewear Packaging Architecture",
     year: 2026,
     tagline: "Tactile packaging die-lines, microfiber branded cloth, and bespoke stationery suites.",
     brief:
@@ -97,7 +97,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     title: "Onirique Parfums 3D CGI & Visual Identity",
     client: "Onirique Parfums",
     category: "Graphic Design",
-    industry: "Haute Parfumerie & Luxury Cosmetics",
+    industry: "Haute Parfumerie & Luxury Fragrance",
     year: 2026,
     tagline: "Hyper-realistic 3D product CGI, glass material shaders, and luxury fragrance packaging.",
     brief:
@@ -171,7 +171,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
   {
     slug: "nirva-resort-environmental-branding",
     clientId: "nirva",
-    aliases: ["omni-global-campaign"],
+    aliases: ["omni-global-campaign", "ooh-billboards-commercial-print"],
     title: "Nirva Luxury Resort OOH & Brand Architecture",
     client: "Nirva Club & Resort",
     category: "Graphic Design",
@@ -229,23 +229,23 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     },
     processStills: [
       {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835309/lucie-creatives/portfolio/graphic-design/nirva-club/standy-mockup.webp",
-        caption: "3x4 high-contrast exhibition and reception standee mockup",
-        alt: "Nirva standee mockup",
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835320/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-architectural-standee.webp",
+        caption: "3x4 high-contrast reception and sports club membership standee",
+        alt: "Nirva Club & Resort reception standee",
       },
       {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835293/lucie-creatives/portfolio/graphic-design/nirva-club/billboard-opening.webp",
-        caption: "Ultra-wide highway hoarding architecture for grand opening",
-        alt: "Nirva highway hoarding banner",
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835318/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-family-hoarding.webp",
+        caption: "Highway billboard celebrating multi-generational family relaxation and resort leisure",
+        alt: "Nirva Club & Resort family highway billboard",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-creative.webp",
-        caption: "Kalpvriksh restaurant fine dining marketing creative",
+        caption: "Kalpvriksh pure vegetarian fine dining launch creative",
         alt: "Nirva restaurant dining creative",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835296/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic.webp",
-        caption: "Weekend lifestyle and day picnic promotional creative",
+        caption: "Weekend family day picnic collateral and leisure package guide",
         alt: "Nirva picnic lifestyle creative",
       },
     ],
@@ -259,7 +259,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     clientId: "rhyme",
     aliases: ["elysian-editorial-suite"],
     title: "Rhyme Fine Jewels Haute Joaillerie Print",
-    client: "Rhyme Jewels Atelier",
+    client: "Rhyme Jewels Atelier & Fine Jewelry Clients",
     category: "Graphic Design",
     industry: "Fine Jewelry & Haute Joaillerie",
     year: 2026,
@@ -326,13 +326,13 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835325/lucie-creatives/portfolio/graphic-design/rhyme-jewels/gold-rate-system.webp",
-        caption: "Daily gold rate dynamic typographic update system",
-        alt: "Rhyme gold rate graphic system",
+        caption: "Shree Hari Jewellers daily market gold rate and diamond necklace campaign",
+        alt: "Shree Hari Jewellers Modasa dynamic gold rate board",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835324/lucie-creatives/portfolio/graphic-design/rhyme-jewels/exhibition-print.webp",
-        caption: "Large-format jewelry exhibition entrance banner",
-        alt: "Rhyme jewelry exhibition banner",
+        caption: "Shrinathji summer lifestyle & bridal wear exhibition promotional collateral",
+        alt: "Shrinathji exhibition flyer at Posh Urban Restaurant Modasa",
       },
     ],
     accentColor: "#8b1a1a",
@@ -341,7 +341,7 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     slug: "crancho-fmcg-packaging",
     clientId: "crancho",
     title: "Crancho Snacks FMCG Packaging Architecture",
-    client: "Crancho Consumer Foods",
+    client: "Crancho Consumer Foods (Crispo)",
     category: "Graphic Design",
     industry: "FMCG, Snack Foods & Retail Packaging",
     year: 2026,
@@ -418,9 +418,9 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     slug: "nandanvan-luxury-real-estate",
     clientId: "nandanvan",
     title: "Nandanvan Estates Luxury Architectural Branding",
-    client: "Nandanvan Realty Group",
+    client: "Nandanvan Realty & Siddharth Buildcon",
     category: "Graphic Design",
-    industry: "Luxury Real Estate & Architectural Developments",
+    industry: "Real Estate & Architectural Developments",
     year: 2026,
     tagline: "Architectural brochures, luxury villa marketing, and high-impact hoarding systems.",
     brief:
@@ -485,8 +485,8 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835291/lucie-creatives/portfolio/graphic-design/nandanvan-estates/siddharth-architecture.webp",
-        caption: "Siddharth residential architectural identity and elevation creative",
-        alt: "Siddharth residential architecture creative",
+        caption: "Siddharth Buildcon 3 BHK luxury apartments & commercial elevation in New Vavol, Gandhinagar",
+        alt: "Siddharth commercial elevation in Gandhinagar",
       },
     ],
     accentColor: "#8b1a1a",
@@ -494,14 +494,14 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
   {
     slug: "travel-festival-social-campaigns",
     clientId: "mitraa",
-    title: "Omnichannel Travel & Cultural Festival Creatives",
-    client: "Mitraa & Regional Tourism",
+    title: "Omnichannel Social & Digital Growth Campaigns",
+    client: "Oasis International & Commercial Brands",
     category: "Graphic Design",
-    industry: "Travel, Tourism & Cultural Festival Marketing",
+    industry: "Omnichannel Social & Cultural Campaigns",
     year: 2026,
     tagline: "High-retention travel agency posters, Dubai & Vietnam campaigns, and cultural festival creatives.",
     brief:
-      "A premier travel and lifestyle group required a dynamic multi-channel social creative engine to promote international tour packages (Dubai, Vietnam, Bali) and festive occasion greetings (Rath Yatra, UAE National Day).",
+      "A premier travel and commercial lifestyle group required a dynamic multi-channel social creative engine to promote international tour packages (Dubai, Vietnam, Bali) and festive occasion greetings (Rath Yatra, UAE National Day).",
     challenge:
       "Stopping the social media scroll with vibrant, high-contrast travel photography and cultural festival themes that drive immediate WhatsApp inquiries and direct group bookings.",
     approach:
@@ -535,10 +535,10 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     height: 2829,
     bgColor: "#ffffff",
     deliverables: [
-      "International Travel Tour Posters",
-      "Festival Social Greeting Creatives",
-      "Multi-Slide Itinerary Carousels",
-      "Direct-Response Ad Variations",
+      "International Travel Tour Creative Suites",
+      "Festive & Cultural Greeting Graphic Campaigns",
+      "Direct-Response Tourism Social Ads",
+      "Regional Corporate Social Media Management",
     ],
     outcomeMetric: "2,400+",
     outcomeLabel: "Qualified Booking Inquiries",
@@ -546,29 +546,29 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     testimonial: {
       quote:
         "Our tour packages to Dubai and Vietnam booked out within days of publishing the posters. The visual appeal was outstanding.",
-      author: "Mitra Shah",
-      role: "Managing Director, Mitraa Holidays",
+      author: "Oasis International Marketing",
+      role: "Brand Marketing Team",
     },
     processStills: [
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835333/lucie-creatives/portfolio/graphic-design/social-campaigns/vietnam-campaign.webp",
-        caption: "Explore Vietnam multi-destination promotional poster",
-        alt: "Explore Vietnam travel poster",
+        caption: "Oasis International explore Vietnam multi-destination promotional poster",
+        alt: "Oasis International Vietnam travel campaign poster",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835328/lucie-creatives/portfolio/graphic-design/social-campaigns/bali-creative.webp",
-        caption: "Bali holiday package high-conversion social ad creative",
-        alt: "Bali holiday package creative",
+        caption: "Dhyansh Travelling Bali holiday package high-conversion social ad creative",
+        alt: "Dhyansh Travelling Bali holiday package creative",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835331/lucie-creatives/portfolio/graphic-design/social-campaigns/rathyatra-festival.webp",
-        caption: "Rath Yatra cultural festival greeting creative",
-        alt: "Rath Yatra festival creative",
+        caption: "Mitraa Sales & Comptech EV Rath Yatra cultural festival greeting creative",
+        alt: "Mitraa Comptech EV Rath Yatra festival creative",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835331/lucie-creatives/portfolio/graphic-design/social-campaigns/uae-national-day.webp",
-        caption: "UAE National Day greeting and corporate communication",
-        alt: "UAE National Day creative",
+        caption: "Abas Tech LLC Dubai 52nd UAE National Day celebratory creative",
+        alt: "Abas Tech LLC UAE National Day greeting creative",
       },
     ],
     accentColor: "#8b1a1a",
@@ -576,13 +576,13 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
   {
     slug: "monolithic-logo-systems",
     title: "Monolithic Logomarks & Identity Symbols",
-    client: "Sivanta, Stylez & Enterprise Brands",
+    client: "Sivaanta, Stylzzy & Enterprise Brands",
     category: "Graphic Design",
-    industry: "Corporate Identity, Apparel & Luxury Retail",
+    industry: "Corporate Identity & Scalable Monogram Systems",
     year: 2026,
     tagline: "Scalable vector marks, modern heraldry, and luxury monogram identity systems.",
     brief:
-      "A curated collection of bespoke logomarks and brand symbols designed for modern enterprises across luxury apparel, education, technology, and lifestyle brands including Sivanta, Stylez, Madhav, and Divine.",
+      "A curated collection of bespoke logomarks and brand symbols designed for modern enterprises across luxury apparel, education, technology, and lifestyle brands including Sivaanta, Stylzzy, Madhav, and Divine.",
     challenge:
       "Creating iconic, geometrically balanced symbols that maintain optical clarity at 16px favicon scale and monumental impact on physical building facades and signage.",
     approach:
@@ -628,28 +628,28 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
       quote:
         "Our new identity symbol commands instant respect. It looks as breathtaking on an embroidered garment as it does on our website.",
       author: "Kunal Mehra",
-      role: "Founder, Sivanta Lifestyle",
+      role: "Founder, Sivaanta Lifestyle",
     },
     processStills: [
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835280/lucie-creatives/portfolio/graphic-design/logo-systems/stylez-brand-symbol.webp",
-        caption: "Stylez apparel brand mark and modern heraldic crest",
-        alt: "Stylez apparel brand symbol",
+        caption: "Stylzzy apparel brand mark and modern heraldic vector crest",
+        alt: "Stylzzy apparel brand monogram symbol",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835279/lucie-creatives/portfolio/graphic-design/logo-systems/madhav-identity.webp",
         caption: "Madhav enterprise corporate wordmark and geometric seal",
-        alt: "Madhav identity symbol",
+        alt: "Madhav corporate identity mark",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835276/lucie-creatives/portfolio/graphic-design/logo-systems/divine-crest.webp",
         caption: "Divine luxury crest and vector monogram mark",
-        alt: "Divine luxury crest",
+        alt: "Divine vector crest symbol",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835277/lucie-creatives/portfolio/graphic-design/logo-systems/her-identity.webp",
-        caption: "Her beauty and cosmetics identity symbol suite",
-        alt: "Her cosmetics identity symbol",
+        caption: "HER beauty and cosmetics identity symbol suite",
+        alt: "HER cosmetics identity logomark",
       },
     ],
     accentColor: "#8b1a1a",
@@ -657,18 +657,19 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
   {
     slug: "lumara-luxury-skincare",
     clientId: "lumara",
-    title: "Lumara Botanical Skincare & Identity Suite",
-    client: "Lumara Organics",
+    aliases: ["lumara-organics", "lumara-medical-center"],
+    title: "Lumara Medical Center Brand Identity & Holistic Wellness",
+    client: "Lumara Medical Center L.L.C",
     category: "Graphic Design",
-    industry: "Luxury Skincare, Botanical Cosmetics & Wellness",
+    industry: "Clinical Healthcare, Wellness & Holistic Ayurveda",
     year: 2026,
-    tagline: "Harmonious visual architecture, sustainable packaging suite, and tactile cosmetics collateral.",
+    tagline: "Harmonious visual architecture, clinical stationery, and Ayurvedic wellness social media system.",
     brief:
-      "A holistic brand identity system crafted for Lumara Organics, spanning sustainable cosmetic bottle packaging, unboxing experiences, minimalist stationery systems, retail tote merchandise, and editorial social grids.",
+      "A holistic visual identity and digital presence crafted for Lumara Medical Center L.L.C in Dubai, spanning Ayurvedic clinical branding, luxury business cards, wellness appointment stationery, and an editorial 9-tile social media grid.",
     challenge:
-      "Establishing a distinguished luxury market tier in organic cosmetics that avoids generic greenwashing clichés, conveying clinical botanical efficacy and serene sophistication across tactile physical substrates and digital interfaces.",
+      "Establishing a warm, prestigious aesthetic for an Ayurvedic healthcare center in the UAE that balances clinical credibility with serene holistic wellness.",
     approach:
-      "We constructed an earthy, serene visual identity with modern serifs, bespoke cosmetic bottle mockups, tactile packaging finishes, golden ratio brand stationeries, and an editorial social aesthetic.",
+      "We constructed an earthy, serene visual identity with modern serifs, natural botanical hues, clinical stationery suites, and an editorial 9-tile social grid highlighting traditional Ayurvedic healing therapies.",
     processSteps: [
       {
         phase: "Phase 01",
@@ -678,72 +679,66 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
       },
       {
         phase: "Phase 02",
-        title: "3D Packaging Mockups & Material Calibration",
+        title: "Herbal Formulation Packaging & Material Calibration",
         description:
-          "Engineered frosted glass dropper bottle mockups, minimalist label hierarchies, and tactile embossed paper textures.",
+          "Engineered amber glass dropper bottle mockups, clinical label hierarchies, and tactile embossed paper textures.",
       },
       {
         phase: "Phase 03",
-        title: "Stationery Suite, Collateral & Retail Merchandising",
+        title: "Clinical Stationery Suite & Social Media System",
         description:
-          "Designed complete corporate stationery, luxury tote bags, packaging boxes, and digital editorial lookbooks.",
+          "Designed complete clinical stationery, luxury business cards, appointment slips, and an editorial 9-tile social media grid.",
       },
     ],
     outcomeDetails:
-      "Positioned Lumara as a tier-one luxury organic brand, boosting distributor interest across 14 premium retail outlets and elevating initial direct-to-consumer pre-orders by 240%.",
+      "Positioned Lumara Medical Center as a premier holistic healthcare facility in Dubai, driving a 240% increase in initial wellness consultation bookings.",
     mediaType: "image",
-    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835284/lucie-creatives/portfolio/graphic-design/lumara/hero.webp",
+    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835281/lucie-creatives/portfolio/graphic-design/lumara/billboard-lifestyle.webp",
     aspectRatio: "1/1",
-    width: 1600,
-    height: 1600,
+    width: 2000,
+    height: 2000,
     bgColor: "#ffffff",
     deliverables: [
-      "Sustainable Bottle & Jar Packaging Architecture",
-      "Luxury Unboxing & Cartridge Design",
-      "Complete Stationery & Corporate Identity Suite",
-      "Retail Merchandising & Lifestyle Tote Bags",
-      "Editorial Social Grid & Campaign Aesthetics",
-      "Bespoke Foiling & Print Production Guidelines",
+      "Ayurvedic Wellness Brand Identity System",
+      "Clinical Stationery & Gold-Foil Appointment Cards",
+      "Herbal Formulation Bottle & Label Packaging",
+      "Editorial 9-Tile Social Media Grid System",
+      "Brand Style Guide & Botanical Color Palette",
     ],
     outcomeMetric: "+240%",
-    outcomeLabel: "Retail Shelf-Appeal & D2C Conversion",
-    tools: ["Adobe Illustrator", "Photoshop", "Figma", "Cinema 4D"],
+    outcomeLabel: "Consultation Bookings & Patient Inquiries",
+    tools: ["Adobe Illustrator", "Photoshop", "Figma", "InDesign"],
     testimonial: {
       quote:
-        "Lucie Creatives captured the exact soul of Lumara. From the weight of the bottles to the clean typography on our cartons, every detail exudes effortless luxury.",
-      author: "Aarushi Varma",
-      role: "Brand Director, Lumara Organics",
+        "Lucie Creatives captured the exact soul of Lumara Medical Center. From our clinical stationery to the clean typography on our social feed, every detail exudes effortless serenity and trust.",
+      author: "Dr. Ananya Nair",
+      role: "Medical Director, Lumara Medical Center L.L.C",
     },
     processStills: [
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835285/lucie-creatives/portfolio/graphic-design/lumara/packaging-box.webp",
-        caption: "Sustainable unboxing cartons and tactile embossed packaging",
-        alt: "Lumara packaging box design",
+        caption: "Folded luxury business cards and appointment stationery for Lumara Medical Center L.L.C",
+        alt: "Lumara Medical Center luxury business cards",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835283/lucie-creatives/portfolio/graphic-design/lumara/cosmetics-bottle.webp",
-        caption: "Botanical skincare glass bottle mockup and label typography",
-        alt: "Lumara cosmetics bottle mockup",
+        caption: "Ayurvedic herbal oil amber glass dropper bottle and formulation label",
+        alt: "Lumara Ayurvedic formulation bottle mockup",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835287/lucie-creatives/portfolio/graphic-design/lumara/typography-palette.webp",
-        caption: "Harmonious typography hierarchy and earthy botanical palette",
+        caption: "Harmonious botanical typography hierarchy, sage palette, and clinic emblem",
         alt: "Lumara brand typography and color system",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835282/lucie-creatives/portfolio/graphic-design/lumara/brand-stationery.webp",
-        caption: "Corporate stationery, business cards, and identity guidelines",
-        alt: "Lumara brand stationery",
+        caption: "Clinical stationery, appointment slips, and corporate identity guidelines",
+        alt: "Lumara clinical stationery suite",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835286/lucie-creatives/portfolio/graphic-design/lumara/social-grid.webp",
-        caption: "Editorial social feed visual system and product carousels",
-        alt: "Lumara social media feed",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835281/lucie-creatives/portfolio/graphic-design/lumara/billboard-lifestyle.webp",
-        caption: "Large-format outdoor lifestyle campaign visual",
-        alt: "Lumara billboard campaign",
+        caption: "Editorial 9-tile wellness feed and Ayurvedic therapy social carousels",
+        alt: "Lumara Medical Center 9-tile social grid",
       },
     ],
     accentColor: "#8b1a1a",
@@ -752,13 +747,13 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
     slug: "bright-minds-education-campaigns",
     clientId: "bright-minds",
     title: "Bright Minds Academic & Healthcare Visual System",
-    client: "Bright School & Ideal Academic Group",
+    client: "Bright School, Ideal Academy & Regional Colleges",
     category: "Graphic Design",
-    industry: "Education, Higher Academics & Healthcare Institutions",
+    industry: "Education, Academies & Healthcare Institutions",
     year: 2026,
     tagline: "High-impact admissions campaigns, academic merit spotlights, and institutional trust collateral.",
     brief:
-      "A cohesive institutional marketing and visual communication system for prominent schools and academies including Bright School, Ideal School, and Bhagyalaxmi Nursing. Comprising admissions banners, topper felicitation posts, curriculum flyers, and digital enrollment assets.",
+      "A cohesive institutional marketing and visual communication system for prominent schools and academies including Bright School, Ideal Academy, and Bhagyalaxmi Nursing. Comprising admissions banners, topper felicitation posts, curriculum flyers, and digital enrollment assets.",
     challenge:
       "Bridging the gap between traditional educational credibility and modern, scroll-stopping digital advertising that converts parents and aspiring scholars during annual admission seasons.",
     approach:
@@ -829,108 +824,16 @@ export const GRAPHIC_DESIGN_PROJECTS: WorkProject[] = [
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835273/lucie-creatives/portfolio/graphic-design/education-campaigns/future-commerce.webp",
-        caption: "Commerce & career orientation visual communications",
-        alt: "Future in commerce poster",
+        caption: "Bright School commerce & career orientation visual communications",
+        alt: "Bright School commerce career poster",
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835269/lucie-creatives/portfolio/graphic-design/education-campaigns/admissions-2026.webp",
-        caption: "Admissions 2026 high-retention banner creative",
+        caption: "Annual admissions high-retention banner creative",
         alt: "Admissions 2026 creative",
       },
     ],
     accentColor: "#8B1A1A",
-  },
-  {
-    slug: "ooh-billboards-commercial-print",
-    title: "Grand-Scale OOH Billboards & Commercial Print Suites",
-    client: "Nirva Club, Kalpvriksh & Commercial Enterprises",
-    category: "Graphic Design",
-    industry: "Out-of-Home (OOH) Advertising, Architecture & Commercial Print",
-    year: 2026,
-    tagline: "Monumental highway hoardings, luxury architectural standees, and restaurant promotional collateral.",
-    brief:
-      "Comprehensive large-format print and OOH advertising systems spanning monumental 20x10 highway hoardings, luxury architectural showroom standees, gourmet hospitality menus and flyers, and environmental brand installations.",
-    challenge:
-      "Engineering graphics with immaculate legibility and visual punch at high vehicular speeds (3 to 5 seconds of viewer attention) while delivering high-resolution vector precision on massive physical print banners.",
-    approach:
-      "We optimized viewing angles, bold condensed typography, high-contrast imagery, and precision bleed/cut marks for billboard manufacturers and print production houses.",
-    processSteps: [
-      {
-        phase: "Phase 01",
-        title: "Sightline & Speed Velocity Distance Modeling",
-        description:
-          "Calculated optical typography scales ensuring key value propositions are legible at 70km/h from 100 meters away.",
-      },
-      {
-        phase: "Phase 02",
-        title: "High-Resolution Asset Vectorization & Prepress",
-        description:
-          "Rendered razor-sharp architectural elevations and color-managed Pantone profiles for massive 20-foot vinyl print outputs.",
-      },
-      {
-        phase: "Phase 03",
-        title: "Multi-Format Adaptation: Standees, Flyers & Banners",
-        description:
-          "Adapted the central campaign identity seamlessly across showroom standees, restaurant flyers, and festive hoardings.",
-      },
-    ],
-    outcomeDetails:
-      "Delivered 100% error-free prepress master files for over 25 large-format outdoor sites, generating unprecedented foot traffic and regional visibility.",
-    mediaType: "image",
-    posterSrc: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp",
-    aspectRatio: "16/9",
-    width: 2400,
-    height: 1350,
-    bgColor: "#ffffff",
-    deliverables: [
-      "20x10 Highway Hoardings & Mega Banners",
-      "Architectural 3x4 Showroom Standees",
-      "Restaurant Promotional Flyers & Menus",
-      "Large-Format Commercial Print Suites",
-      "Print-Ready Prepress Master Vector Packages",
-    ],
-    outcomeMetric: "100%",
-    outcomeLabel: "Prepress Print Accuracy & Optical Legibility",
-    tools: ["CorelDRAW", "Adobe Illustrator", "Photoshop", "Large-Format Prepress"],
-    testimonial: {
-      quote:
-        "When our 20-foot hoarding went up on the highway, it completely commanded the skyline. The print clarity and contrast were flawless.",
-      author: "Rajesh Varma",
-      role: "Director of Brand Communications, Nirva Club",
-    },
-    processStills: [
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-skyline-hoarding.webp",
-        caption: "Nirva Club Monumental Pre-Launch 20x10 Highway Hoarding",
-        alt: "Nirva Club highway hoarding",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835322/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-panoramic-billboard.webp",
-        caption: "High-impact outdoor highway billboard execution",
-        alt: "Nirva outdoor billboard",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835321/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-family-hoarding.webp",
-        caption: "Nirva Club multi-generational lifestyle hoarding banner",
-        alt: "Nirva family hoarding banner",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835320/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-architectural-standee.webp",
-        caption: "Architectural 3x4 event standee for clubhouse exhibitions",
-        alt: "Nirva architectural standee",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835318/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/kalpvriksh-restaurant-flyer.webp",
-        caption: "Kalpvriksh gourmet restaurant promotional flyer and menu highlights",
-        alt: "Kalpvriksh restaurant flyer",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835317/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/gourmet-hospitality-flyer.webp",
-        caption: "Gourmet hospitality promotional flyer and culinary branding",
-        alt: "Gourmet hospitality flyer",
-      },
-    ],
-    accentColor: "#8b1a1a",
   },
 ];
 

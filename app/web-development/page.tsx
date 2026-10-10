@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { DevHero } from "@/components/dev/DevHero";
+import { LivingShowcaseHero } from "@/components/dev/LivingShowcaseHero";
 import { WebDevBrowserShowcase } from "@/components/dev/WebDevBrowserShowcase";
 import { DevClosingCta } from "@/components/dev/DevClosingCta";
 import { constructMetadata, SITE_METADATA_MAP } from "@/lib/seo-metadata";
@@ -32,16 +32,16 @@ export default function WebDevelopmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <main className="min-h-screen bg-white text-text-primary selection:bg-brand-red selection:text-white font-sans font-normal relative">
+      <main className="min-h-screen bg-white text-text-primary selection:bg-brand-red selection:text-white font-sans font-normal relative overflow-x-clip">
         <Navbar />
 
-        {/* 1. Engineering Intro Hero with Self-Building Browser Mock */}
-        <DevHero />
+        {/* 1. Living Showcase Hero (Rebuilt from scratch) */}
+        <LivingShowcaseHero />
 
-        {/* 2. Web Development — Horizontal Browser Showcase */}
+        {/* 3. Web Development — Detailed Audit & Case Study Showcase */}
         <WebDevBrowserShowcase />
 
-        {/* 3. Development-Scoped Closing Section */}
+        {/* 4. Development-Scoped Closing Section */}
         <DevClosingCta />
 
         <Footer />

@@ -135,7 +135,7 @@ export function LocationPageTemplate({
           <div className="max-w-6xl mx-auto relative z-10">
             <Breadcrumbs items={breadcrumbItems} className="mb-8" />
 
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-soft border border-[#8b1a1a]/20 mb-6 cursor-default">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-control bg-white shadow-soft border border-[#8b1a1a]/20 mb-6 cursor-default">
               <MapPin className="w-3.5 h-3.5 text-[#8b1a1a]" />
               <span className="text-[11px] font-black uppercase tracking-widest text-ink">
                 {badge}
@@ -160,7 +160,7 @@ export function LocationPageTemplate({
                 href="/contact"
                 variant="primary"
                 size="lg"
-                className="px-8 py-4 text-sm font-black rounded-2xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
+                className="px-8 py-4 text-sm font-black rounded-control shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90"
               >
                 <span>Start a Regional Project</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -168,7 +168,7 @@ export function LocationPageTemplate({
 
               <Link
                 href="/video-editing"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-line/50 hover:bg-line/80 border border-line text-body text-sm font-bold transition-all"
+                className="inline-flex items-center gap-2 px-6 py-4 rounded-control bg-line/50 hover:bg-line/80 border border-line text-body text-sm font-bold transition-all"
               >
                 <span>Explore Agency Portfolio</span>
                 <ArrowRight className="w-4 h-4" />
@@ -211,11 +211,11 @@ export function LocationPageTemplate({
               {marketPillars.map((p, i) => (
                 <div
                   key={i}
-                  className="p-7 rounded-3xl backdrop-blur-xl bg-white/85 border border-white/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.06),0_0_1px_1px_rgba(255,255,255,0.8)] flex flex-col justify-between"
+                  className="p-7 rounded-card backdrop-blur-xl bg-white/85 border border-white/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.06),0_0_1px_1px_rgba(255,255,255,0.8)] flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-[#FDF2F2] text-[#8b1a1a] border border-[#8b1a1a]/20">
+                      <span className="text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-control bg-[#FDF2F2] text-[#8b1a1a] border border-[#8b1a1a]/20">
                         {p.tag}
                       </span>
                       <span className="text-xs font-mono font-bold text-muted">
@@ -251,7 +251,7 @@ export function LocationPageTemplate({
                 <Link
                   key={idx}
                   href={s.href}
-                  className="p-7 rounded-3xl bg-white border border-line hover:border-[#8b1a1a]/40 hover:shadow-card transition-all group flex flex-col justify-between"
+                  className="p-7 rounded-card bg-white border border-line hover:border-[#8b1a1a]/40 hover:shadow-card transition-all group flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
@@ -305,7 +305,7 @@ export function LocationPageTemplate({
                   <Link
                     key={p.slug}
                     href={`/work/${p.slug}`}
-                    className="group p-6 rounded-3xl bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
+                    className="group p-6 rounded-card bg-white border border-line shadow-soft hover:shadow-card hover:border-[#8b1a1a]/40 transition-all flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center justify-between text-xs text-muted font-bold mb-3">
@@ -356,8 +356,8 @@ export function LocationPageTemplate({
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="p-6 rounded-3xl bg-white border border-line shadow-soft">
-                <div className="w-10 h-10 rounded-2xl bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
+              <div className="p-6 rounded-card bg-white border border-line shadow-soft">
+                <div className="w-10 h-10 rounded-control bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
                   <MessageSquare className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-black text-ink uppercase mb-2">
@@ -368,8 +368,8 @@ export function LocationPageTemplate({
                 </p>
               </div>
 
-              <div className="p-6 rounded-3xl bg-white border border-line shadow-soft">
-                <div className="w-10 h-10 rounded-2xl bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
+              <div className="p-6 rounded-card bg-white border border-line shadow-soft">
+                <div className="w-10 h-10 rounded-control bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
                   <Clock className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-black text-ink uppercase mb-2">
@@ -380,8 +380,8 @@ export function LocationPageTemplate({
                 </p>
               </div>
 
-              <div className="p-6 rounded-3xl bg-white border border-line shadow-soft">
-                <div className="w-10 h-10 rounded-2xl bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
+              <div className="p-6 rounded-card bg-white border border-line shadow-soft">
+                <div className="w-10 h-10 rounded-control bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-black text-ink uppercase mb-2">
@@ -392,8 +392,8 @@ export function LocationPageTemplate({
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-white border border-line shadow-xs">
-                <div className="w-10 h-10 rounded-2xl bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
+              <div className="p-6 rounded-card bg-white border border-line shadow-xs">
+                <div className="w-10 h-10 rounded-control bg-[#FDF2F2] border border-[#8b1a1a]/20 flex items-center justify-center text-[#8b1a1a] mb-4">
                   <Layers className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-black text-ink uppercase mb-2">
@@ -423,7 +423,7 @@ export function LocationPageTemplate({
                 return (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-line overflow-hidden transition-colors"
+                    className="rounded-control border border-line overflow-hidden transition-colors"
                   >
                     <button
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
@@ -465,7 +465,7 @@ export function LocationPageTemplate({
                   <Link
                     key={idx}
                     href={loc.href}
-                    className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
+                    className="px-4 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all"
                   >
                     Agency Hub in {loc.name} →
                   </Link>
@@ -488,7 +488,7 @@ export function LocationPageTemplate({
               href="/contact"
               variant="secondary"
               size="lg"
-              className="bg-white text-[#8B1A1A] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-2xl shadow-elevated"
+              className="bg-white text-[#8B1A1A] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-control shadow-elevated"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4 ml-1" />

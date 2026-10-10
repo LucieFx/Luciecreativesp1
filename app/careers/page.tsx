@@ -41,7 +41,7 @@ export default function CareersPage() {
 
         {/* Header Section */}
         <header className="mb-14 sm:mb-18 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-bold tracking-widest uppercase mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-bold tracking-widest uppercase mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#8B1A1A] inline-block" aria-hidden="true" />
             <span>Join The Team</span>
           </div>
@@ -79,7 +79,7 @@ export default function CareersPage() {
               <Reveal key={role.slug} delay={idx * 0.08}>
                 <Link
                   href={`/careers/${role.slug}`}
-                  className="group block rounded-3xl bg-white border border-line/90 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#8B1A1A]/40 transition-all duration-300 relative"
+                  className="group block rounded-card bg-white border border-line/90 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-[#8B1A1A]/40 transition-all duration-300 relative"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
                     <div>
@@ -102,14 +102,14 @@ export default function CareersPage() {
 
                   {/* Tag Pills below description: Blush background, maroon text, rounded-full */}
                   <div className="flex flex-wrap items-center gap-2 pt-4 mt-2 border-t border-line/60">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
                       <Briefcase className="w-3.5 h-3.5 text-[#8B1A1A]" />
                       <span>{role.department}</span>
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
+                    <span className="px-3 py-1 rounded-control bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
                       {role.type}
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
+                    <span className="px-3 py-1 rounded-control bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
                       {role.location}
                     </span>
                   </div>

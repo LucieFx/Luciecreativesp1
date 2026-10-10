@@ -1,0 +1,260 @@
+{
+  "pathname": "/branding",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689926160\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689926160\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689926160\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/branding/page.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/not-found.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://luciecreatives.in/branding#service",
+      "name": "Branding by Lucie Creatives",
+      "serviceType": "Branding",
+      "description": "Branding is far more than a logo—it is the operating system of your market reputation. We construct comprehensive brand ecosystems that define strategic market positioning, verbal tone of voice, visual identity standards, color psychology, and rigorous brand books that build enterprise valuation.",
+      "url": "https://luciecreatives.in/branding",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmedabad"
+        },
+        {
+          "@type": "City",
+          "name": "Surat"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        {
+          "@type": "City",
+          "name": "Bengaluru"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Branding Deliverables",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Strategic Brand Positioning & Narrative",
+              "description": "Defining your brand purpose, core value propositions, competitive differentiation pillars, and narrative arc to clearly articulate why your company wins in its category."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Comprehensive Brand Guideline Books",
+              "description": "In-depth 80-to-120 page brand manuals specifying typography hierarchies, grid mechanics, iconography rules, and usage do's & don'ts across all channels."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Color Psychology & Token Architecture",
+              "description": "Curated chromatic palettes with mathematically tested contrast ratios, dark-mode variations, and digital design token definitions ready for software engineers."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Verbal Identity & Tone of Voice Playbooks",
+              "description": "Defining how your brand speaks, writes, and communicates—establishing grammar standards, executive vocabulary, and customer support guidelines."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-Touchpoint Collateral Systems",
+              "description": "Unified templates for keynote decks, corporate stationery, business cards, email signatures, merchandise, and environmental spatial graphics."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corporate Rebranding & Evolution",
+              "description": "Helping established enterprises shed legacy aesthetics and transition smoothly into contemporary digital leaders without alienating existing loyal customers."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between logo design and complete branding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A logo is simply a visual mark or graphic identifier. Complete branding is the entire strategic ecosystem—market positioning, narrative messaging, typography hierarchies, chromatic color psychology, verbal tone of voice, and multi-channel asset systems that govern how your business is perceived."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a full brand identity engagement take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A comprehensive brand identity engagement typically takes between 4 to 8 weeks, depending on the depth of stakeholder research, collateral breadth, and packaging requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you help with corporate rebrands for legacy companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We specialize in strategic brand evolution, modernizing outdated visual assets while protecting existing brand equity, customer trust, and organic search presence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the delivered brand guidelines book contain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our brand books typically span 80 to 120 pages, covering logo construction grids, spacing rules, color formulas (Pantone, CMYK, RGB, HEX), typography pairings, photography direction, verbal tone of voice, and real-world collateral examples."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will our internal team be able to use the assets easily?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We organize all files in structured cloud repositories and provide editable Figma and Canva templates with clear instructions, making on-brand production seamless for non-designers."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://luciecreatives.in/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Branding",
+          "item": "https://luciecreatives.in/branding"
+        }
+      ]
+    }
+  ]
+}

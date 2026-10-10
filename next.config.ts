@@ -19,8 +19,6 @@ const nextConfig: NextConfig = {
     devtoolSegmentExplorer: false,
   },
   webpack: (config) => {
-    config.resolve.alias = config.resolve.alias || {};
-    config.resolve.alias["framer-motion"] = path.resolve(__dirname, "lib/static-motion.tsx");
     return config;
   },
   transpilePackages: ["lucide-react", "gsap"],

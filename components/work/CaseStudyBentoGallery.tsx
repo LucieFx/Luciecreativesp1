@@ -286,7 +286,7 @@ export function CaseStudyBentoGallery({
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-auto">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-line text-xs font-mono font-bold text-body">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-slate-100 border border-line text-xs font-mono font-bold text-body">
             <Ratio className="w-3.5 h-3.5 text-brand-red" />
             <span>{stills.length} Production Assets</span>
           </span>
@@ -304,7 +304,7 @@ export function CaseStudyBentoGallery({
             <div
               key={idx}
               onClick={() => setActiveLightboxIndex(idx)}
-              className={`${colSpanClass} group relative rounded-xl overflow-hidden bg-white border border-line shadow-xs hover:border-brand-red/40 transition-colors duration-200 flex flex-col justify-between cursor-pointer`}
+              className={`${colSpanClass} group relative rounded-media overflow-hidden bg-white border border-line shadow-xs hover:border-brand-red/40 transition-colors duration-200 flex flex-col justify-between cursor-pointer`}
             >
               {/* Top Bar Floating Meta Pill */}
               <div className="absolute top-3 inset-x-3 sm:top-4 sm:inset-x-4 flex items-center justify-between pointer-events-none z-20">
@@ -389,7 +389,7 @@ export function CaseStudyBentoGallery({
               >
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-mono font-black text-brand-red bg-brand-redLight/80 border border-brand-red/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                    <span className="text-xs font-mono font-black text-brand-red bg-brand-redLight/80 border border-brand-red/20 px-2.5 py-0.5 rounded-control uppercase tracking-wider">
                       {getRatioSpecs(resolveStillRatio(stills[activeLightboxIndex])).badge}
                     </span>
                     <span className="text-muted font-bold">•</span>
@@ -405,7 +405,7 @@ export function CaseStudyBentoGallery({
                 <button
                   onClick={() => setActiveLightboxIndex(null)}
                   aria-label="Close high-resolution viewer"
-                  className="p-2.5 rounded-full bg-slate-100 hover:bg-line text-ink border border-line shadow-sm transition-colors cursor-pointer"
+                  className="p-2.5 rounded-control bg-slate-100 hover:bg-line text-ink border border-line shadow-sm transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -429,7 +429,7 @@ export function CaseStudyBentoGallery({
                       )
                     }
                     aria-label="Previous image"
-                    className="absolute left-2 sm:left-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
+                    className="absolute left-2 sm:left-6 z-30 p-3.5 rounded-control bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
                   >
                     <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
                   </button>
@@ -459,7 +459,7 @@ export function CaseStudyBentoGallery({
                       )
                     }
                     aria-label="Next image"
-                    className="absolute right-2 sm:right-6 z-30 p-3.5 rounded-full bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
+                    className="absolute right-2 sm:right-6 z-30 p-3.5 rounded-control bg-white/90 hover:bg-white text-ink border border-line shadow-xl transition-all cursor-pointer backdrop-blur-sm hover:scale-105 active:scale-95"
                   >
                     <ChevronRight className="w-6 h-6 stroke-[2.5]" />
                   </button>

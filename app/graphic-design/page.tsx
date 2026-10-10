@@ -50,9 +50,9 @@ export default function GraphicDesignPage() {
           subheadline="Brand identity, packaging, social creatives and large-format OOH, designed to look premium and sell."
           chips={[
             { label: "Brand Identity & Packaging", href: "#graphic-design-grid" },
-            { label: "OOH Print & Billboards", href: "#graphic-design-grid" },
-            { label: "Haute Jewels & FMCG", href: "#graphic-design-grid" },
-            { label: "Education, Social & Logos", href: "#graphic-design-grid" },
+            { label: "Hospitality & Real Estate", href: "#graphic-design-grid" },
+            { label: "Retail, Jewelry & FMCG", href: "#graphic-design-grid" },
+            { label: "Education & Social Campaigns", href: "#graphic-design-grid" },
           ]}
           primaryButton={{
             label: "Start a project",

@@ -157,7 +157,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
             {/* Meta Category & Reading Time */}
             <div className="flex items-center gap-3 mb-6 flex-wrap">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-50 text-[11px] font-black text-[#8b1a1a] uppercase tracking-wider border border-[#8b1a1a]/20">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-control bg-red-50 text-[11px] font-black text-[#8b1a1a] uppercase tracking-wider border border-[#8b1a1a]/20">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#8b1a1a] inline-block" aria-hidden="true" />
                 {article.category}
               </span>
@@ -201,7 +201,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
             </div>
 
             {/* Hero Cover Image */}
-            <div className="relative w-full aspect-16/9 sm:aspect-21/9 rounded-3xl overflow-hidden mt-10 shadow-soft border border-line">
+            <div className="relative w-full aspect-16/9 sm:aspect-21/9 rounded-media overflow-hidden mt-10 shadow-soft border border-line">
               <Image
                 src={article.coverImage}
                 alt={article.coverImageAlt}
@@ -214,7 +214,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
             {/* 2. EXECUTIVE KEY TAKEAWAYS */}
             {article.keyTakeaways?.length > 0 && (
-              <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-white border border-line shadow-soft">
+              <div className="mt-12 p-6 sm:p-8 rounded-card bg-white border border-line shadow-soft">
                 <div className="flex items-center gap-2 mb-4 text-[#8b1a1a]">
                   <BookOpen className="w-5 h-5" />
                   <h2 className="text-sm sm:text-base font-black uppercase tracking-widest text-ink">
@@ -234,7 +234,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
             {/* 3. TABLE OF CONTENTS */}
             {article.tableOfContents?.length > 0 && (
-              <div className="mt-10 p-6 rounded-2xl bg-white border border-line">
+              <div className="mt-10 p-6 rounded-card bg-white border border-line">
                 <span className="text-[11px] font-black uppercase tracking-widest text-muted block mb-3">
                   IN THIS GUIDE
                 </span>
@@ -334,7 +334,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
             {/* 5. ARTICLE → PRIMARY SERVICE CONNECTION */}
             {article.primaryService && (
               <div className="mt-16 p-8 sm:p-10 rounded-lg bg-[#8B1A1A] text-white border border-[#8b1a1a] relative overflow-hidden">
-                <span className="text-[11px] font-black uppercase tracking-widest text-red-100 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full inline-block mb-3">
+                <span className="text-[11px] font-black uppercase tracking-widest text-red-100 bg-white/10 border border-white/20 px-3.5 py-1 rounded-control inline-block mb-3">
                   PRIMARY SERVICE DISCIPLINE
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-2">
@@ -346,7 +346,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                 <div className="flex items-center gap-4 flex-wrap">
                   <Link
                     href={article.primaryService.href}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#8b1a1a] hover:bg-red-50 hover:shadow-floating font-black text-xs transition-all shadow-md group"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-control bg-white text-[#8b1a1a] hover:bg-red-50 hover:shadow-floating font-black text-xs transition-all shadow-md group"
                   >
                     <span>{article.primaryService.anchor}</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#8b1a1a] transition-transform" />
@@ -376,7 +376,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                     <Link
                       key={cs.slug}
                       href={`/work/${cs.slug}`}
-                      className="p-5 rounded-2xl bg-white border border-line hover:border-[#8b1a1a]/40 transition-all group flex flex-col justify-between"
+                      className="p-5 rounded-card bg-white border border-line hover:border-[#8b1a1a]/40 transition-all group flex flex-col justify-between"
                     >
                       <div>
                         <span className="text-[10px] font-black uppercase tracking-wider text-[#8b1a1a] block mb-1">
@@ -397,9 +397,9 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
 
             {/* 7. ARTICLE → LOCATION RELEVANCE (Natural Only) */}
             {article.relatedLocation && (
-              <div className="mt-12 p-6 rounded-2xl bg-white border border-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="mt-12 p-6 rounded-card bg-white border border-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-line flex items-center justify-center text-[#8b1a1a] shrink-0">
+                  <div className="w-10 h-10 rounded-control bg-white border border-line flex items-center justify-center text-[#8b1a1a] shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -413,7 +413,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                 </div>
                 <Link
                   href={article.relatedLocation.href}
-                  className="px-4 py-2 rounded-xl bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all shrink-0"
+                  className="px-4 py-2 rounded-control bg-white border border-line text-xs font-black text-body hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 transition-all shrink-0"
                 >
                   {article.relatedLocation.anchor} →
                 </Link>
@@ -431,7 +431,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
                   {article.faqs.map((f, fIdx) => (
                     <details
                       key={fIdx}
-                      className="group rounded-2xl border border-line bg-white p-5 sm:p-6 transition-all hover:border-[#8b1a1a]/30 [&_summary::-webkit-details-marker]:hidden"
+                      className="group rounded-card border border-line bg-white p-5 sm:p-6 transition-all hover:border-[#8b1a1a]/30 [&_summary::-webkit-details-marker]:hidden"
                     >
                       <summary className="flex cursor-pointer items-center justify-between font-bold text-ink list-none text-sm sm:text-base">
                         <span>{f.q}</span>
@@ -481,7 +481,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
               href="/contact"
               variant="secondary"
               size="lg"
-              className="bg-white text-[#8B1A1A] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-2xl shadow-elevated"
+              className="bg-white text-[#8B1A1A] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-control shadow-elevated"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4 ml-1" />

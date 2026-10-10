@@ -88,14 +88,14 @@ export default async function RoleDetailPage({ params }: RolePageProps) {
 
           {/* Tag Pills */}
           <div className="flex flex-wrap items-center gap-2 mb-6">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-control bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
               <Briefcase className="w-3 h-3 text-[#8B1A1A]" />
               <span>{role.department}</span>
             </span>
-            <span className="px-3 py-1 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
+            <span className="px-3 py-1 rounded-control bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
               {role.type}
             </span>
-            <span className="px-3 py-1 rounded-full bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
+            <span className="px-3 py-1 rounded-control bg-[#8B1A1A]/[0.08] border border-[#8B1A1A]/15 text-[#8B1A1A] text-xs font-semibold">
               {role.location}
             </span>
           </div>

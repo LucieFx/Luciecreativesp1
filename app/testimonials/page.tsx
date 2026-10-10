@@ -49,13 +49,13 @@ export default function TestimonialsPage() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/video-editing"
-                className="px-6 py-3 rounded-full bg-[#8B1A1A] text-white font-bold text-sm hover:bg-[#8b1a1a] transition-colors"
+                className="px-6 py-3 rounded-control bg-[#8B1A1A] text-white font-bold text-sm hover:bg-[#8b1a1a] transition-colors"
               >
                 View Video Editing Work
               </Link>
               <Link
                 href="/web-development"
-                className="px-6 py-3 rounded-full border border-line text-text-primary font-bold text-sm hover:border-[#8B1A1A] transition-colors"
+                className="px-6 py-3 rounded-control border border-line text-text-primary font-bold text-sm hover:border-[#8B1A1A] transition-colors"
               >
                 View Web Development Work
               </Link>

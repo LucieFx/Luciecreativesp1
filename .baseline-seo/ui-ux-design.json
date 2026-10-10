@@ -1,0 +1,260 @@
+{
+  "pathname": "/ui-ux-design",
+  "status": 200,
+  "head": "<meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_256/v1789835250/lucie-creatives/logo/lucie-logo.png 1x, https://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto,w_384/v1789835250/lucie-creatives/logo/lucie-logo.png 2x\"/><link rel=\"stylesheet\" href=\"/_next/static/css/app/layout.css?v=1790689926962\" data-precedence=\"next_static/css/app/layout.css\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/webpack.js?v=1790689926962\"/><script src=\"/_next/static/chunks/main-app.js?v=1790689926962\" async=\"\"></script><script src=\"/_next/static/chunks/app-pages-internals.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/ui-ux-design/page.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/global-error.js\" async=\"\"></script><script src=\"/_next/static/chunks/app/not-found.js\" async=\"\"></script><meta name=\"color-scheme\" content=\"light\"/><meta name=\"description\" content=\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and branding.\"/><meta name=\"theme-color\" content=\"#ffffff\"/><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://luciecreatives.in/#organization\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png\",\"width\":1200,\"height\":630},\"description\":\"Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.\",\"email\":\"hello@luciecreatives.in\",\"sameAs\":[\"https://instagram.com/luciecreatives\",\"https://linkedin.com/company/luciecreatives\",\"https://x.com/luciecreatives\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"hello@luciecreatives.in\",\"contactType\":\"customer service\",\"availableLanguage\":[\"English\",\"Hindi\",\"Gujarati\"]},\"areaServed\":[{\"@type\":\"Place\",\"name\":\"Worldwide\"},{\"@type\":\"AdministrativeArea\",\"name\":\"Gujarat\"},{\"@type\":\"Country\",\"name\":\"India\"},{\"@type\":\"Country\",\"name\":\"United States\"},{\"@type\":\"Country\",\"name\":\"United Kingdom\"},{\"@type\":\"Country\",\"name\":\"United Arab Emirates\"}],\"knowsAbout\":[\"Web Development\",\"Website Design\",\"Graphic Design\",\"Video Editing\",\"Logo Design\",\"Branding\",\"UI/UX Design\",\"Social Media Design\"]}</script><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://luciecreatives.in/#website\",\"name\":\"Lucie Creatives\",\"url\":\"https://luciecreatives.in\",\"description\":\"Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands\",\"publisher\":{\"@id\":\"https://luciecreatives.in/#organization\"}}</script><noscript><style>\n            [data-reveal], [data-split], [data-mask] {\n              opacity: 1 !important;\n              transform: none !important;\n              clip-path: none !important;\n              visibility: visible !important;\n            }\n          </style></noscript><script src=\"/_next/static/chunks/polyfills.js\" noModule=\"\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://luciecreatives.in/#organization",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Lucie Creatives is a premier video editing and web development agency specializing in cinematic video editing, high-performance web development, graphic design, and brand identity systems.",
+      "email": "hello@luciecreatives.in",
+      "sameAs": [
+        "https://instagram.com/luciecreatives",
+        "https://linkedin.com/company/luciecreatives",
+        "https://x.com/luciecreatives"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@luciecreatives.in",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English",
+          "Hindi",
+          "Gujarati"
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Website Design",
+        "Graphic Design",
+        "Video Editing",
+        "Logo Design",
+        "Branding",
+        "UI/UX Design",
+        "Social Media Design"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://luciecreatives.in/#website",
+      "name": "Lucie Creatives",
+      "url": "https://luciecreatives.in",
+      "description": "Web Development, Graphic Design & Video Editing Agency in Gujarat Serving Global Brands",
+      "publisher": {
+        "@id": "https://luciecreatives.in/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://luciecreatives.in/ui-ux-design#service",
+      "name": "UI/UX Design by Lucie Creatives",
+      "serviceType": "UI/UX Design",
+      "description": "We transform complex digital workflows into frictionless, intuitive experiences. Grounded in cognitive psychology, conversion rate optimization (CRO), and modular Figma design systems, our UI/UX design bridges the gap between user delight and measurable commercial growth.",
+      "url": "https://luciecreatives.in/ui-ux-design",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://luciecreatives.in/#organization",
+        "name": "Lucie Creatives",
+        "url": "https://luciecreatives.in",
+        "logo": "https://luciecreatives.inhttps://res.cloudinary.com/oct7txvw/image/upload/f_auto,q_auto/v1789835244/lucie-creatives/logo/lucie-creatives-og.png"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmedabad"
+        },
+        {
+          "@type": "City",
+          "name": "Surat"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        {
+          "@type": "City",
+          "name": "Bengaluru"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "UI/UX Design Deliverables",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Figma Design Systems & Token Architecture",
+              "description": "Modular component libraries utilizing Figma variables, auto-layout 5.0, dark mode tokens, and strict naming conventions that map 1-to-1 with React/Tailwind frontend codebases."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "User Journey Mapping & Wireframing",
+              "description": "Heuristic audits, user persona journeys, hierarchical sitemaps, and low-fidelity wireframe schematics engineered to minimize cognitive load and eliminate user friction."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "High-Fidelity UI & Clickable Prototypes",
+              "description": "Interactive micro-prototypes simulating exact production physics, page transitions, and responsive behavior for realistic stakeholder testing and usability validation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Responsive Web & SaaS Interface Design",
+              "description": "Responsive web application and SaaS interfaces engineered for clarity, high conversion rates, and seamless cross-device workflows."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conversion Rate Optimization (CRO)",
+              "description": "Strategic audit and redesign of user onboarding flows, checkout tunnels, and lead capture funnels to eliminate drop-off points and maximize completion rates."
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Developer Handoff & Implementation Specs",
+              "description": "Pixel-perfect redlining, CSS property documentation, exported SVG assets, and interactive component state specs ensuring zero loss in translation during engineering."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What design tools do you use for UI/UX product design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Figma is our primary design and prototyping operating environment. It allows seamless real-time collaboration, auto-layout 5.0 systems, design tokens, and instant developer inspection. For complex physics-based motion, we also utilize Principle and After Effects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you coordinate with our internal engineering team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work directly alongside your frontend engineers. We organize Figma components into atomic hierarchies matching React components, document all states (default, hover, focus, active, disabled), and supply direct CSS and Tailwind property values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you design for both responsive websites and SaaS web applications?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We design responsive marketing websites as well as complex, multi-tenant SaaS web applications, dashboards, and client portals optimized across desktop, tablet, and mobile browsers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you redesign an existing software product with high user churn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We specialize in legacy product modernization and UX friction reduction, conducting heuristic audits to pinpoint drop-off zones and rebuilding flows for intuitive usability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you also build the frontend code for the designs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Our agency offers end-to-end capabilities; our web development team can seamlessly turn Figma files into production Next.js/React code."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luciecreatives.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://luciecreatives.in/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "UI/UX Design",
+          "item": "https://luciecreatives.in/ui-ux-design"
+        }
+      ]
+    }
+  ]
+}

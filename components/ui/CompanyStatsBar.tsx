@@ -65,7 +65,7 @@ export function CompanyStatsBar({ stats, className = "" }: CompanyStatsBarProps)
           {displayStats.map((stat, idx) => (
             <div
               key={`${stat.label}-${idx}`}
-              className="p-4 sm:p-5 rounded-2xl bg-white/70 border border-line/70 text-center flex flex-col items-center justify-center group hover:bg-white hover:border-[#8B1A1A]/30 hover:shadow-md transition-all duration-200"
+              className="p-4 sm:p-5 rounded-card bg-white/70 border border-line/70 text-center flex flex-col items-center justify-center group hover:bg-white hover:border-[#8B1A1A]/30 hover:shadow-md transition-all duration-200"
             >
               <div className="font-mono text-2xl sm:text-3xl lg:text-4xl font-black text-ink tracking-tight">
                 {stat.value}

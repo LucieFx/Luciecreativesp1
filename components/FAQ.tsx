@@ -38,7 +38,7 @@ export function FAQ() {
                 <div
                   key={idx}
                   onClick={() => toggleAccordion(idx)}
-                  className={`rounded-2xl border transition-all duration-300 overflow-hidden cursor-pointer ${
+                  className={`rounded-control border transition-all duration-300 overflow-hidden cursor-pointer ${
                     isOpen
                       ? "bg-brand-red-50/60 border-brand-red shadow-floating scale-[1.01] ring-2 ring-brand-red/25"
                       : "bg-white border-border-light hover:border-brand-red/40 hover:bg-brand-red-50/20 shadow-sm"
@@ -50,7 +50,7 @@ export function FAQ() {
                       e.stopPropagation();
                       toggleAccordion(idx);
                     }}
-                    className="w-full flex items-center justify-between text-left gap-4 px-6 py-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-inset rounded-2xl cursor-pointer"
+                    className="w-full flex items-center justify-between text-left gap-4 px-6 py-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-inset rounded-control cursor-pointer"
                     aria-expanded={isOpen}
                   >
                     <span
@@ -61,7 +61,7 @@ export function FAQ() {
                       {faq.question}
                     </span>
                     <div
-                      className={`w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                      className={`w-8 h-8 rounded-control-inner flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                         isOpen
                           ? "bg-brand-red text-white shadow-purple-btn rotate-180 scale-105"
                           : "bg-brand-red-50 text-brand-red border border-brand-red/20"

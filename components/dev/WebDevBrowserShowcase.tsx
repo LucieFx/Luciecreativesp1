@@ -6,16 +6,14 @@ import Link from "next/link";
 import {
   Lock,
   ArrowRight,
+  ArrowUpRight,
+  ExternalLink,
   Shield,
-  FileCheck,
   Play,
   X,
   Eye,
   Gauge,
-  Zap,
-  CheckCircle2,
   ChevronDown,
-  Sparkles,
 } from "lucide-react";
 import { m, useInView, useReducedMotion } from "framer-motion";
 import {
@@ -26,29 +24,30 @@ import {
 import { Reveal } from "@/components/motion";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppLink } from "@/lib/constants";
+import { ScoreRing } from "./ScoreRing";
 
 /**
- * Status Tag Helper Component
+ * Status Tag Helper Component (Used in Modal Header)
  */
 function StatusTag({ status }: { status: WebProjectStatus }) {
   switch (status) {
     case "client":
       return (
-        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/80">
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-control text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/80">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" aria-hidden="true" />
           <span>Live client project</span>
         </span>
       );
     case "concept":
       return (
-        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-sky-50 text-sky-800 border border-sky-200/80">
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-control text-[11px] font-semibold bg-sky-50 text-sky-800 border border-sky-200/80">
           <span className="w-1.5 h-1.5 rounded-full bg-sky-600" aria-hidden="true" />
           <span>Concept project</span>
         </span>
       );
     case "own-product":
       return (
-        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-purple-50 text-purple-800 border border-purple-200/80">
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-control text-[11px] font-semibold bg-purple-50 text-purple-800 border border-purple-200/80">
           <span className="w-1.5 h-1.5 rounded-full bg-purple-600" aria-hidden="true" />
           <span>Our product</span>
         </span>
@@ -57,171 +56,100 @@ function StatusTag({ status }: { status: WebProjectStatus }) {
 }
 
 /**
- * Google Lighthouse Official-Style Animated SVG Circular Score Ring
+ * Compact Score Ring for Part B (Lighthouse 64px Rectangle)
  */
-function LighthouseRing({
-  score,
+function CompactScoreRing({
+  value,
   label,
-  delay = 0,
 }: {
-  score: number | null;
+  value: number;
   label: string;
-  delay?: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-20px" });
-  const shouldReduceMotion = useReducedMotion();
-
-  const radius = 14;
-  const strokeWidth = 2.8;
+  const dim = 28;
+  const strokeWidth = 2.5;
+  const radius = (dim - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
+  const clamped = Math.max(0, Math.min(100, value));
+  const strokeDashoffset = circumference * (1 - clamped / 100);
 
-  // Determine standard Google Lighthouse color styling
-  let strokeColor = "#CBD5E1";
-  let textColor = "text-slate-400";
-  let bgFillColor = "bg-slate-50";
+  // Standard Lighthouse Colors: 90-100 green, 50-89 orange, <50 red
+  let ringColor = "#0CCE6B";
+  let textColor = "text-[#007a3d]";
+  let bgTint = "bg-[#0CCE6B]/10";
+  let trackColor = "rgba(12, 206, 107, 0.15)";
 
-  if (score !== null) {
-    if (score >= 90) {
-      strokeColor = "#0CCE6B"; // Google Lighthouse green
-      textColor = "text-[#007a3d]"; // Deep green readable text with WCAG AA compliance
-      bgFillColor = "bg-[#0CCE6B]/10"; // Soft mint circular background
-    } else if (score >= 50) {
-      strokeColor = "#FFA400"; // Lighthouse orange
-      textColor = "text-[#B45309]";
-      bgFillColor = "bg-[#FFA400]/10";
-    } else {
-      strokeColor = "#FF4E42"; // Lighthouse red
-      textColor = "text-[#8b1a1a]";
-      bgFillColor = "bg-[#FF4E42]/10";
-    }
+  if (value < 50) {
+    ringColor = "#FF4E42";
+    textColor = "text-[#8B1A1A]";
+    bgTint = "bg-[#FF4E42]/10";
+    trackColor = "rgba(255, 78, 66, 0.15)";
+  } else if (value < 90) {
+    ringColor = "#FFA400";
+    textColor = "text-[#B45309]";
+    bgTint = "bg-[#FFA400]/10";
+    trackColor = "rgba(255, 164, 0, 0.15)";
   }
 
-  const targetOffset =
-    score !== null ? circumference * (1 - Math.min(Math.max(score, 0), 100) / 100) : circumference;
-
-  const accessibleLabel =
-    score !== null ? `${label}: ${score} out of 100` : `${label}: Measuring soon`;
-
   return (
     <div
-      ref={ref}
-      className="flex flex-col items-center text-center gap-1"
-      aria-label={accessibleLabel}
-      role="meter"
-      aria-valuenow={score !== null ? score : undefined}
-      aria-valuemin={0}
-      aria-valuemax={100}
-    >
-      <div className={`relative w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${bgFillColor} transition-colors duration-300`}>
-        <svg className="w-full h-full -rotate-90 p-0.5" viewBox="0 0 36 36" aria-hidden="true">
-          {/* Background Track */}
-          <circle
-            cx="18"
-            cy="18"
-            r={radius}
-            fill="transparent"
-            stroke="#E2E8F0"
-            strokeWidth={strokeWidth}
-          />
-          {/* Animated Progress Circle */}
-          {score !== null ? (
-            <m.circle
-              cx="18"
-              cy="18"
-              r={radius}
-              fill="transparent"
-              stroke={strokeColor}
-              strokeWidth={strokeWidth}
-              strokeDasharray={circumference}
-              strokeLinecap="round"
-              initial={{ strokeDashoffset: circumference }}
-              animate={
-                isInView || shouldReduceMotion
-                  ? { strokeDashoffset: targetOffset }
-                  : { strokeDashoffset: circumference }
-              }
-              transition={{
-                duration: shouldReduceMotion ? 0 : 0.9,
-                delay: shouldReduceMotion ? 0 : delay,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            />
-          ) : (
-            <circle
-              cx="18"
-              cy="18"
-              r={radius}
-              fill="transparent"
-              stroke="#CBD5E1"
-              strokeWidth={strokeWidth}
-              strokeDasharray="3 3"
-            />
-          )}
-        </svg>
-
-        {/* Center Score Value */}
-        <span className={`absolute font-body font-bold text-[11px] sm:text-xs tracking-tight select-none ${textColor}`}>
-          {score !== null ? score : "—"}
-        </span>
-      </div>
-
-      <div className="flex flex-col items-center leading-tight">
-        <span className="text-[9.5px] sm:text-[10px] font-medium text-slate-600 tracking-tight">
-          {label}
-        </span>
-        {score === null && (
-          <span className="text-[8.5px] font-medium text-slate-400 mt-0.5">
-            Measuring soon
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
-
-/**
- * Official-Style Agentic Browsing Pill Badge
- */
-function AgenticBrowsingBadge({
-  value,
-  label = "Agentic AI",
-}: {
-  value: string;
-  label?: string;
-}) {
-  return (
-    <div
-      className="flex flex-col items-center text-center gap-1"
+      className="flex flex-col items-center justify-center text-center shrink-0 min-w-0"
       aria-label={`${label}: ${value}`}
     >
-      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-[#0CCE6B]/12 border border-[#0CCE6B]/30 transition-colors duration-300">
-        <span className="inline-flex items-center gap-0.5 font-body font-bold text-[10.5px] sm:text-[11px] tracking-tight text-[#007a3d] select-none">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#0CCE6B] shrink-0" aria-hidden="true" />
-          <span>{value}</span>
+      <div
+        style={{ width: dim, height: dim }}
+        className={`relative rounded-full flex items-center justify-center ${bgTint} shrink-0`}
+      >
+        <svg
+          width={dim}
+          height={dim}
+          viewBox={`0 0 ${dim} ${dim}`}
+          className="-rotate-90"
+          aria-hidden="true"
+        >
+          <circle
+            cx={dim / 2}
+            cy={dim / 2}
+            r={radius}
+            fill="transparent"
+            stroke={trackColor}
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx={dim / 2}
+            cy={dim / 2}
+            r={radius}
+            fill="transparent"
+            stroke={ringColor}
+            strokeWidth={strokeWidth}
+            strokeDasharray={circumference}
+            strokeDashoffset={strokeDashoffset}
+            strokeLinecap="round"
+          />
+        </svg>
+        <span
+          className={`absolute inset-0 flex items-center justify-center font-mono font-bold tabular-nums text-[10px] sm:text-[11px] leading-none select-none ${textColor}`}
+        >
+          {value}
         </span>
       </div>
-
-      <div className="flex flex-col items-center leading-tight">
-        <span className="text-[9.5px] sm:text-[10px] font-medium text-slate-600 tracking-tight">
-          {label}
-        </span>
-      </div>
+      <span className="hidden min-[380px]:block text-[9px] sm:text-[10px] text-slate-500 font-medium leading-none mt-1 truncate max-w-[62px] text-center">
+        {label === "Best Practices" ? "Practices" : label}
+      </span>
     </div>
   );
 }
 
 /**
- * MacBook-Style Hardware Frame + Overlapping Phone Frame
+ * MacBook-Style Laptop Frame + Overlapping Phone Frame
  */
 function ShowcaseDeviceFrames({
   project,
   isHovered,
-  onOpenPreview,
+  onError,
 }: {
   project: WebProject;
   isHovered: boolean;
-  onOpenPreview?: () => void;
+  onError?: () => void;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -245,29 +173,18 @@ function ShowcaseDeviceFrames({
   return (
     <div
       ref={containerRef}
-      className="relative w-full select-none cursor-pointer"
-      onClick={onOpenPreview}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onOpenPreview?.();
-        }
-      }}
-      aria-label={`Preview Full UI: website interface for ${project.title}`}
+      className="relative w-full select-none"
       onContextMenu={(e) => e.preventDefault()}
     >
       {/* 1. MacBook-Style Laptop Frame */}
-      <div className="relative w-full rounded-t-xl bg-slate-900 border border-slate-800 shadow-2xs overflow-hidden flex flex-col pt-1.5 px-1.5 pb-0 transition-transform duration-500 ease-out group-hover:scale-[1.01]">
+      <div className="relative w-full rounded-t-lg bg-slate-900 border border-slate-800 shadow-sm overflow-hidden flex flex-col pt-1.5 px-1.5 pb-0">
         {/* Laptop Display Top Bezel: Camera Dot */}
         <div className="flex items-center justify-center pb-1" aria-hidden="true">
           <div className="w-1.5 h-1.5 rounded-full bg-slate-800 border border-slate-700" />
         </div>
 
-        {/* Laptop Screen Viewport */}
-        <div className="relative w-full aspect-[16/9] bg-slate-950 rounded-t-xs overflow-hidden border border-slate-800/80">
-          {/* Video or Desktop Screenshot */}
+        {/* Laptop Screen Viewport: 16:10 Native Display Ratio */}
+        <div className="relative w-full aspect-[16/10] bg-slate-950 rounded-t-xs overflow-hidden border border-slate-800/80">
           {project.scrollVideo ? (
             <>
               <video
@@ -278,17 +195,18 @@ function ShowcaseDeviceFrames({
                 loop
                 playsInline
                 preload="none"
-                className="w-full h-full object-cover object-top pointer-events-none transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                onError={onError}
+                className="w-full h-full object-cover object-top pointer-events-none"
               >
                 <p>Screen recording demonstration of {project.title}.</p>
               </video>
               {!isPlaying && (
                 <div
-                  className="absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity"
+                  className="absolute inset-0 bg-black/25 flex items-center justify-center"
                   aria-hidden="true"
                 >
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-xs text-white text-[11px] font-semibold shadow-md transition-transform duration-200 group-hover:scale-105">
-                    <Play className="w-3 h-3 fill-white" />
+                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-control bg-black/70 backdrop-blur-xs text-white text-[10px] font-semibold shadow-md">
+                    <Play className="w-2.5 h-2.5 fill-white" />
                     <span>Preview</span>
                   </div>
                 </div>
@@ -301,24 +219,14 @@ function ShowcaseDeviceFrames({
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               draggable={false}
-              className="object-cover object-top pointer-events-none select-none transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              onError={onError}
+              className="object-cover object-top pointer-events-none select-none"
             />
           )}
 
-          {/* Interactive Hover "Preview Full UI" Pill Overlay */}
+          {/* Low-Opacity Watermark on Laptop Screen */}
           <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-15 pointer-events-none"
-            aria-hidden="true"
-          >
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-ink text-xs font-bold shadow-md transform translate-y-1 group-hover:translate-y-0 transition-all duration-300">
-              <Eye className="w-3.5 h-3.5 text-[#8B1A1A]" />
-              <span>Preview Full UI</span>
-            </span>
-          </div>
-
-          {/* Low-Opacity IP Watermark on Laptop Screen */}
-          <div
-            className="absolute top-2 right-2 z-10 pointer-events-none select-none px-1.5 py-0.5 rounded bg-black/50 backdrop-blur-2xs text-[9.5px] font-mono tracking-wider text-white/80 shadow-2xs"
+            className="absolute top-1.5 right-1.5 z-10 pointer-events-none select-none px-1.5 py-0.5 rounded bg-black/50 backdrop-blur-2xs text-[9px] font-mono tracking-wider text-white/80 shadow-2xs"
             aria-hidden="true"
           >
             Lucie Creatives
@@ -328,26 +236,27 @@ function ShowcaseDeviceFrames({
 
       {/* Laptop Aluminum Base & Notch */}
       <div className="w-full bg-gradient-to-b from-slate-200 via-slate-300 to-slate-400 h-2 sm:h-2.5 rounded-b-md border-t border-slate-400/60 flex items-center justify-center shadow-2xs">
-        <div className="w-10 sm:w-14 h-0.5 sm:h-1 rounded-full bg-slate-500/50" aria-hidden="true" />
+        <div className="w-10 sm:w-14 h-0.5 sm:h-1 rounded-sm bg-slate-500/50" aria-hidden="true" />
       </div>
 
       {/* 2. Overlapping Mobile Phone Frame (Bottom-Right Corner) */}
       <div
-        className="absolute -bottom-1.5 -right-1 sm:-bottom-2 sm:-right-1.5 z-20 w-[54px] sm:w-[68px] aspect-[9/19] rounded-[11px] sm:rounded-[14px] bg-slate-900 border border-slate-800 shadow-lg overflow-hidden flex flex-col p-0.5 sm:p-1 transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-xl"
+        className="absolute -bottom-1.5 -right-1 sm:-bottom-2 sm:-right-1.5 z-20 w-[48px] sm:w-[60px] aspect-[9/19] rounded-card bg-slate-900 border border-slate-800 shadow-lg overflow-hidden flex flex-col p-0.5 sm:p-1"
         aria-hidden="true"
       >
         {/* Phone Notch */}
-        <div className="w-4 sm:w-5 h-0.5 sm:h-1 bg-slate-800 rounded-full mx-auto mb-0.5 shrink-0" />
+        <div className="w-3.5 sm:w-4 h-0.5 sm:h-1 bg-slate-800 rounded-sm mx-auto mb-0.5 shrink-0" />
 
         {/* Phone Screen */}
-        <div className="relative w-full flex-1 rounded-[8px] sm:rounded-[10px] overflow-hidden bg-slate-950">
+        <div className="relative w-full flex-1 rounded-control overflow-hidden bg-slate-950">
           <Image
             src={project.screenshotMobile || project.screenshotDesktop}
             alt={`${project.title} mobile interface`}
             fill
-            sizes="68px"
+            sizes="60px"
             draggable={false}
-            className="object-cover object-top pointer-events-none select-none transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+            onError={onError}
+            className="object-cover object-top pointer-events-none select-none"
           />
         </div>
       </div>
@@ -356,9 +265,151 @@ function ShowcaseDeviceFrames({
 }
 
 /**
- * Individual Web Development Showcase Card
+ * PART A: SQUARE WEBSITE BOX (aspect-ratio: 1/1)
  */
-function WebProjectShowcaseCard({
+function SquareWebsiteBox({
+  project,
+  isHovered,
+  onOpenPreview,
+}: {
+  project: WebProject;
+  isHovered: boolean;
+  onOpenPreview: () => void;
+}) {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div
+      onClick={onOpenPreview}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpenPreview();
+        }
+      }}
+      aria-label={`Preview full website UI for ${project.title}`}
+      className="relative w-full aspect-square rounded-[12px] overflow-hidden border border-slate-200/90 bg-[#f4f6f9] flex items-center justify-center p-3.5 sm:p-5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] group/square select-none shadow-2xs"
+    >
+      {/* Top-Left Chip: Project name only with 95% opacity background, tiny green dot if live */}
+      <div className="absolute top-3 left-3 z-20 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-xs text-ink text-xs font-bold border border-slate-200/80 shadow-2xs pointer-events-none">
+        {project.status === "client" && (
+          <span
+            className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"
+            aria-hidden="true"
+          />
+        )}
+        <span className="truncate max-w-[200px]">{project.title}</span>
+      </div>
+
+      {/* Inside: Centered laptop + phone mockup */}
+      {hasError ? (
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-100 flex flex-col items-center justify-center p-4 text-center">
+          <span className="text-sm font-bold text-slate-700">{project.title}</span>
+          <span className="text-xs text-slate-500 mt-1">Web Platform</span>
+        </div>
+      ) : (
+        <div className="w-full transform transition-transform duration-400 ease-out group-hover/card:scale-[1.03]">
+          <ShowcaseDeviceFrames
+            project={project}
+            isHovered={isHovered}
+            onError={() => setHasError(true)}
+          />
+        </div>
+      )}
+
+      {/* Bottom-Right Corner: Small "View live" icon arrow on hover */}
+      <div
+        className="absolute bottom-3 right-3 z-20 w-8 h-8 rounded-full bg-white/95 border border-slate-200/90 shadow-xs flex items-center justify-center text-ink opacity-0 group-hover/card:opacity-100 transition-all duration-300 transform translate-y-1 group-hover/card:translate-y-0 pointer-events-none"
+        aria-hidden="true"
+      >
+        <ArrowUpRight className="w-4 h-4 text-[#8B1A1A]" />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * PART B: COMPACT LIGHTHOUSE RECTANGLE (Height: 64px, White, Rounded 10px)
+ */
+function CompactLighthouseBar({
+  project,
+  onOpenReport,
+}: {
+  project: WebProject;
+  onOpenReport: () => void;
+}) {
+  const lh = project.lighthouse;
+
+  const scoreItems = [
+    { label: "Performance", val: lh.performance },
+    { label: "Accessibility", val: lh.accessibility },
+    { label: "Best Practices", val: lh.bestPractices },
+    { label: "SEO", val: lh.seo },
+  ];
+
+  return (
+    <div
+      onClick={onOpenReport}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpenReport();
+        }
+      }}
+      title={`${project.title} Lighthouse Audit · ${lh.mode}, ${lh.measuredOn}`}
+      aria-label={`View Lighthouse scores for ${project.title}: Performance ${lh.performance}, Accessibility ${lh.accessibility}, Best Practices ${lh.bestPractices}, SEO ${lh.seo}`}
+      className="w-full h-[64px] rounded-[10px] bg-white border border-slate-200/90 shadow-2xs px-2.5 sm:px-3 flex items-center justify-between gap-1 sm:gap-2 cursor-pointer transition-all duration-200 hover:border-slate-300 hover:bg-slate-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B1A1A] select-none overflow-hidden"
+    >
+      {/* 4 Score Rings (or 5 with Agentic AI) */}
+      <div className="flex items-center justify-around flex-1 gap-1 sm:gap-2 min-w-0">
+        {scoreItems.map((item) => (
+          <CompactScoreRing
+            key={item.label}
+            value={item.val ?? 0}
+            label={item.label}
+          />
+        ))}
+
+        {/* 5th Chip: Agentic AI score (shown on sm+, dropped on mobile) */}
+        {lh.agenticBrowsing && (
+          <div className="hidden sm:flex flex-col items-center justify-center shrink-0">
+            <div className="w-[28px] h-[28px] rounded-full bg-purple-50 border border-purple-200/80 flex items-center justify-center text-purple-700 font-mono font-bold text-[10px]">
+              {lh.agenticBrowsing}
+            </div>
+            <span className="hidden min-[420px]:block text-[9px] sm:text-[10px] text-slate-500 font-medium leading-none mt-1 truncate max-w-[56px] text-center">
+              Agentic
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Right End: View Report external icon */}
+      {project.reportImage && (
+        <a
+          href={project.reportImage}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          title="View verified Google Lighthouse report"
+          aria-label={`View verified Lighthouse report for ${project.title} (opens in new tab)`}
+          className="p-1.5 rounded-md hover:bg-slate-100 text-slate-400 hover:text-ink transition-colors cursor-pointer shrink-0 ml-1"
+        >
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
+      )}
+    </div>
+  );
+}
+
+/**
+ * Individual Web Development Showcase Card:
+ * Vertical stack with 12px gap: [Square website box] + [Compact Lighthouse rectangle]
+ */
+function WebProjectCompactCard({
   project,
   onOpenReport,
   onOpenPreview,
@@ -369,133 +420,24 @@ function WebProjectShowcaseCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const contactMessage = `Hi, I'd like the live link for ${project.title}.`;
-  const contactHref = `/contact?message=${encodeURIComponent(contactMessage)}`;
-  const whatsappHref = buildWhatsAppLink(contactMessage);
-
   return (
     <article
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#8B1A1A]/35 hover:shadow-lg hover:shadow-slate-200/50 hover:scale-[1.012] hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-between h-full group will-change-transform overflow-visible"
+      className="flex flex-col gap-3 group/card transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-md rounded-[12px] will-change-transform max-w-[420px] mx-auto w-full md:max-w-none"
     >
-      <div>
-        {/* Device Showcase (Laptop + Overlapping Mobile Phone) */}
-        <div className="mb-3.5 pt-0.5">
-          <ShowcaseDeviceFrames
-            project={project}
-            isHovered={isHovered}
-            onOpenPreview={() => onOpenPreview(project)}
-          />
-        </div>
+      {/* PART A: Square Website Box */}
+      <SquareWebsiteBox
+        project={project}
+        isHovered={isHovered}
+        onOpenPreview={() => onOpenPreview(project)}
+      />
 
-        {/* Status Tag & Category */}
-        <div className="flex items-center justify-between gap-2 mb-2">
-          <StatusTag status={project.status} />
-          <span className="text-[10px] font-mono font-semibold text-slate-500 uppercase tracking-wider truncate">
-            {project.category}
-          </span>
-        </div>
-
-        {/* Project Title */}
-        <h3 className="text-lg sm:text-xl font-bold font-body text-ink tracking-tight mb-1">
-          {project.title}
-        </h3>
-
-        {/* Description */}
-        <p className="text-xs sm:text-[13px] font-normal text-slate-600 leading-snug mb-2.5 line-clamp-2 text-pretty">
-          {project.description}
-        </p>
-
-        {/* Tech Stack Chips */}
-        <div className="flex flex-wrap gap-1 mb-3" aria-label="Technology stack">
-          {project.stack.map((tech) => (
-            <span
-              key={tech}
-              className="px-2 py-0.5 rounded-md bg-slate-100/90 hover:bg-slate-200/90 text-slate-700 hover:text-ink text-[11px] font-medium border border-line/50 transition-colors duration-150"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        {/* Compact Lighthouse Audit Box */}
-        <div className="bg-slate-50/80 border border-slate-200/70 rounded-xl p-2.5 sm:p-3 mb-3.5">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-[10.5px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
-              <Gauge className="w-3 h-3 text-[#008744]" />
-              <span>Lighthouse Audit</span>
-            </span>
-            <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-medium text-slate-500">
-              <span>{project.lighthouse.mode}</span>
-              <span>·</span>
-              <span>{project.lighthouse.measuredOn}</span>
-            </div>
-          </div>
-
-          <div
-            className={`grid ${
-              project.lighthouse.agenticBrowsing
-                ? "grid-cols-5 gap-1 sm:gap-1.5"
-                : "grid-cols-4 gap-1.5 sm:gap-2"
-            } mb-2 items-start`}
-          >
-            <LighthouseRing score={project.lighthouse.performance} label="Performance" delay={0.05} />
-            <LighthouseRing score={project.lighthouse.accessibility} label="Accessibility" delay={0.12} />
-            <LighthouseRing score={project.lighthouse.bestPractices} label="Best Practices" delay={0.19} />
-            <LighthouseRing score={project.lighthouse.seo} label="SEO" delay={0.26} />
-            {project.lighthouse.agenticBrowsing && (
-              <AgenticBrowsingBadge value={project.lighthouse.agenticBrowsing} />
-            )}
-          </div>
-
-          {/* Quick Triggers */}
-          <div className="flex items-center justify-end gap-3 text-[11px] pt-1.5 border-t border-slate-200/60">
-            <button
-              type="button"
-              onClick={() => onOpenPreview(project)}
-              className="inline-flex items-center gap-1 font-semibold text-slate-600 hover:text-ink cursor-pointer transition-colors"
-              title="Preview full website UI"
-            >
-              <Eye className="w-3 h-3 text-slate-400" />
-              <span>Preview UI</span>
-            </button>
-            {project.reportImage && (
-              <button
-                type="button"
-                onClick={() => onOpenReport(project)}
-                className="inline-flex items-center gap-1 font-semibold text-[#8B1A1A] hover:underline cursor-pointer transition-colors"
-                title="View verified Lighthouse report"
-              >
-                <FileCheck className="w-3 h-3" />
-                <span>View report</span>
-              </button>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Action Row: Request Live Link + WhatsApp Quick Message */}
-      <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2.5 mt-auto">
-        <Link
-          href={contactHref}
-          className="group/btn flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#8B1A1A] hover:bg-[#8b1a1a]/90 active:scale-[0.98] text-white font-body font-semibold text-xs sm:text-[13px] transition-all duration-200 shadow-2xs hover:shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B1A1A]"
-        >
-          <span>Request live link</span>
-          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
-        </Link>
-
-        <a
-          href={whatsappHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`Request live link for ${project.title} via WhatsApp`}
-          title="Quick request via WhatsApp"
-          className="p-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 hover:border-emerald-600/40 hover:scale-105 active:scale-95 text-emerald-700 transition-all duration-200 shrink-0 shadow-2xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
-        >
-          <WhatsAppIcon className="w-3.5 h-3.5" />
-        </a>
-      </div>
+      {/* PART B: Compact Lighthouse Rectangle directly under the square */}
+      <CompactLighthouseBar
+        project={project}
+        onOpenReport={() => onOpenReport(project)}
+      />
     </article>
   );
 }
@@ -514,6 +456,7 @@ export function WebDevBrowserShowcase() {
     project: null,
     activeTab: "preview",
   });
+  const shouldReduceMotion = useReducedMotion();
 
   // Close modal on Escape key
   useEffect(() => {
@@ -549,12 +492,17 @@ export function WebDevBrowserShowcase() {
   return (
     <section
       id="websites-weve-built"
-      className="relative w-full py-12 sm:py-18 px-4 sm:px-6 md:px-12 bg-white text-text-primary overflow-visible border-b border-line select-none"
+      className="relative w-full py-12 sm:py-16 px-4 sm:px-6 md:px-12 bg-white text-text-primary overflow-visible border-b border-line select-none"
     >
       <div className="max-w-7xl mx-auto relative z-10 overflow-visible">
-        {/* Section Header with smooth blur fade up */}
-        <Reveal delay={0} y={16} duration={0.65} className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 sm:mb-12 overflow-visible">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red-50 border border-brand-red/20 text-[#8B1A1A] text-xs font-semibold uppercase tracking-wider mb-3">
+        {/* Section Header */}
+        <Reveal
+          delay={0}
+          y={16}
+          duration={0.65}
+          className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 sm:mb-10 overflow-visible"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-control bg-brand-red-50 border border-brand-red/20 text-[#8B1A1A] text-xs font-semibold uppercase tracking-wider mb-3">
             <Shield className="w-3.5 h-3.5" />
             <span>Digital Engineering Portfolio</span>
           </div>
@@ -570,53 +518,41 @@ export function WebDevBrowserShowcase() {
           <p className="text-xs sm:text-sm text-slate-500 font-normal">
             Click any project to inspect full interactive UI and verified audit reports. Live links shared privately.
           </p>
-
-          {/* Status Tag Legend */}
-          <div className="mt-4 pt-4 border-t border-line/80 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-600">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-600" aria-hidden="true" />
-              <span className="font-semibold text-slate-800">Live client project:</span>
-              <span>Client deliverable in production</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-sky-600" aria-hidden="true" />
-              <span className="font-semibold text-slate-800">Concept project:</span>
-              <span>Architecture &amp; UX exploration</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-purple-600" aria-hidden="true" />
-              <span className="font-semibold text-slate-800">Our product:</span>
-              <span>Internal tooling &amp; platform</span>
-            </div>
-          </div>
         </Reveal>
 
-        {/* Responsive Showcase Grid: 1 col mobile, 2 col tablet/desktop */}
-        <div
-          className={`grid grid-cols-1 md:grid-cols-2 ${
-            projects.length % 3 === 0 ? "lg:grid-cols-3" : "lg:grid-cols-2"
-          } gap-5 sm:gap-6 items-stretch overflow-visible`}
-        >
+        {/* 3-Column Desktop (1280px+), 2-Column Tablet (768px), 1-Column Mobile Grid. Gap: 24px */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start overflow-visible w-full">
           {projects.map((project, idx) => (
             <m.div
               key={project.slug}
-              initial={{ opacity: 0, y: 22, scale: 0.98, filter: "blur(6px)" }}
-              whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+              initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
+              whileInView={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{
-                duration: 0.7,
-                delay: idx * 0.1,
+                duration: 0.45,
+                delay: idx * 0.06,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="h-full overflow-visible"
+              className="w-full overflow-visible"
             >
-              <WebProjectShowcaseCard
+              <WebProjectCompactCard
                 project={project}
                 onOpenReport={openReportModal}
                 onOpenPreview={openPreviewModal}
               />
             </m.div>
           ))}
+        </div>
+
+        {/* Bottom CTA Button */}
+        <div className="mt-10 sm:mt-12 flex items-center justify-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#8B1A1A] hover:bg-[#8B1A1A]/90 text-white font-body font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-[#8B1A1A]"
+          >
+            <span>Start your web project</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
 
@@ -630,7 +566,7 @@ export function WebDevBrowserShowcase() {
           onClick={() => setModalState((prev) => ({ ...prev, isOpen: false }))}
         >
           <div
-            className="relative max-w-5xl w-full bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] border border-slate-200"
+            className="relative max-w-5xl w-full bg-white rounded-card overflow-hidden shadow-2xl flex flex-col max-h-[92vh] border border-slate-200"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Top Bar */}
@@ -673,7 +609,7 @@ export function WebDevBrowserShowcase() {
                   <Gauge className="w-3.5 h-3.5 text-[#008744]" />
                   <span>Lighthouse Audit</span>
                   {modalState.project.lighthouse.performance && (
-                    <span className="px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold">
+                    <span className="px-1.5 py-0.2 rounded-control bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold">
                       {modalState.project.lighthouse.performance}
                     </span>
                   )}
@@ -685,7 +621,7 @@ export function WebDevBrowserShowcase() {
                 type="button"
                 onClick={() => setModalState((prev) => ({ ...prev, isOpen: false }))}
                 aria-label="Close modal"
-                className="p-2 rounded-xl hover:bg-slate-200 text-slate-500 hover:text-ink transition-colors cursor-pointer shrink-0"
+                className="p-2 rounded-control hover:bg-slate-200 text-slate-500 hover:text-ink transition-colors cursor-pointer shrink-0"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -695,7 +631,7 @@ export function WebDevBrowserShowcase() {
             <div className="p-4 sm:p-6 overflow-y-auto flex-1 bg-slate-100/60">
               {modalState.activeTab === "preview" ? (
                 /* Tab 1: Scrollable Browser Window UI Preview */
-                <div className="w-full rounded-xl sm:rounded-2xl bg-white border border-slate-300 shadow-md overflow-hidden flex flex-col">
+                <div className="w-full rounded-media bg-white border border-slate-300 shadow-md overflow-hidden flex flex-col">
                   {/* Browser Chrome Header */}
                   <div className="bg-slate-100 border-b border-slate-200 px-4 py-2.5 flex items-center justify-between gap-3">
                     <div className="flex items-center gap-1.5" aria-hidden="true">
@@ -739,114 +675,112 @@ export function WebDevBrowserShowcase() {
                 </div>
               ) : (
                 /* Tab 2: Verified Google Lighthouse Audit */
-                <div className="flex flex-col gap-5">
-                  {/* Top Metric Cards */}
-                  <div
-                    className={`grid grid-cols-2 ${
-                      modalState.project.lighthouse.agenticBrowsing
-                        ? "sm:grid-cols-5"
-                        : "sm:grid-cols-4"
-                    } gap-3`}
-                  >
-                    <div className="p-4 rounded-xl bg-white border border-line shadow-xs flex flex-col items-center text-center">
-                      <span className="text-xs font-semibold text-slate-600 mb-1">Performance</span>
-                      <span className="text-3xl font-extrabold text-[#008744]">
-                        {modalState.project.lighthouse.performance ?? "—"}
-                      </span>
-                      <span className="text-[10px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full mt-1">
-                        Sub-second FCP
-                      </span>
+                <div className="flex flex-col gap-6">
+                  {/* Top Metric Cards: 4 equal cards in a row */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                    <div className="p-4 sm:p-5 rounded-card bg-white border border-slate-200/80 shadow-xs flex flex-col items-center justify-center text-center">
+                      <ScoreRing
+                        value={modalState.project.lighthouse.performance ?? 0}
+                        label="Performance"
+                        size="lg"
+                        delay={0}
+                        trigger={modalState.activeTab === "audit"}
+                      />
                     </div>
-                    <div className="p-4 rounded-xl bg-white border border-line shadow-xs flex flex-col items-center text-center">
-                      <span className="text-xs font-semibold text-slate-600 mb-1">Accessibility</span>
-                      <span className="text-3xl font-extrabold text-[#008744]">
-                        {modalState.project.lighthouse.accessibility ?? "—"}
-                      </span>
-                      <span className="text-[10px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full mt-1">
-                        WCAG 2.1 AA
-                      </span>
+                    <div className="p-4 sm:p-5 rounded-card bg-white border border-slate-200/80 shadow-xs flex flex-col items-center justify-center text-center">
+                      <ScoreRing
+                        value={modalState.project.lighthouse.accessibility ?? 0}
+                        label="Accessibility"
+                        size="lg"
+                        delay={0.12}
+                        trigger={modalState.activeTab === "audit"}
+                      />
                     </div>
-                    <div className="p-4 rounded-xl bg-white border border-line shadow-xs flex flex-col items-center text-center">
-                      <span className="text-xs font-semibold text-slate-600 mb-1">Best Practices</span>
-                      <span className="text-3xl font-extrabold text-[#008744]">
-                        {modalState.project.lighthouse.bestPractices ?? "—"}
-                      </span>
-                      <span className="text-[10px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full mt-1">
-                        Zero Deprecations
-                      </span>
+                    <div className="p-4 sm:p-5 rounded-card bg-white border border-slate-200/80 shadow-xs flex flex-col items-center justify-center text-center">
+                      <ScoreRing
+                        value={modalState.project.lighthouse.bestPractices ?? 0}
+                        label="Best Practices"
+                        size="lg"
+                        delay={0.24}
+                        trigger={modalState.activeTab === "audit"}
+                      />
                     </div>
-                    <div className="p-4 rounded-xl bg-white border border-line shadow-xs flex flex-col items-center text-center">
-                      <span className="text-xs font-semibold text-slate-600 mb-1">SEO</span>
-                      <span className="text-3xl font-extrabold text-[#008744]">
-                        {modalState.project.lighthouse.seo ?? "—"}
-                      </span>
-                      <span className="text-[10px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full mt-1">
-                        JSON-LD Schema
-                      </span>
+                    <div className="p-4 sm:p-5 rounded-card bg-white border border-slate-200/80 shadow-xs flex flex-col items-center justify-center text-center">
+                      <ScoreRing
+                        value={modalState.project.lighthouse.seo ?? 0}
+                        label="SEO"
+                        size="lg"
+                        delay={0.36}
+                        trigger={modalState.activeTab === "audit"}
+                      />
                     </div>
-                    {modalState.project.lighthouse.agenticBrowsing && (
-                      <div className="p-4 rounded-xl bg-white border border-line shadow-xs flex flex-col items-center text-center">
-                        <span className="text-xs font-semibold text-slate-600 mb-1">Agentic Browsing</span>
-                        <div className="flex items-center justify-center gap-1.5 my-auto">
-                          <span className="w-2.5 h-2.5 rounded-full bg-[#008744]" aria-hidden="true" />
-                          <span className="text-3xl font-extrabold text-[#008744]">
-                            {modalState.project.lighthouse.agenticBrowsing}
-                          </span>
-                        </div>
-                        <span className="text-[10px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full mt-1">
-                          AI Agent Ready
-                        </span>
-                      </div>
-                    )}
                   </div>
-
-                  {/* Audit Screenshot Graphic */}
-                  {modalState.project.reportImage ? (
-                    <div className="rounded-xl sm:rounded-2xl bg-white border border-line p-4 sm:p-6 shadow-xs flex flex-col items-center">
-                      <div className="flex items-center justify-between w-full mb-3 text-xs font-semibold text-slate-700">
-                        <span className="flex items-center gap-1.5">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                          <span>Official Google Lighthouse Audit Capture</span>
-                        </span>
-                        <span className="font-mono text-slate-500">
-                          {modalState.project.lighthouse.mode} · {modalState.project.lighthouse.measuredOn}
-                        </span>
-                      </div>
-                      <div className="relative w-full max-w-2xl aspect-[564/160] rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-50">
-                        <Image
-                          src={modalState.project.reportImage}
-                          alt={`Official Lighthouse audit score report for ${modalState.project.title}`}
-                          fill
-                          className="object-contain p-2"
-                        />
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="p-8 rounded-xl bg-white border border-line text-center text-sm text-slate-500">
-                      Detailed Lighthouse audit report graphic is currently being compiled for this concept project.
-                    </div>
-                  )}
 
                   {/* Core Web Vitals Summary */}
-                  <div className="p-4 rounded-xl bg-white border border-line text-xs text-slate-700">
-                    <span className="font-bold text-ink uppercase tracking-wider block mb-2">
-                      Core Web Vitals Engineering Highlights:
+                  <div className="p-4 sm:p-5 rounded-card bg-white border border-slate-200/80 shadow-xs">
+                    <span className="text-[11px] font-mono font-bold tracking-wider text-slate-400 uppercase block mb-3">
+                      Core Web Vitals
                     </span>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-[11px]">
-                      <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                        <span className="text-slate-500 block">First Contentful Paint (FCP)</span>
-                        <span className="text-emerald-700 font-bold text-sm">&lt; 0.8s</span>
-                      </div>
-                      <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                        <span className="text-slate-500 block">Largest Contentful Paint (LCP)</span>
-                        <span className="text-emerald-700 font-bold text-sm">&lt; 1.2s</span>
-                      </div>
-                      <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                        <span className="text-slate-500 block">Cumulative Layout Shift (CLS)</span>
-                        <span className="text-emerald-700 font-bold text-sm">0.00 (Zero Shift)</span>
-                      </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono">
+                      <m.div
+                        initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: shouldReduceMotion ? 0 : 1.2,
+                          ease: "easeOut",
+                        }}
+                        className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col gap-1"
+                      >
+                        <span className="text-[11px] font-sans font-medium text-slate-500">
+                          First Contentful Paint (FCP)
+                        </span>
+                        <span className="text-base sm:text-lg font-semibold text-emerald-700">
+                          &lt; 0.8s
+                        </span>
+                      </m.div>
+
+                      <m.div
+                        initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: shouldReduceMotion ? 0 : 1.3,
+                          ease: "easeOut",
+                        }}
+                        className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col gap-1"
+                      >
+                        <span className="text-[11px] font-sans font-medium text-slate-500">
+                          Largest Contentful Paint (LCP)
+                        </span>
+                        <span className="text-base sm:text-lg font-semibold text-emerald-700">
+                          &lt; 1.2s
+                        </span>
+                      </m.div>
+
+                      <m.div
+                        initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: shouldReduceMotion ? 0 : 1.4,
+                          ease: "easeOut",
+                        }}
+                        className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col gap-1"
+                      >
+                        <span className="text-[11px] font-sans font-medium text-slate-500">
+                          Cumulative Layout Shift (CLS)
+                        </span>
+                        <span className="text-base sm:text-lg font-semibold text-emerald-700">
+                          0.00 (Zero Shift)
+                        </span>
+                      </m.div>
                     </div>
                   </div>
+
+                  <p className="text-center text-xs text-slate-400 font-mono py-1">
+                    Measured with Google Lighthouse · {modalState.project.lighthouse.mode} · {modalState.project.lighthouse.measuredOn}
+                  </p>
                 </div>
               )}
             </div>

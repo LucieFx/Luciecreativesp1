@@ -5,7 +5,7 @@ import { WHATSAPP_CONFIG } from "@/lib/constants";
 export function WhatsAppQR() {
   return (
     <div className="whatsapp-qr-container flex flex-col items-center">
-      <div className="bg-white p-3 rounded-2xl border border-line shadow-sm inline-flex items-center justify-center">
+      <div className="bg-white p-3 rounded-card border border-line shadow-sm inline-flex items-center justify-center">
         <QRCodeSVG
           value={WHATSAPP_CONFIG.defaultLink}
           size={160}

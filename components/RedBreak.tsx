@@ -21,7 +21,7 @@ export function RedBreak({
     >
       <div className="max-w-5xl mx-auto relative z-10">
         <div
-          className="relative bg-[#8B1A1A] rounded-2xl py-14 sm:py-20 px-6 sm:px-12 md:px-16 text-center overflow-hidden shadow-xs border border-white/20"
+          className="relative bg-[#8B1A1A] rounded-card py-14 sm:py-20 px-6 sm:px-12 md:px-16 text-center overflow-hidden shadow-xs border border-white/20"
         >
           <div className="relative z-10 max-w-3xl mx-auto">
             {/* Clean Brand Badge */}
@@ -50,7 +50,7 @@ export function RedBreak({
                 href="/contact"
                 variant="secondary"
                 size="lg"
-                className="w-full sm:w-auto bg-white text-[#8B1A1A] hover:bg-brand-red-50 border-none shadow-xs rounded-xl font-bold text-[15px] px-8 py-4 transition-colors duration-200"
+                className="w-full sm:w-auto bg-white text-[#8B1A1A] hover:bg-brand-red-50 border-none shadow-xs rounded-control font-bold text-[15px] px-8 py-4 transition-colors duration-200"
               >
                 <span>{primaryCtaLabel}</span>
                 <ArrowUpRight className="w-4 h-4 ml-1" />
@@ -58,10 +58,26 @@ export function RedBreak({
 
               <a
                 href={`mailto:${displayEmail}`}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-[15px] border border-white/30 transition-colors duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-control bg-white/15 hover:bg-white/25 hover:-translate-y-[1px] active:translate-y-0 text-white border border-white/30 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
               >
-                <Mail className="w-4 h-4 text-white shrink-0" />
-                <span>{displayEmail}</span>
+                <Mail className="w-4 h-4 text-white shrink-0" aria-hidden="true" />
+                <span
+                  className="text-[14px] sm:text-[15px] font-semibold text-white tracking-[0.01em] lowercase normal-case whitespace-nowrap antialiased"
+                  style={{
+                    fontFamily:
+                      'var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
+                    fontWeight: 600,
+                    letterSpacing: "0.01em",
+                    textTransform: "none",
+                    fontFeatureSettings: '"liga" 0, "calt" 0',
+                    fontVariantLigatures: "none",
+                    WebkitFontSmoothing: "antialiased",
+                    whiteSpace: "nowrap",
+                    color: "#ffffff",
+                  }}
+                >
+                  {displayEmail}
+                </span>
               </a>
             </div>
 

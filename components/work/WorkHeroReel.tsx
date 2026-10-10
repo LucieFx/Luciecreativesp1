@@ -33,7 +33,7 @@ export function WorkHeroReel({ onLoaded }: WorkHeroReelProps) {
       {/* 2. HERO CONTENT */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 pb-10 sm:pb-14">
         {/* Eyebrow badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white/90 text-xs font-black uppercase tracking-widest mb-4 shadow-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-white/15 backdrop-blur-md border border-white/25 text-white/90 text-xs font-black uppercase tracking-widest mb-4 shadow-md">
           <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
           <span>LUCIE CREATIVES • EDITING &amp; DESIGN PORTFOLIO</span>
         </div>
@@ -54,25 +54,25 @@ export function WorkHeroReel({ onLoaded }: WorkHeroReelProps) {
         <div className="mt-7 flex flex-wrap items-center gap-2 sm:gap-2.5">
           <a
             href="#short-form-videos"
-            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-control bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
             <span>9:16 Vertical Reels</span>
           </a>
           <a
             href="#long-form-videos"
-            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-control bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
             <span>16:9 Cinema Commercials</span>
           </a>
           <a
             href="#graphic-design"
-            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-control bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
             <span>Brand Identity &amp; Packaging</span>
           </a>
           <a
             href="#stat-break"
-            className="px-4 py-2 rounded-xl bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 rounded-control bg-white hover:bg-brand-red-50 border border-line text-ink hover:text-brand-red text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
           >
             <span>{SITE_STATS.viewsLabel} Client Impact</span>
           </a>

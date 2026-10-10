@@ -129,7 +129,7 @@ export function ProcessStrip({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-red-50 border border-brand-red/20 text-brand-red text-xs font-black uppercase tracking-widest mb-3.5 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-control bg-brand-red-50 border border-brand-red/20 text-brand-red text-xs font-black uppercase tracking-widest mb-3.5 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-brand-red shrink-0" />
             <span>{eyebrow}</span>
           </div>
@@ -153,7 +153,7 @@ export function ProcessStrip({
             return (
               <div
                 key={idx}
-                className="group relative bg-white rounded-2xl border border-line hover:border-brand-red/40 p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-xs hover:shadow-card overflow-hidden"
+                className="group relative bg-white rounded-card border border-line hover:border-brand-red/40 p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-xs hover:shadow-card overflow-hidden"
               >
                 {/* Subtle top accent gradient bar on hover */}
                 <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -168,7 +168,7 @@ export function ProcessStrip({
                       {step.number}
                     </span>
 
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-b from-white via-surface-alt to-neutral-100 border border-line shadow-[0_2px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center text-ink/75 group-hover:text-white group-hover:bg-gradient-to-b group-hover:from-brand-red group-hover:via-brand-red group-hover:to-brand-redDark group-hover:border-brand-red group-hover:shadow-[0_4px_16px_rgba(139,26,26,0.35)] transition-all duration-300">
+                    <div className="w-10 h-10 rounded-control bg-gradient-to-b from-white via-surface-alt to-neutral-100 border border-line shadow-[0_2px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center text-ink/75 group-hover:text-white group-hover:bg-gradient-to-b group-hover:from-brand-red group-hover:via-brand-red group-hover:to-brand-redDark group-hover:border-brand-red group-hover:shadow-[0_4px_16px_rgba(139,26,26,0.35)] transition-all duration-300">
                       {step.icon}
                     </div>
                   </div>
@@ -206,7 +206,7 @@ export function ProcessStrip({
                 {!isLast && (
                   <div
                     aria-hidden="true"
-                    className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-white border border-brand-red/25 items-center justify-center text-brand-red shadow-xs group-hover:scale-110 group-hover:border-brand-red transition-all"
+                    className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-control bg-white border border-brand-red/25 items-center justify-center text-brand-red shadow-xs group-hover:scale-110 group-hover:border-brand-red transition-all"
                   >
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>

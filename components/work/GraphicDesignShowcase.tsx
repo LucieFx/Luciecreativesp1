@@ -18,16 +18,16 @@ interface GraphicDesignShowcaseProps {
 type SubcategoryFilter =
   | "All"
   | "Brand Identity & Packaging"
-  | "OOH Print & Billboards"
-  | "Haute Jewels & FMCG"
-  | "Education, Social & Logos";
+  | "Hospitality & Real Estate"
+  | "Retail, Jewelry & FMCG"
+  | "Education & Social Campaigns";
 
 const SUB_FILTERS: SubcategoryFilter[] = [
   "All",
   "Brand Identity & Packaging",
-  "OOH Print & Billboards",
-  "Haute Jewels & FMCG",
-  "Education, Social & Logos",
+  "Hospitality & Real Estate",
+  "Retail, Jewelry & FMCG",
+  "Education & Social Campaigns",
 ];
 
 // Similar 1:1 creative posts for the constant linear slide effect
@@ -63,8 +63,8 @@ const SIMILAR_CREATIVES = [
     src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-creative.webp",
   },
   {
-    title: "Rhyme Daily Market Gold Rate System",
-    tag: "Retail Grid",
+    title: "Shree Hari Daily Market Gold Rate System",
+    tag: "Fine Jewelry",
     src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835325/lucie-creatives/portfolio/graphic-design/rhyme-jewels/gold-rate-system.webp",
   },
   {
@@ -73,12 +73,12 @@ const SIMILAR_CREATIVES = [
     src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835328/lucie-creatives/portfolio/graphic-design/social-campaigns/bali-creative.webp",
   },
   {
-    title: "Sivanta Luxury Monogram & Identity",
+    title: "Sivaanta Luxury Monogram & Identity",
     tag: "Vector Mark",
     src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835278/lucie-creatives/portfolio/graphic-design/logo-systems/hero-sivanta-logo.webp",
   },
   {
-    title: "Stylez Contemporary Apparel Monogram",
+    title: "Stylzzy Contemporary Apparel Monogram",
     tag: "Fashion Brand",
     src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835280/lucie-creatives/portfolio/graphic-design/logo-systems/stylez-brand-symbol.webp",
   },
@@ -108,9 +108,9 @@ const SIMILAR_CREATIVES = [
     src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835327/lucie-creatives/portfolio/graphic-design/rhyme-jewels/pendant-still.webp",
   },
   {
-    title: "Gourmet Hospitality Seasonal Menu Flyer",
-    tag: "Commercial Print",
-    src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835317/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/gourmet-hospitality-flyer.webp",
+    title: "Lumara Ayurvedic Wellness 9-Tile Grid",
+    tag: "Healthcare Wellness",
+    src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835281/lucie-creatives/portfolio/graphic-design/lumara/billboard-lifestyle.webp",
   },
 ];
 
@@ -187,7 +187,7 @@ function GraphicGridCard({
       }}
       onMouseEnter={onHoverStart}
       onMouseLeave={handleMouseLeave}
-      className={`group relative bg-white border border-line hover:border-brand-red/40 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between ${
+      className={`group relative bg-white border border-line hover:border-brand-red/40 rounded-card overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between ${
         isOtherHovered ? "opacity-70" : "opacity-100"
       }`}
     >
@@ -242,10 +242,10 @@ function GraphicGridCard({
 
         {/* Top Floating Badges */}
         <div className="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-none z-10">
-          <span className="px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs">
+          <span className="px-2.5 py-1 rounded-control bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white uppercase tracking-wider shadow-xs">
             {project.client}
           </span>
-          <span className="px-2.5 py-1 rounded-full bg-brand-red text-[10px] font-mono font-bold text-white shadow-xs">
+          <span className="px-2.5 py-1 rounded-control bg-brand-red text-[10px] font-mono font-bold text-white shadow-xs">
             {project.outcomeMetric}
           </span>
         </div>
@@ -282,7 +282,7 @@ function GraphicGridCard({
             </span>
             <Link
               href={`/work/${project.slug}${categoryQuery}`}
-              className="inline-flex items-center gap-1.5 text-xs font-black text-white bg-brand-red hover:bg-[#8b1a1a]/90 px-4 py-2 rounded-xl transition-all shadow-sm shrink-0"
+              className="inline-flex items-center gap-1.5 text-xs font-black text-white bg-brand-red hover:bg-[#8b1a1a]/90 px-4 py-2 rounded-control transition-all shadow-sm shrink-0"
             >
               <span>Explore Case</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -303,7 +303,7 @@ function GraphicGridCard({
         </div>
         <Link
           href={`/work/${project.slug}${categoryQuery}`}
-          className="shrink-0 p-2 rounded-xl text-muted hover:text-brand-red hover:bg-brand-red-50 transition-colors"
+          className="shrink-0 p-2 rounded-control text-muted hover:text-brand-red hover:bg-brand-red-50 transition-colors"
           title="Explore Case"
           aria-label={`Explore ${project.title} case study`}
         >
@@ -384,30 +384,29 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
         (p) =>
           p.slug === "speczo-luxury-eyewear" ||
           p.slug === "onirique-parfums-identity" ||
-          p.slug === "lumara-luxury-skincare"
+          p.slug === "lumara-luxury-skincare" ||
+          p.slug === "monolithic-logo-systems"
       );
     }
-    if (activeSubFilter === "OOH Print & Billboards") {
+    if (activeSubFilter === "Hospitality & Real Estate") {
       return gridProjects.filter(
         (p) =>
           p.slug === "nirva-resort-environmental-branding" ||
-          p.slug === "ooh-billboards-commercial-print" ||
           p.slug === "nandanvan-luxury-real-estate"
       );
     }
-    if (activeSubFilter === "Haute Jewels & FMCG") {
+    if (activeSubFilter === "Retail, Jewelry & FMCG") {
       return gridProjects.filter(
         (p) =>
           p.slug === "rhyme-haute-joaillerie" ||
           p.slug === "crancho-fmcg-packaging"
       );
     }
-    if (activeSubFilter === "Education, Social & Logos") {
+    if (activeSubFilter === "Education & Social Campaigns") {
       return gridProjects.filter(
         (p) =>
           p.slug === "bright-minds-education-campaigns" ||
-          p.slug === "travel-festival-social-campaigns" ||
-          p.slug === "monolithic-logo-systems"
+          p.slug === "travel-festival-social-campaigns"
       );
     }
     return gridProjects;
@@ -430,7 +429,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
         <section id="flagship-project" className="relative w-full py-12 sm:py-16 border-b border-line">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative z-10">
             <div className="mb-6 flex items-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-redLight text-brand-red border border-brand-red/20 text-xs font-black uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-brand-redLight text-brand-red border border-brand-red/20 text-xs font-black uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Flagship Case Study</span>
               </div>
@@ -438,7 +437,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
 
             <div
               key={`featured-${flagshipProject.slug}`}
-              className="group relative bg-white border border-line/90 hover:border-brand-red/40 rounded-3xl p-4 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+              className="group relative bg-white border border-line/90 hover:border-brand-red/40 rounded-card p-4 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
             >
               {/* Left Column: Rounded panel with soft background & uncropped image at natural aspect ratio */}
               <motion.div
@@ -446,11 +445,11 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                 whileInView={{ backgroundColor: flagshipProject.bgColor || "#ffffff" }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.9, ease: EASE_OUT }}
-                className="lg:col-span-7 relative w-full rounded-[20px] p-4 sm:p-6 lg:p-8 flex flex-col justify-between items-center border border-line/60 overflow-hidden"
+                className="lg:col-span-7 relative w-full rounded-card p-4 sm:p-6 lg:p-8 flex flex-col justify-between items-center border border-line/60 overflow-hidden"
               >
                 {/* Brand Name Chip on Panel Padding (never covers the artwork) */}
                 <div className="w-full flex justify-end mb-3 sm:mb-4 pointer-events-none z-10 shrink-0">
-                  <span className="px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono font-bold text-white shadow-xs">
+                  <span className="px-3 py-1.5 rounded-control bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono font-bold text-white shadow-xs">
                     {flagshipProject.client}
                   </span>
                 </div>
@@ -489,7 +488,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                               ? `${flagshipProject.width} / ${flagshipProject.height}`
                               : undefined,
                         }}
-                        className="object-contain rounded-xl shadow-md transition-transform duration-500 group-hover:scale-[1.01]"
+                        className="object-contain rounded-media shadow-md transition-transform duration-500 group-hover:scale-[1.01]"
                       />
                     </motion.div>
                   </MaskReveal>
@@ -544,7 +543,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
 
                   {/* Documented Impact Box (renders ONLY if project data has real impact value) */}
                   {flagshipProject.impact && (
-                    <div className="mt-5 p-4 rounded-2xl bg-brand-redLight/60 border border-brand-red/20 flex items-center gap-4">
+                    <div className="mt-5 p-4 rounded-card bg-brand-redLight/60 border border-brand-red/20 flex items-center gap-4">
                       <div className="text-3xl sm:text-4xl font-black font-mono text-brand-red">
                         {flagshipProject.outcomeMetric || flagshipProject.impact}
                       </div>
@@ -594,7 +593,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                   )}
                   <Link
                     href={`/work/${flagshipProject.slug}${categoryQuery}`}
-                    className="inline-flex items-center justify-center gap-2 text-xs font-black text-white bg-brand-red hover:bg-[#8b1a1a]/90 px-6 py-3 rounded-xl transition-all shadow-md group/btn shrink-0"
+                    className="inline-flex items-center justify-center gap-2 text-xs font-black text-white bg-brand-red hover:bg-[#8b1a1a]/90 px-6 py-3 rounded-control transition-all shadow-md group/btn shrink-0"
                   >
                     <span>Explore Flagship Case</span>
                     <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -634,7 +633,7 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
                     <button
                       key={filter}
                       onClick={() => handleFilterChange(filter)}
-                      className={`px-3 py-1.5 rounded-full text-[11px] font-bold tracking-tight whitespace-nowrap transition-all duration-200 cursor-pointer border ${
+                      className={`px-3 py-1.5 rounded-control text-[11px] font-bold tracking-tight whitespace-nowrap transition-all duration-200 cursor-pointer border ${
                         isActive
                           ? "bg-ink text-white border-ink shadow-xs"
                           : "bg-white hover:bg-line/60 text-body border-line"
@@ -701,9 +700,9 @@ export function GraphicDesignShowcase({ projects }: GraphicDesignShowcaseProps) 
               {SIMILAR_CREATIVES.map((post, idx) => (
                 <div
                   key={idx}
-                  className="relative flex-shrink-0 w-52 sm:w-60 bg-white rounded-2xl border border-line p-2.5 shadow-xs select-none"
+                  className="relative flex-shrink-0 w-52 sm:w-60 bg-white rounded-card border border-line p-2.5 shadow-xs select-none"
                 >
-                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-[#ffffff] p-1.5 flex items-center justify-center">
+                  <div className="relative w-full aspect-square rounded-media overflow-hidden bg-[#ffffff] p-1.5 flex items-center justify-center">
                     <Image
                       src={post.src}
                       alt={post.title}

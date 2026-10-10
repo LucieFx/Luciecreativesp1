@@ -20,8 +20,8 @@ const TEAM_ROLES = [
 
 export function HumanTrustSection() {
   return (
-    <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 md:px-12 bg-white border-b border-line/80 select-none overflow-visible">
-      <div className="max-w-7xl mx-auto overflow-visible">
+    <section className="relative w-full py-16 sm:py-24 bg-white border-b border-line/80 select-none overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 overflow-visible">
         {/* Team Header with smooth blur fade up */}
         <Reveal delay={0} y={16} duration={0.65} className="flex flex-col items-center text-center mb-12 sm:mb-16 overflow-visible">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-[-0.02em] leading-[1.0] text-ink max-w-3xl text-balance">
@@ -41,9 +41,9 @@ export function HumanTrustSection() {
             const Icon = item.icon;
             return (
               <Reveal key={item.role} delay={idx * 0.1} duration={0.7} className="h-full overflow-visible">
-                <div className="p-6 sm:p-8 rounded-2xl bg-white border border-line/90 shadow-xs hover:border-[#8b1a1a]/40 hover:shadow-lg hover:scale-[1.015] hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left h-full will-change-transform overflow-visible">
+                <div className="p-6 sm:p-8 rounded-card bg-white border border-line/90 shadow-xs hover:border-[#8b1a1a]/40 hover:shadow-lg hover:scale-[1.015] hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left h-full will-change-transform overflow-visible">
                   {/* Role Icon Box */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-brand-red-50 border border-brand-red/20 flex items-center justify-center text-[#8b1a1a] shrink-0 shadow-xs">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-control bg-brand-red-50 border border-brand-red/20 flex items-center justify-center text-[#8b1a1a] shrink-0 shadow-xs">
                     <Icon className="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.75]" />
                   </div>
 
@@ -74,36 +74,75 @@ export function HumanTrustSection() {
             Feedback from recent collaborations across video, web, and graphic design.
           </p>
         </Reveal>
+      </div>
 
-        {/* Testimonials Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 overflow-visible">
-          {HOME_TESTIMONIALS.slice(0, 3).map((item, idx) => (
-            <Reveal key={item.id} delay={idx * 0.1} duration={0.7} className="h-full overflow-visible">
-              <div className="p-6 sm:p-7 rounded-2xl bg-slate-50/60 border border-line/90 hover:bg-white hover:border-[#8b1a1a]/40 hover:shadow-lg hover:scale-[1.015] hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-between h-full will-change-transform overflow-visible">
+      {/* Testimonials Continuous Marquee (Full Viewport Bleed) */}
+      <div className="testimonials-marquee-wrapper py-2">
+        <div className="testimonials-marquee-track">
+          {/* Primary Track Set */}
+          <div className="testimonials-marquee-group">
+            {HOME_TESTIMONIALS.map((item) => (
+              <div
+                key={`testimonial-primary-${item.id}`}
+                className="testimonials-marquee-card w-[280px] sm:w-[320px] lg:w-[380px] shrink-0 h-full flex flex-col justify-between p-6 sm:p-7 rounded-card bg-[#fbfcfd] border border-line/90 shadow-none hover:border-[#8b1a1a]/30 transition-colors duration-200 select-text"
+              >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <Quote className="w-5 h-5 text-[#8b1a1a]/70" />
-                    <span className="text-xs font-semibold text-slate-600 bg-white border border-line/80 px-2.5 py-0.5 rounded-md shadow-xs">
-                      {item.discipline}
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <Quote className="w-5 h-5 text-[#8b1a1a]/70 shrink-0" aria-hidden="true" />
+                    <span className="text-xs font-semibold text-slate-600 bg-white border border-line/80 px-2.5 py-0.5 rounded-control shadow-xs shrink-0">
+                      {item.category}
                     </span>
                   </div>
 
-                  <p className="text-[15px] text-slate-800 leading-relaxed font-normal italic mb-6">
+                  <p className="text-[15px] text-slate-800 leading-[1.6] font-normal italic mb-6">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-line/60">
+                <div className="mt-auto pt-4 border-t border-line/60">
                   <div className="font-bold text-ink text-[14px]">
                     {item.name}
                   </div>
                   <div className="text-slate-600 text-[13px] font-medium leading-snug mt-0.5">
-                    {item.role}, {item.company}
+                    {item.role}
                   </div>
                 </div>
               </div>
-            </Reveal>
-          ))}
+            ))}
+          </div>
+
+          {/* Duplicate Track Set for Seamless Infinite Loop */}
+          <div className="testimonials-marquee-group marquee-duplicate" aria-hidden="true">
+            {HOME_TESTIMONIALS.map((item, idx) => (
+              <div
+                key={`testimonial-duplicate-${item.id}-${idx}`}
+                tabIndex={-1}
+                className="testimonials-marquee-card w-[280px] sm:w-[320px] lg:w-[380px] shrink-0 h-full flex flex-col justify-between p-6 sm:p-7 rounded-card bg-[#fbfcfd] border border-line/90 shadow-none hover:border-[#8b1a1a]/30 transition-colors duration-200 select-text"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <Quote className="w-5 h-5 text-[#8b1a1a]/70 shrink-0" aria-hidden="true" />
+                    <span className="text-xs font-semibold text-slate-600 bg-white border border-line/80 px-2.5 py-0.5 rounded-control shadow-xs shrink-0">
+                      {item.category}
+                    </span>
+                  </div>
+
+                  <p className="text-[15px] text-slate-800 leading-[1.6] font-normal italic mb-6">
+                    &ldquo;{item.quote}&rdquo;
+                  </p>
+                </div>
+
+                <div className="mt-auto pt-4 border-t border-line/60">
+                  <div className="font-bold text-ink text-[14px]">
+                    {item.name}
+                  </div>
+                  <div className="text-slate-600 text-[13px] font-medium leading-snug mt-0.5">
+                    {item.role}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

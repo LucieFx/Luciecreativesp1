@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Video, Code2, Compass } from "lucide-react";
+import { Video, Sparkles, Compass } from "lucide-react";
 
 interface NotificationItem {
   id: string;
@@ -23,12 +23,12 @@ const NOTIFICATIONS: NotificationItem[] = [
     icon: Video,
   },
   {
-    id: "site-live",
-    type: "Web",
-    title: "Website live",
-    subtitle: "Media house agency · mediahouse.space",
-    statusBadge: "Live",
-    icon: Code2,
+    id: "cgi-approved",
+    type: "3D & CGI",
+    title: "3D render approved",
+    subtitle: "Onirique Parfums · Luxury fragrance CGI",
+    statusBadge: "Approved",
+    icon: Sparkles,
   },
   {
     id: "logo-handed-over",
@@ -76,10 +76,10 @@ export function HeroNotificationStack() {
               }
             >
               <div
-                className="w-full bg-white rounded-[18px] border border-[#8B1A1A]/16 shadow-[0_4px_16px_rgba(139,26,26,0.05),0_1px_3px_rgba(0,0,0,0.04)] px-3.5 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-3 hover:border-[#8B1A1A]/35 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(139,26,26,0.08)] transition-all duration-200 cursor-default"
+                className="w-full bg-white rounded-card border border-[#8B1A1A]/16 shadow-[0_4px_16px_rgba(139,26,26,0.05),0_1px_3px_rgba(0,0,0,0.04)] px-3.5 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-3 hover:border-[#8B1A1A]/35 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(139,26,26,0.08)] transition-all duration-200 cursor-default"
               >
                 <div className="flex items-center gap-3 min-w-0">
-                  <div className="w-8 h-8 rounded-full bg-[#8B1A1A]/08 border border-[#8B1A1A]/12 flex items-center justify-center text-[#8B1A1A] shrink-0">
+                  <div className="w-8 h-8 rounded-control bg-[#8B1A1A]/08 border border-[#8B1A1A]/12 flex items-center justify-center text-[#8B1A1A] shrink-0">
                     <Icon className="w-4 h-4" />
                   </div>
                   <div className="min-w-0 text-left">
@@ -93,7 +93,7 @@ export function HeroNotificationStack() {
                 </div>
 
                 <div className="shrink-0 flex items-center">
-                  <span className="text-[10px] font-semibold text-[#8B1A1A] bg-[#8B1A1A]/08 border border-[#8B1A1A]/15 px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                  <span className="text-[10px] font-semibold text-[#8B1A1A] bg-[#8B1A1A]/08 border border-[#8B1A1A]/15 px-2.5 py-0.5 rounded-control whitespace-nowrap">
                     {item.statusBadge}
                   </span>
                 </div>

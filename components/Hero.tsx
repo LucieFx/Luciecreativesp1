@@ -19,7 +19,7 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
   return (
     <section
       style={{ overflowX: "clip", overflowY: "visible" }}
-      className="relative bg-white pt-24 md:pt-32 pb-14 md:pb-20 px-4 sm:px-6 md:px-12 overflow-visible font-sans font-normal"
+      className="relative bg-white pt-[160px] sm:pt-32 pb-14 md:pb-20 px-4 sm:px-6 md:px-12 overflow-visible font-sans font-normal"
     >
       {/* (A) Background Orbit Layer: 4 concentric circles, rotating highlight arcs & 8 service chips */}
       <HeroOrbit />
@@ -44,37 +44,50 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
               Video Editing · Graphic Design · Web Development
             </motion.div>
 
-            {/* Single H1 on the page: "Boring gets scrolled past." */}
-            <motion.h1
-              className="tracking-[-0.02em] text-text-primary mb-4 text-balance font-display font-semibold text-[clamp(2.1rem,6vw,4.8rem)] leading-[1.05]"
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={
-                shouldReduceMotion
-                  ? { duration: 0 }
-                  : { delay: 0.95, duration: 0.5, ease: [0.16, 1, 0.3, 1] }
-              }
-            >
-              <span className="inline-block mr-3">Boring</span>
-              <span className="inline-block mr-3">gets</span>
-              <span className="font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal inline">
-                scrolled past.
-              </span>
-            </motion.h1>
+            {/* Headline & Subhead container with soft radial white mask (white to transparent, no blur) */}
+            <div className="relative w-full overflow-visible">
+              {/* Soft radial white mask behind headline and subtext so concentric rings softly fade out near text */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-x-6 sm:-inset-x-12 -inset-y-8 sm:-inset-y-12 pointer-events-none -z-10"
+                style={{
+                  background:
+                    "radial-gradient(ellipse 85% 75% at 35% 45%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.96) 45%, rgba(255, 255, 255, 0.6) 72%, rgba(255, 255, 255, 0) 100%)",
+                }}
+              />
 
-            {/* Subhead: at least 18px with strong contrast */}
-            <motion.p
-              className="max-w-xl text-[18px] sm:text-[20px] text-slate-700 font-medium leading-relaxed mb-8 text-pretty"
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={
-                shouldReduceMotion
-                  ? { duration: 0 }
-                  : { delay: 1.1, duration: 0.45, ease: [0.16, 1, 0.3, 1] }
-              }
-            >
-              Video editing, graphic design and web development for brands that want to be noticed.
-            </motion.p>
+              {/* Single H1 on the page: "Boring gets scrolled past." */}
+              <motion.h1
+                className="tracking-[-0.02em] text-text-primary mb-4 text-balance font-display font-semibold text-[clamp(2.1rem,6vw,4.8rem)] leading-[1.05] relative z-10"
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={
+                  shouldReduceMotion
+                    ? { duration: 0 }
+                    : { delay: 0.95, duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+                }
+              >
+                <span className="inline-block mr-3">Boring</span>
+                <span className="inline-block mr-3">gets</span>
+                <span className="font-accent italic text-[#8B1A1A] text-[1.1em] tracking-normal inline">
+                  scrolled past.
+                </span>
+              </motion.h1>
+
+              {/* Subhead: at least 18px with strong contrast */}
+              <motion.p
+                className="max-w-xl text-[18px] sm:text-[20px] text-slate-700 font-medium leading-relaxed mb-8 text-pretty relative z-10"
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={
+                  shouldReduceMotion
+                    ? { duration: 0 }
+                    : { delay: 1.1, duration: 0.45, ease: [0.16, 1, 0.3, 1] }
+                }
+              >
+                Video editing, graphic design and web development for brands that want to be noticed.
+              </motion.p>
+            </div>
 
             {/* Action Buttons: "Start a project" & "See our work" */}
             <motion.div
@@ -91,7 +104,7 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                className="w-full sm:w-auto px-6 sm:px-7 py-3.5 text-sm sm:text-base font-semibold rounded-2xl shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 hover:scale-[1.02] transition-transform"
+                className="w-full sm:w-auto px-6 sm:px-7 py-3.5 text-sm sm:text-base font-semibold rounded-control shadow-red-btn !bg-[#8b1a1a] hover:!bg-[#8b1a1a]/90 hover:scale-[1.02] transition-transform"
               >
                 <span>{primaryCtaLabel}</span>
               </MagneticButton>
@@ -107,7 +120,7 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
                     window.location.hash = "portfolio";
                   }
                 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold rounded-2xl border-2 border-slate-900/15 hover:border-slate-900/40 text-ink bg-transparent hover:bg-red-50/50 hover:scale-[1.02] transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold rounded-control border border-line hover:border-slate-900/40 text-ink bg-transparent hover:bg-red-50/50 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 <span>See our work</span>
                 <ArrowRight className="w-4 h-4 text-slate-700" />
@@ -118,10 +131,9 @@ export function Hero({ primaryCtaLabel = "Start a project" }: HeroProps = {}) {
             <HeroNotificationStack />
           </div>
 
-          {/* RIGHT COLUMN: Stacked Adaptive Cards Showcase */}
+          {/* RIGHT COLUMN: Fixed Two-Device Showcase (MacBook & iPhone) */}
           <motion.div
-            className="lg:col-span-5 flex flex-col items-center justify-center z-20 w-full overflow-visible min-h-[520px] sm:min-h-[580px] md:min-h-[650px]"
-            style={{ contain: "layout style" }}
+            className="lg:col-span-5 flex flex-col items-center justify-center z-20 w-full overflow-visible"
             initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={

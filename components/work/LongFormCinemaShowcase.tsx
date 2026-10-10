@@ -74,9 +74,9 @@ export function LongFormCinemaShowcase({ projects }: LongFormCinemaShowcaseProps
 
 function CompactCinemaCard({ project }: { project: WorkProject }) {
   return (
-    <div className="group bg-white/70 border border-line/90 hover:border-brand-red/40 rounded-2xl p-5 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+    <div className="group bg-white/70 border border-line/90 hover:border-brand-red/40 rounded-card p-5 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
       <div>
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-900 mb-4 shadow-sm">
+        <div className="relative aspect-[16/9] rounded-media overflow-hidden bg-slate-900 mb-4 shadow-sm">
           <Image
             src={project.posterSrc}
             alt={`${project.title} - 16:9 commercial still for ${project.client}`}
@@ -85,7 +85,7 @@ function CompactCinemaCard({ project }: { project: WorkProject }) {
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute top-2.5 inset-x-2.5 flex items-center justify-between pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-white">
+            <span className="px-2 py-0.5 rounded-control bg-black/70 backdrop-blur-md text-[10px] font-mono text-white">
               {project.client}
             </span>
           </div>
@@ -191,14 +191,14 @@ function CinemaProjectPanel({
       ref={containerRef}
       className={`flex flex-col ${
         isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-      } items-center gap-10 lg:gap-14 bg-white/70 border border-line/90 rounded-3xl p-4 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl hover:border-brand-red/30 transition-all duration-500`}
+      } items-center gap-10 lg:gap-14 bg-white/70 border border-line/90 rounded-card p-4 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl hover:border-brand-red/30 transition-all duration-500`}
     >
       {/* 1. Cinema 16:9 Screen */}
       <div
         ref={screenRef}
         data-cursor="Play"
         onClick={togglePlay}
-        className="w-full lg:w-3/5 relative aspect-[16/9] rounded-2xl overflow-hidden bg-slate-900 border border-line shadow-xl group cursor-pointer"
+        className="w-full lg:w-3/5 relative aspect-[16/9] rounded-media overflow-hidden bg-slate-900 border border-line shadow-xl group cursor-pointer"
       >
 
         {/* Thumbnail slowly pushes in (scale 1.0 to 1.06 over 8s) */}
@@ -246,7 +246,7 @@ function CinemaProjectPanel({
 
         {/* Top Badges */}
         <div className="absolute top-2.5 sm:top-4 inset-x-2.5 sm:inset-x-4 flex items-center justify-between pointer-events-none z-10">
-          <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-mono font-bold text-white uppercase">
+          <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-control bg-black/60 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-mono font-bold text-white uppercase">
             16:9 Commercial
           </span>
         </div>
@@ -260,7 +260,7 @@ function CinemaProjectPanel({
               e.stopPropagation();
               togglePlay();
             }}
-            className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 text-white text-[11px] sm:text-xs font-bold flex items-center gap-1.5 sm:gap-2 backdrop-blur-md transition-all cursor-pointer"
+            className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-control bg-black/70 hover:bg-black/90 border border-white/20 text-white text-[11px] sm:text-xs font-bold flex items-center gap-1.5 sm:gap-2 backdrop-blur-md transition-all cursor-pointer"
           >
             {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 fill-white" />}
             <span>{isPlaying ? "Pause" : "Play"}</span>
@@ -269,7 +269,7 @@ function CinemaProjectPanel({
           <button
             type="button"
             onClick={toggleMute}
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 flex items-center justify-center text-white backdrop-blur-md transition-all cursor-pointer"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-control bg-black/70 hover:bg-black/90 border border-white/20 flex items-center justify-center text-white backdrop-blur-md transition-all cursor-pointer"
             title={isMuted ? "Unmute Sound" : "Mute Sound"}
           >
             {isMuted ? <VolumeX className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-muted" /> : <Volume2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-red" />}
@@ -332,7 +332,7 @@ function CinemaProjectPanel({
           </div>
           <Link
             href={`/work/${project.slug}`}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-red hover:bg-brand-redDark text-white text-xs font-black tracking-wider uppercase transition-all shadow-red-btn group/btn"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-control bg-brand-red hover:bg-brand-redDark text-white text-xs font-black tracking-wider uppercase transition-all shadow-red-btn group/btn"
           >
             <span>Case Study</span>
             <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />

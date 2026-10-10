@@ -77,7 +77,7 @@ export function AboutProofStrip({ stats }: AboutProofStripProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 relative z-10">
         {/* Section Tagline */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-red-100 text-xs font-black uppercase tracking-widest border border-white/25 backdrop-blur-sm mb-2">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-control bg-white/15 text-red-100 text-xs font-black uppercase tracking-widest border border-white/25 backdrop-blur-sm mb-2">
             <ShieldCheck className="w-3.5 h-3.5 text-white/70" />
             <span>Proven Agency Track Record</span>
           </div>
@@ -91,7 +91,7 @@ export function AboutProofStrip({ stats }: AboutProofStripProps) {
           {metrics.map((metric, index) => (
             <div
               key={metric.id}
-              className="p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md text-center flex flex-col justify-center items-center hover:bg-white/15 hover:border-white/30 transition-all group shadow-md"
+              className="p-6 rounded-card bg-white/10 border border-white/20 backdrop-blur-md text-center flex flex-col justify-center items-center hover:bg-white/15 hover:border-white/30 transition-all group shadow-md"
             >
               <div className="flex flex-col items-center justify-center gap-1.5">
                 <div className="flex items-baseline justify-center font-mono text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">

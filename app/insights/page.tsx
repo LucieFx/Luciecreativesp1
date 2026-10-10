@@ -76,7 +76,7 @@ export default function InsightsPage() {
               href="/contact"
               variant="secondary"
               size="lg"
-              className="bg-white text-[#8b1a1a] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-2xl shadow-elevated"
+              className="bg-white text-[#8b1a1a] hover:bg-brand-red-50 font-black text-sm px-8 py-4 rounded-control shadow-elevated"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4 ml-1" />

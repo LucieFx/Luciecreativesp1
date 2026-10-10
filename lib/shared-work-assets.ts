@@ -50,27 +50,15 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
       "Engineered for monumental viewing authority along high-speed commercial corridors with calibrated typographic legibility and rich Mediterranean color contrast.",
     items: [
       {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835301/lucie-creatives/portfolio/graphic-design/nirva-club/main-hoarding-grand.jpg",
-        title: "Monumental 20×10 Highway Hoarding Architecture",
-        caption: "Primary grand launch billboard engineered with mathematical viewing distance contrast for transit corridors.",
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835319/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-skyline-hoarding.webp",
+        title: "Grand Inauguration Evening Banquet Hoarding",
+        caption: "High-contrast architectural hoarding capturing open-air banqueting lawns and illuminated resort elevations.",
         aspectRatio: "2/1",
       },
       {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835305/lucie-creatives/portfolio/graphic-design/nirva-club/nirva-opening-soon.jpg",
-        title: "Highway Opening Teaser Hoarding",
-        caption: "High-contrast architectural teaser sequence announcing the upcoming inauguration.",
-        aspectRatio: "2/1",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835304/lucie-creatives/portfolio/graphic-design/nirva-club/nirva-coming-soon.jpg",
-        title: "Curtain-Raiser Pre-Launch Billboard",
-        caption: "Teaser billboard generating regional anticipation and membership inquiries across Gujarat arteries.",
-        aspectRatio: "2/1",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835293/lucie-creatives/portfolio/graphic-design/nirva-club/billboard-opening.webp",
-        title: "Grand Opening Panoramic Highway Billboard",
-        caption: "Monumental horizontal billboard installed across major Gujarat inter-city routes.",
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835318/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-family-hoarding.webp",
+        title: "Family Peace & Lifestyle Hoarding Architecture",
+        caption: "Regional Gujarati hoarding engineered for multi-generational leisure, wellness, and staycation appeal.",
         aspectRatio: "2/1",
       },
       {
@@ -78,6 +66,18 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
         title: "Flagship Hoarding Identity & Architectural Key Visual",
         caption: "Brand anchor visual integrating resort elevation rendering with foundational club crest.",
         aspectRatio: "2/1",
+      },
+      {
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835293/lucie-creatives/portfolio/graphic-design/nirva-club/billboard-opening.webp",
+        title: "Highway Opening Panoramic Banner",
+        caption: "Wide-aspect roadside visibility banner deployed across Surat and North Gujarat transit corridors.",
+        aspectRatio: "2/1",
+      },
+      {
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835320/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/nirva-architectural-standee.webp",
+        title: "3×4 Reception & Sports Club Membership Standee",
+        caption: "High-contrast vertical banner installed in the reception pavilion showcasing racquet sports and leisure amenities.",
+        aspectRatio: "4/5",
       },
     ],
   },
@@ -87,7 +87,7 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
       "Art direction, premium menus, and promotional gastronomy campaigns for Kalpvriksh, the multi-cuisine luxury restaurant at Nirva Club.",
     items: [
       {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835300/lucie-creatives/portfolio/graphic-design/nirva-club/kalpvriksh-restaurant-post.jpg",
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-creative.webp",
         title: "Kalpvriksh Multi-Cuisine Fine Dining Campaign",
         caption: "Warm ambiance gastronomy identity designed with rich gold flourishes and heritage serif typography.",
         aspectRatio: "4/5",
@@ -105,16 +105,10 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
         aspectRatio: "1/1",
       },
       {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835309/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-flyer-menu.jpg",
-        title: "Kalpvriksh Multi-Course Menu & Flyer System",
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835317/lucie-creatives/portfolio/graphic-design/ooh-billboards-print/gourmet-hospitality-flyer.webp",
+        title: "Kalpvriksh Multi-Course Menu & Fine Dining Flyer System",
         caption: "Structured menu typography with botanical motif accents and luxury price formatting.",
         aspectRatio: "4/5",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835307/lucie-creatives/portfolio/graphic-design/nirva-club/restaurant-creative.webp",
-        title: "Epicurean Experience Brochure Insert",
-        caption: "Tactile print menu fold-out highlighting organic locally sourced ingredients and poolside seating.",
-        aspectRatio: "1/1",
       },
     ],
   },
@@ -136,7 +130,7 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
         aspectRatio: "4/5",
       },
       {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835294/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic-campaign.jpg",
+        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835296/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic.webp",
         title: "Family Weekend Day Picnic & Olympic Pool Campaign",
         caption: "Comprehensive leisure package collateral featuring poolside cabanas, rain dance, and banquet dining.",
         aspectRatio: "4/5",
@@ -165,18 +159,6 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
         caption: "Editorial tribute card celebrating maternal bonding in tranquil resort garden settings.",
         aspectRatio: "4/5",
       },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835296/lucie-creatives/portfolio/graphic-design/nirva-club/day-picnic.webp",
-        title: "Day Picnic Print Flyer & Digital WhatsApp Blast",
-        caption: "Omnichannel day picnic guide distributed to 25,000+ club patrons across South Gujarat.",
-        aspectRatio: "1/1",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835309/lucie-creatives/portfolio/graphic-design/nirva-club/standy-mockup.webp",
-        title: "3×4 Reception & Lobby Standee Architecture",
-        caption: "High-contrast vertical banner installed in the main reception pavilion.",
-        aspectRatio: "4/5",
-      },
     ],
   },
   {
@@ -192,8 +174,8 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
       },
       {
         src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835306/lucie-creatives/portfolio/graphic-design/nirva-club/photo-frame-mockup.jpg",
-        title: "Bespoke Resort Memory Photo Frame Design",
-        caption: "Custom handcrafted souvenir frame gifted to founding members with commemorative photos.",
+        title: "In-Room Eco-Sustainability & Energy Conservation Tent Card",
+        caption: "Bespoke guest room eco-sustainability tent card encouraging energy conservation and air-conditioning efficiency.",
         aspectRatio: "4/5",
       },
       {
@@ -201,12 +183,6 @@ export const NIRVA_DESIGN_GALLERIES: DesignGalleryCategory[] = [
         title: "Grand Inauguration Invitation Collateral",
         caption: "Gold-accented physical invitation collateral distributed to foundational club trustees and VIP guests.",
         aspectRatio: "4/5",
-      },
-      {
-        src: "https://res.cloudinary.com/oct7txvw/image/upload/v1789835293/lucie-creatives/portfolio/graphic-design/nirva-club/billboard-opening.webp",
-        title: "Highway Opening Panoramic Banner",
-        caption: "Wide-aspect roadside visibility banner deployed across Surat and Gujarat transit corridors.",
-        aspectRatio: "2/1",
       },
     ],
   },

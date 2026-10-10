@@ -29,7 +29,7 @@ export default function Error({
 
       <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center">
         {/* Chiclet Logo Mark */}
-        <div className="w-16 h-16 rounded-2xl bg-white shadow-md border border-line flex items-center justify-center p-2.5 mb-6">
+        <div className="w-16 h-16 rounded-control bg-white shadow-md border border-line flex items-center justify-center p-2.5 mb-6">
           <Image
             src="https://res.cloudinary.com/oct7txvw/image/upload/v1789835253/lucie-creatives/logo/lucie-mark.png"
             alt="Lucie Creatives Logo"
@@ -41,7 +41,7 @@ export default function Error({
         </div>
 
         {/* Notice Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-control bg-red-50 text-[#8b1a1a] text-xs font-mono font-bold uppercase tracking-wider border border-red-200/80 mb-5 shadow-xs">
           <AlertCircle className="w-3.5 h-3.5" />
           <span>Notice — Something Went Wrong</span>
         </div>
@@ -61,7 +61,7 @@ export default function Error({
           <button
             type="button"
             onClick={() => reset()}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 text-white rounded-xl font-bold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8b1a1a] hover:bg-[#8b1a1a]/90 text-white rounded-control font-bold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
           >
             <RefreshCw className="w-4 h-4" />
             <span>Try Again</span>
@@ -69,7 +69,7 @@ export default function Error({
 
           <Link
             href="/"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] rounded-xl font-bold text-sm transition-all shadow-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-ink border-2 border-line hover:border-[#8b1a1a]/40 hover:text-[#8b1a1a] rounded-control font-bold text-sm transition-all shadow-xs"
           >
             <Home className="w-4 h-4" />
             <span>Go to Home</span>
@@ -89,7 +89,7 @@ export default function Error({
             </button>
 
             {showDetails && (
-              <div className="mt-3 p-4 rounded-xl bg-slate-50 border border-line text-xs font-mono text-body space-y-1.5 overflow-x-auto text-left">
+              <div className="mt-3 p-4 rounded-control bg-slate-50 border border-line text-xs font-mono text-body space-y-1.5 overflow-x-auto text-left">
                 {error.digest && (
                   <p>
                     <span className="font-bold text-ink">Digest:</span> {error.digest}

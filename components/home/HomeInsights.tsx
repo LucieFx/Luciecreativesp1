@@ -40,7 +40,7 @@ export function HomeInsights() {
 
           <Link
             href="/insights"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white border border-line text-xs font-black text-ink hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 hover:shadow-soft transition-all shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-control bg-white border border-line text-xs font-black text-ink hover:text-[#8b1a1a] hover:border-[#8b1a1a]/40 hover:shadow-soft transition-all shrink-0"
           >
             <span>View All Insights</span>
             <ArrowRight className="w-4 h-4 text-[#8b1a1a]" />
@@ -53,11 +53,11 @@ export function HomeInsights() {
             <Link
               key={article.slug}
               href={`/insights/${article.slug}`}
-              className="group p-6 sm:p-7 rounded-3xl bg-white border border-line/80 shadow-soft hover:shadow-[0_20px_45px_-10px_rgba(139, 26, 26,0.12)] hover:border-[#8b1a1a]/40 transition-all duration-300 flex flex-col justify-between"
+              className="group p-6 sm:p-7 rounded-card bg-white border border-line/80 shadow-soft hover:shadow-[0_20px_45px_-10px_rgba(139, 26, 26,0.12)] hover:border-[#8b1a1a]/40 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Cover Image */}
-                <div className="relative w-full aspect-16/9 rounded-2xl overflow-hidden mb-6 bg-slate-100 border border-line/60">
+                <div className="relative w-full aspect-16/9 rounded-media overflow-hidden mb-6 bg-slate-100 border border-line/60">
                   <Image
                     src={article.coverImage}
                     alt={article.coverImageAlt}
