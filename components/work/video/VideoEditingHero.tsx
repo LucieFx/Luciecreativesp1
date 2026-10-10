@@ -211,7 +211,7 @@ export function VideoEditingHero() {
         role="button"
         tabIndex={0}
         onClick={() => handleCardClick(instanceKey)}
-        onKeyDown={(e) => {
+        onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             handleCardClick(instanceKey);
@@ -247,7 +247,7 @@ export function VideoEditingHero() {
               playsInline
               loop
               preload="auto"
-              onTimeUpdate={(e) => {
+              onTimeUpdate={(e: React.SyntheticEvent<HTMLVideoElement>) => {
                 const v = e.currentTarget;
                 if (v.duration) {
                   setProgress((v.currentTime / v.duration) * 100);
@@ -268,7 +268,7 @@ export function VideoEditingHero() {
                 <span
                   role="button"
                   tabIndex={0}
-                  onClick={(e) => {
+                  onClick={(e: React.MouseEvent) => {
                     e.stopPropagation();
                     setLockedInstanceKey(null);
                     setProgress(0);
