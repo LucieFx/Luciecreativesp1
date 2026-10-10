@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { PageHero } from "@/components/work/shared/PageHero";
+import { VideoEditingHero } from "@/components/work/video/VideoEditingHero";
 import { WorkStatBreak } from "@/components/work/WorkStatBreak";
 
 const RotatingShortsShowcase = dynamic(
@@ -26,7 +26,7 @@ const WorkClosingCta = dynamic(
   () => import("@/components/work/WorkClosingCta").then((mod) => mod.WorkClosingCta),
   { ssr: true }
 );
-import { getShortFormProjects, getLongFormProjects, getAllShortFormReelThumbnails } from "@/lib/video-work-data";
+import { getShortFormProjects, getLongFormProjects } from "@/lib/video-work-data";
 import { STAT_BREAK } from "@/lib/work-data";
 import { SITE_STATS } from "@/lib/site-stats";
 import { constructMetadata, SITE_METADATA_MAP } from "@/lib/seo-metadata";
@@ -37,7 +37,6 @@ export const metadata: Metadata = constructMetadata(SITE_METADATA_MAP["/video-ed
 export default function VideoEditingPage() {
   const shortFormProjects = getShortFormProjects();
   const longFormProjects = getLongFormProjects();
-  const reelThumbnails = getAllShortFormReelThumbnails();
 
   const serviceSchema = getServiceSchema({
     name: "Video Editing",
@@ -65,28 +64,8 @@ export default function VideoEditingPage() {
       <main className="min-h-screen bg-white text-text-primary selection:bg-brand-red selection:text-white font-sans font-normal relative">
         <Navbar />
 
-        {/* 1. Hero */}
-        <PageHero
-          badge="LUCIE CREATIVES · VIDEO EDITING"
-          headlinePrefix="Videos people can't"
-          headlineItalicAccent="scroll past."
-          subheadline="Short-form reels and cinematic commercials, edited for attention and built to grow your brand."
-          chips={[
-            { label: "9:16 Vertical Reels", href: "#short-form-videos" },
-            { label: "16:9 Cinema Commercials", href: "#long-form-videos" },
-            { label: `${SITE_STATS.viewsLabel} Client Impact`, href: "#stat-break" },
-          ]}
-          primaryButton={{
-            label: "Start a project",
-            href: "/contact",
-          }}
-          secondaryButton={{
-            label: "See our reels",
-            href: "#short-form-videos",
-          }}
-          timelineEditMotion={true}
-          reelThumbnails={reelThumbnails}
-        />
+        {/* 1. Hero: New 3D Reel Wall & Clean Text Split */}
+        <VideoEditingHero />
 
         {/* 2. Short-form reels section (current phone + tile picker) */}
         <RotatingShortsShowcase projects={shortFormProjects} />

@@ -140,10 +140,10 @@ export const WEB_PROJECTS_DATA: WebProject[] = [
     description:
       "AI-powered captioning SaaS for 50+ Indic languages with sub-second speech processing, 99.2% accuracy, and high-retention typography.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Web Audio API", "AI Speech API"],
-    screenshotDesktop: "/projects/kaption-desktop.png",
-    screenshotMobile: "/projects/kaption-mobile.png",
-    fullPreviewImage: "/projects/kaption-full-desktop.png",
-    poster: "/projects/kaption-desktop.png",
+    screenshotDesktop: "/projects/kaption-desktop.webp",
+    screenshotMobile: "/projects/kaption-mobile.webp",
+    fullPreviewImage: "/projects/kaption-full-desktop.webp",
+    poster: "/projects/kaption-desktop.webp",
     lighthouse: {
       performance: 94,
       accessibility: 98,
@@ -170,7 +170,7 @@ export const WEB_PROJECTS_DATA: WebProject[] = [
     poster: "/projects/copease-desktop.webp",
     lighthouse: {
       performance: 99,
-      accessibility: 79,
+      accessibility: 96,
       bestPractices: 100,
       seo: 92,
       mode: "Desktop",
